@@ -1,0 +1,97 @@
+.comparison-section {
+  padding: 96px 0;
+  background: #ffffff;
+}
+
+.comparison-heading {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 45px;
+}
+
+.comparison-heading span {
+  color: #057DCD;
+}
+
+.comparison-card {
+  background: #ffffff;
+  border: 1.33px solid #e2e8f0;
+  border-radius: 16px;
+  margin-top: 32px;
+  padding: 32px;
+  height: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.comparison-card:hover {
+  background: #f5faff;
+  border-color: #057DCD;
+  box-shadow: 0 4px 16px rgba(13, 140, 240, 0.08);
+}
+
+.comparison-card:hover h5 {
+  color: #057DCD;
+}
+
+.comparison-card h5 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: #475569;
+  margin-bottom: 22px;
+  transition: 0.3s;
+}
+
+.comparison-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comparison-card li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.comparison-card li:last-child {
+  margin-bottom: 0;
+}
+
+/* Green Tick */
+
+.icon-success {
+  color: #22c55e;
+  font-weight: 700;
+  min-width: 16px;
+}
+
+/* Red Cross */
+
+.icon-fail {
+  color: #ef4444;
+  font-weight: 700;
+  min-width: 16px;
+}
+
+
+@media (max-width: 768px) {
+  .comparison-section {
+    padding: 50px 0;
+  }
+
+
+  .comparison-card {
+    padding: 20px;
+  }
+
+}

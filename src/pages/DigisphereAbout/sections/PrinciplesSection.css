@@ -1,0 +1,64 @@
+.principles-section {
+  background: #f7f9fc;
+  padding: 60px 0;
+}
+
+.principles-heading {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 40px;
+}
+
+.principles-heading span {
+  color: #057DCD;
+}
+
+.principle-card {
+  background: #ffffff;
+  border: 1.33px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 32px;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.principle-card:hover {
+  transform: translateY(-4px);
+}
+
+.principle-icon {
+  width: 48px;
+  height: 48px;
+  background: #eef7ff;
+  color: #057DCD;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+}
+
+.principle-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.principle-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+@media (max-width: 768px) {
+  .principles-heading {
+    /* font-size: 30px; */
+    margin-bottom: 30px;
+  }
+}

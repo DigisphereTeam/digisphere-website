@@ -1,0 +1,158 @@
+.cta-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #ffffff;
+}
+
+/* ── Testimonial Card ── */
+.testimonial-card {
+    background: #f7fafd;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 64px;
+}
+
+.quote-icon {
+    font-size: 48px;
+    font-weight: 900;
+    color: #d0e8f8;
+    line-height: 1;
+    margin-bottom: 12px;
+    font-family: Georgia, serif;
+}
+
+.quote-text {
+    font-size: 16px;
+    color: #1a1a2e;
+    line-height: 1.7;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.author-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #057DCD;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.author-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+}
+
+.author-title {
+    font-size: 16px;
+    color: #888888;
+    margin: 0;
+}
+
+/* ── CTA Block ── */
+.cta-block {
+    padding-top: 8px;
+}
+
+.cta-heading {
+    font-size: 40px;
+    font-weight: 800;
+    color: #111111;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.cta-highlight {
+    color: #057DCD;
+}
+
+.cta-subtitle {
+    font-size: 16px;
+    color: #666666;
+    max-width: 460px;
+    margin: 0 auto 28px auto;
+    line-height: 1.7;
+}
+
+/* ── Buttons ── */
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.btn-primary-cta {
+    background-color: #057DCD;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary-cta:hover {
+    background-color: #0464A4;
+    transform: translateY(-2px);
+}
+
+.btn-ghost-cta {
+    background-color: #fff;
+    color: #0f172a ;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-ghost-cta:hover {
+    border-color: #f1f5f9;
+    /* box-shadow: 0 4px 12px #0464A4; */
+    transform: translateY(-2px);
+}
+
+/* ── Stats Row ── */
+.cta-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #888888;
+    font-weight: 500;
+}
+
+.cta-stats span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cta-stats i {
+    color: #057DCD;
+    font-size: 14px;
+}

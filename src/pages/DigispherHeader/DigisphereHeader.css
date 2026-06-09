@@ -1,0 +1,98 @@
+.custom-navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 12px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  font-weight: 600;
+}
+
+.custom-container {
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.Digisphere-logo-image {
+  width: 170px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.nav-link {
+  color: #0f172a !important; 
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 4px !important;
+  transition: color 0.2s ease-in-out;
+}
+
+/* React Router NavLink automatically injects the .active class on the matching link */
+.nav-link:hover, 
+.nav-link.active {
+  color: #0464a4 !important;
+}
+
+/* Desktop Button Sizes */
+.work-btn, .talk-btn {
+  padding: 7px 15px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.work-btn {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.work-btn:hover {
+  background: #f1f5f9;
+}
+
+.talk-btn {
+  border: none;
+  background: #057dcd;
+  color: #ffffff;
+}
+
+.talk-btn:hover {
+  background: #0464a4;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Mobile responsive layout overrides */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    align-items: flex-start !important;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .nav-buttons-container {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .work-btn, .talk-btn {
+    padding: 6px 12px !important; 
+    font-size: 12.5px !important;
+    border-radius: 5px !important;
+  }
+}

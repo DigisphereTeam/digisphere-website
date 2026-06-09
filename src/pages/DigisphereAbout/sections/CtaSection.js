@@ -1,0 +1,78 @@
+import React from "react";
+import "./CTASection.css";
+import whiteArrow from "../../../assets/about-page/arrow-icon1.svg";
+import blackArrow from "../../../assets/about-page/arrow-icon2.svg";
+
+import Reveal from "../../../animations/Reveal";
+import { fadeUp } from "../../../animations/variants";
+
+const CTASection = () => {
+  return (
+    <section className="cta-section">
+      <div className="container">
+        {/* Testimonial Card */}
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-8 col-lg-6">
+            <Reveal variant={fadeUp} delay={0.1}>
+              <div className="testimonial-card">
+                <div className="quote-icon">"</div>
+                <p className="quote-text">
+                  "The results were visible within weeks. Digisphere focused on
+                  our business goals instead of just delivering a website."
+                </p>
+                <div className="author-row">
+                  <div className="author-avatar">MK</div>
+                  <div className="author-info">
+                    <p className="author-name">Manish Kumar</p>
+                    <p className="author-title">CEO, TechVision Solutions</p>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+
+        {/* CTA Block */}
+        <div className="cta-block text-center">
+          <Reveal variant={fadeUp} delay={0.1}>
+            <h2 className="cta-heading">
+              Let's build something
+              <br />
+              <span className="cta-highlight">that works.</span>
+            </h2>
+          </Reveal>
+          <Reveal variant={fadeUp} delay={0.2}>
+            <p className="cta-subtitle">
+              Whether you're planning a website, application, marketing
+              strategy, cloud migration, or security assessment, we're ready to
+              help.
+            </p>
+          </Reveal>
+          <Reveal variant={fadeUp} delay={0.3}>
+            <div className="cta-buttons">
+              <button className="btn-primary-cta">
+                Book a Free Digital Audit
+                <img src={whiteArrow} alt="arrow" />
+              </button>
+              <button className="btn-ghost-cta">
+                Talk To Our Team
+                <img src={blackArrow} alt="arrow" />
+              </button>
+            </div>
+          </Reveal>
+          <Reveal variant={fadeUp} delay={0.4}>
+            <div className="cta-stats">
+              <span>
+                <i className="bi bi-check2"></i> Response within 4 hours
+              </span>
+              <span>325+ Projects</span>
+              <span>210+ Clients</span>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CTASection;

@@ -1,0 +1,82 @@
+.team-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.team-header h2 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+    color: #111111;
+}
+
+.team-highlight {
+    color: #1a7fd4;
+}
+
+.team-subtitle {
+    color: #666666;
+    font-size: 16px;
+    max-width: 580px;
+    margin: 0 auto 32px auto;
+    line-height: 1.5;
+}
+
+.team-grid {
+    margin-top: 8px;
+}
+
+.profile-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.profile-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(26, 127, 212, 0.14);
+    border-color: #c5d9ef;
+}
+
+.avatar-circle {
+    width: 48px;
+    height: 48px;
+    background-color: #1a7fd4;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.profile-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 2px;
+}
+
+.profile-role {
+    display: block;
+    color: #1a7fd4;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.profile-desc {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}

@@ -1,0 +1,118 @@
+.why-digisphere {
+  padding: 64px 0;
+  background: #fff;
+}
+
+/* ==========================
+   LEFT SECTION
+========================== */
+
+.why-heading h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+/* ==========================
+   RIGHT TIMELINE
+========================== */
+
+.timeline-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  min-height: 118px;
+}
+
+/* Marker */
+
+.timeline-marker {
+  width: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: #057DCD;
+  border-radius: 50%;
+}
+
+.timeline-line {
+  width: 1px;
+  height: 80px;
+  background: #d9dee7;
+  margin-top: 6px;
+}
+
+/* Content */
+
+.timeline-content {
+  padding-top: 1px;
+}
+
+.timeline-content h6 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #057DCD;
+  margin-bottom: 12px;
+}
+
+.timeline-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #5b677a;
+  margin: 0;
+  max-width: 630px;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 991px) {
+  .why-digisphere {
+    padding: 60px 0;
+  }
+
+  .why-heading {
+    margin-bottom: 50px;
+  }
+
+  .timeline-item {
+    min-height: 105px;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 576px) {
+
+  .timeline-item {
+    gap: 18px;
+    min-height: 95px;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-line {
+    height: 65px;
+  }
+
+}

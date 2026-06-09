@@ -1,0 +1,95 @@
+
+
+/* RESPONSIVE FONT-SIZES */
+
+@media (max-width: 991px) {
+  .about-hero-title,
+  .why-heading h2,
+  .stats-header h2,
+  .stat-value,
+  .principles-heading,
+  .comparison-heading,
+  .eco-title h2,
+  .digisphere-banner h1,
+  .team-header h2,
+  .cta-heading{
+    font-size: 36px;
+  }
+
+  .timeline-content h6,
+  .card-content h3,
+  .principle-card h3,
+  .comparison-card h5,
+  .profile-card h3{
+    font-size: 16px;
+  }
+
+  .about-hero-badge,
+  .about-hero-description,
+  .timeline-content p,
+  .card-content p,
+  .stat-label,
+  .principle-card p,
+  .comparison-card li,
+  .service-card p,
+  .digisphere-banner p,
+  .team-subtitle,
+  .profile-role,
+  .profile-desc,
+  .quote-text,
+  .author-avatar,
+  .author-name,
+  .author-title,
+  .cta-subtitle,
+  .cta-stats,
+  .cta-stats i{
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 576px){
+  .about-hero-title,
+  .why-heading h2,
+  .stats-header h2,
+  .stat-value,
+  .principles-heading,
+  .comparison-heading,
+  .eco-title h2,
+  .digisphere-banner h1,
+  .team-header h2,
+  .cta-heading{
+    font-size: 32px;
+  }
+
+  .timeline-content h6,
+  .card-content h3,
+  .principle-card h3,
+  .comparison-card h5,
+  .profile-card h3{
+    font-size: 14px;
+  }
+
+  .about-hero-badge,
+  .about-hero-description,
+  .timeline-content p,
+  .card-content p,
+  .stat-label,
+  .principle-card p,
+  .comparison-card li,
+  .service-card p,
+  .digisphere-banner p,
+  .team-subtitle,
+  .profile-role,
+  .profile-desc,
+  .quote-text,
+  .cta-stats,
+  .cta-stats i,
+  .quote-text,
+  .author-avatar,
+  .author-name,
+  .author-title,
+  .cta-subtitle{
+    font-size: 12px;
+  }
+}

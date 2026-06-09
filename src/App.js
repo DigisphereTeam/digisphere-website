@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+import DigispherHeader from "./pages/DigispherHeader/DigisphereHeader";
+import DigisphereHome from "./pages/DigisphereHome/DigispherHome";
+import DigisphereAbout from "./pages/DigisphereAbout/DigisphereAbout";
+import DigisphereFooter from "./pages/DigisphereFooter/DigisphereFooter";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <DigispherHeader />
+      <Routes>
+        <Route path="/" element={<DigisphereHome />} />
+        <Route path="/about" element={<DigisphereAbout />} />
+      </Routes>
+
+      <DigisphereFooter />
+    </Router>
   );
 }
 
