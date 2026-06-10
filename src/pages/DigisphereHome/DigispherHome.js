@@ -58,6 +58,7 @@ import logo11 from "../../assets/logo12-removebg-preview - Copy.png";
 
 import Reveal from "../../animations/Reveal";
 import { fadeLeft, fadeRight, fadeUp } from "../../animations/variants";
+import { Link } from "react-router-dom";
 
 
 
@@ -399,7 +400,7 @@ const DigispherHome = () => {
     }, 2000); // change slide every 2 sec
  
     return () => clearInterval(interval);
-  }, []);
+  }, [testimonials.length]);
 
   return (
     <div className="digisphere-page-container">
@@ -424,15 +425,15 @@ const DigispherHome = () => {
               </p>
 
               <div class="digisphere-hero-buttons">
-                <a class="btn-books" target="_blank">
+                <Link class="btn-books" >
                   Start Free Digital Audit
                   <i class="bi bi-arrow-right">
                     <FaArrowRight />
                   </i>
-                </a>
-                <a href="" class="btn-call">
+                </Link>
+                <Link href="" class="btn-call">
                   <i class="bi bi-telephone"></i> See Our Work
-                </a>
+                </Link>
               </div>
               <div className="digiphere-stats py-3">
                 <div className="digisphere-Projects-Delivered">
@@ -757,12 +758,12 @@ const DigispherHome = () => {
             More online enquiries within the first quarter.
           </p>
 
-          <a href="#" className="digisphere-client-report__link">
+          <Link className="digisphere-client-report__link">
             How We Do It
             <span className="digisphere-client-report__arrow">
               <img src={howwedo} alt="Analytics" />
             </span>
-          </a>
+          </Link>
         </div>
       </section>
       <section className="digisphere-stats" ref={sectionRef}>
