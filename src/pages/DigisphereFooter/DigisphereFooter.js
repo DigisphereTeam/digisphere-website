@@ -1,15 +1,11 @@
 import React from "react";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+
 import "./DigisphereFooter.css";
 import Linkedinicon from "../../assets/LinkedinIcon.png";
 import instaicon from "../../assets/instaIcon.png";
 import facebook from "../../assets/FacebookIcon.png";
 import Twitericon from "../../assets/TwiterIcon.png";
+import { Link } from "react-router-dom";
 
 const DigisphereFooter = () => {
   return (
@@ -26,18 +22,18 @@ const DigisphereFooter = () => {
             </p>
 
             <div className="social-icons mt-4">
-              <a href="#">
-              <img src={Linkedinicon}/>
-              </a>
-              <a href="#">
-                     <img src={instaicon}/>
-              </a>
-              <a href="#">
-                    <img src={facebook}/>
-              </a>
-              <a href="#">
-                    <img src={Twitericon} />
-              </a>
+              <Link >
+              <img src={Linkedinicon} alt="LinkedIn"/>
+              </Link>
+              <Link>
+                     <img src={instaicon} alt="Instagram"/>
+              </Link>
+              <Link>
+                    <img src={facebook} alt="Facebook"/>
+              </Link>
+              <Link>
+                    <img src={Twitericon} alt="Twitter"/>
+              </Link>
             </div>
           </div>
 
@@ -46,28 +42,28 @@ const DigisphereFooter = () => {
             <h6 className="footer-title">Services</h6>
             <ul className="footer-links">
               <li>
-                <a href="#">Website Design</a>
+                <Link>Website Design</Link>
               </li>
               <li>
-                <a href="#">Web Applications</a>
+                <Link>Web Applications</Link>
               </li>
               <li>
-                <a href="#">Digital Marketing</a>
+                <Link>Digital Marketing</Link>
               </li>
               <li>
-                <a href="#">Experience Design</a>
+                <Link>Experience Design</Link>
               </li>
               <li>
-                <a href="#">Cloud Services</a>
+                <Link>Cloud Services</Link>
               </li>
               <li>
-                <a href="#">Cybersecurity</a>
+                <Link>Cybersecurity</Link>
               </li>
               <li>
-                <a href="#">Managed IT</a>
+                <Link>Managed IT</Link>
               </li>
               <li>
-                <a href="#">DevOps</a>
+                <Link>DevOps</Link>
               </li>
             </ul>
           </div>
@@ -77,22 +73,22 @@ const DigisphereFooter = () => {
             <h6 className="footer-title">Company</h6>
             <ul className="footer-links">
               <li>
-                <a href="#">About Us</a>
+                <Link>About Us</Link>
               </li>
               <li>
-                <a href="#">Careers</a>
+                <Link>Careers</Link>
               </li>
               <li>
-                <a href="#">Our Work</a>
+                <Link>Our Work</Link>
               </li>
               <li>
-                <a href="#">Case Studies</a>
+                <Link>Case Studies</Link>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <Link>Blog</Link>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <Link>Contact</Link>
               </li>
             </ul>
           </div>
