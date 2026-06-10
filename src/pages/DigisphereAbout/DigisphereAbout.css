@@ -92,4 +92,9 @@
   .cta-subtitle{
     font-size: 12px;
   }
+
+  .btn-primary-cta,.btn-ghost-cta{
+    width: 100%;
+  }
+  
 }

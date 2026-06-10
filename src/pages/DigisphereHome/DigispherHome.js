@@ -573,7 +573,7 @@ const DigispherHome = () => {
                 </h3>
               </Reveal>
             </div>
-            <div className="row gx-5 align-items-center pair-row my-5">
+            <div className="row  align-items-center pair-row my-5">
               <div className="col-lg-6 digisphere-per ">
                 <div class="digisphere-service-icon">
                   <img src={analyticsIcon} alt="analyticsIcon" />
@@ -599,7 +599,7 @@ const DigispherHome = () => {
                 </div>
               </div>
             </div>
-            <div className="row gx-5 align-items-center pair-row ">
+            <div className="row  align-items-center pair-row ">
               <div className="col-lg-6 digisphere-left-per ">
                 <div className="digisphere-wrapper-per">
                   <img
@@ -630,7 +630,7 @@ const DigispherHome = () => {
               </div>
             </div>
 
-            <div className="row gx-5 align-items-center pair-row  ">
+            <div className="row  align-items-center pair-row  ">
               <div className="col-lg-6 digisphere-left-built">
                 <div class="digisphere-service-icon">
                   <img src={Growth} alt="analyticsIcon" />

@@ -1424,7 +1424,7 @@
 
 @media (max-width: 576px) {
   .digisphere-cta-section {
-    padding: 70px 20px;
+    padding: 35px 10px
   }
 
   .digisphere-cta-buttons {
@@ -1626,7 +1626,7 @@
   }
 
   .digisphere-feature-item {
-    width: 100%;
+    /* width: 100%; */
     max-width: 350px;
   }
   .digisphere-cta-title {
@@ -1692,7 +1692,7 @@
   }
 
   .digisphere-card {
-    max-width: 340px;
+    max-width: 270px;
   }
   .digisphere-business-needs-title {
     font-size: 32px;
@@ -1706,7 +1706,44 @@
   .digisphere-business-needs-description {
     font-size: 12px;
   }
-
+.digisphere-testimonial-wrapper{
+       /* width: 270px; */
+     padding:20px;
+  }
+  .digisphere-testimonial-quote{
+    font-size: 12px;
+  }
+  .digisphere-testimonial-badge{
+    font-size: 12px;
+  }
+  .digisphere-testimonial-name{
+    font-size: 14px;
+  }
+.digisphere-testimonial-role{
+font-size: 12px;
+}
+.digisphere-feature-section{
+  padding: 35px 0;
+}
+.digisphere-feature-title{
+  margin-bottom: 30px;
+}
+.digisphere-business-needs-section{
+  padding: 30px 0;
+}
+.digisphere-ecosystem-section{
+  padding: 30px 0;
+  margin-top: 20px;
+}
+.digisphere-client-report{
+  padding:32px 5px;
+}
+.digisphere-stats{
+  padding:40px 0;
+}
+.digisphere-industries{
+  padding:35px 0;
+}
   .digisphere-process__title {
     font-size: 32px;
   }
@@ -1718,6 +1755,9 @@
   }
    .digisphere-cta-description {
     font-size: 12px;
+  }
+  .btn-books,.btn-call{
+    width: 100%
   }
 }
 
