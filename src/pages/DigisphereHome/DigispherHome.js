@@ -59,8 +59,7 @@ import logo11 from "../../assets/logo12-removebg-preview - Copy.png";
 import Reveal from "../../animations/Reveal";
 import { fadeLeft, fadeRight, fadeUp } from "../../animations/variants";
 import { Link } from "react-router-dom";
-
-
+import { useInView } from "framer-motion";
 
 const CountUp = ({ end, suffix = "", duration = 2000, startAnimation }) => {
   const [count, setCount] = useState(0);
@@ -98,36 +97,75 @@ const AnimatedCounter = ({
   prefix = "",
   duration = 2000,
 }) => {
-  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+
+  const isInView = useInView(ref, {
+    once: true,
+    amount: 0.3,
+  });
+
+  const isRange = Array.isArray(end);
+
+  const [count1, setCount1] = useState(0);
+  const [count2, setCount2] = useState(0);
+
+  const target1 = isRange ? end[0] : end;
+  const target2 = isRange ? end[1] : 0;
 
   useEffect(() => {
+    if (!isInView) return;
+
     let startTime = null;
+    let animationFrameId;
 
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
 
-      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const progress = Math.min(
+        (currentTime - startTime) / duration,
+        1
+      );
 
-      setCount(progress * end);
+      setCount1(progress * target1);
+
+      if (isRange) {
+        setCount2(progress * target2);
+      }
 
       if (progress < 1) {
-        requestAnimationFrame(animate);
+        animationFrameId = requestAnimationFrame(animate);
       }
     };
 
-    requestAnimationFrame(animate);
-  }, [end, duration]);
+    animationFrameId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isInView, target1, target2, duration, isRange]);
+
+  const formatNumber = (currentVal, finalVal) => {
+    return Number.isInteger(finalVal)
+      ? Math.floor(currentVal).toLocaleString()
+      : currentVal.toFixed(1);
+  };
 
   return (
-    <>
+    <span ref={ref}>
       {prefix}
-      {Number.isInteger(end)
-        ? Math.floor(count).toLocaleString()
-        : count.toFixed(1)}
+      {isRange ? (
+        <>
+          {formatNumber(count1, target1)}–{formatNumber(
+            count2,
+            target2
+          )}
+        </>
+      ) : (
+        formatNumber(count1, target1)
+      )}
       {suffix}
-    </>
+    </span>
   );
 };
+
 
 const DigispherHome = () => {
   const logos = [
@@ -383,11 +421,11 @@ const DigispherHome = () => {
   }, []);
 
   const [activeIndex, setActiveIndex] = useState(0);
- 
+
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % testimonials.length);
   };
- 
+
   const prevSlide = () => {
     setActiveIndex(
       (prev) => (prev - 1 + testimonials.length) % testimonials.length,
@@ -398,7 +436,7 @@ const DigispherHome = () => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % testimonials.length);
     }, 2000); // change slide every 2 sec
- 
+
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
@@ -409,72 +447,77 @@ const DigispherHome = () => {
           <div className="row">
             <div className="col-lg-6 Digisphere-left">
               <Reveal variant={fadeRight} delay={0.1}>
-              <p class="Digisphere-badge">
-                Technology that works for your business
-              </p>
-              <h1 className="digisphere-hero-title">Technology that</h1>
-              <h1 className="digisphere-hero-secondtitle">
-                grows your
-                <br /> business.
-              </h1>
-              <p className="digisphere-hero-desc">
-                We design and build the websites, applications, and marketing
-                systems that bring in customers and keep them. Then we make sure
-                the infrastructure behind them is fast, secure, and ready to
-                scale.
-              </p>
+                <p class="Digisphere-badge">
+                  Technology that works for your business
+                </p>
+                <h1 className="digisphere-hero-title">Technology that</h1>
+                <h1 className="digisphere-hero-secondtitle">
+                  grows your
+                  <br /> business.
+                </h1>
+                <p className="digisphere-hero-desc">
+                  We design and build the websites, applications, and marketing
+                  systems that bring in customers and keep them. Then we make
+                  sure the infrastructure behind them is fast, secure, and ready
+                  to scale.
+                </p>
 
-              <div class="digisphere-hero-buttons">
-                <Link class="btn-books" >
-                  Start Free Digital Audit
-                  <i class="bi bi-arrow-right">
-                    <FaArrowRight />
-                  </i>
-                </Link>
-                <Link href="" class="btn-call">
-                  <i class="bi bi-telephone"></i> See Our Work
-                </Link>
-              </div>
-              <div className="digiphere-stats py-3">
-                <div className="digisphere-Projects-Delivered">
-                  <h6>336+</h6>
-                  <p>Projects Delivered</p>
+                <div class="digisphere-hero-buttons">
+                  <Link class="btn-books">
+                    Start Free Digital Audit
+                    <i class="bi bi-arrow-right">
+                      <FaArrowRight />
+                    </i>
+                  </Link>
+                  <Link href="" class="btn-call">
+                    <i class="bi bi-telephone"></i> See Our Work
+                  </Link>
                 </div>
+                <div className="digiphere-stats py-3">
+                  <div className="digisphere-Projects-Delivered">
+                    <h6>336+</h6>
+                    <p>Projects Delivered</p>
+                  </div>
 
-                <div className="digisphere-Clients">
-                  <h6>316+</h6>
-                  <p>Clients</p>
-                </div>
+                  <div className="digisphere-Clients">
+                    <h6>316+</h6>
+                    <p>Clients</p>
+                  </div>
 
-                <div className="digisphere-growing">
-                  <p>Growing Nationwide</p>
+                  <div className="digisphere-growing">
+                    <p>Growing Nationwide</p>
+                  </div>
                 </div>
-              </div>
               </Reveal>
             </div>
             <div className="col-lg-6 digisphere-right">
-              <Reveal variant={fadeLeft} delay={0.1}>
               <div className="top-grid">
                 {topCards.map((card, index) => (
-                  <div className="card large-card" key={index}>
-                    <div className="card-header">
-                      <span className="icon">{card.icon}</span>
-                      <span className="title">{card.title}</span>
+                  <Reveal
+                    variant={
+                      index === 0 ? fadeLeft : index === 1 ? fadeRight : fadeUp
+                    }
+                    delay={0.2}
+                  >
+                    <div className="card large-card" key={index}>
+                      <div className="card-header">
+                        <span className="icon">{card.icon}</span>
+                        <span className="title">{card.title}</span>
+                      </div>
+
+                      <h2 className="Digisphere-value">
+                        <AnimatedCounter
+                          end={card.end}
+                          prefix={card.prefix}
+                          suffix={card.suffix}
+                        />
+                      </h2>
+
+                      <span className="Digisphere-label">{card.label}</span>
                     </div>
-
-                    <h2 className="Digisphere-value">
-                      <AnimatedCounter
-                        end={card.end}
-                        prefix={card.prefix}
-                        suffix={card.suffix}
-                      />
-                    </h2>
-
-                    <span className="Digisphere-label">{card.label}</span>
-                  </div>
+                  </Reveal>
                 ))}
               </div>
-              </Reveal>
               <div className="bottom-grid">
                 {bottomCards.map((card, index) => (
                   <div className="card digi-small-card" key={index}>
@@ -521,22 +564,21 @@ const DigispherHome = () => {
         <div className="container">
           <div className="row">
             <div className="digisphere-dusinesses-growth">
-              <Reveal variant={fadeUp}>
-              <h3 className="digisphere-growth-title">
-                Most businesses don't have a technology problem.
-              </h3>
-              <h3 className="digisphere-secondgrowth-title">
-                They have a growth problem.
-              </h3>
+              <Reveal variant={fadeUp} delay={0.12}>
+                <h3 className="digisphere-growth-title">
+                  Most businesses don't have a technology problem.
+                </h3>
+                <h3 className="digisphere-secondgrowth-title">
+                  They have a growth problem.
+                </h3>
               </Reveal>
             </div>
             <div className="row gx-5 align-items-center pair-row my-5">
-              
               <div className="col-lg-6 digisphere-per ">
-                
                 <div class="digisphere-service-icon">
                   <img src={analyticsIcon} alt="analyticsIcon" />
                 </div>
+                <Reveal variant={fadeRight} delay={0.2}>
                 <div className="digisphere-service-section">
                   <p className="digisphere-service-title">
                     Customers are searching for your services right now. If they
@@ -549,7 +591,7 @@ const DigispherHome = () => {
                   <h6 className="digisphere-outcome">OUTCOME</h6>
                   <p className="enquiries">60–80% more enquiries.</p>
                 </div>
-                
+                </Reveal>
               </div>
               <div className="col-lg-6 digisphere-right-per ">
                 <div className="digisphere-wrapper">
@@ -571,6 +613,7 @@ const DigispherHome = () => {
                 <div class="digisphere-service-icon">
                   <img src={manual} alt="manual" />
                 </div>
+                <Reveal variant={fadeLeft} delay={0.2}>
                 <div className="digisphere-service-section">
                   <p className="digisphere-service-title">
                     Your team relies on WhatsApp, spreadsheets, and manual
@@ -583,6 +626,7 @@ const DigispherHome = () => {
                   <h6 className="digisphere-outcome">OUTCOME</h6>
                   <p className="enquiries">10+ hours saved every week.</p>
                 </div>
+                </Reveal>
               </div>
             </div>
 
@@ -591,6 +635,7 @@ const DigispherHome = () => {
                 <div class="digisphere-service-icon">
                   <img src={Growth} alt="analyticsIcon" />
                 </div>
+                <Reveal variant={fadeRight} delay={0.2}>
                 <div className="digisphere-service-section">
                   <p className="digisphere-service-title">
                     Growth breaks infrastructure that wasn't built to scale.
@@ -602,6 +647,7 @@ const DigispherHome = () => {
                   <h6 className="digisphere-outcome">OUTCOME</h6>
                   <p className="enquiries">99.9% uptime.</p>
                 </div>
+                </Reveal>
               </div>
               <div className="col-lg-6 digisphere-right-built ">
                 <div className="digisphere-wrapper-growth">
@@ -619,90 +665,92 @@ const DigispherHome = () => {
       <section className="digisphere-ecosystem-section">
         <div className="container">
           <Reveal variant={fadeRight}>
-          <h2 className="digisphere-ecosystem-title">
-            Everything your business needs
-            <br />
-            <span>to grow and scale.</span>
-          </h2>
+            <h2 className="digisphere-ecosystem-title">
+              Everything your business needs
+              <br />
+              <span>to grow and scale.</span>
+            </h2>
           </Reveal>
           <div className="digisphere-service-grid">
             {services.map((item, index) => (
               <Reveal variant={fadeUp}>
-              <div className="digisphere-service-card" key={index}>
-                <span className="digisphere-service-icon-image">
-                  {item.icon}
-                </span>
-                <span>{item.name}</span>
-              </div>
+                <div className="digisphere-service-card" key={index}>
+                  <span className="digisphere-service-icon-image">
+                    {item.icon}
+                  </span>
+                  <span>{item.name}</span>
+                </div>
               </Reveal>
             ))}
           </div>
           <Reveal variant={fadeUp} delay={0.1}>
-          <div className="digisphere-ecosystem-box">
-            <h3>DIGISPHERE ECOSYSTEM</h3>
-            <p>All services integrated and working together for your growth</p>
-          </div>
+            <div className="digisphere-ecosystem-box">
+              <h3>DIGISPHERE ECOSYSTEM</h3>
+              <p>
+                All services integrated and working together for your growth
+              </p>
+            </div>
           </Reveal>
         </div>
       </section>
       <section className="digisphere-advantage-section">
         <div className="digisphere-container">
           <Reveal variant={fadeUp} delay={0.1}>
-          <h2 className="digisphere-title">
-            From
-            <span className="digital-presence"> digital presence</span>
-            <br />
-            to <span className="digital-advantage">digital advantage.</span>
-          </h2>
+            <h2 className="digisphere-title">
+              From
+              <span className="digital-presence"> digital presence</span>
+              <br />
+              to <span className="digital-advantage">digital advantage.</span>
+            </h2>
           </Reveal>
           <div className="digisphere-cards-wrapper">
             {/* Before Card */}
             <Reveal variant={fadeRight} delay={0.1}>
-            <div className="digisphere-card digisphere-before-card">
-              <div className="digisphere-card-header">
-                <span className="digisphere-icon">
-                  <img
-                    className="digisphere-header-icon"
-                    src={Before}
-                    alt="Before"
-                  />
-                </span>
-                <span>Before</span>
-              </div>
+              <div className="digisphere-card digisphere-before-card">
+                <div className="digisphere-card-header">
+                  <span className="digisphere-icon">
+                    <img
+                      className="digisphere-header-icon"
+                      src={Before}
+                      alt="Before"
+                    />
+                  </span>
+                  <span>Before</span>
+                </div>
 
-              <ul className="digisphere-list">
-                {beforeItems.map((item, index) => (
-                  <li key={index} className="digisphere-list-item">
-                    <span className="digisphere-item-icon">{item.icon}</span>
-                    <span>{item.name}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                <ul className="digisphere-list">
+                  {beforeItems.map((item, index) => (
+                    <li key={index} className="digisphere-list-item">
+                      <span className="digisphere-item-icon">{item.icon}</span>
+                      <span>{item.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </Reveal>
             {/* After Card */}
             <Reveal variant={fadeLeft} delay={0.1}>
-            <div className="digisphere-card digisphere-after-card">
-              <div className="digisphere-card-header">
-                <span className="digisphere-icon">
-                  <img
-                    className="digisphere-header-icon"
-                    src={After}
-                    alt="After"
-                  />
-                </span>
-                <span>After</span>
-              </div>
+              <div className="digisphere-card digisphere-after-card">
+                <div className="digisphere-card-header">
+                  <span className="digisphere-icon">
+                    <img
+                      className="digisphere-header-icon"
+                      src={After}
+                      alt="After"
+                    />
+                  </span>
+                  <span>After</span>
+                </div>
 
-              <ul className="digisphere-list">
-                {afterItems.map((item, index) => (
-                  <li key={index} className="digisphere-list-item">
-                    <span className="digisphere-item-icon">{item.icon}</span>
-                    <span>{item.name}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                <ul className="digisphere-list">
+                  {afterItems.map((item, index) => (
+                    <li key={index} className="digisphere-list-item">
+                      <span className="digisphere-item-icon">{item.icon}</span>
+                      <span>{item.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </Reveal>
           </div>
         </div>
@@ -710,37 +758,37 @@ const DigispherHome = () => {
       <section className="digisphere-business-needs-section">
         <div className="digisphere-business-needs-container">
           <Reveal variant={fadeLeft}>
-          <h2 className="digisphere-business-needs-title">
-            Everything your business needs
-            <br />
-            <span>to grow and run online.</span>
-          </h2>
+            <h2 className="digisphere-business-needs-title">
+              Everything your business needs
+              <br />
+              <span>to grow and run online.</span>
+            </h2>
           </Reveal>
           <div className="digisphere-business-needs-grid">
             {businessNeeds.map((item, index) => (
               <Reveal variant={fadeUp}>
-              <div key={index} className="digisphere-business-needs-card">
-                <div className="digisphere-business-needs-icon">
-                  <img src={item.icon} alt={item.title} />
+                <div key={index} className="digisphere-business-needs-card">
+                  <div className="digisphere-business-needs-icon">
+                    <img src={item.icon} alt={item.title} />
+                  </div>
+
+                  <h3 className="digisphere-business-needs-heading">
+                    {item.title}
+                  </h3>
+
+                  <p className="digisphere-business-needs-description">
+                    {item.description}
+                  </p>
+
+                  <p className="digisphere-business-needs-highlight">
+                    {item.highlight}
+                  </p>
+
+                  <button className="digisphere-business-needs-link">
+                    Learn more
+                    <span>→</span>
+                  </button>
                 </div>
-
-                <h3 className="digisphere-business-needs-heading">
-                  {item.title}
-                </h3>
-
-                <p className="digisphere-business-needs-description">
-                  {item.description}
-                </p>
-
-                <p className="digisphere-business-needs-highlight">
-                  {item.highlight}
-                </p>
-
-                <button className="digisphere-business-needs-link">
-                  Learn more
-                  <span>→</span>
-                </button>
-              </div>
               </Reveal>
             ))}
           </div>
@@ -752,7 +800,9 @@ const DigispherHome = () => {
             OUR CLIENTS REPORT
           </span>
 
-          <h2 className="digisphere-client-report__percentage">60–80%</h2>
+          <h2 className="digisphere-client-report__percentage">
+            <AnimatedCounter end={[60,80]} suffix="%"/>
+          </h2>
 
           <p className="digisphere-client-report__description">
             More online enquiries within the first quarter.
@@ -801,40 +851,40 @@ const DigispherHome = () => {
         <div className="container">
           {/* Section Heading */}
           <Reveal variant={fadeUp}>
-          <div className="engagement-header text-center">
-            <h2>
-              From first conversation to{" "}
-              <h2 className="engagement-highlight">
-                {" "}
-                your business growing.
+            <div className="engagement-header text-center">
+              <h2>
+                From first conversation to{" "}
+                <h2 className="engagement-highlight">
+                  {" "}
+                  your business growing.
+                </h2>
               </h2>
-            </h2>
-          </div>
+            </div>
           </Reveal>
           {/* Cards */}
-          <div className="row g-4 justify-content-center steps-grid">
+          <section className="row g-4 justify-content-center digisteps-grid">
             {steps.map((step, index) => (
               <div className="col-12 col-sm-6 col-lg-3" key={index}>
-                <Reveal variant={fadeUp}>
-                <div className="step-card h-100">
-                  <div className="step-icon-box">
-                    <img
-                      src={step.icon}
-                      alt={step.title}
-                      className="step-icon"
-                    />
+                <Reveal variant={fadeUp} className="h-100">
+                  <div className="step-card h-100">
+                    <div className="step-icon-box">
+                      <img
+                        src={step.icon}
+                        alt={step.title}
+                        className="step-icon"
+                      />
+                    </div>
+
+                    <div className="step-number">{step.number}</div>
+
+                    <h3 className="step-title">{step.title}</h3>
+
+                    <p className="step-desc">{step.description}</p>
                   </div>
-
-                  <div className="step-number">{step.number}</div>
-
-                  <h3 className="step-title">{step.title}</h3>
-
-                  <p className="step-desc">{step.description}</p>
-                </div>
                 </Reveal>
               </div>
             ))}
-          </div>
+          </section>
         </div>
       </section>
 
@@ -846,7 +896,7 @@ const DigispherHome = () => {
               businesses like yours.
             </span>
           </h2>
- 
+
           <div className="digisphere-industries__tags">
             {industries.map((industry, index) => (
               <button key={index} className="digisphere-industries__tag">
@@ -921,58 +971,59 @@ const DigispherHome = () => {
       <section className="digisphere-feature-section">
         <div className="container">
           <Reveal variant={fadeLeft}>
-          <h2 className="digisphere-feature-title">
-            Build it. <span className="digisphere-feature-grow">Grow it.</span>{" "}
-            <span className="digisphere-feature-protect">Protect it.</span>
-          </h2>
+            <h2 className="digisphere-feature-title">
+              Build it.{" "}
+              <span className="digisphere-feature-grow">Grow it.</span>{" "}
+              <span className="digisphere-feature-protect">Protect it.</span>
+            </h2>
           </Reveal>
           <Reveal variant={fadeUp}>
-          <div className="digisphere-feature-grid">
-            {/* Build */}
-            <div className="digisphere-feature-item">
-              <div className="digisphere-feature-icon-box digisphere-feature-blue-bg">
-                <img src={Launch} alt="Launch" />
+            <div className="digisphere-feature-grid">
+              {/* Build */}
+              <div className="digisphere-feature-item">
+                <div className="digisphere-feature-icon-box digisphere-feature-blue-bg">
+                  <img src={Launch} alt="Launch" />
+                </div>
+
+                <h3 className="digisphere-feature-blue">Build it.</h3>
+
+                <ul>
+                  <li>Websites</li>
+                  <li>Applications</li>
+                  <li>Digital Products</li>
+                </ul>
               </div>
 
-              <h3 className="digisphere-feature-blue">Build it.</h3>
+              {/* Grow */}
+              <div className="digisphere-feature-item">
+                <div className="digisphere-feature-icon-box digisphere-feature-green-bg">
+                  <img src={Grow} alt="Grow" />
+                </div>
 
-              <ul>
-                <li>Websites</li>
-                <li>Applications</li>
-                <li>Digital Products</li>
-              </ul>
-            </div>
+                <h3 className="digisphere-feature-green-text">Grow it.</h3>
 
-            {/* Grow */}
-            <div className="digisphere-feature-item">
-              <div className="digisphere-feature-icon-box digisphere-feature-green-bg">
-                <img src={Grow} alt="Grow" />
+                <ul>
+                  <li>SEO</li>
+                  <li>Ads</li>
+                  <li>Marketing</li>
+                </ul>
               </div>
 
-              <h3 className="digisphere-feature-green-text">Grow it.</h3>
+              {/* Protect */}
+              <div className="digisphere-feature-item">
+                <div className="digisphere-feature-icon-box digisphere-feature-orange-bg">
+                  <img src={Protect} alt="Protect" />
+                </div>
 
-              <ul>
-                <li>SEO</li>
-                <li>Ads</li>
-                <li>Marketing</li>
-              </ul>
-            </div>
+                <h3 className="digisphere-feature-orange-text">Protect it.</h3>
 
-            {/* Protect */}
-            <div className="digisphere-feature-item">
-              <div className="digisphere-feature-icon-box digisphere-feature-orange-bg">
-                <img src={Protect} alt="Protect" />
+                <ul>
+                  <li>Cloud</li>
+                  <li>Security</li>
+                  <li>Managed IT</li>
+                </ul>
               </div>
-
-              <h3 className="digisphere-feature-orange-text">Protect it.</h3>
-
-              <ul>
-                <li>Cloud</li>
-                <li>Security</li>
-                <li>Managed IT</li>
-              </ul>
             </div>
-          </div>
           </Reveal>
         </div>
       </section>

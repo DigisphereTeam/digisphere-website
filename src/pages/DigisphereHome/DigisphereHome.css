@@ -382,7 +382,7 @@
 
 .digisphere-ecosystem-section {
   background: #f5f7fa;
-  padding: 100px 0;
+  padding: 60px 0;
   margin-top: 40px;
 }
 
@@ -474,8 +474,16 @@
   .digisphere-service-grid {
     grid-template-columns: 1fr;
   }
+  .digisphere-right {
+  margin: 20px auto;
+  padding: 20px;
+}
   .digisphere-right-per {
     padding: none !important;
+  }
+  .digisphere-left-per{
+    margin: 20px auto;
+    padding: 20px;
   }
 
   .digisphere-wrapper {
@@ -490,10 +498,11 @@
 
 .digisphere-advantage-section {
   width: 100%;
-  padding: 80px 20px;
+  padding: 70px 20px;
   display: flex;
   justify-content: center;
 }
+
 
 .digisphere-container {
   max-width: 900px;
@@ -524,6 +533,7 @@
   padding: 32px;
   text-align: left;
   min-height: 160px;
+  /* transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .digisphere-before-card {
@@ -614,7 +624,7 @@
 }
 
 .digisphere-business-needs-section {
-  padding: 80px 20px;
+  padding: 70px 20px;
   background: #f8fafc;
 }
 
@@ -721,7 +731,7 @@
 
 .digisphere-client-report {
   background: #ffffff;
-  padding: 120px 20px;
+  padding: 64px 20px;
   text-align: center;
 }
 
@@ -1011,12 +1021,11 @@
   }
 }
 .digisphere-testimonial-wrapper {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #ffffff;
-  padding: 40px;
+  padding: 60px;
 }
 
 .digisphere-testimonial-card {
@@ -1168,7 +1177,7 @@
 
 .digisphere-feature-section {
   background: #f8fafc;
-  padding: 100px 20px;
+  padding: 70px 20px;
 }
 
 .digisphere-feature-title {
@@ -1292,7 +1301,7 @@
 
 .digisphere-cta-section {
   background: #ffffff;
-  padding: 100px 20px;
+  padding: 70px 20px;
 }
 
 .digisphere-cta-container {
@@ -1433,6 +1442,7 @@
     flex-direction: column;
     gap: 8px;
   }
+
 }
 
 /*New css */
@@ -1626,6 +1636,12 @@
 
 /* optional better mobile spacing */
 @media (max-width: 576px) {
+  .digisphere-advantage-section{
+    padding:30px;
+  }
+  .digisphere-client-report__percentage{
+    font-size: 65px;
+  }
   .digisphere-hero-title {
     font-size: 36px !important;
   }
@@ -1676,7 +1692,6 @@
   }
 
   .digisphere-card {
-    width: 100%;
     max-width: 340px;
   }
   .digisphere-business-needs-title {
@@ -1707,7 +1722,7 @@
 }
 
 .home-engagement-section {
-  padding-top: 50px ;
+  padding-top: 60px;
  
 }
 
@@ -1735,8 +1750,8 @@
    STEP CARDS
 ========================== */
 
-.steps-grid {
-  margin-bottom: 120px;
+.digisphere-steps-grid{
+  margin-bottom: 60px;
 }
 
 .step-card {
@@ -1846,6 +1861,9 @@
   .engagement-header {
     margin-bottom: 48px;
   }
+  .digisphere-steps-grid{
+  margin-bottom: 40px;
+}
 
   .step-card {
     min-height: 280px;
@@ -1869,9 +1887,10 @@
     margin-bottom: 40px;
   }
 
-  .steps-grid {
-    margin-bottom: 80px;
-  }
+  .digisphere-steps-grid{
+  margin-bottom: 30px;
+}
+
 
   .step-card {
     min-height: auto;
