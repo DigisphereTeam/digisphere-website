@@ -1,0 +1,198 @@
+.business-problems-section {
+  padding: 50px 0;
+  background: #ffffff;
+}
+
+.section-heading {
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #141b34;
+}
+
+.section-heading span {
+  color: #057dcd;
+}
+
+.problem-row {
+  margin-bottom: 50px;
+}
+
+.problem-row:last-child {
+  margin-bottom: 0;
+}
+
+.problem-content {
+  max-width: 540px;
+}
+
+.problem-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #141b34;
+  margin-bottom: 20px;
+}
+
+.problem-info {
+  padding: 10px 0;
+  border-top: 1px solid #e8edf3;
+}
+
+.problem-info:last-child {
+  border-bottom: 1px solid #e8edf3;
+}
+
+.problem-info h5 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+/* Heading Colors */
+
+.reason-title {
+  color: #ff4d4d;
+}
+
+.solution-title {
+  color: #057dcd;
+}
+
+.outcome-title {
+  color: #00b26b;
+}
+
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 30px;
+}
+
+.reason-grid span {
+  font-size: 14px;
+  color: #707b8e;
+}
+
+.problem-info p {
+  margin: 0;
+  color: #707b8e;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.success {
+  color: #0F172A !important;
+  font-weight: 600;
+}
+
+.problem-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.problem-image img {
+  width: 100%;
+  max-width: 650px;
+  display: block;
+}
+
+/* ==========================
+   Tablet & Mobile
+========================== */
+
+@media (max-width: 991px) {
+  .business-problems-section {
+    padding: 30px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 60px;
+  }
+
+  .section-heading h2 {
+    font-size: 36px;
+  }
+
+  .problem-row {
+    margin-bottom: 35px;
+  }
+
+  .problem-content {
+    max-width: 100%;
+    margin-bottom: 15px;
+    padding-right: 0;
+  }
+
+  .problem-content h3 {
+    font-size: 20px;
+  }
+  .problem-info h5 {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  .problem-info p{
+    font-size: 13px;
+  }
+
+  .problem-image {
+    margin-top: 0;
+  }
+
+  .problem-image img {
+    max-width: 600px;
+  }
+  .reason-grid span{
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  .business-problems-section {
+    padding: 18px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+  .problem-content h3 {
+    font-size: 18px;
+  }
+
+  .problem-info h5 {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .problem-info p{
+    font-size: 12px;
+  }
+
+  .reason-grid {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .reason-grid span{
+    font-size: 12px;
+  }
+
+  .problem-row {
+    margin-bottom: 30px;
+     column-gap: 30px;
+  }
+
+  .problem-content {
+    margin-bottom: 10px;
+  }
+
+  .problem-image img {
+    max-width: 100%;
+  }
+}

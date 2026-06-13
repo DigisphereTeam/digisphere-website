@@ -1,0 +1,220 @@
+.website-capabilities {
+  padding: 40px 0;
+  background: #ffffff;
+}
+
+/* =========================
+   COMMON HEADING
+========================= */
+
+.section-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 40px;
+}
+
+.section-title span {
+  color: #057DCD;
+}
+
+/* =========================
+   TABLE SECTION
+========================= */
+
+.capability-section {
+  padding: 45px 0px;
+  margin-bottom: 48px;
+  background-color: #f8fafc;
+}
+
+.capability-table-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.capability-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.capability-table thead {
+  background: #f8fafc;
+}
+
+.capability-table th {
+  text-align: left;
+  padding: 18px 22px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 1px;
+}
+
+.capability-table td {
+  padding: 18px 22px;
+  font-size: 15px;
+  color: #334155;
+  border-top: 1px solid #e5e7eb;
+}
+
+.capability-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.capability-table td:first-child {
+  font-weight: 600;
+}
+
+.table-dot {
+  width: 8px;
+  height: 8px;
+  background: #057DCD;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 12px;
+  position: relative;
+  top: -1px;
+}
+
+/* =========================
+   INDUSTRY SECTION
+========================= */
+
+.industry-section {
+  margin-top: 10px;
+}
+
+.industry-card {
+  height: 100%;
+  padding: 28px 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.industry-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.industry-icon i {
+  color: #057DCD;
+  font-size: 20px;
+}
+
+.industry-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.industry-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #64748b;
+  margin-bottom: 6px;
+  min-height: 70px;
+}
+
+.industry-footer{
+    padding-top: 12px;
+    border-top: 1px solid #e2e8f0;
+}
+.industry-benefit {
+    display: flex;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #22c55e;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+  .website-capabilities {
+    padding: 30px 0;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .capability-table th,
+  .capability-table td {
+    padding: 16px;
+  }
+
+  .industry-card {
+    padding: 24px 20px;
+  }
+
+  .industry-card p {
+    min-height: auto;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+  .website-capabilities {
+    padding: 24px 0;
+  }
+
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .capability-section {
+    padding: 35px 8px;
+    margin-bottom: 48px;
+  }
+
+  .capability-table th {
+    font-size: 11px;
+    padding: 14px;
+  }
+
+  .capability-table td {
+    font-size: 13px;
+    padding: 14px;
+  }
+
+  .industry-card {
+    padding: 22px 18px;
+    margin:0px 8px;
+  }
+
+  .industry-card h3 {
+    font-size: 17px;
+  }
+
+  .industry-card p {
+    font-size: 14px;
+  }
+}

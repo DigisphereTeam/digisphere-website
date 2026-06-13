@@ -11,8 +11,8 @@ const DigisphereHeader = () => {
     {
       title: "Services",
       options: [
-        { label: "Option 1", path: "/services/1" },
-        { label: "Option 2", path: "/services/2" },
+        { label: "WebsiteDevelopment", path: "/services/webdevelopment" },
+        { label: "Artificial Intelligence", path: "/services/2" },
       ],
     },
     {
@@ -41,7 +41,6 @@ const DigisphereHeader = () => {
           <img src={digilogo} alt="Digisphere Logo" className="Digisphere-logo-image" />
         </Link>
 
-        {/* Hamburger Mobile Toggle */}
         <button
           className="navbar-toggler"
           type="button"
@@ -52,13 +51,11 @@ const DigisphereHeader = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Collapsible content wrapper */}
         <div className={`collapse navbar-collapse justify-content-between ${isNavbarOpen ? "show" : ""}`}>
           
           {/* Center Links */}
           <ul className="navbar-nav mx-auto align-items-center gap-4">
             <li className="nav-item">
-              {/* Using NavLink instead of Link for automatic route matching */}
               <NavLink className="nav-link" to="/" end onClick={closeNavbar}>
                 Home
               </NavLink>
