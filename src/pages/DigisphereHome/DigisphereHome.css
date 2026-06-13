@@ -32,6 +32,7 @@
 }
 .digisphere-hero-desc {
   font-size: 18px;
+  color: #475569;
   margin-top: 20px;
   font-weight: 400;
 }
@@ -1364,7 +1365,7 @@
   border: 1px solid #e2e8f0;
   border-radius: 6px;
   padding: 12px 22px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;

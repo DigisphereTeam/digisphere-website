@@ -1,0 +1,15 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 12C0 5.37258 5.37258 0 12 0H36C42.6274 0 48 5.37258 48 12V36C48 42.6274 42.6274 48 36 48H12C5.37258 48 0 42.6274 0 36V12Z" fill="#E8F4FD"/>
+<path d="M14.97 24.92C14.6748 25.0974 14.4303 25.348 14.2604 25.6476C14.0904 25.9472 14.0008 26.2856 14 26.63V29.87C14.0008 30.2144 14.0904 30.5528 14.2604 30.8524C14.4303 31.152 14.6748 31.4026 14.97 31.58L17.97 33.38C18.2811 33.5669 18.6371 33.6656 19 33.6656C19.3629 33.6656 19.7189 33.5669 20.03 33.38L24 31V25.5L19 22.5L14.97 24.92Z" stroke="#057DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19 28.4999L14.26 25.6499" stroke="#057DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19 28.5L24 25.5" stroke="#057DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19 28.5V33.67" stroke="#057DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 25.5V31L27.97 33.38C28.2811 33.5669 28.6371 33.6656 29 33.6656C29.3629 33.6656 29.7189 33.5669 30.03 33.38L33.03 31.58C33.3252 31.4026 33.5697 31.152 33.7396 30.8524C33.9096 30.5528 33.9992 30.2144 34 29.87V26.63C33.9992 26.2856 33.9096 25.9472 33.7396 25.6476C33.5697 25.348 33.3252 25.0974 33.03 24.92L29 22.5L24 25.5Z" stroke="#057DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29 28.5L24 25.5" stroke="#057DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29 28.4999L33.74 25.6499" stroke="#057DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29 28.5V33.67" stroke="#057DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.97 16.4201C19.6748 16.5975 19.4303 16.8481 19.2604 17.1477C19.0904 17.4473 19.0008 17.7857 19 18.1301V22.5001L24 25.5001L29 22.5001V18.1301C28.9992 17.7857 28.9096 17.4473 28.7396 17.1477C28.5697 16.8481 28.3252 16.5975 28.03 16.4201L25.03 14.6201C24.7189 14.4332 24.3629 14.3345 24 14.3345C23.6371 14.3345 23.2811 14.4332 22.97 14.6201L19.97 16.4201Z" stroke="#057DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 19.9999L19.26 17.1499" stroke="#057DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 19.9999L28.74 17.1499" stroke="#057DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 25.5V20" stroke="#057DCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
