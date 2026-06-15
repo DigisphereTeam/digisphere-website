@@ -11,7 +11,7 @@ const DigisphereHeader = () => {
     {
       title: "Services",
       options: [
-        { label: "WebsiteDevelopment", path: "/services/webdevelopment" },
+        { label: "Website Development", path: "/services/webdevelopment" },
         { label: "Artificial Intelligence", path: "/services/2" },
       ],
     },

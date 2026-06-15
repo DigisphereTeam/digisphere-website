@@ -103,6 +103,9 @@
 /* Mobile */
 
 @media (max-width: 576px) {
+  .before-after-wrapper{
+    gap:10px;
+  }
   .before-after-title {
     font-size: 32px;
   }
