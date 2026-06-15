@@ -51,7 +51,7 @@
 .capability-table th {
   text-align: left;
   padding: 18px 22px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   color: #475569;
   letter-spacing: 1px;
@@ -59,7 +59,7 @@
 
 .capability-table td {
   padding: 18px 22px;
-  font-size: 15px;
+  font-size: 16px;
   color: #334155;
   border-top: 1px solid #e5e7eb;
 }
@@ -164,7 +164,7 @@
 
   .capability-table th,
   .capability-table td {
-    padding: 16px;
+    padding: 14px;
   }
 
   .industry-card {
@@ -197,11 +197,11 @@
 
   .capability-table th {
     font-size: 11px;
-    padding: 14px;
+    padding: 12px;
   }
 
   .capability-table td {
-    font-size: 13px;
+    font-size: 12px;
     padding: 14px;
   }
 

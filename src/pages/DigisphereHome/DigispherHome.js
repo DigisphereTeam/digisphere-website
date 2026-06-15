@@ -465,7 +465,7 @@ const DigispherHome = () => {
                 <div class="digisphere-hero-buttons">
                   <Link class="btn-books">
                     Start Free Digital Audit
-                    <i class="bi bi-arrow-right">
+                    <i>
                       <FaArrowRight />
                     </i>
                   </Link>
@@ -865,7 +865,7 @@ const DigispherHome = () => {
           <section className="row g-4 justify-content-center digisteps-grid">
             {steps.map((step, index) => (
               <div className="col-12 col-sm-6 col-lg-3" key={index}>
-                <Reveal variant={fadeUp} className="h-100">
+                <Reveal variant={fadeUp} className="h-100" delay={index * 0.15}>
                   <div className="step-card h-100">
                     <div className="step-icon-box">
                       <img
@@ -977,7 +977,7 @@ const DigispherHome = () => {
               <span className="digisphere-feature-protect">Protect it.</span>
             </h2>
           </Reveal>
-          <Reveal variant={fadeUp}>
+          <Reveal variant={fadeUp} delay={0.15}>
             <div className="digisphere-feature-grid">
               {/* Build */}
               <div className="digisphere-feature-item">
