@@ -10,7 +10,7 @@
 .section-title {
   text-align: center;
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   color: #0f172a;
   margin-bottom: 40px;
@@ -52,15 +52,15 @@
   text-align: left;
   padding: 18px 22px;
   font-size: 16px;
-  font-weight: 700;
-  color: #475569;
+  font-weight: 600;
+  color: #0F172A;
   letter-spacing: 1px;
 }
 
 .capability-table td {
   padding: 18px 22px;
   font-size: 16px;
-  color: #334155;
+  color: #0F172A;
   border-top: 1px solid #e5e7eb;
 }
 
@@ -72,17 +72,9 @@
   font-weight: 600;
 }
 
-.table-dot {
-  width: 8px;
-  height: 8px;
-  background: #057DCD;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 12px;
-  position: relative;
-  top: -1px;
+.item-outcome{
+  color:#475569 !important;
 }
-
 /* =========================
    INDUSTRY SECTION
 ========================= */
@@ -123,7 +115,7 @@
 
 .industry-card h3 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: #0f172a;
   margin-bottom: 12px;
   line-height: 1.3;
@@ -132,7 +124,7 @@
 .industry-card p {
   font-size: 14px;
   line-height: 1.7;
-  color: #64748b;
+  color: #475569;
   margin-bottom: 6px;
   min-height: 70px;
 }
@@ -147,6 +139,9 @@
   font-size: 13px;
   font-weight: 600;
   color: #22c55e;
+}
+.blue-icon{
+  margin-right: 12px;
 }
 
 /* =========================

@@ -48,7 +48,6 @@ const WebsiteTechnologySection = () => {
 
   return (
     <>
-      {/* Technology Stack */}
 
       <section className="website-tech-section">
         <div className="container">
@@ -69,12 +68,14 @@ const WebsiteTechnologySection = () => {
 
                   <div className="technology-list">
                     {tech.items.map((item, idx) => (
+                      <Reveal variant={fadeUp} delay={idx*0.15}>
                       <div
                         key={idx}
                         className="technology-item"
                       >
                         {item}
                       </div>
+                      </Reveal>
                     ))}
                   </div>
                 </div>

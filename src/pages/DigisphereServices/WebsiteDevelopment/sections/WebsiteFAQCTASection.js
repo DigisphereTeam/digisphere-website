@@ -7,6 +7,7 @@ import { fadeUp,fadeLeft,fadeRight } from "../../../../animations/variants";
 import Button from "../../../../components/Button/Button";
 import { FaArrowRight } from "react-icons/fa";
 import { RxPeople } from "react-icons/rx";
+import { LuChevronDown } from "react-icons/lu";
 
 const faqData = [
   {
@@ -75,7 +76,7 @@ const WebsiteFAQCTASection = () => {
                         activeIndex === index ? "active" : ""
                       }`}
                     >
-                      ▼
+                      <LuChevronDown />
                     </span>
                   </button>
 

@@ -1,6 +1,8 @@
 import React from "react";
 import "./WebsiteCapabilities.css";
 
+import blueIcon from "../../../../assets/website-development/blue-icon.svg";
+
 import cardIcon1 from "../../../../assets/website-development/card-icon1.svg";
 import cardIcon2 from "../../../../assets/website-development/card-icon2.svg";
 import cardIcon3 from "../../../../assets/website-development/card-icon3.svg";
@@ -143,10 +145,10 @@ const WebsiteCapabilities = () => {
                 {capabilities.map((item, index) => (
                   <tr key={index}>
                     <td>
-                      <span className="table-dot"></span>
+                      <span><img src={blueIcon} alt="Icon" className="blue-icon"/></span>
                       {item.capability}
                     </td>
-                    <td>{item.outcome}</td>
+                    <td className="item-outcome">{item.outcome}</td>
                   </tr>
                 ))}
               </tbody>

@@ -9,7 +9,7 @@
 
 .section-heading h2 {
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   color: #141b34;
 }
@@ -32,7 +32,7 @@
 
 .problem-content h3 {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   color: #141b34;
   margin-bottom: 20px;
 }
@@ -75,12 +75,12 @@
 
 .reason-grid span {
   font-size: 14px;
-  color: #707b8e;
+  color: #475569;
 }
 
 .problem-info p {
   margin: 0;
-  color: #707b8e;
+  color: #475569;
   font-size: 15px;
   line-height: 1.7;
 }
@@ -88,6 +88,12 @@
 .success {
   color: #0F172A !important;
   font-weight: 600;
+}
+
+.grade-icons{
+  margin-right: 4px;
+  height: 18px;
+  width: 18px;
 }
 
 .problem-image {
