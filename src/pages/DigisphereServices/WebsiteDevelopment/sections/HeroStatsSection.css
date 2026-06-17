@@ -54,37 +54,6 @@
   flex-wrap: wrap;
 }
 
-.primary-btn {
-  border: none;
-  background-color: #057DCD;
-  color: #ffffff;
-  padding: 16px 30px;
-  border-radius: 50px;
-  font-size: 15px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.primary-btn:hover {
-  background-color: #0464A4;
-  transform: translateY(-2px);
-}
-
-.secondary-btn {
-  background: transparent;
-  border: 1px solid #d0d5dd;
-  color: #101828;
-  padding: 16px 30px;
-  border-radius: 50px;
-  font-size: 15px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.secondary-btn:hover {
-  transform: translateY(-2px);
-}
-
 .hero-image-wrapper {
   text-align: center;
 }
@@ -188,8 +157,4 @@
     font-size: 12px;
   }
 
-  .primary-btn,
-  .secondary-btn {
-    width: 100%;
-  }
 }

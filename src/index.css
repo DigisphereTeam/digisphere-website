@@ -12,6 +12,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Outfit', sans-serif;
+  font-weight: 600;
 }
 
 /* Utility classes (Optional fallback helpers if you ever need to force a font somewhere specific) */

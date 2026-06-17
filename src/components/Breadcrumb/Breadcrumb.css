@@ -26,3 +26,12 @@
   color: #0F172A;
   font-weight: 600;
 }
+
+
+@media(max-width: 767px){
+  .breadcrumb-nav{
+    font-size: 10px;
+    margin-bottom: 5px;
+    padding-left: 4px;
+  }
+}

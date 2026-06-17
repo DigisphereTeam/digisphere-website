@@ -89,14 +89,14 @@
 
 .case-study-solution {
   color: #057dcd;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .case-study-description {
   font-size: 14px;
   line-height: 1.7;
   color: #64748b;
-  margin-bottom: 0;
+  margin-bottom: 14px;
 }
 
 .case-study-divider {
@@ -113,7 +113,7 @@
 }
 
 .case-study-result-number {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 1;
 }
@@ -155,7 +155,7 @@
   }
 
   .case-study-result-number {
-    font-size: 36px;
+    font-size: 30px;
   }
   .case-study-description{
     font-size: 12px;

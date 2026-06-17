@@ -25,7 +25,7 @@ const Breadcrumb = ({ items }) => {
 
             {!isLast && (
               <span className="breadcrumb-separator">
-                /
+                
               </span>
             )}
           </React.Fragment>

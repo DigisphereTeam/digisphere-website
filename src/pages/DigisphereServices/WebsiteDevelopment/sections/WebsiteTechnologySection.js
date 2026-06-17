@@ -1,8 +1,10 @@
 import React from "react";
 import "./WebsiteTechnologySection.css";
 
-import Before from "../../../../assets/website-development/before.svg";
-import After from "../../../../assets/website-development/after.svg";
+import { FaTimes,FaCheck } from "react-icons/fa";
+
+import Before from "../../../../assets/Before.svg";
+import After from "../../../../assets/After.svg";
 import Reveal from "../../../../animations/Reveal";
 import { fadeUp } from "../../../../animations/variants";
 import BeforeAfterCards from "../../../../components/BeforeAfterCards/BeforeAfterCards";
@@ -29,20 +31,20 @@ const WebsiteTechnologySection = () => {
   ];
 
   const beforeItems = [
-    { icon: "✕", name: "Slow website" },
-    { icon: "✕", name: "Poor rankings" },
-    { icon: "✕", name: "Low enquiries" },
-    { icon: "✕", name: "Outdated design" },
-    { icon: "✕", name: "No analytics" },
-  ];
+  { icon: <FaTimes />, name: "Slow website" },
+  { icon: <FaTimes />, name: "Poor rankings" },
+  { icon: <FaTimes />, name: "Low enquiries" },
+  { icon: <FaTimes />, name: "Outdated design" },
+  { icon: <FaTimes />, name: "No analytics" },
+];
 
   const afterItems = [
-    { icon: "✓", name: "Fast performance" },
-    { icon: "✓", name: "SEO visibility" },
-    { icon: "✓", name: "Lead generation" },
-    { icon: "✓", name: "Modern UX" },
-    { icon: "✓", name: "Business insights" },
-  ];
+  { icon: <FaCheck/>, name: "Fast performance" },
+  { icon: <FaCheck/>, name: "SEO visibility" },
+  { icon: <FaCheck/>, name: "Lead generation" },
+  { icon: <FaCheck/>, name: "Modern UX" },
+  { icon: <FaCheck/>, name: "Business insights" },
+];
 
   return (
     <>

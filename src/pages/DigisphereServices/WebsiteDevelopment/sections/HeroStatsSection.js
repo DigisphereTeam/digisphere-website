@@ -3,9 +3,10 @@ import "./HeroStatsSection.css";
 
 import heroImage from "../../../../assets/website-development/hero-image.svg";
 import Counter from "../../../../components/Counter/Counter";
-import Breadcrumb from "../../../../components/Breadcrumb/Breadcrumb";
 import Reveal from "../../../../animations/Reveal";
 import { fadeUp } from "../../../../animations/variants";
+import { FaArrowRight } from "react-icons/fa";
+import Button from "../../../../components/Button/Button";
 
 const HeroStatsSection = () => {
   const stats = [
@@ -17,7 +18,7 @@ const HeroStatsSection = () => {
     },
     {
       end: 70,
-      prefix:  "60-",
+      prefix: "60-",
       suffix: "%",
       label: "Average Increase In Enquiries",
     },
@@ -39,39 +40,38 @@ const HeroStatsSection = () => {
         <div className="row align-items-center">
           <div className="col-lg-6 col-12">
             <Reveal variant={fadeUp} delay={0.1}>
-            <div className="hero-content">
-              <Breadcrumb items={[
-                {label:"Home",path:"/"},
-                {label:"Services",path:"/services/webdevelopment"},
-                {label:"Website Design & Development"}
-              ]}/>
+              <div className="hero-content">
+                {/* <Breadcrumb
+                  items={[
+                    { label: "Home", path: "/" },
+                    { label: "Services", path: "/services/webdevelopment" },
+                    { label: "Website Design & Development" },
+                  ]}
+                /> */}
+                <span className="hero-tag">WEBSITE DESIGN & DEVELOPMENT</span>
 
-              <span className="hero-tag">
-                WEBSITE DESIGN & DEVELOPMENT
-              </span>
+                <h1 className="hero-title">
+                  Websites that work as hard
+                  <span> as your business does.</span>
+                </h1>
 
-              <h1 className="hero-title">
-                Websites that work as hard
-                <span> as your business does.</span>
-              </h1>
+                <p className="hero-description">
+                  Your website should be your best salesperson, not your biggest
+                  frustration. We design and develop fast, secure, and
+                  conversion-focused websites that help businesses attract more
+                  visitors, generate more leads, and win more customers.
+                </p>
 
-              <p className="hero-description">
-                Your website should be your best salesperson, not your biggest
-                frustration. We design and develop fast, secure, and
-                conversion-focused websites that help businesses attract more
-                visitors, generate more leads, and win more customers.
-              </p>
+                <div className="hero-buttons">
+                  <Button variant="primary" icon={<FaArrowRight/>}>
+                    <span>Start Free Digital Audit</span>
+                  </Button>
 
-              <div className="hero-buttons">
-                <button className="primary-btn">
-                  Start Free Digital Audit
-                </button>
-
-                <button className="secondary-btn">
-                  View Website Projects
-                </button>
+                  <Button variant="secondary" icon={<FaArrowRight />}>
+                    <span>View Website Projects</span>
+                  </Button>
+                </div>
               </div>
-            </div>
             </Reveal>
           </div>
 
@@ -90,22 +90,19 @@ const HeroStatsSection = () => {
       <div className="container stats-wrapper">
         <div className="row g-4">
           {stats.map((item, index) => (
-            <div
-              key={index}
-              className="col-lg-3 col-md-6 col-12"
-            >
+            <div key={index} className="col-lg-3 col-md-6 col-12">
               <Reveal variant={fadeUp} delay={index * 0.1}>
-              <div className="stat-card">
-                <h3 className="stat-number">
-                  <Counter
-                    end={item.end}
-                    prefix={item.prefix || ""}
-                    suffix={item.suffix || ""}
-                  />
-                </h3>
+                <div className="stat-card">
+                  <h3 className="stat-number">
+                    <Counter
+                      end={item.end}
+                      prefix={item.prefix || ""}
+                      suffix={item.suffix || ""}
+                    />
+                  </h3>
 
-                <p className="stat-label">{item.label}</p>
-              </div>
+                  <p className="stat-label">{item.label}</p>
+                </div>
               </Reveal>
             </div>
           ))}

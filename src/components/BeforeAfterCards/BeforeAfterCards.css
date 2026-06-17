@@ -54,8 +54,8 @@
 }
 
 .before-after-card-header img {
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
 }
 
 .before-after-card ul {
@@ -81,11 +81,11 @@
 }
 
 .item-icon.danger {
-  color: #ef4444;
+  color: #ef4444 !important;
 }
 
 .item-icon.success {
-  color: #10b981;
+  color: #10b981 !important;
 }
 
 /* Tablet */
@@ -103,11 +103,25 @@
 /* Mobile */
 
 @media (max-width: 576px) {
-  .before-after-wrapper{
-    gap:10px;
+
+  .before-after-card{
+    max-width: 100%;
+    width: 100%;
+    padding: 24px;
   }
+
+  .before-after-wrapper{
+    padding: 0 16px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .before-after-wrapper>*{
+    width: 100%;
+  }
+
   .before-after-title {
     font-size: 32px;
+    padding: 0 16px;
   }
 
   .before-after-card {

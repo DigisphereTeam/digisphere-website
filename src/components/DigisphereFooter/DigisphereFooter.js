@@ -95,18 +95,19 @@ const DigisphereFooter = () => {
 
           {/* Offices */}
           <div className="col-lg-3">
+            <h6 className="footer-title mt-4">Hyderabad Office</h6>
+            <p className="office-text">
+            HITEC City, Madhapur<br/>
+Telangana
+            </p>
             <h6 className="footer-title">Vijayawada Office</h6>
             <p className="office-text">
               MG Road, Labbipet
               <br />
-              Vijayawada, Andhra Pradesh
+              Andhra Pradesh
             </p>
 
-            <h6 className="footer-title mt-4">Hyderabad Office</h6>
-            <p className="office-text">
-            HITEC City, Madhapur<br/>
-Hyderabad, Telangana
-            </p>
+            
           </div>
         </div>
 
@@ -114,16 +115,16 @@ Hyderabad, Telangana
 
         {/* Bottom Section */}
         <div className="footer-bottom">
-          <div className="footer-certifications">
+          {/* <div className="footer-certifications">
             <span>ISO 27001 Aligned</span>
             <span>GDPR Framework</span>
             <span>IT Act 2000 Compliant</span>
-          </div>
+          </div> */}
 
-          <div className="footer-status">
+          {/* <div className="footer-status">
             <span className="status-dot"></span>
          All Systems Operational
-          </div>
+          </div> */}
         
         </div>
         <div className="footer-copy">

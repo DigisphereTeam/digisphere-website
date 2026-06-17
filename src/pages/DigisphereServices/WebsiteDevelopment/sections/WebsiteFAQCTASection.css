@@ -113,37 +113,6 @@
   margin-bottom: 40px;
 }
 
-.primary-btn {
-  border: none;
-  background: #057dcd;
-  color: #ffffff;
-  padding: 14px 28px;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.primary-btn:hover {
-  background: #046cb1;
-}
-
-.secondary-btn {
-  border: 1px solid #d0d5dd;
-  background: #ffffff;
-  color: #101828;
-  padding: 14px 28px;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.secondary-btn:hover {
-  border-color: #057dcd;
-  color: #057dcd;
-}
-
 .stats-row {
   justify-content: center;
   text-align: center;
@@ -201,12 +170,6 @@
     margin-bottom:10px;
   }
   
-
-  .primary-btn,
-  .secondary-btn {
-    width: 100%;
-    justify-content: center;
-  }
   .stat-item{
     font-size: 12px;
   }

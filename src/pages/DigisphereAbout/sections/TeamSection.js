@@ -19,16 +19,16 @@ const TeamSection = () => {
     description: "UX strategist creating user-centered digital experiences.",
   },
   {
+    initials: "SG",
+    name: "Sneha",
+    role: "Marketing Director",
+    description: "Growth marketer, driving measurable business outcomes."
+  },
+  {
     initials: "RV",
     name: "Ravi",
     role: "Backend Lead",
     description: "Cybersecurity expert with enterprise compliance experience.",
-  },
-  {
-    initials: "IS",
-    name: "Ibrahim Shaik",
-    role: "Frontend Developer",
-    description: "Cloud architect specializing in scalable infrastructure.",
   },
   {
     initials: "NA",
@@ -41,6 +41,12 @@ const TeamSection = () => {
     name: "Vamshi",
     role: "Backend Developer",
     description: "Focused on building robust microservices and server-side logic.",
+  },
+  {
+    initials: "IS",
+    name: "Ibrahim Shaik",
+    role: "Frontend Developer",
+    description: "Cloud architect specializing in scalable infrastructure.",
   },
   {
     initials: "PM",
