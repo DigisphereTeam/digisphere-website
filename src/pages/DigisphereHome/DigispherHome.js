@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { Container } from "react-bootstrap";
 import "./DigisphereHome.css";
-
+import { TiArrowUp } from "react-icons/ti";
+import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
 import Website from "../../assets/Website.svg";
 import Launchgrow from "../../assets/Launch & Grow.svg";
@@ -12,8 +13,6 @@ import Securitye from "../../assets/Security.svg";
 import Performance from "../../assets/Performance.svg";
 import DevOps from "../../assets/DevOps.svg";
 import analyticsIcon from "../../assets/Website AnalyticsIcon.svg";
-import ranking from "../../assets/ranking image.svg";
-import percentage from "../../assets/percentage.svg";
 import manual from "../../assets/manual.svg";
 import infrastructure from "../../assets/infrastructure.svg";
 import Growth from "../../assets/Growth.svg";
@@ -60,6 +59,7 @@ import Reveal from "../../animations/Reveal";
 import { fadeLeft, fadeRight, fadeUp } from "../../animations/variants";
 import { Link } from "react-router-dom";
 import { useInView } from "framer-motion";
+
 
 const CountUp = ({ end, suffix = "", duration = 2000, startAnimation }) => {
   const [count, setCount] = useState(0);
@@ -121,10 +121,7 @@ const AnimatedCounter = ({
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
 
-      const progress = Math.min(
-        (currentTime - startTime) / duration,
-        1
-      );
+      const progress = Math.min((currentTime - startTime) / duration, 1);
 
       setCount1(progress * target1);
 
@@ -153,10 +150,7 @@ const AnimatedCounter = ({
       {prefix}
       {isRange ? (
         <>
-          {formatNumber(count1, target1)}–{formatNumber(
-            count2,
-            target2
-          )}
+          {formatNumber(count1, target1)}–{formatNumber(count2, target2)}
         </>
       ) : (
         formatNumber(count1, target1)
@@ -166,8 +160,24 @@ const AnimatedCounter = ({
   );
 };
 
-
 const DigispherHome = () => {
+  const tasks = [
+    {
+      color: "#10B981",
+      progress: "100%",
+      title: "Automated Lead Flow",
+    },
+    {
+      color: "#057DCDE9",
+      progress: "80%",
+      title: "CRM Integration",
+    },
+    {
+      color: "#F59E0B",
+      progress: "60%",
+      title: "Reporting Dashboard",
+    },
+  ];
   const logos = [
     logo1,
     logo4,
@@ -398,6 +408,10 @@ const DigispherHome = () => {
       role: "Founder, GrowthHub",
     },
   ];
+  const bars = [36, 42, 50, 65, 78, 100, 117, 127];
+
+  const maxHeight = Math.max(...bars);
+  const minHeight = Math.min(...bars);
 
   const [startCount, setStartCount] = useState(false);
   const sectionRef = useRef(null);
@@ -450,16 +464,16 @@ const DigispherHome = () => {
                 <p class="Digisphere-badge">
                   Technology that works for your business
                 </p>
-                <h1 className="digisphere-hero-title">Technology that</h1>
-                <h1 className="digisphere-hero-secondtitle">
+                <h1 className="digisphere-hero-title">Technology that <h1 className="digisphere-hero-secondtitle">
                   grows your
                   <br /> business.
-                </h1>
+                </h1></h1>
+               
                 <p className="digisphere-hero-desc">
-                  We design and build the websites, applications, and marketing
-                  systems that bring in customers and keep them. Then we make
+                  We design and build the websites, applications, and marketing<br/>
+                  systems that bring in customers and keep them. Then we make<br/>
                   sure the infrastructure behind them is fast, secure, and ready
-                  to scale.
+                  to <br/>scale.
                 </p>
 
                 <div class="digisphere-hero-buttons">
@@ -579,28 +593,81 @@ const DigispherHome = () => {
                   <img src={analyticsIcon} alt="analyticsIcon" />
                 </div>
                 <Reveal variant={fadeRight} delay={0.2}>
-                <div className="digisphere-service-section">
-                  <p className="digisphere-service-title">
-                    Customers are searching for your services right now. If they
-                    can't find you, they find your competitors.
-                  </p>
-                  <h6 className="digisphere-solution">SOLUTION</h6>
-                  <p className="SEO-strategies">
-                    High-performance websites and SEO strategies.
-                  </p>
-                  <h6 className="digisphere-outcome">OUTCOME</h6>
-                  <p className="enquiries">60–80% more enquiries.</p>
-                </div>
+                  <div className="digisphere-service-section">
+                    <p className="digisphere-service-title">
+                      Customers are searching for your services right now. If
+                      they can't find you, they find your competitors.
+                    </p>
+                    <h6 className="digisphere-solution">SOLUTION</h6>
+                    <p className="SEO-strategies">
+                      High-performance websites and SEO strategies.
+                    </p>
+                    <h6 className="digisphere-outcome">OUTCOME</h6>
+                    <p className="enquiries">60–80% more enquiries.</p>
+                  </div>
                 </Reveal>
               </div>
-              <div className="col-lg-6 digisphere-right-per ">
+              {/* <div className="col-lg-6 digisphere-right-per ">
                 <div className="digisphere-wrapper">
                   <img className="ranking-image" src={ranking} alt="ranking" />
+                </div>
+              </div> */}
+              <div className="col-lg-6 digisphere-right-per ">
+                <div className="traffic-card">
+                  <div className="traffic-header">
+                    <h4>Organic Traffic</h4>
+
+                    <motion.span
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8 }}
+                    />
+                  </div>
+
+                  <div className="traffic-bars">
+                    {bars.map((height, index) => (
+                      <div
+                        key={index}
+                        className={`bar-wrapper ${
+                          height === maxHeight || height === minHeight
+                            ? "fixed-tooltip"
+                            : ""
+                        }`}
+                      >
+                        <span className="bar-tooltip">
+                          <TiArrowUp /> {height}%
+                        </span>
+
+                        <motion.div
+                          className="traffic-bar"
+                          initial={{ scaleY: 0 }}
+                          animate={{ scaleY: 1 }}
+                          transition={{
+                            duration: 0.6,
+                            delay: index * 0.1,
+                          }}
+                          style={{
+                            height: `${height}px`,
+                            transformOrigin: "bottom",
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  <motion.p
+                    className="traffic-footer"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1 }}
+                  >
+                    Search Rankings Up
+                  </motion.p>
                 </div>
               </div>
             </div>
             <div className="row  align-items-center pair-row ">
-              <div className="col-lg-6 digisphere-left-per ">
+              {/* <div className="col-lg-6 digisphere-left-per ">
                 <div className="digisphere-wrapper-per">
                   <img
                     className="percenteage-image"
@@ -608,24 +675,58 @@ const DigispherHome = () => {
                     alt="ranking"
                   />
                 </div>
+              </div> */}
+              <div className="col-lg-6 digisphere-left-per ">
+                <div className="progress-card">
+                  {tasks.map((task, index) => (
+                    <div className="progress-item" key={index}>
+                      <div
+                        className="progress-icon"
+                        style={{ background: `${task.color}20` }}
+                      >
+                        <span
+                          className="icon-dot"
+                          style={{ background: task.color }}
+                        ></span>
+                      </div>
+
+                      <div className="progress-content">
+                        <div className="progress-track">
+                          <motion.div
+                            className="progress-fill"
+                            initial={{ width: 0 }}
+                            animate={{ width: task.progress }}
+                            transition={{
+                              duration: 1.2,
+                              delay: index * 0.3,
+                            }}
+                            style={{ background: task.color }}
+                          />
+                        </div>
+
+                        <p>{task.title}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="col-lg-6 digisphere-right-per ">
                 <div class="digisphere-service-icon">
                   <img src={manual} alt="manual" />
                 </div>
                 <Reveal variant={fadeLeft} delay={0.2}>
-                <div className="digisphere-service-section">
-                  <p className="digisphere-service-title">
-                    Your team relies on WhatsApp, spreadsheets, and manual
-                    processes.
-                  </p>
-                  <h6 className="digisphere-solution">SOLUTION</h6>
-                  <p className="SEO-strategies">
-                    Custom applications and business automation.
-                  </p>
-                  <h6 className="digisphere-outcome">OUTCOME</h6>
-                  <p className="enquiries">10+ hours saved every week.</p>
-                </div>
+                  <div className="digisphere-service-section">
+                    <p className="digisphere-service-title">
+                      Your team relies on WhatsApp, spreadsheets, and manual
+                      processes.
+                    </p>
+                    <h6 className="digisphere-solution">SOLUTION</h6>
+                    <p className="SEO-strategies">
+                      Custom applications and business automation.
+                    </p>
+                    <h6 className="digisphere-outcome">OUTCOME</h6>
+                    <p className="enquiries">10+ hours saved every week.</p>
+                  </div>
                 </Reveal>
               </div>
             </div>
@@ -636,17 +737,17 @@ const DigispherHome = () => {
                   <img src={Growth} alt="analyticsIcon" />
                 </div>
                 <Reveal variant={fadeRight} delay={0.2}>
-                <div className="digisphere-service-section">
-                  <p className="digisphere-service-title">
-                    Growth breaks infrastructure that wasn't built to scale.
-                  </p>
-                  <h6 className="digisphere-solution">SOLUTION</h6>
-                  <p className="SEO-strategies">
-                    Cloud architecture, DevOps, and security.
-                  </p>
-                  <h6 className="digisphere-outcome">OUTCOME</h6>
-                  <p className="enquiries">99.9% uptime.</p>
-                </div>
+                  <div className="digisphere-service-section">
+                    <p className="digisphere-service-title">
+                      Growth breaks infrastructure that wasn't built to scale.
+                    </p>
+                    <h6 className="digisphere-solution">SOLUTION</h6>
+                    <p className="SEO-strategies">
+                      Cloud architecture, DevOps, and security.
+                    </p>
+                    <h6 className="digisphere-outcome">OUTCOME</h6>
+                    <p className="enquiries">99.9% uptime.</p>
+                  </div>
                 </Reveal>
               </div>
               <div className="col-lg-6 digisphere-right-built ">
@@ -801,7 +902,7 @@ const DigispherHome = () => {
           </span>
 
           <h2 className="digisphere-client-report__percentage">
-            <AnimatedCounter end={[60,80]} suffix="%"/>
+            <AnimatedCounter end={[60, 80]} suffix="%" />
           </h2>
 
           <p className="digisphere-client-report__description">
@@ -851,7 +952,7 @@ const DigispherHome = () => {
         <div className="container">
           {/* Section Heading */}
           <Reveal variant={fadeUp}>
-            <div className="engagement-header text-center">
+            <div className="digi-engagement-header text-center">
               <h2>
                 From first conversation to{" "}
                 <h2 className="engagement-highlight">
@@ -1032,9 +1133,9 @@ const DigispherHome = () => {
           <h2 className="digisphere-cta-title">
             Your business deserves a
             <br />
-            <span className="digisphere-cta-highlight">
+            <h2 className="digisphere-cta-highlight">
               better digital presence.
-            </span>
+            </h2>
           </h2>
 
           <p className="digisphere-cta-description">
