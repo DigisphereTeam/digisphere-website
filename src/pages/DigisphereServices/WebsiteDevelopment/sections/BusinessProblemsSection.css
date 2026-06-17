@@ -19,7 +19,7 @@
 }
 
 .problem-row {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .problem-row:last-child {
@@ -120,7 +120,7 @@
   }
 
   .problem-row {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
   }
 
   .problem-content {
@@ -164,7 +164,7 @@
   }
 
   .problem-content h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .problem-info h5 {
@@ -184,7 +184,7 @@
   }
 
   .problem-row {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
      column-gap: 30px;
   }
 

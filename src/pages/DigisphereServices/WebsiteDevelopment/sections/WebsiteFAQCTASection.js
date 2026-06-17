@@ -4,6 +4,9 @@ import "./WebsiteFAQCTASection.css";
 
 import Reveal from "../../../../animations/Reveal";
 import { fadeUp,fadeLeft,fadeRight } from "../../../../animations/variants";
+import Button from "../../../../components/Button/Button";
+import { FaArrowRight } from "react-icons/fa";
+import { RxPeople } from "react-icons/rx";
 
 const faqData = [
   {
@@ -115,15 +118,13 @@ const WebsiteFAQCTASection = () => {
 
               <Reveal variants={fadeUp}>
                 <div className="cta-buttons">
-                  <button className="primary-btn">
+                  <Button variant="primary" icon={<FaArrowRight/>}>
                     Book Free Audit
-                    <i className="bi bi-arrow-right ms-2"></i>
-                  </button>
+                  </Button>
 
-                  <button className="secondary-btn">
-                    <i className="bi bi-people me-2"></i>
+                  <Button variant="secondary" icon={<RxPeople />} iconPosition="left" >
                     Talk To Our Team
-                  </button>
+                  </Button>
                 </div>
               </Reveal>
 
