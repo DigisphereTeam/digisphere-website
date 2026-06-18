@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/" element={<DigisphereHome />} />
         <Route path="/about" element={<DigisphereAbout />} />
         <Route path="/services/webdevelopment" element={<WebsiteDevelopment/>} />
-        <Route path="/services/ExperinceDesign" element={<ExperinceDesign/>} />
+        <Route path="/services/experience-design" element={<ExperinceDesign/>} />
       </Routes>
 
       <DigisphereFooter />

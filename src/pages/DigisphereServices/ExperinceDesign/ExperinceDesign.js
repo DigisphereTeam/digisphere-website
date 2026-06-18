@@ -1,8 +1,11 @@
 import React from 'react'
+import ExperinceHerosection from './sections/ExperinceHerosection'
 
 const ExperinceDesign = () => {
   return (
-    <div>ExperinceDesign</div>
+    <>
+    <ExperinceHerosection/>
+    </>
     
   )
 }

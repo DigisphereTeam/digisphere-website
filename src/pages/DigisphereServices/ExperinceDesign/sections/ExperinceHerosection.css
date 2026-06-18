@@ -1,0 +1,21 @@
+.Experince-hero-image{
+  width: 100%;
+  max-width: 700px;
+  margin-top: 80px;
+  height: 100% !important;
+}
+.experince-stat-card {
+  border-radius: 18px;
+  padding: 32px 24px;
+  text-align: center;
+  height: 100%;
+  transition: 0.3s;
+}
+.experince-stat-number{
+    color: #FFFFFF;
+    font-size: 36px;
+}
+.experince-stat-label{
+    color: #FFFFFF99;
+    font-size: 12px;
+}
