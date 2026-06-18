@@ -6,6 +6,8 @@ import seoImg from "../../../../assets/website-development/seo-ranking.svg";
 import funnelImg from "../../../../assets/website-development/conversion-funnel.svg";
 import Reveal from "../../../../animations/Reveal";
 import { fadeLeft, fadeRight, fadeUp } from "../../../../animations/variants";
+import wrongIcon from "../../../../assets/website-development/wrong-icon.svg";
+import rightIcon from "../../../../assets/website-development/right-icon.svg";
 
 const BusinessProblemsSection = () => {
   return (
@@ -33,10 +35,10 @@ const BusinessProblemsSection = () => {
                   <h5 className="reason-title">REASONS</h5>
 
                   <div className="reason-grid">
-                    <span>✕ Slow speed</span>
-                    <span>✕ Poor structure</span>
-                    <span>✕ Weak messaging</span>
-                    <span>✕ Poor mobile experience</span>
+                    <span><img src={wrongIcon} alt="wrong-icon" className="grade-icons"/> Slow speed</span>
+                    <span><img src={wrongIcon} alt="wrong-icon" className="grade-icons"/> Poor structure</span>
+                    <span><img src={wrongIcon} alt="wrong-icon" className="grade-icons"/> Weak messaging</span>
+                    <span><img src={wrongIcon} alt="wrong-icon" className="grade-icons"/> Poor mobile experience</span>
                   </div>
                 </div>
 
@@ -50,7 +52,7 @@ const BusinessProblemsSection = () => {
 
                 <div className="problem-info">
                   <h5 className="outcome-title">OUTCOME</h5>
-                  <p className="success">✓ Higher engagement and enquiries.</p>
+                  <p className="success"><img src={rightIcon} alt="right-icon" className="grade-icons"/> Higher engagement and enquiries.</p>
                 </div>
               </div>
             </Reveal>
@@ -80,10 +82,10 @@ const BusinessProblemsSection = () => {
                 <h5 className="reason-title">REASONS</h5>
 
                 <div className="reason-grid">
-                  <span>✕ No SEO</span>
-                  <span>✕ Poor content</span>
-                  <span>✕ Slow site</span>
-                  <span>✕ No backlinks</span>
+                  <span><img src={wrongIcon} alt="wrong-icon" className="grade-icons"/> No SEO</span>
+                  <span><img src={wrongIcon} alt="wrong-icon" className="grade-icons"/> Poor content</span>
+                  <span><img src={wrongIcon} alt="wrong-icon" className="grade-icons"/> Slow site</span>
+                  <span><img src={wrongIcon} alt="wrong-icon" className="grade-icons"/> No backlinks</span>
                 </div>
               </div>
 
@@ -94,7 +96,7 @@ const BusinessProblemsSection = () => {
 
               <div className="problem-info">
                 <h5 className="outcome-title">OUTCOME</h5>
-                <p className="success">✓ More qualified organic traffic.</p>
+                <p className="success"><img src={rightIcon} alt="right-icon" className="grade-icons"/> More qualified organic traffic.</p>
               </div>
             </div>
             </Reveal>
@@ -112,10 +114,10 @@ const BusinessProblemsSection = () => {
                   <h5 className="reason-title">REASONS</h5>
 
                   <div className="reason-grid">
-                    <span>✕ Weak CTA</span>
-                    <span>✕ No trust signals</span>
-                    <span>✕ Confusing flow</span>
-                    <span>✕ Missing forms</span>
+                    <span><img src={wrongIcon} alt="wrong-icon" className="grade-icons"/> Weak CTA</span>
+                    <span><img src={wrongIcon} alt="wrong-icon" className="grade-icons"/> No trust signals</span>
+                    <span><img src={wrongIcon} alt="wrong-icon" className="grade-icons"/> Confusing flow</span>
+                    <span><img src={wrongIcon} alt="wrong-icon" className="grade-icons"/> Missing forms</span>
                   </div>
                 </div>
 
@@ -126,7 +128,7 @@ const BusinessProblemsSection = () => {
 
                 <div className="problem-info">
                   <h5 className="outcome-title">OUTCOME</h5>
-                  <p className="success">✓ More leads from existing traffic.</p>
+                  <p className="success"><img src={rightIcon} alt="right-icon" className="grade-icons"/> More leads from existing traffic.</p>
                 </div>
               </div>
             </Reveal>

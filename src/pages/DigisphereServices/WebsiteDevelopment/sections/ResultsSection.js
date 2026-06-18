@@ -10,6 +10,7 @@ import consultingIcon from "../../../../assets/website-development/technology-co
 import ecommerceIcon from "../../../../assets/website-development/ecommerce-retail-icon.svg";
 import Reveal from "../../../../animations/Reveal";
 import { fadeUp } from "../../../../animations/variants";
+import Counter from "../../../../components/Counter/Counter";
 
 const ResultsSection = () => {
   const caseStudies = [
@@ -99,7 +100,10 @@ const ResultsSection = () => {
                         className="case-study-result-number"
                         style={{ color: item.color }}
                       >
-                        {item.result}
+                        <Counter 
+                        prefix="+"
+                        end={parseInt(item.result)} //{parseInt(item.result.replace(/[^0-9]/g,""), 10)}
+                        suffix="%"/>
                       </span>
 
                       <span className="case-study-result-label">

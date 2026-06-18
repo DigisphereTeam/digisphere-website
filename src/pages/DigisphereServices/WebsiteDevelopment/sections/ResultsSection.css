@@ -10,7 +10,7 @@
 
 .design-performance-heading h2 {
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   color: #0f172a;
   margin-bottom: 0;
@@ -78,7 +78,7 @@
 .case-study-challenge,
 .case-study-solution {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.8px;
   margin-bottom: 8px;
 }
@@ -95,7 +95,7 @@
 .case-study-description {
   font-size: 14px;
   line-height: 1.7;
-  color: #64748b;
+  color: #475569;
   margin-bottom: 14px;
 }
 
@@ -114,7 +114,7 @@
 
 .case-study-result-number {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
 }
 

@@ -56,10 +56,12 @@ const HeroStatsSection = () => {
                 </h1>
 
                 <p className="hero-description">
-                  Your website should be your best salesperson, not your biggest
-                  frustration. We design and develop fast, secure, and
-                  conversion-focused websites that help businesses attract more
-                  visitors, generate more leads, and win more customers.
+                  A website is not a brochure. It is your best salesperson working 
+                  24 hours a day. We design and build websites that load fast, rank
+                  on search engines, and convert visitors into enquiries, bookings and
+                  sales.
+
+                  
                 </p>
 
                 <div className="hero-buttons">

@@ -8,9 +8,9 @@
 
 .section-heading {
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.15;
-  color: #101828;
+  color: #0F172A;
   margin-bottom: 40px;
 }
 
@@ -53,11 +53,11 @@
 
   font-size: 15px;
   font-weight: 500;
-  color: #101828;
+  color: #0F172A;
 }
 
 .faq-icon {
-  font-size: 12px;
+  font-size: 14px;
   color: #057dcd;
   transition: 0.3s ease;
 }
