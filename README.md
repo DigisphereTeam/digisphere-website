@@ -72,4 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 =======
 # digisphere-website
 Official Digisphere company website
->>>>>>> 0d9dd1429c39fde62f434fab9408cb46778ec839
+> 0d9dd1429c39fde62f434fab9408cb46778ec839
