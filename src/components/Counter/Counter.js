@@ -1,12 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import "./Counter.css";
 
-const Counter = ({
-  end,
-  duration = 2000,
-  prefix = "",
-  suffix = "",
-}) => {
+const Counter = ({ end, duration = 2000, prefix = "", suffix = "" }) => {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const counterRef = useRef(null);
@@ -18,12 +13,11 @@ const Counter = ({
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
 
-      const progress = Math.min(
-        (currentTime - startTime) / duration,
-        1
-      );
+      const progress = Math.min((currentTime - startTime) / duration, 1);
 
-      const currentCount = Math.floor(progress * end);
+      const currentCount = Number.isInteger(end)
+        ? Math.floor(progress * end)
+        : (progress * end).toFixed(1);
 
       setCount(currentCount);
 
@@ -48,7 +42,7 @@ const Counter = ({
       },
       {
         threshold: 0.4,
-      }
+      },
     );
 
     if (currentRef) {
