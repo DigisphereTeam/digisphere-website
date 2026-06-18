@@ -60,7 +60,6 @@ import { fadeLeft, fadeRight, fadeUp } from "../../animations/variants";
 import { Link } from "react-router-dom";
 import { useInView } from "framer-motion";
 
-
 const CountUp = ({ end, suffix = "", duration = 2000, startAnimation }) => {
   const [count, setCount] = useState(0);
 
@@ -412,6 +411,18 @@ const DigispherHome = () => {
 
   const maxHeight = Math.max(...bars);
   const minHeight = Math.min(...bars);
+  const barVariants = {
+    hidden: {
+      scaleY: 0,
+    },
+    visible: (index) => ({
+      scaleY: 1,
+      transition: {
+        duration: 0.6,
+        delay: index * 0.1,
+      },
+    }),
+  };
 
   const [startCount, setStartCount] = useState(false);
   const sectionRef = useRef(null);
@@ -464,16 +475,22 @@ const DigispherHome = () => {
                 <p class="Digisphere-badge">
                   Technology that works for your business
                 </p>
-                <h1 className="digisphere-hero-title">Technology that <h1 className="digisphere-hero-secondtitle">
-                  grows your
-                  <br /> business.
-                </h1></h1>
-               
+                <h1 className="digisphere-hero-title">
+                  Technology that{" "}
+                  <h1 className="digisphere-hero-secondtitle">
+                    grows your
+                    <br /> business.
+                  </h1>
+                </h1>
+
                 <p className="digisphere-hero-desc">
-                  We design and build the websites, applications, and marketing<br/>
-                  systems that bring in customers and keep them. Then we make<br/>
+                  We design and build the websites, applications, and marketing
+                  <br />
+                  systems that bring in customers and keep them. Then we make
+                  <br />
                   sure the infrastructure behind them is fast, secure, and ready
-                  to <br/>scale.
+                  to <br />
+                  scale.
                 </p>
 
                 <div class="digisphere-hero-buttons">
@@ -484,7 +501,7 @@ const DigispherHome = () => {
                     </i>
                   </Link>
                   <Link href="" class="btn-call">
-                    <i class="bi bi-telephone"></i> See Our Work
+                    <i class=""></i> See Our Work
                   </Link>
                 </div>
                 <div className="digiphere-stats py-3">
@@ -607,21 +624,24 @@ const DigispherHome = () => {
                   </div>
                 </Reveal>
               </div>
-              {/* <div className="col-lg-6 digisphere-right-per ">
-                <div className="digisphere-wrapper">
-                  <img className="ranking-image" src={ranking} alt="ranking" />
-                </div>
-              </div> */}
-              <div className="col-lg-6 digisphere-right-per ">
-                <div className="traffic-card">
-                  <div className="traffic-header">
-                    <h4>Organic Traffic</h4>
 
-                    <motion.span
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8 }}
-                    />
+              <div className="col-lg-6 digisphere-right-per">
+                <motion.div
+                  className="traffic-card"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <div className="traffic-header">
+                    <motion.h4
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      Organic Traffic
+                    </motion.h4>
                   </div>
 
                   <div className="traffic-bars">
@@ -635,17 +655,17 @@ const DigispherHome = () => {
                         }`}
                       >
                         <span className="bar-tooltip">
-                          <TiArrowUp /> {height}%
+                          <TiArrowUp />
+                          {height}%
                         </span>
 
                         <motion.div
                           className="traffic-bar"
-                          initial={{ scaleY: 0 }}
-                          animate={{ scaleY: 1 }}
-                          transition={{
-                            duration: 0.6,
-                            delay: index * 0.1,
-                          }}
+                          variants={barVariants}
+                          initial="hidden"
+                          whileInView="visible"
+                          viewport={{ once: true, amount: 0.3 }}
+                          custom={index}
                           style={{
                             height: `${height}px`,
                             transformOrigin: "bottom",
@@ -658,57 +678,65 @@ const DigispherHome = () => {
                   <motion.p
                     className="traffic-footer"
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.8 }}
                   >
                     Search Rankings Up
                   </motion.p>
-                </div>
+                </motion.div>
               </div>
             </div>
             <div className="row  align-items-center pair-row ">
-              {/* <div className="col-lg-6 digisphere-left-per ">
-                <div className="digisphere-wrapper-per">
-                  <img
-                    className="percenteage-image"
-                    src={percentage}
-                    alt="ranking"
-                  />
-                </div>
-              </div> */}
               <div className="col-lg-6 digisphere-left-per ">
-                <div className="progress-card">
-                  {tasks.map((task, index) => (
-                    <div className="progress-item" key={index}>
-                      <div
-                        className="progress-icon"
-                        style={{ background: `${task.color}20` }}
-                      >
-                        <span
-                          className="icon-dot"
-                          style={{ background: task.color }}
-                        ></span>
-                      </div>
+                 <motion.div
+        className="progress-card"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+      >
+        {tasks.map((task, index) => (
+          <div className="progress-item" key={index}>
+            <div
+              className="progress-icon"
+              style={{
+                backgroundColor: `${task.color}20`,
+              }}
+            >
+              <div
+                className="icon-dot"
+                style={{
+                  backgroundColor: task.color,
+                }}
+              />
+            </div>
 
-                      <div className="progress-content">
-                        <div className="progress-track">
-                          <motion.div
-                            className="progress-fill"
-                            initial={{ width: 0 }}
-                            animate={{ width: task.progress }}
-                            transition={{
-                              duration: 1.2,
-                              delay: index * 0.3,
-                            }}
-                            style={{ background: task.color }}
-                          />
-                        </div>
+            <div className="progress-content">
+              <div className="progress-track">
+                <motion.div
+                  className="progress-fill"
+                  style={{
+                    backgroundColor: task.color,
+                  }}
+                  initial={{ width: 0 }}
+                  whileInView={{ width: task.progress }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{
+                    duration: 1.2,
+                    delay: index * 0.25,
+                    ease: "easeOut",
+                  }}
+                />
+              </div>
 
-                        <p>{task.title}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+              <p>
+                {task.title} ({task.progress})
+              </p>
+            </div>
+          </div>
+        ))}
+      </motion.div>
               </div>
               <div className="col-lg-6 digisphere-right-per ">
                 <div class="digisphere-service-icon">

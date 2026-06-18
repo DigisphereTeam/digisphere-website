@@ -1,4 +1,3 @@
-
 .digisphere-page-container {
   width: 100%;
   overflow-x: hidden;
@@ -30,7 +29,7 @@
   font-size: 40px;
 }
 .digisphere-hero-desc {
-  font-size: 14px;
+  font-size: 16px;
   color: #475569;
   margin-top: 20px;
   font-weight: 400;
@@ -121,7 +120,6 @@
   color: #000000;
   margin: 0;
   line-height: 1;
-
 }
 
 .digiphere-stats p {
@@ -210,8 +208,8 @@
   align-items: center;
   text-align: center;
   border: 2px solid #e2e8f0;
-
   padding: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .digi-small-title {
   font-size: 10px;
@@ -268,7 +266,6 @@
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
-
 }
 
 .digi-partners-row span {
@@ -281,7 +278,6 @@
   text-align: center;
   font-size: 40px;
   font-weight: 600;
-
 }
 .digisphere-secondgrowth-title {
   text-align: center;
@@ -294,7 +290,6 @@
   font-size: 18px;
   font-weight: 700;
   margin-top: 20px;
-  
 }
 .digisphere-solution {
   font-size: 14px;
@@ -317,6 +312,7 @@
 .SEO-strategies {
   font-size: 16px;
   font-weight: 400;
+  color: #475569;
 }
 .digisphere-outcome {
   font-size: 14px;
@@ -338,7 +334,6 @@
 .enquiries {
   font-size: 18px;
   font-weight: 600;
-
 }
 .digisphere-wrapper {
   position: relative;
@@ -392,7 +387,6 @@
   font-weight: 600;
   color: #0f172a;
   margin-bottom: 40px;
- 
 }
 
 .digisphere-ecosystem-title span {
@@ -422,7 +416,7 @@
   font-weight: 600;
   color: #0f172a;
   align-items: baseline;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .digisphere-service-icon {
@@ -475,13 +469,13 @@
     grid-template-columns: 1fr;
   }
   .digisphere-right {
-  margin: 20px auto;
-  padding: 20px;
-}
+    margin: 20px auto;
+    padding: 20px;
+  }
   .digisphere-right-per {
     padding: none !important;
   }
-  .digisphere-left-per{
+  .digisphere-left-per {
     margin: 20px auto;
     padding: 20px;
   }
@@ -503,7 +497,6 @@
   justify-content: center;
 }
 
-
 .digisphere-container {
   max-width: 900px;
   width: 100%;
@@ -516,7 +509,6 @@
   line-height: 1.15;
   color: #1d2a44;
   margin-bottom: 50px;
- 
 }
 
 .digisphere-cards-wrapper {
@@ -582,7 +574,6 @@
   font-size: 20px;
   font-weight: 600;
   color: #556070;
-
 }
 
 .digisphere-icon {
@@ -757,7 +748,6 @@
   line-height: 1;
   color: rgba(5, 125, 205, 1);
   margin: 0;
- 
 }
 
 .digisphere-client-report__description {
@@ -765,7 +755,6 @@
   color: rgba(15, 23, 42, 1);
   margin: 25px 0 20px;
   font-weight: 400;
-  
 }
 
 .digisphere-client-report__link {
@@ -817,7 +806,6 @@
   color: rgba(15, 23, 42, 1);
   margin: 0;
   line-height: 1;
- 
 }
 
 .digisphere-stats__label {
@@ -870,7 +858,6 @@
   line-height: 1.2;
   color: #000000;
   margin: 0;
-
 }
 
 .digisphere-process__title-highlight {
@@ -919,7 +906,6 @@
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 10px;
-
 }
 
 .digisphere-process__card-title {
@@ -927,7 +913,6 @@
   font-weight: 700;
   color: rgba(15, 23, 42, 1);
   margin: 0 0 10px;
- 
 }
 
 .digisphere-process__description {
@@ -994,11 +979,17 @@
   color: rgba(15, 23, 42, 1);
   cursor: pointer;
 }
+.digisphere-industries__tag:hover {
+  background: #f1f5f9;
+  border-color: #f1f5f9;
+  color: #057dcd;
+  transform: translateY(-3px);
+}
 
 .digisphere-industries__tags:hover {
-   border-color: #e2e8f0;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-} 
+  border-color: #e2e8f0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 @media (max-width: 768px) {
   .digisphere-industries {
@@ -1046,7 +1037,7 @@
   border-radius: 20px;
   padding: 32px;
   opacity: 0.8 !important;
-  transition: all 0.3s  ease-in-out !important;
+  transition: all 0.3s ease-in-out !important;
 }
 
 .digisphere-testimonial-quote {
@@ -1055,7 +1046,6 @@
   line-height: 1.5;
   color: #1f2937;
   margin-bottom: 20px;
-
 }
 
 .digisphere-testimonial-badge {
@@ -1185,7 +1175,6 @@
   color: #0f172a;
   margin-bottom: 60px;
   line-height: 1.2;
-
 }
 
 .digisphere-feature-grow {
@@ -1246,7 +1235,6 @@
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 14px;
-
 }
 
 .digisphere-feature-green-text {
@@ -1314,7 +1302,6 @@
   line-height: 1.2;
   color: #000000;
   margin-bottom: 24px;
-
 }
 
 .digisphere-cta-highlight {
@@ -1423,7 +1410,7 @@
 
 @media (max-width: 576px) {
   .digisphere-cta-section {
-    padding: 35px 10px
+    padding: 35px 10px;
   }
 
   .digisphere-cta-buttons {
@@ -1441,7 +1428,6 @@
     flex-direction: column;
     gap: 8px;
   }
-
 }
 
 /*New css */
@@ -1547,7 +1533,7 @@
   .digisphere-brands-logos-item img {
     height: 40px !important;
   }
-  .digisphere-testimonial-name{
+  .digisphere-testimonial-name {
     font-size: 16px;
   }
 }
@@ -1564,13 +1550,13 @@
     font-size: 36px !important;
   }
   .digisphere-hero-desc {
-    font-size: 16px !important;
+    font-size: 14x !important;
   }
   .digiphere-stats h6 {
     font-size: 18px !important;
   }
   .digisphere-growth-title {
-    font-size: 36px ;
+    font-size: 36px;
   }
   .digisphere-service-title {
     font-size: 16px;
@@ -1581,7 +1567,7 @@
   .SEO-strategies {
     font-size: 12px;
   }
-  .digisphere-testimonial-quote{
+  .digisphere-testimonial-quote {
     font-size: 16px;
   }
   .enquiries {
@@ -1608,7 +1594,7 @@
   .digisphere-process__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .digisphere-testimonial-name{
+  .digisphere-testimonial-name {
     font-size: 14px;
   }
 
@@ -1635,10 +1621,10 @@
 
 /* optional better mobile spacing */
 @media (max-width: 576px) {
-  .digisphere-advantage-section{
-    padding:30px;
+  .digisphere-advantage-section {
+    padding: 30px;
   }
-  .digisphere-client-report__percentage{
+  .digisphere-client-report__percentage {
     font-size: 65px;
   }
   .digisphere-hero-title {
@@ -1648,7 +1634,7 @@
     font-size: 32px;
   }
   .digisphere-hero-desc {
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
   .digiphere-stats h6 {
     font-size: 16pxc !important;
@@ -1671,7 +1657,7 @@
   .digisphere-service-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-   .digisphere-testimonial-quote{
+  .digisphere-testimonial-quote {
     font-size: 14px;
   }
 
@@ -1705,44 +1691,44 @@
   .digisphere-business-needs-description {
     font-size: 12px;
   }
-.digisphere-testimonial-wrapper{
-       /* width: 270px; */
-     padding:20px;
+  .digisphere-testimonial-wrapper {
+    /* width: 270px; */
+    padding: 20px;
   }
-  .digisphere-testimonial-quote{
+  .digisphere-testimonial-quote {
     font-size: 12px;
   }
-  .digisphere-testimonial-badge{
+  .digisphere-testimonial-badge {
     font-size: 12px;
   }
-  .digisphere-testimonial-name{
+  .digisphere-testimonial-name {
     font-size: 14px;
   }
-.digisphere-testimonial-role{
-font-size: 12px;
-}
-.digisphere-feature-section{
-  padding: 35px 0;
-}
-.digisphere-feature-title{
-  margin-bottom: 30px;
-}
-.digisphere-business-needs-section{
-  padding: 30px 0;
-}
-.digisphere-ecosystem-section{
-  padding: 30px 0;
-  margin-top: 20px;
-}
-.digisphere-client-report{
-  padding:32px 5px;
-}
-.digisphere-stats{
-  padding:40px 0;
-}
-.digisphere-industries{
-  padding:35px 0;
-}
+  .digisphere-testimonial-role {
+    font-size: 12px;
+  }
+  .digisphere-feature-section {
+    padding: 35px 0;
+  }
+  .digisphere-feature-title {
+    margin-bottom: 30px;
+  }
+  .digisphere-business-needs-section {
+    padding: 30px 0;
+  }
+  .digisphere-ecosystem-section {
+    padding: 30px 0;
+    margin-top: 20px;
+  }
+  .digisphere-client-report {
+    padding: 32px 5px;
+  }
+  .digisphere-stats {
+    padding: 40px 0;
+  }
+  .digisphere-industries {
+    padding: 35px 0;
+  }
   .digisphere-process__title {
     font-size: 32px;
   }
@@ -1752,17 +1738,17 @@ font-size: 12px;
   .digisphere-cta-title {
     font-size: 32px !important;
   }
-   .digisphere-cta-description {
+  .digisphere-cta-description {
     font-size: 12px;
   }
-  .btn-books,.btn-call{
-    width: 100%
+  .btn-books,
+  .btn-call {
+    width: 100%;
   }
 }
 
 .home-engagement-section {
   padding: 60px 0;
- 
 }
 
 /* ==========================
@@ -1778,7 +1764,7 @@ font-size: 12px;
   font-weight: 600;
   color: #16213e;
   line-height: 1.2;
-margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .engagement-highlight {
@@ -1789,7 +1775,7 @@ margin-bottom: 50px;
    STEP CARDS
 ========================== */
 
-.digisphere-steps-grid{
+.digisphere-steps-grid {
   margin-bottom: 60px;
 }
 
@@ -1798,7 +1784,7 @@ margin-bottom: 50px;
   border: 1px solid #dfe8f1;
   border-radius: 14px;
   padding: 16px;
- 
+
   transition: all 0.3s ease;
 }
 
@@ -1831,7 +1817,7 @@ margin-bottom: 50px;
   font-weight: 700;
   color: #16213e;
   margin-bottom: 16px;
-  line-height: 1.0;
+  line-height: 1;
 }
 
 .step-desc {
@@ -1900,9 +1886,9 @@ margin-bottom: 50px;
   .engagement-header {
     margin-bottom: 48px;
   }
-  .digisphere-steps-grid{
-  margin-bottom: 40px;
-}
+  .digisphere-steps-grid {
+    margin-bottom: 40px;
+  }
 
   .step-card {
     min-height: 280px;
@@ -1926,10 +1912,9 @@ margin-bottom: 50px;
     margin-bottom: 40px;
   }
 
-  .digisphere-steps-grid{
-  margin-bottom: 30px;
-}
-
+  .digisphere-steps-grid {
+    margin-bottom: 30px;
+  }
 
   .step-card {
     min-height: auto;
@@ -1974,20 +1959,20 @@ margin-bottom: 50px;
   position: relative;
   border: 1px solid rgba(226, 232, 240, 1);
 }
- 
+
 .traffic-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
- 
+
 .traffic-header h4 {
   color: #475569;
   font-size: 15px;
   font-weight: 500;
   margin: 0;
 }
- 
+
 .traffic-bars {
   position: absolute;
   bottom: 45px;
@@ -1998,14 +1983,14 @@ margin-bottom: 50px;
   align-items: flex-end;
   gap: 8px;
 }
- 
+
 .bar-wrapper {
   flex: 1;
   position: relative;
   display: flex;
   justify-content: center;
 }
- 
+
 .traffic-bar {
   width: 100%;
   background: #057dcd;
@@ -2013,38 +1998,38 @@ margin-bottom: 50px;
   cursor: pointer;
   transition: 0.3s;
 }
- 
+
 .traffic-bar:hover {
   background: #0464a4;
 }
- 
+
 .bar-tooltip {
   position: absolute;
   top: -35px;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
-  color: #10b981;
+  color: #10B981;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   white-space: nowrap;
   opacity: 0;
   transition: all 0.3s ease;
   pointer-events: none;
   z-index: 10;
 }
- 
+
 /* Normal bars → show on hover */
 .bar-wrapper:hover .bar-tooltip {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
- 
+
 /* Highest & Lowest bars → always visible */
 .bar-wrapper.fixed-tooltip .bar-tooltip {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  /* transform: translateX(-50%) translateY(0); */
 }
- 
+
 .traffic-footer {
   position: absolute;
   bottom: 12px;
@@ -2055,14 +2040,14 @@ margin-bottom: 50px;
   margin: 0;
   text-align: center;
 }
- 
+
 /* Tablet */
 @media (max-width: 992px) {
   .traffic-card {
     min-height: 190px;
     padding: 10px 15px;
   }
- 
+
   .traffic-bars {
     height: 120px;
     bottom: 35px;
@@ -2070,20 +2055,20 @@ margin-bottom: 50px;
     right: 15px;
     gap: 5px;
   }
- 
+
   .traffic-header h4 {
     font-size: 14px;
   }
- 
+
   .traffic-footer {
     font-size: 13px;
   }
- 
+
   .bar-tooltip {
     font-size: 13px;
   }
 }
- 
+
 /* Mobile */
 @media (max-width: 768px) {
   .traffic-card {
@@ -2091,7 +2076,7 @@ margin-bottom: 50px;
     min-height: 170px;
     padding: 10px;
   }
- 
+
   .traffic-bars {
     height: 100px;
     bottom: 30px;
@@ -2099,22 +2084,21 @@ margin-bottom: 50px;
     right: 10px;
     gap: 3px;
   }
- 
+
   .traffic-header h4 {
     font-size: 12px;
   }
- 
+
   .traffic-footer {
     font-size: 11px;
     bottom: 8px;
   }
- 
+
   .bar-tooltip {
     font-size: 11px;
     top: -25px;
   }
 }
-
 
 .progress-card {
   width: 100%;
@@ -2124,17 +2108,17 @@ margin-bottom: 50px;
   padding: 16px;
   border: 1px solid #e2e8f0;
 }
- 
+
 .progress-item {
   display: flex;
-  /* align-items: center; */
   gap: 16px;
+  margin-bottom: 20px;
 }
- 
+
 .progress-item:last-child {
   margin-bottom: 0;
 }
- 
+
 .progress-icon {
   width: 40px;
   height: 40px;
@@ -2142,22 +2126,22 @@ margin-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
- 
+
 .icon-dot {
   width: 20px;
   height: 20px;
   border-radius: 50%;
 }
- 
+
 .progress-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 12px;
 }
- 
+
 .progress-track {
   width: 100%;
   height: 8px;
@@ -2165,49 +2149,42 @@ margin-bottom: 50px;
   border-radius: 50px;
   overflow: hidden;
 }
- 
+
 .progress-fill {
   height: 100%;
+  width: 0;
   border-radius: 50px;
- 
-  animation: fillBar 1.5s ease forwards;
 }
- 
+
 .progress-content p {
-  margin-top: 6px;
-  font-size: 10px;
+  margin-top: 8px;
+  font-size: 12px;
   color: #64748b;
+  font-weight: 500;
 }
- 
-@keyframes fillBar {
-  from {
-    width: 0;
-  }
-}
- 
+
 @media (max-width: 768px) {
   .progress-card {
-    min-height: 170px;
-    padding: 10px;
     width: 100%;
+    padding: 12px;
   }
-  .ranking-imag {
-    width: 116% !important;
+
+  .progress-item {
+    gap: 12px;
+    margin-bottom: 16px;
   }
+
   .progress-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 36px;
+    height: 36px;
   }
+
   .icon-dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+    width: 18px;
+    height: 18px;
   }
-  .digisphere-wrapper-growth{
-    width: 114%;
+
+  .progress-content p {
+    font-size: 11px;
   }
 }
