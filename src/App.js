@@ -5,6 +5,7 @@ import DigisphereHome from "./pages/DigisphereHome/DigispherHome";
 import DigisphereAbout from "./pages/DigisphereAbout/DigisphereAbout";
 import DigisphereFooter from "./components/DigisphereFooter/DigisphereFooter";
 import { WebsiteDevelopment } from "./pages/DigisphereServices/WebsiteDevelopment/WebsiteDevelopment";
+import ExperinceDesign from "./pages/DigisphereServices/ExperinceDesign/ExperinceDesign";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" element={<DigisphereHome />} />
         <Route path="/about" element={<DigisphereAbout />} />
         <Route path="/services/webdevelopment" element={<WebsiteDevelopment/>} />
+        <Route path="/services/ExperinceDesign" element={<ExperinceDesign/>} />
       </Routes>
 
       <DigisphereFooter />

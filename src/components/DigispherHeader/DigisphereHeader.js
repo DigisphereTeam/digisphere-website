@@ -12,7 +12,7 @@ const DigisphereHeader = () => {
       title: "Services",
       options: [
         { label: "Website Development", path: "/services/webdevelopment" },
-        { label: "Artificial Intelligence", path: "/services/2" },
+        { label: "Experince Design", path: "/services/ExperinceDesign" },
       ],
     },
     {
@@ -38,7 +38,11 @@ const DigisphereHeader = () => {
       <div className="container-fluid custom-container">
         {/* Left Side: Logo */}
         <Link className="navbar-brand fw-bold" to="/" onClick={closeNavbar}>
-          <img src={digilogo} alt="Digisphere Logo" className="Digisphere-logo-image" />
+          <img
+            src={digilogo}
+            alt="Digisphere Logo"
+            className="Digisphere-logo-image"
+          />
         </Link>
 
         <button
@@ -51,8 +55,9 @@ const DigisphereHeader = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className={`collapse navbar-collapse justify-content-between ${isNavbarOpen ? "show" : ""}`}>
-          
+        <div
+          className={`collapse navbar-collapse justify-content-between ${isNavbarOpen ? "show" : ""}`}
+        >
           {/* Center Links */}
           <ul className="navbar-nav mx-auto align-items-center gap-4">
             <li className="nav-item">
@@ -78,7 +83,11 @@ const DigisphereHeader = () => {
                 <ul className="dropdown-menu">
                   {item.options.map((opt, i) => (
                     <li key={i}>
-                      <Link className="dropdown-item" to={opt.path} onClick={closeNavbar}>
+                      <Link
+                        className="dropdown-item"
+                        to={opt.path}
+                        onClick={closeNavbar}
+                      >
                         {opt.label}
                       </Link>
                     </li>
@@ -95,7 +104,6 @@ const DigisphereHeader = () => {
               Let's Talk <FaArrowRight className="ms-1" size={12} />
             </button>
           </div>
-
         </div>
       </div>
     </nav>
