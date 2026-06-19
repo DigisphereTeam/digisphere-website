@@ -1,5 +1,5 @@
 import React from "react";
-import "./ExperinceHerosection.css";
+import "./ExperienceHerosection.css";
 import Reveal from "../../../../animations/Reveal";
 import Counter from "../../../../components/Counter/Counter";
 import { fadeUp } from "../../../../animations/variants";
@@ -39,7 +39,7 @@ const ExperinceHerosection = () => {
           <div className="col-lg-6 col-12">
             <Reveal variant={fadeUp} delay={0.1}>
               <div className="hero-content">
-                <p class="Digisphere-badge">
+                <p class="Digi-badge">
                   <img className="pen-image" src={pen} alt="pen" /> Experience
                   Design
                 </p>
