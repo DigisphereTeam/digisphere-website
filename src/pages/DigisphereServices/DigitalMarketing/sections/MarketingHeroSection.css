@@ -1,0 +1,17 @@
+
+
+.marketing-stat-card {
+  border-radius: 18px;
+  padding: 32px 24px;
+  text-align: center;
+  height: 100%;
+  transition: 0.3s;
+}
+.marketing-stat-number{
+    color: #FFFFFF;
+    font-size: 36px;
+}
+.marketing-stat-label{
+    color: #FFFFFF99;
+    font-size: 12px;
+}

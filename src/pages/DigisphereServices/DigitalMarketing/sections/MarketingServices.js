@@ -8,7 +8,7 @@ import tickIcon from "../../../../assets/digital-marketing/tick-icon.svg"
 
 import ServicesGrid from "../../../../components/ServicesGrid/ServicesGrid";
 
-const services = [
+const marketingServices = [
   {
     icon: seoIcon,
     title: "Search Engine Optimisation",
@@ -88,7 +88,7 @@ function MarketingServices() {
       sectionLabel="WHAT WE DO"
       heading="Every channel, one strategy."
       description="We don't pick one channel and call it a day. We build integrated systems where SEO, paid, email, and content amplify each other."
-      services={services}
+      services={marketingServices}
       tickIcon={tickIcon}
     />
   );
