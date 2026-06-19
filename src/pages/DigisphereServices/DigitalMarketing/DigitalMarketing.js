@@ -1,12 +1,14 @@
 import React from 'react'
-import MarketingCounter from './sections/MarketingCounter'
 import MarketingServices from './sections/MarketingServices'
+import MarketingHeroSection from './sections/MarketingHeroSection'
+import CardsFaqSection from './sections/CardsFaqSection'
 
 export const DigitalMarketing = () => {
   return (
     <>
-      <MarketingCounter/>
+      <MarketingHeroSection/>
       <MarketingServices/>
+      <CardsFaqSection/>
     </>
   )
 }
