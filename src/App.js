@@ -7,7 +7,7 @@ import DigisphereFooter from "./components/DigisphereFooter/DigisphereFooter";
 import { WebsiteDevelopment } from "./pages/DigisphereServices/WebsiteDevelopment/WebsiteDevelopment";
 import { DigitalMarketing } from "./pages/DigisphereServices/DigitalMarketing/DigitalMarketing";
 import { ManagedItServices } from "./pages/DigisphereServices/MangedItServices/ManagedItServices";
-import ExperinceDesign from "./pages/DigisphereServices/ExperinceDesign/ExperinceDesign";
+import ExperienceDesign from "./pages/DigisphereServices/ExperienceDesign/ExperienceDesign.js";
 
 const App = () => {
   return (
@@ -19,7 +19,10 @@ const App = () => {
         <Route path="/services/webdevelopment" element={<WebsiteDevelopment/>} />
         <Route path="/services/managed-it-services" element={<ManagedItServices/>}/>
         <Route path="/services/digital-marketing" element={<DigitalMarketing/>} />
-        <Route path="/services/experience-design" element={<ExperinceDesign/>} />
+        <Route path="/services/experience-design" element={<ExperienceDesign/>} />
+
+
+        
       </Routes>
 
       <DigisphereFooter />
