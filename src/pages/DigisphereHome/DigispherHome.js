@@ -605,7 +605,7 @@ const DigispherHome = () => {
               </Reveal>
             </div>
             <div className="row  align-items-center pair-row my-5">
-              <div className="col-lg-6 digisphere-per ">
+              <div className="col-lg-6 digisphere-per order-1"order-lg-1>
                 <div class="digisphere-service-icon">
                   <img src={analyticsIcon} alt="analyticsIcon" />
                 </div>
@@ -625,7 +625,7 @@ const DigispherHome = () => {
                 </Reveal>
               </div>
 
-              <div className="col-lg-6 digisphere-right-per">
+              <div className="col-lg-6 digisphere-right-per order-1 order-lg-2">
                 <motion.div
                   className="traffic-card"
                   initial={{ opacity: 0, y: 40 }}
@@ -688,7 +688,7 @@ const DigispherHome = () => {
               </div>
             </div>
             <div className="row  align-items-center pair-row ">
-              <div className="col-lg-6 digisphere-left-per ">
+              <div className="col-lg-6 digisphere-left-per order-2 order-lg-1">
                  <motion.div
         className="progress-card"
         initial={{ opacity: 0, y: 40 }}
@@ -738,7 +738,7 @@ const DigispherHome = () => {
         ))}
       </motion.div>
               </div>
-              <div className="col-lg-6 digisphere-right-per ">
+              <div className="col-lg-6 digisphere-right-per order-1 order-lg-2 ">
                 <div class="digisphere-service-icon">
                   <img src={manual} alt="manual" />
                 </div>
@@ -885,7 +885,7 @@ const DigispherHome = () => {
         </div>
       </section>
       <section className="digisphere-business-needs-section">
-        <div className="digisphere-business-needs-container">
+        <div className="digisphere-business-needs container">
           <Reveal variant={fadeLeft}>
             <h2 className="digisphere-business-needs-title">
               Everything your business needs
