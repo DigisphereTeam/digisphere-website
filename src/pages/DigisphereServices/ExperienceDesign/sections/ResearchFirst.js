@@ -6,27 +6,27 @@ const ResearchFirst = () => {
    const MarketingProcessSteps = [
     {
       number: "01",
-      title: "Audit & Discovery",
+      title: "Discover",
       description:
-        "We audit your channels, competitors, keyword landscape, and conversion funnel to find the highest-leverage opportunities.",
+      "We interview stakeholders and users, audit existing products, and map your customer journey to understand where experience is breaking down.",
     },
     {
       number: "02",
-      title: "Strategy Design",
+      title: "Define",
       description:
-        "A 90-day growth plan with channel prioritisation, budget allocation, content calendar, and conversion goals.",
+        "We distil research into personas, problem statements, and design principles that guide every decision that follows.",
     },
     {
       number: "03",
-      title: "Launch & Execute",
+      title: "Design",
       description:
-        "Campaigns go live with full tracking in place. Creative tested, landing pages optimised, automation wired.",
+        "Wireframes → high-fidelity mockups → interactive prototypes. We design in cycles with review checkpoints.",
     },
     {
       number: "04",
-      title: "Optimise & Scale",
+      title: "Validate",
       description:
-        "Monthly performance reviews, ongoing A/B tests, and budget reallocation toward what's working.",
+        "We test with real users before development begins, iterating until the experience is proven to work at the task level.",
     },
   ];
    const MarketingFaqData = [

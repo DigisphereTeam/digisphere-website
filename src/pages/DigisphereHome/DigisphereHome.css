@@ -41,6 +41,20 @@
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
+
+/* Mobile + Tablet */
+@media (max-width: 991px) {
+  .digisphere-hero-buttons {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-books,
+  .btn-call {
+    justify-content: center;
+    text-align: center;
+  }
+}
 .nav-btn-book {
   text-decoration: none;
   color: #ffffff;
@@ -233,6 +247,10 @@
   .top-grid,
   .bottom-grid {
     grid-template-columns: 1fr;
+  }
+  .large-card{
+    justify-content: center;
+    align-items: center;
   }
 }
 

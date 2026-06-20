@@ -33,3 +33,8 @@
     letter-spacing: 0.5px;
     margin-top: 40px;
 }
+@media (max-width: 768px) {
+  .Experince-hero-image{
+    margin-top: 10px !important;
+  }
+}
