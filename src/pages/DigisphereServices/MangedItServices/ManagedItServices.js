@@ -6,13 +6,17 @@ import { fadeUp } from "../../../animations/variants";
 import FAQSection from "../../../components/FaqSection/FAQSection";
 import ServicesGrid from "../../../components/ServicesGrid/ServicesGrid";
 
-import tickIcon from "../../../assets/digital-marketing/tick-icon.svg"
-import helpDeskIcon from "../../../assets/managed-it/helpdesk-icon.svg"
-import endpointIcon from "../../../assets/managed-it/endpoint-icon.svg"
-import serverNetworkIcon from "../../../assets/managed-it/servernetwork-icon.svg"
-import backupRecoveryIcon from "../../../assets/managed-it/backup-icon.svg"
-import softwareLicenceIcon from "../../../assets/managed-it/software-licence-icon.svg"
-import itStrategyIcon from "../../../assets/managed-it/itstrategy-icon.svg"
+import dashboardTop from "../../../assets/managed-it/dashboard-top.svg";
+import dashboardBottom from "../../../assets/managed-it/dashboard-bottom.svg";
+import heroLabelIcon from "../../../assets/managed-it/hero-label-icon.svg";
+import tickIcon from "../../../assets/digital-marketing/tick-icon.svg";
+import helpDeskIcon from "../../../assets/managed-it/helpdesk-icon.svg";
+import endpointIcon from "../../../assets/managed-it/endpoint-icon.svg";
+import serverNetworkIcon from "../../../assets/managed-it/servernetwork-icon.svg";
+import backupRecoveryIcon from "../../../assets/managed-it/backup-icon.svg";
+import softwareLicenceIcon from "../../../assets/managed-it/software-licence-icon.svg";
+import itStrategyIcon from "../../../assets/managed-it/itstrategy-icon.svg";
+import Button from "../../../components/Button/Button";
 
 const ManagedItServices = () => {
   const marketingStats = [
@@ -40,73 +44,73 @@ const ManagedItServices = () => {
   ];
 
   const itServices = [
-  {
-    icon: helpDeskIcon,
-    title: "IT Help Desk Support",
-    description:
-      "Single point of contact for all employee IT issues — hardware, software, connectivity, and account management — resolved fast so your team stays productive.",
-    points: [
-      "8am–8pm support (SLA-backed)",
-      "Remote & on-site resolution",
-      "Ticketing & tracking system",
-    ],
-  },
-  {
-    icon: endpointIcon,
-    title: "Endpoint Management",
-    description:
-      "Centrally managed desktops, laptops, and mobile devices — software deployment, patch management, security policies, and asset tracking across your fleet.",
-    points: [
-      "MDM/UEM platform setup",
-      "Automated patch management",
-      "Device health monitoring",
-    ],
-  },
-  {
-    icon: serverNetworkIcon,
-    title: "Server & Network Management",
-    description:
-      "Proactive management of your on-premise servers, network switches, firewalls, and Wi-Fi infrastructure — monitoring, patching, and performance optimisation.",
-    points: [
-      "24/7 monitoring",
-      "Network performance reporting",
-      "Firmware & patch management",
-    ],
-  },
-  {
-    icon: backupRecoveryIcon,
-    title: "Backup & Recovery",
-    description:
-      "Automated, verified backups with documented recovery procedures — protecting your business data against hardware failure, ransomware, and human error.",
-    points: [
-      "Daily automated backups",
-      "Backup verification testing",
-      "Documented RTO/RPO",
-    ],
-  },
-  {
-    icon: softwareLicenceIcon,
-    title: "Software & Licence Management",
-    description:
-      "Inventory, procurement, and compliance management for all software licences — eliminating audit risk and ensuring your team always has the tools they need.",
-    points: [
-      "Licence inventory audit",
-      "Renewal management",
-      "Usage optimisation",
-    ],
-  },
-  {
-    icon: itStrategyIcon,
-    title: "IT Strategy & Consulting",
-    description:
-      "Quarterly business reviews, technology roadmap planning, and budgeting guidance from a virtual CTO who understands your business context.",
-    points: [
-      "Quarterly IT reviews",
-      "3-year technology roadmap",
-      "Budget planning support",
-    ],
-  },
-];
+    {
+      icon: helpDeskIcon,
+      title: "IT Help Desk Support",
+      description:
+        "Single point of contact for all employee IT issues — hardware, software, connectivity, and account management — resolved fast so your team stays productive.",
+      points: [
+        "8am–8pm support (SLA-backed)",
+        "Remote & on-site resolution",
+        "Ticketing & tracking system",
+      ],
+    },
+    {
+      icon: endpointIcon,
+      title: "Endpoint Management",
+      description:
+        "Centrally managed desktops, laptops, and mobile devices — software deployment, patch management, security policies, and asset tracking across your fleet.",
+      points: [
+        "MDM/UEM platform setup",
+        "Automated patch management",
+        "Device health monitoring",
+      ],
+    },
+    {
+      icon: serverNetworkIcon,
+      title: "Server & Network Management",
+      description:
+        "Proactive management of your on-premise servers, network switches, firewalls, and Wi-Fi infrastructure — monitoring, patching, and performance optimisation.",
+      points: [
+        "24/7 monitoring",
+        "Network performance reporting",
+        "Firmware & patch management",
+      ],
+    },
+    {
+      icon: backupRecoveryIcon,
+      title: "Backup & Recovery",
+      description:
+        "Automated, verified backups with documented recovery procedures — protecting your business data against hardware failure, ransomware, and human error.",
+      points: [
+        "Daily automated backups",
+        "Backup verification testing",
+        "Documented RTO/RPO",
+      ],
+    },
+    {
+      icon: softwareLicenceIcon,
+      title: "Software & Licence Management",
+      description:
+        "Inventory, procurement, and compliance management for all software licences — eliminating audit risk and ensuring your team always has the tools they need.",
+      points: [
+        "Licence inventory audit",
+        "Renewal management",
+        "Usage optimisation",
+      ],
+    },
+    {
+      icon: itStrategyIcon,
+      title: "IT Strategy & Consulting",
+      description:
+        "Quarterly business reviews, technology roadmap planning, and budgeting guidance from a virtual CTO who understands your business context.",
+      points: [
+        "Quarterly IT reviews",
+        "3-year technology roadmap",
+        "Budget planning support",
+      ],
+    },
+  ];
 
   const ItServicesFaqData = [
     {
@@ -134,6 +138,46 @@ const ManagedItServices = () => {
   return (
     <div className="managed-it-services-page">
       <section>
+        <div className="hero-stats-section">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-lg-6">
+                <p class="Digi-badge">
+                  <img className="pen-image" src={heroLabelIcon} alt="" />{" "}
+                  Experience Design
+                </p>
+                <h2 className="hero-title">
+                  IT that just works,
+                  <span>so you can focus on business.</span>
+                </h2>
+                <p className="hero-description">
+                  End-to-end IT management — help desk, endpoint management,
+                  servers, networks, backups, and security — delivered as a
+                  predictable monthly service with SLA guarantees.
+                </p>
+                <div className="hero-buttons">
+                  <Button icon={<FaArrowRight />}>Get IT Assessment</Button>
+                  <Button variant="secondary">View Plans</Button>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="hero-dashboard-wrapper">
+                  <img
+                    src={dashboardTop}
+                    alt="System Health Monitor"
+                    className="img-fluid hero-dashboard-img"
+                  />
+
+                  <img
+                    src={dashboardBottom}
+                    alt="Help Desk Queue"
+                    className="img-fluid hero-dashboard-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div
           className="container-fluid mt-5 px-5"
           style={{ backgroundColor: "#0F172A" }}
@@ -161,11 +205,11 @@ const ManagedItServices = () => {
       </section>
       <section>
         <ServicesGrid
-      sectionLabel="WHAT'S INCLUDED"
-      heading="Everything your IT needs, covered."
-      services={itServices}
-      tickIcon={tickIcon}
-    />
+          sectionLabel="WHAT'S INCLUDED"
+          heading="Everything your IT needs, covered."
+          services={itServices}
+          tickIcon={tickIcon}
+        />
       </section>
       <section>
         <FAQSection
