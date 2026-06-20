@@ -6,7 +6,7 @@ import DigisphereAbout from "./pages/DigisphereAbout/DigisphereAbout";
 import DigisphereFooter from "./components/DigisphereFooter/DigisphereFooter";
 import { WebsiteDevelopment } from "./pages/DigisphereServices/WebsiteDevelopment/WebsiteDevelopment";
 import { DigitalMarketing } from "./pages/DigisphereServices/DigitalMarketing/DigitalMarketing";
-import { ManagedItServices } from "./pages/DigisphereServices/MangedItServices/ManagedItServices";
+import ManagedItServices from "./pages/DigisphereServices/MangedItServices/ManagedItServices";
 import ExperienceDesign from "./pages/DigisphereServices/ExperienceDesign/ExperienceDesign.js";
 
 const App = () => {
