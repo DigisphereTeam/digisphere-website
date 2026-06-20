@@ -3,10 +3,6 @@
   padding: 60px 0;
 }
 
-/* ========================================
-   LEFT CONTENT
-======================================== */
-
 .service-faq-content {
   max-width: 420px;
 }
@@ -35,17 +31,14 @@
 
 .service-faq-link {
   color: #057DCD;
-  text-decoration: none;
+  text-decoration: underline;
   transition: opacity 0.3s ease;
 }
 
 .service-faq-link:hover {
   opacity: 0.8;
+  color: #0464A4;
 }
-
-/* ========================================
-   ACCORDION
-======================================== */
 
 .service-faq-accordion {
   display: flex;
