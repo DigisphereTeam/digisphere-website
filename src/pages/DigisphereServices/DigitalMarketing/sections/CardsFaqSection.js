@@ -1,6 +1,9 @@
 import React from "react";
+import './CardsFaqSection.css'
+
 import ProcessCards from "../../../../components/ProcessCards/ProcessCards";
 import FAQSection from "../../../../components/FaqSection/FAQSection";
+import { FaArrowRight } from "react-icons/fa";
 
 const CardsFaqSection = () => {
   const MarketingProcessSteps = [
@@ -53,20 +56,18 @@ const CardsFaqSection = () => {
   ];
   return (
     <section>
-      <div className="process-wrapper py-5 bg-light-subtle">
+      <div className="marketing-process-wrapper">
         <div className="container py-4">
-          <div className="wrapper-header mb-5">
-            {/* 1. Added the small uppercase section subtitle */}
-            <span className="text-uppercase tracking-wider text-primary fw-bold small-label d-block mb-2">
+          <div className="cardsfaq-header">
+            <span className="cardsfaq-subtitle">
               OUR PROCESS
             </span>
-            {/* 2. Added explicit weight to match the bold title */}
-            <h2 className="wrapper-title fw-bold">
-              From audit to growth, in 90 days.
+            
+            <h2 className="cardsfaq-title">
+              From audit to growth in 90 days.
             </h2>
           </div>
 
-          {/* 3. Explicitly set to 'col-lg-3' so it wraps perfectly into a 4-column layout on large screens */}
           <ProcessCards
             cards={MarketingProcessSteps}
             colClass="col-12 col-sm-6 col-lg-3"
@@ -82,6 +83,16 @@ const CardsFaqSection = () => {
           link="/contact"
           faqs={MarketingFaqData}
         />
+      </div>
+      <div className="marketing-banner-section">
+        <h2 className="marketing-banner-header">Ready to grow your pipeline?</h2>
+        <p className="marketing-banner-description">
+          Book a free 30-minute digital marketing audit. We'll identify your 
+          biggest growth opportunities — no pitch, no strings.
+        </p>
+        <div className="marketing-btn">
+          <button>Book Free Audit <FaArrowRight/></button>
+        </div>
       </div>
     </section>
   );
