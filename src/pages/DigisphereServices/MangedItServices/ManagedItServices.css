@@ -2,3 +2,21 @@
     width: 100%;
     overflow: hidden;
 }
+
+.hero-dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-dashboard-img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 991px) {
+  .hero-dashboard-wrapper {
+    margin-top: 40px;
+  }
+}
