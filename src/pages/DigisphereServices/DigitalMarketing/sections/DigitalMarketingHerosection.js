@@ -17,7 +17,7 @@ const DigitalMarketingHerosection = () => {
         <div className="row align-items-center">
           <div className="col-lg-6 col-12">
             <Reveal variant={fadeUp} delay={0.1}>
-              <div className="hero-content">
+              <div className="Digital-hero-content">
                 <p class="Digi-digital-badge">
                   <img className="pen-image" src={pen} alt="pen" /> Experience
                   Design
