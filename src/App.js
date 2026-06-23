@@ -8,6 +8,8 @@ import { WebsiteDevelopment } from "./pages/DigisphereServices/WebsiteDevelopmen
 import { DigitalMarketing } from "./pages/DigisphereServices/DigitalMarketing/DigitalMarketing";
 import ManagedItServices from "./pages/DigisphereServices/MangedItServices/ManagedItServices";
 import ExperienceDesign from "./pages/DigisphereServices/ExperienceDesign/ExperienceDesign.js";
+import Devops from "./pages/DigisphereServices/Devops/Devops.js";
+import CyberSecurity from "./pages/DigisphereServices/CyberSecurity/CyberSecurity.js";
 
 const App = () => {
   return (
@@ -20,7 +22,8 @@ const App = () => {
         <Route path="/services/managed-it-services" element={<ManagedItServices/>}/>
         <Route path="/services/digital-marketing" element={<DigitalMarketing/>} />
         <Route path="/services/experience-design" element={<ExperienceDesign/>} />
-
+        <Route path="/services/devops" element={<Devops/>} />
+        <Route path="/services/cyber-security" element={<CyberSecurity/>} />
 
         
       </Routes>
