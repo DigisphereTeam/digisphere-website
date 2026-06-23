@@ -35,9 +35,12 @@
 }
 
 /* React Router NavLink automatically injects the .active class on the matching link */
-.nav-link:hover, 
+.nav-link:hover{
+  color: #0464a4 !important;
+}
 .nav-link.active {
   color: #0464a4 !important;
+  text-decoration: underline;
 }
 
 /* Desktop Button Sizes */

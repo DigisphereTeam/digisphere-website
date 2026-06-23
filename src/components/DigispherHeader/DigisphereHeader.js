@@ -15,6 +15,8 @@ const DigisphereHeader = () => {
         { label: "Managed It Services", path: "/services/managed-it-services" },
         { label: "Digital Marketing", path: "/services/digital-marketing" },
         { label: "Experience Design", path: "/services/experience-design" },
+        { label: "Devops", path: "/services/devops" },
+        { label: "CyberSecurity", path: "/services/cyber-security" },
       ],
     },
     {
@@ -38,7 +40,7 @@ const DigisphereHeader = () => {
   return (
     <nav className="custom-navbar navbar navbar-expand-lg">
       <div className="container-fluid custom-container">
-        {/* Left Side: Logo */}
+        
         <Link className="navbar-brand fw-bold" to="/" onClick={closeNavbar}>
           <img
             src={digilogo}
@@ -60,7 +62,7 @@ const DigisphereHeader = () => {
         <div
           className={`collapse navbar-collapse justify-content-between ${isNavbarOpen ? "show" : ""}`}
         >
-          {/* Center Links */}
+          
           <ul className="navbar-nav mx-auto align-items-center gap-4">
             <li className="nav-item">
               <NavLink className="nav-link" to="/" end onClick={closeNavbar}>
@@ -99,7 +101,6 @@ const DigisphereHeader = () => {
             ))}
           </ul>
 
-          {/* Right Side Buttons */}
           <div className="nav-buttons-container d-flex flex-column flex-lg-row align-items-center gap-2 gap-lg-3 mt-3 mt-lg-0">
             <button className="work-btn w-100 w-lg-auto">See Our Work</button>
             <button className="talk-btn w-100 w-lg-auto">
