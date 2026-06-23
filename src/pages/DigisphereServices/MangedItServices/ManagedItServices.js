@@ -142,9 +142,10 @@ const ManagedItServices = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-6">
+                <div className="digital-hero-content">
                 <p class="Digi-badge">
                   <img className="pen-image" src={heroLabelIcon} alt="" />{" "}
-                  Experience Design
+                  Managed IT Service
                 </p>
                 <h2 className="hero-title">
                   IT that just works,
@@ -158,6 +159,7 @@ const ManagedItServices = () => {
                 <div className="hero-buttons">
                   <Button icon={<FaArrowRight />}>Get IT Assessment</Button>
                   <Button variant="secondary">View Plans</Button>
+                </div>
                 </div>
               </div>
               <div className="col-lg-6">
