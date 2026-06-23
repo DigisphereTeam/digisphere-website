@@ -147,9 +147,6 @@ const ManagedItServices = () => {
                 <p class="Digi-badge">
                   <img className="pen-image" src={heroLabelIcon} alt="" />{" "}
                   Managed IT Service
-                <p class="Digi-managed-badge">
-                  <img className="pen-image" src={heroLabelIcon} alt="" />{" "}
-                  Managed IT Services
                 </p>
                 <h2 className="hero-title">
                   IT that just works,
