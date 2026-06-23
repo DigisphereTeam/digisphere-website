@@ -31,7 +31,7 @@ const MarketingHeroSection = () => {
   ];
   return (
     <section>
-      <div className="container-fluid px-5" style={{ backgroundColor: "#0F172A",marginTop:"10px"}}>
+      <div className="counter-section container-fluid px-5" Counter-section style={{ backgroundColor: "#0F172A",marginTop:"10px"}}>
         <div className="row g-4">
           {marketingStats.map((item, index) => (
             <div key={index} className="col-lg-3 col-md-6 col-12">

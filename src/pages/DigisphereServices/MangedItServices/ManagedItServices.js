@@ -1,11 +1,12 @@
 import React from "react";
+import "./ManagedItServices.css"
 import { FaArrowRight } from "react-icons/fa";
 import Counter from "../../../components/Counter/Counter";
 import Reveal from "../../../animations/Reveal";
 import { fadeUp } from "../../../animations/variants";
 import FAQSection from "../../../components/FaqSection/FAQSection";
 import ServicesGrid from "../../../components/ServicesGrid/ServicesGrid";
-
+import Critical from "../../../assets/managed-it/Critical response.svg";
 import dashboardTop from "../../../assets/managed-it/dashboard-top.svg";
 import dashboardBottom from "../../../assets/managed-it/dashboard-bottom.svg";
 import heroLabelIcon from "../../../assets/managed-it/hero-label-icon.svg";
@@ -136,16 +137,19 @@ const ManagedItServices = () => {
   ];
 
   return (
-    <div className="managed-it-services-page">
+  <>
       <section>
         <div className="hero-stats-section">
           <div className="container">
-            <div className="row align-items-center">
+            <div className="row "style={{marginTop:"50px"}}>
               <div className="col-lg-6">
                 <div className="digital-hero-content">
                 <p class="Digi-badge">
                   <img className="pen-image" src={heroLabelIcon} alt="" />{" "}
                   Managed IT Service
+                <p class="Digi-managed-badge">
+                  <img className="pen-image" src={heroLabelIcon} alt="" />{" "}
+                  Managed IT Services
                 </p>
                 <h2 className="hero-title">
                   IT that just works,
@@ -162,21 +166,26 @@ const ManagedItServices = () => {
                 </div>
                 </div>
               </div>
-              <div className="col-lg-6">
-                <div className="hero-dashboard-wrapper">
-                  <img
-                    src={dashboardTop}
-                    alt="System Health Monitor"
-                    className="img-fluid hero-dashboard-img"
-                  />
-
-                  <img
-                    src={dashboardBottom}
-                    alt="Help Desk Queue"
-                    className="img-fluid hero-dashboard-img"
-                  />
-                </div>
+              <div className="col-lg-6 col-12">
+            <div className="hero-dashboard">
+              {/* Main Dashboard */}
+              <div className="dashboard-main" >
+                <img
+                  src={dashboardTop}
+                  className="managed-hero-image"
+                  alt="Dashboard"
+                />
               </div>
+               <div className="dashboard-main">
+                <img src={dashboardBottom} className="managedit-hero-image" alt="Positions" />
+              </div>
+
+              {/* Top Right Floating Card */}
+              <div className="dashboard-card managed-dashboard-card">
+                <img src={Critical} alt="Analytics" />
+              </div>
+            </div>
+          </div>
             </div>
           </div>
         </div>
@@ -237,7 +246,8 @@ const ManagedItServices = () => {
           </button>
         </div>
       </section>
-    </div>
+      </>
+  
   );
 };
 export default ManagedItServices;

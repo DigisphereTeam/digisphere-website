@@ -102,18 +102,18 @@
 
 /* Tablet */
 
-@media (max-width: 991px) {
+@media (max-width:992px) {
   .hero-stats-section {
-    padding: 80px 0;
+    padding:  0;
   }
 
-  .hero-content {
+  .Digital-hero-content {
     text-align: center;
     /* max-width: 100%; */
   }
 
   .hero-title {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   .hero-buttons {
@@ -122,6 +122,16 @@
 
   .hero-dashboard {
     margin-top: 60px;
+  }
+  .dashboard-card-4{
+    width: 112px;
+    bottom: -13px;
+    right: -28px;
+    animation: float 4.5s ease-in-out infinite;
+}
+.hero-description {
+    font-size: 14px;
+  }
   }
 
   .dashboard-card-1 {
@@ -139,27 +149,36 @@
     width: 100%;
   }
 
-}
+
 
 /* Mobile */
 
-@media (max-width: 786px) {
+@media (max-width:576px) {
   .hero-title {
-    font-size: 36px;
+    font-size: 32px;
+  }
+  .Digital-hero-content{
+    margin-top: 40px;
+  }
+  .hero-dashboard{
+    margin-top: 20px;
   }
   .dashboard-card-4 {
-    width: 115px;
-    bottom: -41px;
-    right: -24px;
+    width: 66px;
+    bottom: -17px;
+    right: -18px;
     animation: float 4.5s ease-in-out infinite;
 }
 
   .hero-description {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .dashboard-card-1 {
-    display: none;
+       width: 66px;
+    top: 30px;
+    right: -18px;
+    animation: float 4s ease-in-out infinite;
   }
 
   .dashboard-card-3 {
