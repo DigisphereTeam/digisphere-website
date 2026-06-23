@@ -143,9 +143,10 @@ const ManagedItServices = () => {
           <div className="container">
             <div className="row "style={{marginTop:"50px"}}>
               <div className="col-lg-6">
-                <p class="Digi-managed-badge">
+                <div className="digital-hero-content">
+                <p class="Digi-badge">
                   <img className="pen-image" src={heroLabelIcon} alt="" />{" "}
-                  Managed IT Services
+                  Managed IT Service
                 </p>
                 <h2 className="hero-title">
                   IT that just works,
@@ -159,6 +160,7 @@ const ManagedItServices = () => {
                 <div className="hero-buttons">
                   <Button icon={<FaArrowRight />}>Get IT Assessment</Button>
                   <Button variant="secondary">View Plans</Button>
+                </div>
                 </div>
               </div>
               <div className="col-lg-6 col-12">

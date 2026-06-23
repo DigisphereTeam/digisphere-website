@@ -1,0 +1,145 @@
+.devops-hero-section {
+  padding: 40px 0 ;
+  overflow: hidden;
+}
+
+.devops-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #e8f4fd;
+  border: 1px solid rgba(5, 125, 205, 0.15);
+  color: #057dcd;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.devops-badge img {
+  width: 14px;
+}
+
+.devops-title {
+  margin-top: 24px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.05;
+  color: #0f172a;
+}
+
+.devops-title span {
+  color: #057dcd;
+}
+.devops-description {
+  margin-top: 24px;
+  max-width: 560px;
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.devops-dashboard {
+  position: relative;
+  max-width: 620px;
+  margin-left: auto;
+}
+
+.dashboard-main-card img,
+.dashboard-bottom-card img,
+.dashboard-floating-card img {
+  width: 100%;
+  display: block;
+}
+
+.dashboard-main-card {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.dashboard-bottom-card {
+  margin-top: 18px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.dashboard-floating-card {
+  position: absolute;
+  width: 180px;
+  top: -10px;
+  right: -20px;
+
+  animation: devopsFloat 4s ease-in-out infinite;
+}
+
+@keyframes devopsFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+  .devops-hero-section {
+    padding: 36px 0;
+  }
+
+  .devops-hero-content {
+    text-align: center;
+  }
+
+  .devops-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .devops-dashboard {
+    margin-top: 60px;
+  }
+
+  .devops-title {
+    font-size: 50px;
+  }
+  .devops-title {
+    font-size: 36px;
+  }
+
+  .devops-description {
+    font-size: 14px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+    .devops-hero-section {
+    padding: 30px 0;
+  }
+  .devops-title {
+    font-size: 32px;
+    margin-top: 12px;
+  }
+
+  .devops-description {
+    font-size: 12px;
+  }
+
+  .dashboard-floating-card {
+    width: 120px;
+    top: -10px;
+    right: -10px;
+  }
+}

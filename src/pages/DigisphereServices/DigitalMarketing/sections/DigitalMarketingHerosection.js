@@ -19,8 +19,8 @@ const DigitalMarketingHerosection = () => {
             <Reveal variant={fadeUp} delay={0.1}>
               <div className="Digital-hero-content">
                 <p class="Digi-digital-badge">
-                  <img className="pen-image" src={pen} alt="pen" /> Experience
-                  Design
+                  <img className="pen-image" src={pen} alt="pen" /> 
+                  Digital Marketing
                 </p>
 
                 <h1 className="hero-title">
