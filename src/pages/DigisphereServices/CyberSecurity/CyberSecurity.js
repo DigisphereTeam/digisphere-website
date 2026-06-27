@@ -3,9 +3,6 @@ import "./CyberSecurity.css";
 import tickIcon from "../../../assets/digital-marketing/tick-icon.svg";
 import ServicesGrid from "../../../components/ServicesGrid/ServicesGrid";
 import Cybersecurity from "../../../assets/Cybersecurity/Cybersecurity (2).svg";
-import SOCDashboard from "../../../assets/Cybersecurity/SOCDashboard.png";
-import Aligned from "../../../assets/Cybersecurity/Aligned.svg";
-
 import Button from "../../../components/Button/Button";
 import Reveal from "../../../animations/Reveal";
 import FAQSection from "../../../components/FaqSection/FAQSection";
@@ -142,6 +139,26 @@ const CyberSecurity = () => {
         "Yes. We offer flexible security retainer plans that provide ongoing access to security expertise, regular assessments, remediation support, and proactive security guidance throughout the year.",
     },
   ];
+  const activity = [
+    {
+      title: "Port Scan Detected",
+      ip: "143.234.0.73",
+      status: "BLOCKED",
+      color: "#2E90FA",
+    },
+    {
+      title: "Port Scan Detected",
+      ip: "216.94.0.36",
+      status: "BLOCKED",
+      color: "#F79009",
+    },
+    {
+      title: "Malware Beacon",
+      ip: "38.173.0.100",
+      status: "BLOCKED",
+      color: "#EF4444",
+    },
+  ];
   return (
     <>
       <section className="hero-stats-section">
@@ -179,19 +196,81 @@ const CyberSecurity = () => {
               </Reveal>
             </div>
             <div className="col-lg-6 col-12">
-              <div className="hero-dashboard">
-                {/* Main Dashboard */}
-                <div className="dashboard-main">
-                  <img
-                    src={SOCDashboard}
-                    className="digital-hero-image"
-                    alt="Dashboard"
-                  />
+              <div className="CybersecurityDashboard">
+                {/* Header */}
+
+                <div className="CybersecurityHeader">
+                  <div className="CybersecurityHeaderContent">
+                    <h2>SOC Dashboard - Live</h2>
+                    <p>Monitoring 247 endpoints</p>
+                  </div>
+
+                  <div className="CybersecurityLiveStatus">
+                    <span className="CybersecurityLiveDot"></span>
+                    Protected
+                  </div>
                 </div>
 
-                {/* Top Right Floating Card */}
-                <div className="dashboard-card dashboard-card-1">
-                  <img src={Aligned} alt="Analytics" />
+                {/* Main */}
+                <div className="row g-2 CybersecurityContent">
+                  {/* RADAR */}
+                  <div className="col-lg-6 col-12">
+                    <div className="CybersecurityRadarCard">
+                      <div className="CybersecurityRadar">
+                        <div className="CybersecurityCircle CybersecurityCircle1"></div>
+                        <div className="CybersecurityCircle CybersecurityCircle2"></div>
+                        <div className="CybersecurityCircle CybersecurityCircle3"></div>
+
+                        <div className="CybersecurityScanner"></div>
+
+                        <span className="CybersecurityTarget CybersecurityTargetOne"></span>
+                      </div>
+
+                      <h5>Threat Radar</h5>
+                    </div>
+                  </div>
+
+                  {/* STATS */}
+                  <div className="col-lg-6 col-12">
+                    <div className="CybersecurityStats">
+                      <div className="CybersecurityStatCard CybersecurityGreen">
+                        <small>Threats Blocked</small>
+                        <h1>1,847</h1>
+                      </div>
+
+                      <div className="CybersecurityStatCard CybersecurityOrange">
+                        <small>Today's Alerts</small>
+                        <h1>23</h1>
+                      </div>
+
+                      <div className="CybersecurityStatCard CybersecurityBlue">
+                        <small>Open Vulnerabilities</small>
+                        <h1>0</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Activity */}
+                <div className="CybersecurityActivity">
+                  {activity.map((item, index) => (
+                    <div className="CybersecurityActivityCard" key={index}>
+                      <div className="CybersecurityActivityLeft">
+                        <span
+                          className="CybersecurityActivityDot"
+                          style={{ background: item.color }}
+                        ></span>
+
+                        <div className="CybersecurityActivityInfo">
+                          <h4>{item.title}</h4>
+                          <span>{item.ip}</span>
+                        </div>
+                      </div>
+
+                      <button className="CybersecurityBlockedButton">
+                        {item.status}
+                      </button>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -241,15 +320,14 @@ const CyberSecurity = () => {
         />
       </div>
       <div className="marketing-banner-section">
-        <h2 className="marketing-banner-header">
-          Don't wait for a breach.
-        </h2>
+        <h2 className="marketing-banner-header">Don't wait for a breach.</h2>
         <p className="marketing-banner-description">
-Book a free 30-minute security consultation. We'll identify the top 3 security gaps in your current setup — no strings attached.
+          Book a free 30-minute security consultation. We'll identify the top 3
+          security gaps in your current setup — no strings attached.
         </p>
         <div className="marketing-btn">
           <button>
-           Book Security Consultation  <FaArrowRight />
+            Book Security Consultation <FaArrowRight />
           </button>
         </div>
       </div>

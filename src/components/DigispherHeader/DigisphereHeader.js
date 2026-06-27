@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./DigisphereHeader.css";
 import digilogo from "../../assets/digispherelogo.svg";
@@ -14,10 +14,45 @@ import CloudServices from "../../assets/servicesDropdown/CloudServices.svg";
 import Cybersecuritys from "../../assets/servicesDropdown/Cybersecuritys.svg";
 import Managed from "../../assets/servicesDropdown/Managed.svg";
 import DevOp from "../../assets/servicesDropdown/DevOp.svg";
+import AbouUs from "../../assets/Lead Generationicon.svg";
+import HowWeWork from "../../assets/resourcesdropdown/HowWeWork.svg";
+import Careers from "../../assets/resourcesdropdown/Careers.svg";
+import Contact from "../../assets/resourcesdropdown/Contact.svg";
+import Blog from "../../assets/resourcesdropdown/Blog.svg";
+import CaseStudies from "../../assets/Marketing ROI.svg";
+import SuccessStories from "../../assets/resourcesdropdown/SuccessStories.svg";
+import TechnologyGuides from "../../assets/resourcesdropdown/TechnologyGuides.svg";
+import FAQs from "../../assets/resourcesdropdown/FAQs.svg";
+import HelpCenter from "../../assets/resourcesdropdown/HelpCenter.svg";
+import Documentation from "../../assets/resourcesdropdown/Documentation.svg";
 
 const DigisphereHeader = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsServicesOpen(false);
+        setIsResourcesOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const closeNavbar = () => {
+    setIsNavbarOpen(false);
+    setIsServicesOpen(false);
+    setIsResourcesOpen(false);
+  };
 
   const menuItems = {
     services: [
@@ -154,11 +189,144 @@ const DigisphereHeader = () => {
       },
     ],
   };
+  const resourcesmenuItems = {
+    Resources: [
+      {
+        heading: "Company",
+        items: [
+          {
+            title: "About Us",
+            desc: "Our story, team, and mission.",
+            path: "/services/webdevelopment",
+            icon: (
+              <img className="service-image" src={AbouUs} alt="WebsiteDesign" />
+            ),
+          },
+          {
+            title: "How We Work",
+            desc: "Our engagement process explained.",
+            path: "/services/digital-marketing",
+            icon: (
+              <img
+                className="service-image"
+                src={HowWeWork}
+                alt="DigitalMarketing"
+              />
+            ),
+          },
+          {
+            title: "Careers",
+            desc: "Join a growing tech team.",
+            path: "/services/experience-design",
+            icon: <img className="service-image" src={Careers} alt="pen" />,
+          },
+          {
+            title: "Contact",
+            desc: "Get in touch with our team.",
+            path: "/services/webdevelopment",
+            icon: (
+              <img
+                className="service-image"
+                src={Contact}
+                alt="WebsiteDesign"
+              />
+            ),
+          },
+        ],
+      },
 
-  const closeNavbar = () => setIsNavbarOpen(false);
+      {
+        heading: "INSIGHTS",
+        items: [
+          {
+            title: "Blog",
+            desc: "Tech insights and practical guides.",
+            path: "/services/web-applications",
+            icon: <img className="service-image" src={Blog} alt="Blog" />,
+          },
+          {
+            title: "Case Studies",
+            desc: "Real results from real clients.",
+            path: "/services/automation",
+            icon: <img className="service-image" src={CaseStudies} alt="pen" />,
+          },
+          {
+            title: "Success Stories",
+            desc: "How clients grew with us.",
+            path: "/services/ai",
+            icon: (
+              <img className="service-image" src={SuccessStories} alt="pen" />
+            ),
+          },
+          {
+            title: "Technology Guides",
+            desc: "Deep-dives on tools and stacks.",
+            path: "/services/ai",
+            icon: (
+              <img className="service-image" src={TechnologyGuides} alt="pen" />
+            ),
+          },
+        ],
+      },
+
+      {
+        heading: "SUPPORT",
+        items: [
+          {
+            title: "FAQs",
+            desc: "Answers to common questions.",
+            path: "/services/cloud",
+            icon: <img className="service-image" src={FAQs} alt="pen" />,
+          },
+          {
+            title: "Help Center",
+            desc: "Support resources and docs.",
+            path: "/services/cyber-security",
+            icon: <img className="service-image" src={HelpCenter} alt="pen" />,
+          },
+          {
+            title: "Documentation",
+            desc: "Technical references and guides.",
+            path: "/services/managed-it-services",
+            icon: <img className="service-image" src={Managed} alt="pen" />,
+          },
+        ],
+      },
+    ],
+
+    industries: [
+      {
+        label: "Healthcare",
+        path: "/industries/healthcare",
+      },
+      {
+        label: "Finance",
+        path: "/industries/finance",
+      },
+      {
+        label: "Retail",
+        path: "/industries/retail",
+      },
+    ],
+
+    resources: [
+      {
+        label: "Blogs",
+        path: "/blogs",
+      },
+      {
+        label: "Case Studies",
+        path: "/case-studies",
+      },
+      {
+        label: "White Papers",
+        path: "/whitepapers",
+      },
+    ],
+  };
 
   return (
-    <nav className="custom-navbar navbar navbar-expand-lg">
+    <nav ref={menuRef} className="custom-navbar navbar navbar-expand-lg">
       <div className="container-fluid custom-container">
         <Link className="navbar-brand fw-bold" to="/" onClick={closeNavbar}>
           <img
@@ -203,8 +371,13 @@ const DigisphereHeader = () => {
             <li className="nav-item dropdown mega-dropdown">
               <button
                 type="button"
-                className="nav-link d-flex align-items-center gap-1 border-0 bg-transparent"
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className={`nav-link nav-button d-flex align-items-center gap-1 border-0 bg-transparent ${
+                  isServicesOpen ? "active" : ""
+                }`}
+                onClick={() => {
+                  setIsServicesOpen(!isServicesOpen);
+                  setIsResourcesOpen(false);
+                }}
               >
                 Services
                 <IoIosArrowDown
@@ -233,7 +406,7 @@ const DigisphereHeader = () => {
                           to={item.path}
                           className="mega-link d-flex"
                           onClick={() => {
-                            setIsServicesOpen(false);
+                            setIsResourcesOpen(false);
                             closeNavbar();
                           }}
                         >
@@ -277,13 +450,13 @@ const DigisphereHeader = () => {
 
                       <Link
                         to="/services"
-                        className="explore-btn"
+                        className="explore-btn "
                         onClick={() => {
                           setIsServicesOpen(false);
                           closeNavbar();
                         }}
                       >
-                        Explore All Services →
+                        Explore All Services <IoArrowForwardSharp />
                       </Link>
                     </div>
                   </div>
@@ -296,6 +469,10 @@ const DigisphereHeader = () => {
                 type="button"
                 className="nav-link d-flex align-items-center gap-1 border-0 bg-transparent"
                 data-bs-toggle="dropdown"
+                onClick={() => {
+                  setIsServicesOpen(false);
+                  setIsResourcesOpen(false);
+                }}
               >
                 Industries
                 <IoIosArrowDown />
@@ -317,29 +494,98 @@ const DigisphereHeader = () => {
             </li>
 
             {/* ================= RESOURCES ================= */}
-            <li className="nav-item dropdown">
+            <li className="nav-item dropdown mega-dropdown">
               <button
                 type="button"
-                className="nav-link d-flex align-items-center gap-1 border-0 bg-transparent"
+                className="nav-link nav-button d-flex align-items-center gap-1 border-0 bg-transparent"
                 data-bs-toggle="dropdown"
+                onClick={() => {
+                  setIsServicesOpen(false);
+                  setIsResourcesOpen(false);
+                }}
               >
                 Resources
-                <IoIosArrowDown />
+                <IoIosArrowDown
+                  style={{
+                    transform: isResourcesOpen
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
+                    transition: "0.3s",
+                  }}
+                />
               </button>
 
-              <ul className="dropdown-menu">
-                {menuItems.resources.map((item, i) => (
-                  <li key={i}>
-                    <Link
-                      className="dropdown-item"
-                      to={item.path}
-                      onClick={closeNavbar}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div
+                className={`dropdown-menu mega-menu p-4 ${
+                  isResourcesOpen ? "show" : ""
+                }`}
+              >
+                <div className="row">
+                  {resourcesmenuItems.Resources.map((section, idx) => (
+                    <div className="col-lg-3" key={idx}>
+                      <h6 className="mega-heading">{section.heading}</h6>
+
+                      {section.items.map((item, i) => (
+                        <Link
+                          key={i}
+                          to={item.path}
+                          className="mega-link d-flex"
+                          onClick={() => {
+                            setIsServicesOpen(false);
+                            closeNavbar();
+                          }}
+                        >
+                          <div className="icon-box">{item.icon}</div>
+
+                          <div>
+                            <h6>{item.title}</h6>
+                            <p>{item.desc}</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
+
+                  <div className="col-lg-3">
+                    <div className="Build-service-card">
+                      <h3>Free Digital Audit</h3>
+
+                      <p>
+                        30-minute consultation to review your digital setup and
+                        identify your biggest growth opportunities.
+                      </p>
+
+                      <div className="stats">
+                        <div className="Projects">
+                          <span>Duration</span>
+                          <strong>30 min</strong>
+                        </div>
+
+                        <div className="Projects">
+                          <span>Cost</span>
+                          <strong>Free</strong>
+                        </div>
+
+                        <div className="Projects">
+                          <span>Response</span>
+                          <strong> 4 hours</strong>
+                        </div>
+                      </div>
+
+                      <Link
+                        to="/services"
+                        className="explore-btn "
+                        onClick={() => {
+                          setIsServicesOpen(false);
+                          closeNavbar();
+                        }}
+                      >
+                        Book Free Audit <IoArrowForwardSharp />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
 
