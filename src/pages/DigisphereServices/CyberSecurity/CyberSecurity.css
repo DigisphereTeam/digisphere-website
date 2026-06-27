@@ -1,0 +1,263 @@
+/* ================= DASHBOARD WRAPPER ================= */
+.CybersecurityDashboard {
+  width: 100%;
+  background: #f6f9ff;
+  padding: 14px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+}
+
+/* ================= HEADER ================= */
+.CybersecurityHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.CybersecurityHeaderContent h2 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.CybersecurityHeaderContent p {
+  margin: 3px 0 0;
+  color: #7a8599;
+  font-size: 10px;
+}
+
+.CybersecurityLiveStatus {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #22c55e;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.CybersecurityLiveDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.CybersecurityContent {
+  margin-top: 10px;
+}
+
+/* ================= RADAR CARD ================= */
+.CybersecurityRadarCard {
+  width: 90%;
+  max-width: 300px;
+  height: 230px;
+  border: 1px solid #edf1f7;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background: #fff;
+  margin: auto;
+}
+
+/* ================= RADAR ================= */
+.CybersecurityRadar {
+  width: 240px;
+  height: 240px;
+  position: relative;
+}
+
+/* ================= RADAR CIRCLES ================= */
+.CybersecurityCircle {
+  position: absolute;
+  border: 2px solid #dbeafe;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.CybersecurityCircle1 {
+  width: 50px;
+  height: 50px;
+}
+
+.CybersecurityCircle2 {
+  width: 110px;
+  height: 110px;
+}
+
+.CybersecurityCircle3 {
+  width: 170px;
+  height: 170px;
+}
+
+/* ================= SCANNER ================= */
+.CybersecurityScanner {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #3b82f6);
+  top: 50%;
+  left: 50%;
+  transform-origin: left;
+  animation: scan 2.5s linear infinite;
+}
+
+@keyframes scan {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================= TARGET ================= */
+.CybersecurityTarget {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+}
+
+.CybersecurityTargetOne {
+  top: 70px;
+  left: 55px;
+}
+
+/* ================= RADAR TITLE ================= */
+.CybersecurityRadarCard h5 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+/* ================= STATS ================= */
+.CybersecurityStats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ================= STAT CARD ================= */
+.CybersecurityStatCard {
+  width: 100%;
+  border: 1px solid #edf1f7;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  min-height: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* TEXT INSIDE STATS */
+.CybersecurityStatCard small {
+  color: #6b7280;
+  font-size: 8px;
+}
+
+.CybersecurityStatCard h1 {
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+/* COLORS */
+.CybersecurityGreen h1 {
+  color: #22c55e;
+}
+
+.CybersecurityOrange h1 {
+  color: #f59e0b;
+}
+
+.CybersecurityBlue h1 {
+  color: #3b82f6;
+}
+
+/* ================= ACTIVITY ================= */
+.CybersecurityActivity {
+  margin-top: 12px;
+}
+
+.CybersecurityActivityCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.CybersecurityActivityLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.CybersecurityActivityDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.CybersecurityActivityInfo h4 {
+  margin: 0;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.CybersecurityActivityInfo span {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.CybersecurityBlockedButton {
+  background: #dcfce7;
+  color: #16a34a;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+  .CybersecurityRadarCard {
+    max-width: 300px;
+    height: 300px;
+  }
+
+  .CybersecurityRadar {
+    width: 200px;
+    height: 200px;
+  }
+
+  .CybersecurityCircle1 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .CybersecurityCircle2 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .CybersecurityCircle3 {
+    width: 180px;
+    height: 180px;
+  }
+}

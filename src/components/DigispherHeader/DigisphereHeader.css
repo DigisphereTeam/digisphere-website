@@ -1,3 +1,264 @@
+
+
+.custom-container {
+  padding-left: 6% !important;
+  padding-right: 5.8% !important;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.Digisphere-logo-image {
+  width: 170px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.nav-link {
+  color: #0f172a !important;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 4px 0px 0px !important;
+  transition: color 0.2s ease-in-out;
+}
+
+/* React Router NavLink automatically injects the .active class on the matching link */
+.nav-link:hover {
+  color: #0464a4 !important;
+}
+
+
+/* Desktop Button Sizes */
+.work-btn,
+.talk-btn {
+  padding: 7px 15px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.work-btn {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.work-btn:hover {
+  background: #f1f5f9;
+}
+
+.talk-btn {
+  border: none;
+  background: #057dcd;
+  color: #ffffff;
+}
+
+.talk-btn:hover {
+  background: #0464a4;
+}
+
+
+
+/* Mobile responsive layout overrides */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .nav-buttons-container {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .work-btn,
+  .talk-btn {
+    padding: 6px 12px !important;
+    font-size: 12.5px !important;
+    border-radius: 5px !important;
+  }
+}
+
+/* new css */
+.mega-dropdown {
+  position: static !important;
+}
+
+.mega-menu {
+  width: 1000px;
+  left: 50% !important;
+  transform: translateX(-50%);
+  border: none;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  display: none;
+  z-index: 9999;
+}
+
+.mega-heading {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color:#475569;
+  margin-bottom: 30px;
+}
+
+.mega-link {
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.mega-link:hover {
+  color: #0d6efd;
+}
+
+.icon-box {
+  color: #0d6efd;
+  width: 25px;
+  height: 25px;
+
+}
+
+.mega-link h6 {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.mega-link p {
+  margin: 0;
+  font-size: 12px;
+  color:#475569;
+}
+/* .service-image{
+  width: 18px;
+  height: 18px;
+} */
+
+.Build-service-card {
+  background: #eef6ff;
+  padding: 25px;
+  border-radius: 18px;
+  height: 100%;
+}
+
+.Build-service-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.Build-service-card p {
+  font-size: 14px;
+  color:#475569;
+  font-family: 400;
+}
+
+.stats div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.explore-btn {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #057DCD;
+  font-weight: 600;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+
+.Projects span {
+  font-size: 12px;
+  font-weight: 400;
+}
+.Projects strong {
+  font-size: 12px;
+  font-weight: 700;
+}
+@media (max-width: 992px) {
+  .mega-menu {
+    position: static;
+    width: 100%;
+    transform: none;
+    margin-top: 0;
+    box-shadow: none;
+    border-radius: 24px;
+    padding: 20px;
+  }
+  .mega-link{
+    margin-bottom: 10px;
+  }
+
+  /* .mega-dropdown:hover .mega-menu {
+    display: block;
+  } */
+  .nav-item  {
+    align-items: center !important;
+  }
+
+  .Build-service-card {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .mega-menu {
+    padding: 15px;
+    display: none;
+    z-index: 9999;
+    transform: none;
+  }
+
+  .mega-link {
+    margin-bottom: 14px;
+  }
+
+  .icon-box {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .Build-service-card h3 {
+    font-size: 24px;
+  }
+
+  .Build-service-card {
+    padding: 20px;
+  }
+  
+}
+
+@media (max-width: 991px) {
+  .navbar-nav .nav-item.dropdown .nav-link {
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 .custom-navbar {
   background: #ffffff;
   border-bottom: 1px solid #e5e5e5;
@@ -26,22 +287,12 @@
   object-fit: contain;
 }
 
-.nav-link {
-  color: #0f172a !important;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 8px 4px !important;
-  transition: color 0.2s ease-in-out;
-}
 
 /* React Router NavLink automatically injects the .active class on the matching link */
 .nav-link:hover {
   color: #0464a4 !important;
 }
-.nav-link.active {
-  color: #0464a4 !important;
-  text-decoration: underline;
-}
+
 
 /* Desktop Button Sizes */
 .work-btn,
@@ -107,7 +358,7 @@
 }
 
 .mega-menu {
-  width: 1150px;
+  width: 1000px;
   left: 50% !important;
   transform: translateX(-50%);
   border: none;
@@ -124,7 +375,7 @@
   font-weight: 600;
   letter-spacing: 1px;
   color:#475569;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .mega-link {
@@ -147,7 +398,7 @@
 }
 
 .mega-link h6 {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   font-size: 14px;
   font-weight: 600;
   color: #0F172A;
@@ -198,13 +449,8 @@
   font-weight: 600;
 }
 
-.nav-link {
-  font-weight: 500;
-}
 
-.dropdown-toggle::after {
-  display: none;
-}
+
 .Projects span {
   font-size: 12px;
   font-weight: 400;
@@ -220,16 +466,16 @@
     transform: none;
     margin-top: 0;
     box-shadow: none;
-    border-radius: 0;
+    border-radius: 24px;
     padding: 20px;
   }
   .mega-link{
     margin-bottom: 10px;
   }
 
-  .mega-dropdown:hover .mega-menu {
+  /* .mega-dropdown:hover .mega-menu {
     display: block;
-  }
+  } */
   .nav-item  {
     align-items: center !important;
   }
@@ -274,4 +520,40 @@
     align-items: center;
     text-align: center;
   }
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .nav-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-navbar .nav-link::after,
+.custom-navbar .nav-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0;
+  height: 2px;
+  background: #136AD0;
+  transition: width .3s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-button:hover {
+  color: #136AD0 !important;
+}
+
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-button:hover::after,
+.custom-navbar .nav-button.active::after {
+  width: 100%;
+}
+
+
+.custom-navbar .nav-button.active {
+  color: #136AD0 !important;
 }

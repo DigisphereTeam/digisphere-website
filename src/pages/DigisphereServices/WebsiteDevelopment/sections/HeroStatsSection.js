@@ -129,15 +129,11 @@ const HeroStatsSection = () => {
                       </div>
                     </div>
 
-                    <div className="website-chart">
-                      <div className="bar b1"></div>
-                      <div className="bar b2"></div>
-                      <div className="bar b3"></div>
-                      <div className="bar b4"></div>
-                      <div className="bar b5"></div>
-                      <div className="bar b6"></div>
-                      <div className="bar b7"></div>
-                    </div>
+                   <div className="website-chart">
+  {[...Array(7)].map((_, i) => (
+    <div key={i} className={`bar b${i + 1}`}></div>
+  ))}
+</div>
 
                     <div className="website-stats">
                       <div className="box">
@@ -161,7 +157,10 @@ const HeroStatsSection = () => {
 
                   <div className="website-performance">
                     <div className="track">
-                      <div className="fill"></div>
+                     
+                    </div>
+                    <div className="track-1">
+                     
                     </div>
                   </div>
                 </div>
@@ -171,8 +170,10 @@ const HeroStatsSection = () => {
                   <h4>SEO Optimized</h4>
 
                   <div className="website-performance">
-                    <div className="track">
-                      <div className="fill"></div>
+                    <div className="track2">
+                    </div>
+                     <div className="track2-1">
+                     
                     </div>
                   </div>
                 </div>
@@ -182,8 +183,9 @@ const HeroStatsSection = () => {
                   <h4>Mobile Ready</h4>
 
                   <div className="website-performance">
-                    <div className="track">
-                      <div className="fill"></div>
+                    <div className="track3">
+                    </div>
+                    <div className="track3-1">
                     </div>
                   </div>
                 </div>
