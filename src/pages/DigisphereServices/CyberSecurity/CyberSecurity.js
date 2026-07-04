@@ -10,7 +10,8 @@ import { fadeUp } from "../../../animations/variants";
 import { FaArrowRight } from "react-icons/fa";
 
 import Counter from "../../../components/Counter/Counter.js";
-
+import Aligned from "../../../assets/Cybersecurity/Aligned.svg";
+import soc from "../../../assets/Cybersecurity/soc.svg";
 import VAPT from "../../../assets/Cybersecurity/VAPT.svg";
 import Monitoring from "../../../assets/Cybersecurity/Security Monitoring.svg";
 import Risk from "../../../assets/Cybersecurity/Risk Assessment.svg";
@@ -198,19 +199,26 @@ const CyberSecurity = () => {
             <div className="col-lg-6 col-12">
               <div className="CybersecurityDashboard">
                 {/* Header */}
-
+                
                 <div className="CybersecurityHeader">
-                  <div className="CybersecurityHeaderContent">
-                    <h2>SOC Dashboard - Live</h2>
-                    <p>Monitoring 247 endpoints</p>
+                  <div className="dashboard-card dashboard-card-1">
+                  <img src={Aligned} alt="Analytics" />
+                </div>
+
+                  <div className="CybersecurityHeaderLeft">
+                    <img src={soc} alt="SOC" className="CybersecurityLogo" />
+
+                    <div className="CybersecurityHeaderContent">
+                      <h2>SOC Dashboard - Live</h2>
+                      <p>Monitoring 247 endpoints</p>
+                    </div>
                   </div>
 
                   <div className="CybersecurityLiveStatus">
                     <span className="CybersecurityLiveDot"></span>
-                    Protected
+                    <span>Protected</span>
                   </div>
                 </div>
-
                 {/* Main */}
                 <div className="row g-2 CybersecurityContent">
                   {/* RADAR */}
@@ -226,7 +234,7 @@ const CyberSecurity = () => {
                         <span className="CybersecurityTarget CybersecurityTargetOne"></span>
                       </div>
 
-                      <h5>Threat Radar</h5>
+                      <h3 className="Threat-Radar">Threat Radar</h3>
                     </div>
                   </div>
 
@@ -266,9 +274,12 @@ const CyberSecurity = () => {
                         </div>
                       </div>
 
-                      <button className="CybersecurityBlockedButton">
-                        {item.status}
-                      </button>
+                      <div className="CybersecurityActivityRight">
+                        <button className="CybersecurityBlockedButton">
+                          {item.status}
+                        </button>
+                        <span className="CybersecurityTime">now</span>
+                      </div>
                     </div>
                   ))}
                 </div>
