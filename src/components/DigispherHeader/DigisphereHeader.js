@@ -100,7 +100,7 @@ const DigisphereHeader = () => {
             desc: "Custom portals, dashboards and business software.",
             path: "/services/web-applications",
             icon: (
-              <img className="service-image" src={WebApplications} alt="pen" />
+              <img className="service-image" src={WebApplications} alt="WebApplications" />
             ),
           },
           {
@@ -111,15 +111,15 @@ const DigisphereHeader = () => {
               <img
                 className="service-image"
                 src={AutomationSolutions}
-                alt="pen"
+                alt="AutomationSolutions"
               />
             ),
           },
           {
             title: "AI-Powered Solutions",
             desc: "AI integrations, copilots and assistants.",
-            path: "/services/ai",
-            icon: <img className="service-image" src={AIPowered} alt="pen" />,
+            path: "/services/aipowered",
+            icon: <img className="service-image" src={AIPowered} alt="AIPowered" />,
           },
         ],
       },
@@ -130,9 +130,9 @@ const DigisphereHeader = () => {
           {
             title: "Cloud Services",
             desc: "AWS, Azure and Google Cloud solutions.",
-            path: "/services/cloud",
+            path: "/services/cloudServices",
             icon: (
-              <img className="service-image" src={CloudServices} alt="pen" />
+              <img className="service-image" src={CloudServices} alt="CloudServices" />
             ),
           },
           {
@@ -140,20 +140,20 @@ const DigisphereHeader = () => {
             desc: "Monitoring, VAPT and security assessments.",
             path: "/services/cyber-security",
             icon: (
-              <img className="service-image" src={Cybersecuritys} alt="pen" />
+              <img className="service-image" src={Cybersecuritys} alt="Cybersecuritys" />
             ),
           },
           {
             title: "Managed IT",
             desc: "End-to-end IT support and maintenance.",
             path: "/services/managed-it-services",
-            icon: <img className="service-image" src={Managed} alt="pen" />,
+            icon: <img className="service-image" src={Managed} alt="Managed" />,
           },
           {
             title: "DevOps",
             desc: "CI/CD, Kubernetes and automation.",
             path: "/services/devops",
-            icon: <img className="service-image" src={DevOp} alt="pen" />,
+            icon: <img className="service-image" src={DevOp} alt="DevOp" />,
           },
         ],
       },
@@ -285,7 +285,7 @@ const DigisphereHeader = () => {
             icon: <img className="service-image" src={HelpCenter} alt="pen" />,
           },
           {
-            title: "Documentation",
+            title: Documentation,
             desc: "Technical references and guides.",
             path: "/services/managed-it-services",
             icon: <img className="service-image" src={Managed} alt="pen" />,

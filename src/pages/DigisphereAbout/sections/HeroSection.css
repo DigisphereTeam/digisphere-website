@@ -91,8 +91,8 @@
 
 .ecosystem-wrapper {
   position: relative;
-  width: 520px;
-  height: 520px;
+  width: 450px;
+  height: 450px;
 }
 
 /* ==========================================
@@ -109,7 +109,7 @@
 }
 
 .ecosystem-image {
-  width: 240px;
+  width: 200px;
   height: auto;
   object-fit: contain;
 }

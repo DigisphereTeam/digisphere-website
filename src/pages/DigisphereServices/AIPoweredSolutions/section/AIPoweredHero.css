@@ -1,0 +1,8 @@
+.AI-bottom-card {
+    border-radius: 20px;
+    overflow: hidden;
+}
+.AI-bottom-card img , .dashboard-bottom-card img, .dashboard-floating-card img{
+    width: 100%;
+    display: block;
+}
