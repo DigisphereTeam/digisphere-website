@@ -217,6 +217,9 @@
   margin-left: 10px;
   font-size: 10px;
   color: #64748b;
+  background-color: #ffffff;
+  padding: 8px 350px 8px 14px;
+  border-radius: 6px;
 }
 
 /* =========================
@@ -293,21 +296,39 @@
 }
 
 /* fake lines */
-.website-lines div {
-  height: 4px;
-  background: #e5e7eb;
-  margin-top: 6px;
-  border-radius: 8px;
+.website-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.website-lines div:nth-child(1) {
-  width: 90%;
+.website-lines div {
+  height: 4px;
+  border-radius: 10px;
+  background: #e5e7eb;
+  transform-origin: left;
+  animation: growBar 1.2s ease-in-out infinite;
 }
-.website-lines div:nth-child(2) {
-  width: 75%;
-}
-.website-lines div:nth-child(3) {
-  width: 60%;
+
+/* different widths */
+.website-lines div:nth-child(1) { width: 90%; animation-delay: 1s; }
+.website-lines div:nth-child(2) { width: 75%; animation-delay: 0.10s; }
+.website-lines div:nth-child(3) { width: 60%; animation-delay: 0.14s; }
+
+/* actual movement (grow/shrink) */
+@keyframes growBar {
+  0% {
+    transform: scaleX(0.4);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0.4);
+    opacity: 0.6;
+  }
 }
 
 /* buttons */
@@ -419,26 +440,45 @@
 
 .bar {
   width: 10px;
-  height: 20px;           /* base height */
- background: linear-gradient(to top, #2563eb, #93c5fd);
+  height: 20px; /* base height */
+  background: linear-gradient(to top, #2563eb, #93c5fd);
   border-radius: 4px;
   transform-origin: bottom;
   animation: pulse 3s ease-in-out infinite;
 }
 
 /* slow sequential delay */
-.b1 { animation-delay: 0s; }
-.b2 { animation-delay: 0.3s; }
-.b3 { animation-delay: 0.6s; }
-.b4 { animation-delay: 0.9s; }
-.b5 { animation-delay: 1.2s; }
-.b6 { animation-delay: 1.5s; }
-.b7 { animation-delay: 1.8s; }
+.b1 {
+  animation-delay: 0s;
+}
+.b2 {
+  animation-delay: 0.3s;
+}
+.b3 {
+  animation-delay: 0.6s;
+}
+.b4 {
+  animation-delay: 0.9s;
+}
+.b5 {
+  animation-delay: 1.2s;
+}
+.b6 {
+  animation-delay: 1.5s;
+}
+.b7 {
+  animation-delay: 1.8s;
+}
 
 /* controlled growth */
 @keyframes pulse {
-  0%, 100% { transform: scaleY(1); }
-  50% { transform: scaleY(1.6); } /* 👈 reduce this value */
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.6);
+  } /* 👈 reduce this value */
 }
 
 .b1 {
@@ -484,6 +524,10 @@
   font-size: 9px;
   color: #94a3b8;
 }
+.blue{
+  color:#057dcd;
+  font-weight: 700;
+}
 
 .box h3 {
   font-size: 12px;
@@ -492,7 +536,8 @@
 }
 
 .green {
-  color: #22c55e;
+  color:#10B981;
+  font-weight: 700;
 }
 
 /* =========================
@@ -541,14 +586,14 @@
 .track {
   width: 100%;
   height: 3px;
-  background: #057DCD40;
+  background: #057dcd40;
   border-radius: 999px;
   overflow: hidden;
 }
-.track-1{
-   width: 70%;
+.track-1 {
+  width: 70%;
   height: 3px;
-  background: #057DCD20;
+  background: #057dcd20;
   border-radius: 999px;
   overflow: hidden;
   margin-top: 2px;
@@ -556,32 +601,32 @@
 .track2 {
   width: 100%;
   height: 3px;
-  background:#10B98140;
+  background: #10b98140;
   border-radius: 999px;
   overflow: hidden;
 }
-.track2-1{
+.track2-1 {
   width: 70%;
   height: 3px;
-  background:#10B98120;
+  background: #10b98120;
   border-radius: 999px;
   overflow: hidden;
-    margin-top: 2px;
+  margin-top: 2px;
 }
 .track3 {
   width: 100%;
   height: 3px;
-  background: #8B5CF640;
+  background: #8b5cf640;
   border-radius: 999px;
   overflow: hidden;
 }
-.track3-1{
+.track3-1 {
   width: 70%;
   height: 3px;
-  background:#8B5CF620;
+  background: #8b5cf620;
   border-radius: 999px;
   overflow: hidden;
-    margin-top: 2px;
+  margin-top: 2px;
 }
 
 .fill {
@@ -604,11 +649,7 @@
 /* =========================
    RESPONSIVE
 ========================= */
-@media (min-width: 992px) {
-  .website-hero {
-    flex-direction: row;
-  }
-}
+
 
 /* background track (light line) */
 .website-Performance div:first-child {
@@ -627,4 +668,122 @@
   border-radius: 999px;
   position: relative;
   margin-top: 4px;
+}
+/* =========================
+   TABLETS (≤ 768px)
+========================= */
+@media (max-width: 962px) {
+  .hero-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .website-navbar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .website-url {
+    width: 100%;
+    padding: 8px 14px;
+    font-size: 9px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .website-hero {
+    flex-direction: column;
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .website-left,
+  .website-right {
+    width: 100%;
+  }
+
+  .website-feature-card {
+    width: 100%;
+  }
+
+  .website-chart {
+    height: 80px;
+  }
+
+  .website-card {
+    padding: 10px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (≤ 576px)
+========================= */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .hero-description {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .hero-tag {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+  }
+
+  .website-url {
+    font-size: 8px;
+    padding: 6px 10px;
+  }
+
+  .website-hero {
+    padding: 10px;
+  }
+
+  .website-card-header h4 {
+    font-size: 9px;
+  }
+
+  .box h3 {
+    font-size: 10px;
+  }
+
+  .website-feature-card {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .website-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+  }
+
+  .stat-number {
+    font-size: 28px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
 }

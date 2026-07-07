@@ -159,7 +159,7 @@ const AutomationEveryType = () => {
           <div className="row g-4">
             {toolchainData.map((item, index) => (
               <div key={index} className="col-lg-4 col-md-6">
-                <Reveal variant={fadeUp} delay={index * 0.15}>
+                <Reveal className="h-100" variant={fadeUp} delay={index * 0.15}>
                   <div className="toolchain-card">
                     <h3>{item.title}</h3>
 

@@ -1,12 +1,10 @@
-import React from "react";
 import "./HeroStatsSection.css";
-
-import heroImage from "../../../../assets/website-development/hero-image.svg";
-import Counter from "../../../../components/Counter/Counter";
+import { useEffect, useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
 import Reveal from "../../../../animations/Reveal";
 import { fadeUp } from "../../../../animations/variants";
-import { FaArrowRight } from "react-icons/fa";
 import Button from "../../../../components/Button/Button";
+import Counter from "../../../../components/Counter/Counter";
 
 const HeroStatsSection = () => {
   const stats = [
@@ -33,6 +31,36 @@ const HeroStatsSection = () => {
       label: "Google PageSpeed Score",
     },
   ];
+  const [v, setV] = useState(0);
+  const [r, setR] = useState(0);
+
+  useEffect(() => {
+    let i = 0;
+    let j = 0;
+
+    const vT = setInterval(() => {
+      i += 250;
+      if (i >= 12500) {
+        i = 12500;
+        clearInterval(vT);
+      }
+      setV(i);
+    }, 20);
+
+    const rT = setInterval(() => {
+      j += 1;
+      if (j >= 32) {
+        j = 32;
+        clearInterval(rT);
+      }
+      setR(j);
+    }, 50);
+
+    return () => {
+      clearInterval(vT);
+      clearInterval(rT);
+    };
+  }, []);
 
   return (
     <section className="hero-stats-section">
@@ -78,7 +106,7 @@ const HeroStatsSection = () => {
                   <span className="website-dot website-green"></span>
                 </div>
 
-                <div className="website-url">✓ yourwebsite.com</div>
+                <div className="website-url"> ✓ digispheretech.in</div>
               </div>
 
               {/* Navbar */}
@@ -129,21 +157,20 @@ const HeroStatsSection = () => {
                       </div>
                     </div>
 
-                   <div className="website-chart">
-  {[...Array(7)].map((_, i) => (
-    <div key={i} className={`bar b${i + 1}`}></div>
-  ))}
-</div>
-
+                    <div className="website-chart">
+                      {[...Array(7)].map((_, i) => (
+                        <div key={i} className={`bar b${i + 1}`}></div>
+                      ))}
+                    </div>
                     <div className="website-stats">
                       <div className="box">
                         <span>Visitors</span>
-                        <h3>12.5K</h3>
+                        <h3 className="blue">{(v / 1000).toFixed(1)}K</h3>
                       </div>
 
                       <div className="box">
                         <span>Revenue</span>
-                        <h3 className="green">+32%</h3>
+                        <h3 className="green">+{r}%</h3>
                       </div>
                     </div>
                   </div>
@@ -156,12 +183,8 @@ const HeroStatsSection = () => {
                   <h4>Fast Performance</h4>
 
                   <div className="website-performance">
-                    <div className="track">
-                     
-                    </div>
-                    <div className="track-1">
-                     
-                    </div>
+                    <div className="track"></div>
+                    <div className="track-1"></div>
                   </div>
                 </div>
 
@@ -170,11 +193,8 @@ const HeroStatsSection = () => {
                   <h4>SEO Optimized</h4>
 
                   <div className="website-performance">
-                    <div className="track2">
-                    </div>
-                     <div className="track2-1">
-                     
-                    </div>
+                    <div className="track2"></div>
+                    <div className="track2-1"></div>
                   </div>
                 </div>
 
@@ -183,10 +203,8 @@ const HeroStatsSection = () => {
                   <h4>Mobile Ready</h4>
 
                   <div className="website-performance">
-                    <div className="track3">
-                    </div>
-                    <div className="track3-1">
-                    </div>
+                    <div className="track3"></div>
+                    <div className="track3-1"></div>
                   </div>
                 </div>
               </div>
