@@ -13,7 +13,7 @@
 
 .engagement-header h2 {
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 600;
     color: #16213e;
     line-height: 1.2;
     margin: 0;
@@ -21,65 +21,6 @@
 
 .engagement-highlight {
     color: #057DCD;
-}
-
-/* ==========================
-   STEP CARDS
-========================== */
-
-.steps-grid {
-    margin-bottom: 70px;
-}
-
-.step-card {
-    background: #ffffff;
-    border: 1px solid #dfe8f1;
-    border-radius: 14px;
-    padding: 24px;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
-.step-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(5, 125, 205, 0.08);
-}
-
-.step-icon-box {
-    width: 56px;
-    height: 56px;
-    background: #eef6ff;
-    border-radius: 18px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 28px;
-}
-
-
-.step-number {
-    font-size: 40px;
-    font-weight: 800;
-    color: #dceaf8;
-    line-height: 1;
-    margin-bottom: 20px;
-}
-
-.step-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #16213e;
-    margin-bottom: 16px;
-    line-height: 1.3;
-}
-
-.step-desc {
-    font-size: 16px;
-    color: #5c667d;
-    line-height: 1.8;
-    margin: 0;
 }
 
 /* ==========================
@@ -106,7 +47,7 @@
 
 .getting-started h2 {
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 600;
     color: #16213e;
     margin-bottom: 18px;
     line-height: 1.2;
@@ -124,16 +65,192 @@
    GROWTH IMAGE
 ========================== */
 
+/* Card Container */
 .trajectory-card {
-    max-width: 760px;
-    margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.trajectory-image {
-    width: 100%;
-    display: block;
+/* Header Text */
+.trajectory-title {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #334e68;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+  letter-spacing: 0.3px;
 }
 
+/* Bars Flex Wrapper */
+.trajectory-bars-container {
+  display: flex;
+  align-items: flex-end; /* Keeps bars aligned to bottom */
+  justify-content: space-between;
+  width: 100%;
+  height: 200px; /* Fixed height for the chart viewport area */
+  gap: 12px;     /* Spacing between bars */
+}
+
+/* Wrapper to maintain space layout even before bars animate in */
+.trajectory-bar-wrapper {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Individual Animated Bars */
+.trajectory-bar {
+  width: 100%;
+  background-color: #0070ba; /* Vibrant blue matches image */
+  border-radius: 12px 12px 4px 4px; /* Smooth rounded corners on top edge */
+}.traffic-card {
+  width: 100%;
+  height: 230px; /* Slight increase to securely contain bars + header + footer padding */
+  background: linear-gradient(
+    135deg,
+    #e8f4fd 0%,
+    #ffffff 100*
+  );
+  border-radius: 16px;
+  padding: 16px 20px;
+  position: relative;
+  border: 1px solid rgba(226, 232, 240, 1);
+  box-sizing: border-box;
+}
+
+.traffic-header {
+  display: flex;
+  justify-content: center; /* Centered layout matching your updated image header */
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.traffic-header h4 {
+  color: #334e68;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.traffic-bars {
+  position: absolute;
+  bottom: 45px;
+  left: 24px;
+  right: 24px;
+  height: 120px; /* Secure workspace height for bars to expand */
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;     /* Distinct gap matching the image look */
+}
+
+.bar-wrapper {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.traffic-bar {
+  width: 100%;
+  background: #057dcd;
+  /* Gives the bars thick rounded top-caps exactly matching the uploaded image */
+  border-radius: 12px 12px 4px 4px; 
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.traffic-bar:hover {
+  background: #0464a4;
+}
+
+.bar-tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  color: #10B981;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Tooltip States */
+.bar-wrapper:hover .bar-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.bar-wrapper.fixed-tooltip .bar-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.traffic-footer {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #64748b;
+  font-size: 13px;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* --- Breakpoint Cleanups (Eliminated Duplicate Code Blocks) --- */
+@media (max-width: 992px) {
+  .traffic-card {
+    height: 210px;
+  }
+  .traffic-bars {
+    height: 100px;
+    bottom: 40px;
+    gap: 6px;
+  }
+  .traffic-bar {
+    border-radius: 8px 8px 3px 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .traffic-card {
+    height: 190px;
+    padding: 12px 15px;
+  }
+  .traffic-bars {
+    height: 85px;
+    bottom: 35px;
+    gap: 4px;
+    left: 15px;
+    right: 15px;
+  }
+  .traffic-bar {
+    border-radius: 6px 6px 2px 2px;
+  }
+  .bar-tooltip {
+    font-size: 11px;
+    top: -24px;
+  }
+}
 /* ==========================
    TABLET
 ========================== */

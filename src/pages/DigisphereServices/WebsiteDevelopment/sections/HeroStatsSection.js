@@ -69,7 +69,7 @@ const HeroStatsSection = () => {
           <div className="col-lg-6 col-12">
             <Reveal variant={fadeUp} delay={0.1}>
               <div className="hero-content">
-                <span className="hero-tag">WEBSITE DESIGN & DEVELOPMENT</span>
+                <span className="hero-tag">Website Design & Development</span>
 
                 <h1 className="hero-title">
                   Websites that work as hard

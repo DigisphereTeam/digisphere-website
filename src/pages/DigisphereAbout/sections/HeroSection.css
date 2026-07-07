@@ -20,7 +20,7 @@
 
 .about-hero-title {
   font-size: 40px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.15;
   color: #0f172a;
   margin-bottom: 24px;
@@ -47,36 +47,6 @@
   flex-wrap: wrap;
 }
 
-.about-btn-primary,
-.about-btn-secondary {
-  border-radius: 10px;
-  padding: 14px 28px;
-  font-size: 15px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.about-btn-primary {
-  border: none;
-  color: #fff;
-  background: #057DCD;
-}
-
-.about-btn-primary:hover {
-  background: #0464A4;
-  transform: translateY(-2px);
-}
-
-.about-btn-secondary {
-  border: 1px solid #dbe3ef;
-  background: #fff;
-  color: #0f172a;
-}
-
-.about-btn-secondary:hover {
-  background: #f1f5f9;
-  transform: translateY(-2px);
-}
 
 /* ==========================================
    GRAPHIC AREA
