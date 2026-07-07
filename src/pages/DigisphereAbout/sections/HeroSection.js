@@ -8,12 +8,11 @@ import iconDev from "../../../assets/about-page/icon-dev.svg";
 import iconMarketing from "../../../assets/about-page/icon-marketing.svg";
 import iconCloud from "../../../assets/about-page/icon-cloud.svg";
 import iconSecurity from "../../../assets/about-page/icon-security.svg";
-import whiteArrow from "../../../assets/about-page/arrow-icon1.svg";
-import blackArrow from "../../../assets/about-page/arrow-icon2.svg";
+import { FaArrowRight } from "react-icons/fa";
 
-// Animations //
 import Reveal from "../../../animations/Reveal";
 import { fadeUp } from "../../../animations/variants";
+import Button from "../../../components/Button/Button";
 
 export default function HeroSection() {
   return (
@@ -24,7 +23,7 @@ export default function HeroSection() {
           <div className="col-lg-6">
             <div className="about-hero-content">
               <Reveal variant={fadeUp}>
-                <span className="about-hero-badge">ABOUT DIGISPHERE</span>
+                <span className="about-hero-badge">About Digisphere</span>
               </Reveal>
 
               <Reveal variant={fadeUp} delay={0.1}>
@@ -46,15 +45,13 @@ export default function HeroSection() {
 
               <Reveal variant={fadeUp} delay={0.4}>
                 <div className="about-hero-actions">
-                  <button className="about-btn-primary">
-                    Meet The Team
-                    <img src={whiteArrow} alt="arrow" />
-                  </button>
+                  <Button variant="primary" icon={<FaArrowRight />}>
+                    Meet The Team                 
+                  </Button >
 
-                  <button className="about-btn-secondary">
+                  <Button variant="secondary" icon={<FaArrowRight />}>
                     See Our Work
-                    <img src={blackArrow} alt="arrow" />
-                  </button>
+                  </Button>
                 </div>
               </Reveal>
             </div>

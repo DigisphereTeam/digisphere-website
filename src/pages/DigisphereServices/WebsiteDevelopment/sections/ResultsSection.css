@@ -109,7 +109,8 @@
 .case-study-result {
   display: flex;
   align-items: baseline;
-  gap: 10px;
+  gap: 20px;
+  font-variant-numeric: tabular-nums;
 }
 
 .case-study-result-number {
