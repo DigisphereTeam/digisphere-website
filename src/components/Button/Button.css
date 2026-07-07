@@ -13,12 +13,10 @@
 
   cursor: pointer;
   transition: all 0.3s ease;
-
   outline: none;
 }
 
-/* PRIMARY BUTTON */
-
+/* PRIMARY */
 .custom-btn.primary {
   background-color: #057dcd;
   color: #ffffff;
@@ -27,11 +25,9 @@
 
 .custom-btn.primary:hover {
   background-color: #0464a4;
-  transform: translateY(-2px);
 }
 
-/* SECONDARY BUTTON */
-
+/* SECONDARY */
 .custom-btn.secondary {
   background-color: transparent;
   color: #101828;
@@ -40,20 +36,24 @@
 
 .custom-btn.secondary:hover {
   color: #0464A4;
-  transform: translateY(-2px);
 }
 
 /* ICON */
-
 .btn-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 15px;
+
+  transition: transform 0.3s ease;
+}
+
+/* 👉 ONLY ARROW MOVES */
+.custom-btn:hover .btn-icon {
+  transform: translateX(6px);
 }
 
 /* MOBILE */
-
 @media (max-width: 576px) {
   .custom-btn {
     width: 100%;

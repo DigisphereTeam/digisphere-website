@@ -1,5 +1,6 @@
-import React from "react";
-import './AIPoweredHero.css'
+import React, { useState, useEffect, useRef } from "react";
+import { FaRobot, FaPaperPlane, FaCircle } from "react-icons/fa";
+import "./AIPoweredHero.css";
 import Counter from "../../../../components/Counter/Counter";
 import Reveal from "../../../../animations/Reveal";
 import { fadeUp } from "../../../../animations/variants";
@@ -32,6 +33,95 @@ const AIPoweredHero = () => {
       label: "Client satisfaction across projects",
     },
   ];
+  const autoMessages = [
+    "👋 Hello! How can I help you today?",
+    "I can help you build websites.",
+    "I can create React apps.",
+    "I can design UI animations.",
+  ];
+
+  const [messages, setMessages] = useState([
+    {
+      id: 1,
+      sender: "bot",
+      text: "👋 Hello! How can I help you today?",
+    },
+    {
+      id: 2,
+      sender: "bot",
+      text: "I can create AI powered websites.",
+    },
+    {
+      id: 3,
+      sender: "bot",
+      text: "I can build React applications.",
+    },
+    {
+      id: 4,
+      sender: "bot",
+      text: "I can automate your business workflow.",
+    },
+    {
+      id: 5,
+      sender: "bot",
+      text: "Let's create something amazing.",
+    },
+  ]);
+
+  const [input, setInput] = useState("");
+  const [typing, setTyping] = useState(false);
+
+  const bottomRef = useRef(null);
+
+  useEffect(() => {
+    const chatBox = document.querySelector(".chat-body");
+
+    const scroll = setInterval(() => {
+      if (chatBox) {
+        chatBox.scrollTop += 1;
+
+        // Reset when reaching bottom (loop)
+        if (chatBox.scrollTop + chatBox.clientHeight >= chatBox.scrollHeight) {
+          chatBox.scrollTop = 0;
+        }
+      }
+    }, 30);
+
+    return () => clearInterval(scroll);
+  }, []);
+  const sendMessage = () => {
+    if (!input.trim()) return;
+
+    const userMessage = {
+      id: Date.now(),
+      sender: "user",
+      text: input,
+    };
+
+    setMessages((prev) => [...prev, userMessage]);
+    setInput("");
+
+    setTyping(true);
+
+    setTimeout(() => {
+      setTyping(false);
+
+      const botMessage = {
+        id: Date.now() + 1,
+        sender: "bot",
+        text: "This is a demo response. You can connect this UI with OpenAI API.",
+      };
+
+      setMessages((prev) => [...prev, botMessage]);
+    }, 1800);
+  };
+
+  const handleKey = (e) => {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+  };
+
   return (
     <>
       <section className="devops-hero-section">
@@ -71,13 +161,71 @@ const AIPoweredHero = () => {
             </div>
 
             <div className="col-lg-6 col-12">
-              <div className="devops-dashboard">
-                <div className="dashboard-main-card">
-                  <img src={DigisphereAI} alt="Pipeline Dashboard" />
+              <div className="chat-wrapper">
+                {/* Header */}
+
+                <div className="chat-header">
+                  <div className="header-left">
+                    <div className="avatar">
+                      <FaRobot />
+                    </div>
+
+                    <div>
+                      <h3>AI Assistant</h3>
+
+                      <span className="online">
+                        <FaCircle />
+                        Online
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="AI-bottom-card">
-                  <img src={NeuralNetwork} alt="Recent Builds" />
+                {/* Chat Body */}
+
+                <div className="chat-body">
+                  <div className="chat-scroll">
+                    {messages.map((msg) => (
+                      <div
+                        key={msg.id}
+                        className={`message-row ${
+                          msg.sender === "user" ? "user" : "bot"
+                        }`}
+                      >
+                        {msg.sender === "bot" && (
+                          <div className="bot-avatar">
+                            <FaRobot />
+                          </div>
+                        )}
+
+                        <div
+                          className={`message ${
+                            msg.sender === "user"
+                              ? "user-message"
+                              : "bot-message"
+                          }`}
+                        >
+                          {msg.text}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Input */}
+
+                <div className="chat-input">
+                  <input
+                    type="text"
+                    placeholder="Type your message..."
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    onKeyDown={handleKey}
+                  />
+
+                  <button onClick={sendMessage}>
+                    <FaPaperPlane />
+                  </button>
                 </div>
               </div>
             </div>

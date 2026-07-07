@@ -1,31 +1,30 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
-import "./DigisphereHeader.css";
-import digilogo from "../../assets/digispherelogo.svg";
-import { IoArrowForwardSharp } from "react-icons/io5";
+import { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import pen from "../../assets/pen.svg";
-import WebsiteDesign from "../../assets/servicesDropdown/Website Design & Development.svg";
-import DigitalMarketing from "../../assets/servicesDropdown/DigitalMarketing.svg";
-import WebApplications from "../../assets/servicesDropdown/WebApplications.svg";
-import AutomationSolutions from "../../assets/servicesDropdown/AutomationSolutions.svg";
-import AIPowered from "../../assets/servicesDropdown/AI-Powered.svg";
-import CloudServices from "../../assets/servicesDropdown/CloudServices.svg";
-import Cybersecuritys from "../../assets/servicesDropdown/Cybersecuritys.svg";
-import Managed from "../../assets/servicesDropdown/Managed.svg";
-import DevOp from "../../assets/servicesDropdown/DevOp.svg";
+import { IoArrowForwardSharp } from "react-icons/io5";
+import { NavLink, Link, useLocation } from "react-router-dom";
+import digilogo from "../../assets/digispherelogo.svg";
 import AbouUs from "../../assets/Lead Generationicon.svg";
-import HowWeWork from "../../assets/resourcesdropdown/HowWeWork.svg";
+import CaseStudies from "../../assets/Marketing ROI.svg";
+import pen from "../../assets/pen.svg";
+import Blog from "../../assets/resourcesdropdown/Blog.svg";
 import Careers from "../../assets/resourcesdropdown/Careers.svg";
 import Contact from "../../assets/resourcesdropdown/Contact.svg";
-import Blog from "../../assets/resourcesdropdown/Blog.svg";
-import CaseStudies from "../../assets/Marketing ROI.svg";
-import SuccessStories from "../../assets/resourcesdropdown/SuccessStories.svg";
-import TechnologyGuides from "../../assets/resourcesdropdown/TechnologyGuides.svg";
+import DocumentationIcon from "../../assets/resourcesdropdown/Documentation.svg";
 import FAQs from "../../assets/resourcesdropdown/FAQs.svg";
 import HelpCenter from "../../assets/resourcesdropdown/HelpCenter.svg";
-import Documentation from "../../assets/resourcesdropdown/Documentation.svg";
-
+import HowWeWork from "../../assets/resourcesdropdown/HowWeWork.svg";
+import SuccessStories from "../../assets/resourcesdropdown/SuccessStories.svg";
+import TechnologyGuides from "../../assets/resourcesdropdown/TechnologyGuides.svg";
+import AIPowered from "../../assets/servicesDropdown/AI-Powered.svg";
+import AutomationSolutions from "../../assets/servicesDropdown/AutomationSolutions.svg";
+import CloudServices from "../../assets/servicesDropdown/CloudServices.svg";
+import Cybersecuritys from "../../assets/servicesDropdown/Cybersecuritys.svg";
+import DevOp from "../../assets/servicesDropdown/DevOp.svg";
+import DigitalMarketing from "../../assets/servicesDropdown/DigitalMarketing.svg";
+import Managed from "../../assets/servicesDropdown/Managed.svg";
+import WebApplications from "../../assets/servicesDropdown/WebApplications.svg";
+import WebsiteDesign from "../../assets/servicesDropdown/Website Design & Development.svg";
+import "./DigisphereHeader.css";
 const DigisphereHeader = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -100,7 +99,11 @@ const DigisphereHeader = () => {
             desc: "Custom portals, dashboards and business software.",
             path: "/services/web-applications",
             icon: (
-              <img className="service-image" src={WebApplications} alt="WebApplications" />
+              <img
+                className="service-image"
+                src={WebApplications}
+                alt="WebApplications"
+              />
             ),
           },
           {
@@ -119,7 +122,9 @@ const DigisphereHeader = () => {
             title: "AI-Powered Solutions",
             desc: "AI integrations, copilots and assistants.",
             path: "/services/aipowered",
-            icon: <img className="service-image" src={AIPowered} alt="AIPowered" />,
+            icon: (
+              <img className="service-image" src={AIPowered} alt="AIPowered" />
+            ),
           },
         ],
       },
@@ -132,7 +137,11 @@ const DigisphereHeader = () => {
             desc: "AWS, Azure and Google Cloud solutions.",
             path: "/services/cloudServices",
             icon: (
-              <img className="service-image" src={CloudServices} alt="CloudServices" />
+              <img
+                className="service-image"
+                src={CloudServices}
+                alt="CloudServices"
+              />
             ),
           },
           {
@@ -140,7 +149,11 @@ const DigisphereHeader = () => {
             desc: "Monitoring, VAPT and security assessments.",
             path: "/services/cyber-security",
             icon: (
-              <img className="service-image" src={Cybersecuritys} alt="Cybersecuritys" />
+              <img
+                className="service-image"
+                src={Cybersecuritys}
+                alt="Cybersecuritys"
+              />
             ),
           },
           {
@@ -197,7 +210,7 @@ const DigisphereHeader = () => {
           {
             title: "About Us",
             desc: "Our story, team, and mission.",
-            path: "/services/webdevelopment",
+            path: "/services",
             icon: (
               <img className="service-image" src={AbouUs} alt="WebsiteDesign" />
             ),
@@ -205,7 +218,7 @@ const DigisphereHeader = () => {
           {
             title: "How We Work",
             desc: "Our engagement process explained.",
-            path: "/services/digital-marketing",
+            path: "/services",
             icon: (
               <img
                 className="service-image"
@@ -217,13 +230,13 @@ const DigisphereHeader = () => {
           {
             title: "Careers",
             desc: "Join a growing tech team.",
-            path: "/services/experience-design",
+            path: "/services",
             icon: <img className="service-image" src={Careers} alt="pen" />,
           },
           {
             title: "Contact",
             desc: "Get in touch with our team.",
-            path: "/services/webdevelopment",
+            path: "/services",
             icon: (
               <img
                 className="service-image"
@@ -241,19 +254,19 @@ const DigisphereHeader = () => {
           {
             title: "Blog",
             desc: "Tech insights and practical guides.",
-            path: "/services/web-applications",
+            path: "/services",
             icon: <img className="service-image" src={Blog} alt="Blog" />,
           },
           {
             title: "Case Studies",
             desc: "Real results from real clients.",
-            path: "/services/automation",
+            path: "/services",
             icon: <img className="service-image" src={CaseStudies} alt="pen" />,
           },
           {
             title: "Success Stories",
             desc: "How clients grew with us.",
-            path: "/services/ai",
+            path: "/services",
             icon: (
               <img className="service-image" src={SuccessStories} alt="pen" />
             ),
@@ -261,7 +274,7 @@ const DigisphereHeader = () => {
           {
             title: "Technology Guides",
             desc: "Deep-dives on tools and stacks.",
-            path: "/services/ai",
+            path: "/services",
             icon: (
               <img className="service-image" src={TechnologyGuides} alt="pen" />
             ),
@@ -275,20 +288,26 @@ const DigisphereHeader = () => {
           {
             title: "FAQs",
             desc: "Answers to common questions.",
-            path: "/services/cloud",
+            path: "/services",
             icon: <img className="service-image" src={FAQs} alt="pen" />,
           },
           {
             title: "Help Center",
             desc: "Support resources and docs.",
-            path: "/services/cyber-security",
+            path: "/services",
             icon: <img className="service-image" src={HelpCenter} alt="pen" />,
           },
           {
-            title: Documentation,
+            title: "Documentation",
             desc: "Technical references and guides.",
-            path: "/services/managed-it-services",
-            icon: <img className="service-image" src={Managed} alt="pen" />,
+            path: "/services",
+            icon: (
+              <img
+                className="service-image"
+                src={DocumentationIcon}
+                alt="Documentation"
+              />
+            ),
           },
         ],
       },
@@ -324,7 +343,13 @@ const DigisphereHeader = () => {
       },
     ],
   };
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const location = useLocation();
 
+  const isResourcesActive =
+    location.pathname.startsWith("/blogs") ||
+    location.pathname.startsWith("/case-studies") ||
+    location.pathname.startsWith("/whitepapers");
   return (
     <nav ref={menuRef} className="custom-navbar navbar navbar-expand-lg">
       <div className="container-fluid custom-container">
@@ -372,11 +397,12 @@ const DigisphereHeader = () => {
               <button
                 type="button"
                 className={`nav-link nav-button d-flex align-items-center gap-1 border-0 bg-transparent ${
-                  isServicesOpen ? "active" : ""
+                  location.pathname.startsWith("/services") ? "active" : ""
                 }`}
                 onClick={() => {
                   setIsServicesOpen(!isServicesOpen);
                   setIsResourcesOpen(false);
+                  setIsIndustriesOpen(false);
                 }}
               >
                 Services
@@ -467,15 +493,25 @@ const DigisphereHeader = () => {
             <li className="nav-item dropdown">
               <button
                 type="button"
-                className="nav-link d-flex align-items-center gap-1 border-0 bg-transparent"
+                className={`nav-link nav-button d-flex align-items-center gap-1 border-0 bg-transparent ${
+                  location.pathname.startsWith("/industries") ? "active" : ""
+                }`}
                 data-bs-toggle="dropdown"
                 onClick={() => {
+                  setIsIndustriesOpen(!isIndustriesOpen);
                   setIsServicesOpen(false);
                   setIsResourcesOpen(false);
                 }}
               >
                 Industries
-                <IoIosArrowDown />
+                <IoIosArrowDown
+                  style={{
+                    transform: isIndustriesOpen
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
+                    transition: "0.3s",
+                  }}
+                />
               </button>
 
               <ul className="dropdown-menu">
@@ -497,11 +533,13 @@ const DigisphereHeader = () => {
             <li className="nav-item dropdown mega-dropdown">
               <button
                 type="button"
-                className="nav-link nav-button d-flex align-items-center gap-1 border-0 bg-transparent"
-                data-bs-toggle="dropdown"
+                className={`nav-link nav-button d-flex align-items-center gap-1 border-0 bg-transparent ${
+                  isResourcesActive ? "active" : ""
+                }`}
                 onClick={() => {
+                  setIsResourcesOpen(!isResourcesOpen);
                   setIsServicesOpen(false);
-                  setIsResourcesOpen(false);
+                  setIsIndustriesOpen(false);
                 }}
               >
                 Resources

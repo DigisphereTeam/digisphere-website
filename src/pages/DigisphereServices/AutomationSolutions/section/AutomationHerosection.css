@@ -1,0 +1,312 @@
+/* Main Workflow Card */
+.workflow-wrapper {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.Onboarding-Workflow h6{
+    font-size: 12px;
+    font-weight: 700;
+    color: #0F172A;
+    
+}
+.Onboarding-Workflow p{
+    font-size: 10px;
+    font-weight: 400;
+    color: #475569;
+}
+.Onboarding-Workflow{
+    display: flex;
+}
+
+
+/* Header */
+.workflow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.workflow-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Onbord-logo{
+    width: 38px;
+    height: 38px;
+    margin-right: 10px
+}
+
+.workflow-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: #057DCD;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.workflow-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.workflow-subtitle {
+  margin: 2px 0 0;
+  font-size: 9px;
+  color: #6b7280;
+}
+
+.workflow-status {
+  color: #10B981;
+  font-size: 11px;
+  font-weight: 600;
+}
+.auto-status{
+font-size: 10px;
+font-weight: 600;
+color: #10B981;
+}
+
+/* Steps Container */
+.autosteps {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+/* Individual Card */
+.step-card {
+  flex: 1;
+  min-width: 0;
+  height: 78px;
+
+  border-radius: 12px;
+  border: 2px solid #d1d5db;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px;
+  box-sizing: border-box;
+
+  transition: .3s ease;
+}
+
+
+.step-card h6 {
+  margin: 4px 0 2px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #111827;
+}
+
+
+.step-card small {
+  font-size: 8px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+
+/* Connector Lines */
+.connector {
+  width: 14px;
+  height: 2px;
+  background: #10B981;
+  flex-shrink: 0;
+}
+
+
+/* Icon */
+.icon {
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #111827;
+}
+
+
+/* Active Blue */
+.step-card.active {
+  border-color: #057DCD;
+  background: #eef6ff;
+}
+
+.step-card.active .icon {
+  color: #057DCD;
+}
+
+
+/* Completed Green */
+.step-card.done {
+  border:2px solid #10B981;
+  background: #edfff7;
+}
+
+.step-card.done .icon {
+  color: #10B981;
+}
+
+
+/* Rotate Animation */
+/* .rotate {
+  animation: rotateCheck 1s linear infinite;
+}
+
+
+@keyframes rotateCheck {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+} */
+.rotate-icon {
+  animation: rotateIcon 1.2s linear infinite;
+}
+
+@keyframes rotateIcon {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Bootstrap col-lg-6 support */
+@media(max-width:1200px){
+
+  .step-card {
+    height:70px;
+  }
+
+  .step-card h6 {
+    font-size:9px;
+  }
+
+  .step-card small {
+    font-size:7px;
+  }
+
+  .connector {
+    width:10px;
+  }
+
+}
+
+
+/* Mobile */
+@media(max-width:768px){
+
+  .workflow-wrapper{
+    padding:12px;
+  }
+
+  .autosteps{
+    gap:3px;
+  }
+
+  .connector{
+    width:6px;
+  }
+
+  .step-card{
+    height:65px;
+  }
+
+  .step-card h6{
+    font-size:8px;
+  }
+
+  .step-card small{
+    display:none;
+  }
+}
+/* Default icons */
+.step-card .icon {
+  color: #64748b;
+}
+
+/* Active icon blue */
+.step-card.active .icon {
+  color: #057DCD;
+}
+
+/* Completed tick green */
+.step-card.done .icon {
+  color: #10B981;
+}
+.automation-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.automation-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 6px 0;
+}
+
+.automation-item:last-child {
+  padding-bottom: 0;
+}
+.Active-Automations{
+    font-size: 12px;
+    font-weight: 700;
+    color: #0F172A;
+}
+.text-primary{
+    font-size: 10px;
+    font-weight: 600;
+    color: #057DCD !important;
+}
+.Invoice-Generation{
+    font-size: 10px;
+    font-weight: 600;
+    color: #0F172A;
+
+}
+.success{
+    font-size: 9px;
+    font-weight: 600;
+    color: #10B981 !important;
+}
+.text-muted{
+    font-size: 9px;
+    color: #94A3B8 !important;
+}
