@@ -19,15 +19,27 @@ const TeamSection = () => {
     description: "UX strategist creating user-centered digital experiences.",
   },
   {
+    initial: "PK",
+    name: "Shiva Prasanna Kumar",
+    role: "UI/UX Designer",
+    description: "Creative designer crafting intuitive and visually engaging user interfaces.",
+  },
+  {
     initials: "SG",
     name: "Sneha",
     role: "Marketing Director",
     description: "Growth marketer, driving measurable business outcomes."
   },
   {
+    initials: "KK",
+    name: "Kiran Kumar",
+    role: "Digital Marketing Executive",
+    description: "Driving online growth through data-driven marketing strategies."
+  },
+  {
     initials: "RV",
-    name: "Ravi",
-    role: "Backend Lead",
+    name: "Ravi Kishore",
+    role: "Lead Backend Developer",
     description: "Cybersecurity expert with enterprise compliance experience.",
   },
   {
@@ -45,7 +57,7 @@ const TeamSection = () => {
   {
     initials: "IS",
     name: "Ibrahim Shaik",
-    role: "Frontend Developer",
+    role: "Lead Frontend Developer",
     description: "Cloud architect specializing in scalable infrastructure.",
   },
   {

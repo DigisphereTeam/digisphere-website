@@ -338,22 +338,22 @@
   margin-top: 10px;
 }
 
-.primary,
-.secondary {
+.web-primary,
+.web-secondary {
   padding: 4px 10px;
   font-size: 10px;
   border-radius: 6px;
   border: none;
 }
 
-.primary {
+.web-primary {
   background: #057dcd;
   color: #fff;
   font-size: 7px;
   font-weight: 600;
 }
 
-.secondary {
+.web-secondary {
   background: #ffffff;
   color: #334155;
   border: 1px solid #e2e8f0;

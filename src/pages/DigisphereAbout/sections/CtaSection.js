@@ -4,6 +4,8 @@ import "./CTASection.css";
 import Reveal from "../../../animations/Reveal";
 import { fadeUp } from "../../../animations/variants";
 import Button from "../../../components/Button/Button";
+import { FaArrowRight } from "react-icons/fa6";
+import { RxPeople } from "react-icons/rx";
 
 const CTASection = () => {
   return (
@@ -49,11 +51,11 @@ const CTASection = () => {
           </Reveal>
           <Reveal variant={fadeUp} delay={0.3}>
             <div className="cta-buttons">
-              <Button variant="primary">
+              <Button variant="primary" icon={<FaArrowRight/>}>
                 Book a Free Digital Audit
               </Button>
                 
-              <Button variant="secondary">
+              <Button variant="secondary" icon={<RxPeople/>} iconPosition="left">
                 Talk To Our Team
               </Button>
             </div>

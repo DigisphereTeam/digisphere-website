@@ -140,8 +140,8 @@ const HeroStatsSection = () => {
                   </div>
 
                   <div className="website-buttons">
-                    <button className="primary">Start Free Trial</button>
-                    <button className="secondary">Learn More</button>
+                    <button className="web-primary">Start Free Trial</button>
+                    <button className="web-secondary">Learn More</button>
                   </div>
                 </div>
 

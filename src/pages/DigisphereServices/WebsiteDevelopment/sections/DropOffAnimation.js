@@ -1,12 +1,20 @@
-import React, { useEffect } from "react";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 
+// Updated Sub-component to sync with scroll view
 const CountingNumber = ({ value, suffix = "" }) => {
+  const ref = useRef(null);
+  // This hook returns true when the specific number is visible on screen
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  
   const motionValue = useMotionValue(0);
   const rounded = useTransform(motionValue, (latest) => Math.round(latest));
   const [displayValue, setDisplayValue] = React.useState(0);
 
   useEffect(() => {
+    // ONLY run the animation if the item is in view
+    if (!isInView) return;
+
     const controls = animate(motionValue, value, {
       duration: 1.2,
       ease: "easeOut",
@@ -20,12 +28,11 @@ const CountingNumber = ({ value, suffix = "" }) => {
       controls.stop();
       unsubscribe();
     };
-  }, [value, motionValue, rounded]);
+  }, [isInView, value, motionValue, rounded]);
 
-  return <span>{displayValue}{suffix}</span>;
+  return <span ref={ref}>{displayValue}{suffix}</span>;
 };
 
-// 1. Added the "icon" prop here
 const DropOffAnimation = ({ title, data, isRedTheme = true, icon }) => {
   const barColor = isRedTheme ? "#ef4444" : "#3b82f6";
 
@@ -33,7 +40,6 @@ const DropOffAnimation = ({ title, data, isRedTheme = true, icon }) => {
     <div style={cardStyle}>
       <div style={cardHeaderStyle}>
         <span style={cardTitleStyle}>{title}</span>
-        {/* 2. Render your custom SVG icon if it exists */}
         {icon && (
           <img 
             src={icon} 
@@ -69,7 +75,7 @@ const DropOffAnimation = ({ title, data, isRedTheme = true, icon }) => {
   );
 };
 
-// Styles
+// Styles remain identical
 const cardStyle = { background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "16px", padding: "24px", width: "100%" };
 const cardHeaderStyle = { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" };
 const cardTitleStyle = { color: "#334155", fontWeight: "600", fontSize: "16px" };
