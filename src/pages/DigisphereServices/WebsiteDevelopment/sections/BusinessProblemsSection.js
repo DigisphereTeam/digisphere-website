@@ -8,7 +8,6 @@ import rightIcon from "../../../../assets/website-development/right-icon.svg";
 import dropOffIcon from "../../../../assets/website-development/dropoff-icon.svg";
 import funnelIcon from "../../../../assets/website-development/funnel-icon.svg";
 
-// Import your new components here:
 import DropOffAnimation from "./DropOffAnimation";
 import SeoRankingAnimation from "./SeoRankingAnimation";
 
