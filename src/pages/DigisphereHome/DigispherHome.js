@@ -479,10 +479,10 @@ const DigispherHome = () => {
                 </p>
                 <h1 className="digisphere-hero-title">
                   Technology that{" "}
-                  <h1 className="digisphere-hero-secondtitle">
+                  <span className="digisphere-hero-secondtitle">
                     grows your
                     <br /> business.
-                  </h1>
+                  </span>
                 </h1>
 
                 <p className="digisphere-hero-desc">

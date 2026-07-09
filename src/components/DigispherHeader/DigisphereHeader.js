@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoArrowForwardSharp } from "react-icons/io5";
 import { NavLink, Link, useLocation } from "react-router-dom";
@@ -24,8 +25,11 @@ import DigitalMarketing from "../../assets/servicesDropdown/DigitalMarketing.svg
 import Managed from "../../assets/servicesDropdown/Managed.svg";
 import WebApplications from "../../assets/servicesDropdown/WebApplications.svg";
 import WebsiteDesign from "../../assets/servicesDropdown/Website Design & Development.svg";
+
 import "./DigisphereHeader.css";
+import DigispherHome from "../../pages/DigisphereHome/DigispherHome.js";
 const DigisphereHeader = () => {
+  const navigate = useNavigate();
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
@@ -353,7 +357,7 @@ const DigisphereHeader = () => {
   return (
     <nav ref={menuRef} className="custom-navbar navbar navbar-expand-lg">
       <div className="container custom-container">
-        <Link className="navbar-brand fw-bold" to="/" onClick={closeNavbar}>
+        <Link className="navbar-brand fw-bold" to="/" onClick={()=>{<DigispherHome/>}}>
           <img
             src={digilogo}
             alt="Digisphere Logo"
@@ -490,7 +494,7 @@ const DigisphereHeader = () => {
               </div>
             </li>
             {/* ================= INDUSTRIES ================= */}
-            <li className="nav-item dropdown">
+             {/* <li className="nav-item dropdown">
               <button
                 type="button"
                 className={`nav-link nav-button d-flex align-items-center gap-1 border-0 bg-transparent ${
@@ -527,10 +531,10 @@ const DigisphereHeader = () => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </li>  */}
 
             {/* ================= RESOURCES ================= */}
-            <li className="nav-item dropdown mega-dropdown">
+             {/* <li className="nav-item dropdown mega-dropdown">
               <button
                 type="button"
                 className={`nav-link nav-button d-flex align-items-center gap-1 border-0 bg-transparent ${
@@ -624,14 +628,17 @@ const DigisphereHeader = () => {
                   </div>
                 </div>
               </div>
-            </li>
+            </li>  */}
           </ul>
 
           {/* RIGHT BUTTONS */}
           <div className="nav-buttons-container d-flex flex-column flex-lg-row align-items-center gap-2 gap-lg-3 mt-3 mt-lg-0">
-            <button className="work-btn w-100 w-lg-auto">See Our Work</button>
+            {/* <button className="work-btn w-100 w-lg-auto">See Our Work</button> */}
 
-            <button className="talk-btn w-100 w-lg-auto">
+            <button
+              onClick={() => navigate("/contact")}
+              className="talk-btn w-100 w-lg-auto"
+            >
               Let's Talk <IoArrowForwardSharp className="ms-1" size={12} />
             </button>
           </div>

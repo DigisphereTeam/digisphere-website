@@ -23,7 +23,9 @@ export default function HeroSection() {
           <div className="col-lg-6">
             <div className="about-hero-content">
               <Reveal variant={fadeUp}>
-                <span className="about-hero-badge">About Digisphere</span>
+                <p className="Digi-digital-badge">
+                 About Digisphere
+                  </p>
               </Reveal>
 
               <Reveal variant={fadeUp} delay={0.1}>
