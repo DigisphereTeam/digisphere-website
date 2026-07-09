@@ -65,34 +65,35 @@ const HeroStatsSection = () => {
   return (
     <section className="hero-stats-section">
       <div className="hero-wrapper container">
-        <div className="row mt-4">
+        <div className="row mt-5">
           <div className="col-lg-6 col-12">
             <Reveal variant={fadeUp} delay={0.1}>
-              <div className="hero-content">
-                <span className="hero-tag">Website Design & Development</span>
+            <div className="Digital-hero-content">
+                  <p className="Digi-digital-badge">
+                  Website Design & Development
+                  </p>
 
-                <h1 className="hero-title">
-                  Websites that work as hard
-                  <span> as your business does.</span>
-                </h1>
+                  <h1 className="hero-title">
+                    Find your vulnerabilities
+                    <span>before attackers do.</span>
+                  </h1>
 
-                <p className="hero-description">
-                  A website is not a brochure. It is your best salesperson
-                  working 24 hours a day. We design and build websites that load
-                  fast, rank on search engines, and convert visitors into
-                  enquiries, bookings and sales.
-                </p>
+                  <p className="hero-description">
+                    VAPT, SOC monitoring, compliance assessments, and security
+                    architecture reviews — we protect your business from
+                    breaches, ransomware, and regulatory penalties.
+                  </p>
 
-                <div className="hero-buttons">
-                  <Button variant="primary" icon={<FaArrowRight />}>
-                    <span>Start Free Digital Audit</span>
-                  </Button>
+                  <div className="hero-buttons">
+                    <Button variant="primary" icon={<FaArrowRight />}>
+                      <span>Request Security Assessment </span>
+                    </Button>
 
-                  <Button variant="secondary" icon={<FaArrowRight />}>
-                    <span>View Website Projects</span>
-                  </Button>
+                    <Button variant="secondary">
+                      <span>Our Services</span>
+                    </Button>
+                  </div>
                 </div>
-              </div>
             </Reveal>
           </div>
 

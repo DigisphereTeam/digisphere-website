@@ -153,7 +153,7 @@ const AIPoweredHero = () => {
     <>
       <section className="devops-hero-section">
         <div className="hero-wrapper">
-          <div className="row mt-4">
+          <div className="row mt-5">
             <div className="col-lg-6 col-12">
               <Reveal variant={fadeUp} delay={0.1}>
                 <div className="devops-hero-content">

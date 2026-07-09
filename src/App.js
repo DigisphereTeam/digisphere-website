@@ -13,6 +13,7 @@ import CyberSecurity from "./pages/DigisphereServices/CyberSecurity/CyberSecurit
 import Automation from "./pages/DigisphereServices/AutomationSolutions/Automation.js";
 import AIPowered from "./pages/DigisphereServices/AIPoweredSolutions/AIPowered.js"
 import CloudServices from "./pages/DigisphereServices/CloudServices/CloudServices.js"
+import ContactUs from "./pages/ContactUs/ContactUs.js";
 const App = () => {
   return (
     <Router>
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/services/automation" element={<Automation />} />
         <Route path="/services/aipowered" element={<AIPowered/>} />
         <Route path="/services/cloudservices" element={<CloudServices/>} />
+         <Route path="/contact" element={<ContactUs />} />
       </Routes>
 
       <DigisphereFooter />

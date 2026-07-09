@@ -18,7 +18,7 @@
 
 .nav-link {
   color: #0f172a !important;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   padding: 8px 4px 0px 0px !important;
   transition: color 0.2s ease-in-out;
@@ -35,7 +35,7 @@
 .talk-btn {
   padding: 7px 15px;
   border-radius: 6px;
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
   display: inline-flex;
@@ -257,7 +257,7 @@
   top: 0;
   left: 0;
   z-index: 1050;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* .custom-container {
