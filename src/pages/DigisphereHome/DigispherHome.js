@@ -44,7 +44,6 @@ import Proposal from "../../assets/Clear Proposal.svg";
 import Launch from "../../assets/Build & Launch.svg";
 import Grow from "../../assets/Grow.svg";
 import Protect from "../../assets/Protect.svg";
-import ChatonWhatsApp from "../../assets/Chat on WhatsApp.svg";
 import logo1 from "../../assets/logo1-removebg-preview.png";
 import logo4 from "../../assets/logo5-removebg-preview.png";
 import logo5 from "../../assets/logo6-removebg-preview.png";
@@ -59,6 +58,9 @@ import Reveal from "../../animations/Reveal";
 import { fadeLeft, fadeRight, fadeUp } from "../../animations/variants";
 import { Link } from "react-router-dom";
 import { useInView } from "framer-motion";
+import ProcessCards from "../../components/ProcessCards/ProcessCards";
+import Button from "../../components/Button/Button";
+import { IoChatbubbleOutline } from "react-icons/io5";
 
 const CountUp = ({ end, suffix = "", duration = 2000, startAnimation }) => {
   const [count, setCount] = useState(0);
@@ -485,24 +487,14 @@ const DigispherHome = () => {
 
                 <p className="digisphere-hero-desc">
                   We design and build the websites, applications, and marketing
-                  <br />
                   systems that bring in customers and keep them. Then we make
-                  <br />
                   sure the infrastructure behind them is fast, secure, and ready
-                  to <br />
-                  scale.
+                  to scale.
                 </p>
 
                 <div class="digisphere-hero-buttons">
-                  <Link class="btn-books">
-                    Start Free Digital Audit
-                    <i>
-                      <FaArrowRight />
-                    </i>
-                  </Link>
-                  <Link href="" class="btn-call">
-                    <i class=""></i> See Our Work
-                  </Link>
+                  <Button icon={<FaArrowRight/>}>Start Free Digital Audit</Button>
+                  <Button variant="secondary" icon={<FaArrowRight/>}>See Our Work</Button>
                 </div>
                 <div className="digiphere-stats py-3">
                   <div className="digisphere-Projects-Delivered">
@@ -991,29 +983,9 @@ const DigispherHome = () => {
             </div>
           </Reveal>
           {/* Cards */}
-          <section className="row g-4 justify-content-center digisteps-grid">
-            {steps.map((step, index) => (
-              <div className="col-12 col-sm-6 col-lg-3" key={index}>
-                <Reveal variant={fadeUp} className="h-100" delay={index * 0.15}>
-                  <div className="step-card h-100">
-                    <div className="step-icon-box">
-                      <img
-                        src={step.icon}
-                        alt={step.title}
-                        className="step-icon"
-                      />
-                    </div>
-
-                    <div className="step-number">{step.number}</div>
-
-                    <h3 className="step-title">{step.title}</h3>
-
-                    <p className="step-desc">{step.description}</p>
-                  </div>
-                </Reveal>
-              </div>
-            ))}
-          </section>
+          <div>
+            <ProcessCards cards={steps} colClass="col-12 col-md-6 col-lg"/>
+          </div>
         </div>
       </section>
 
@@ -1173,13 +1145,8 @@ const DigispherHome = () => {
           </p>
 
           <div className="digisphere-cta-buttons">
-            <button className="digisphere-cta-primary-btn">
-              Book Your Free Audit <FaArrowRight />
-            </button>
-
-            <button className="digisphere-cta-secondary-btn">
-              <img src={ChatonWhatsApp} alt="ChatonWhatsApp" /> Chat on WhatsApp
-            </button>
+            <Button icon={<FaArrowRight/>}>Book Your Free Audit</Button>
+            <Button variant="secondary" icon={<IoChatbubbleOutline/> } iconPosition="left">Chat on WhatsApp</Button>
           </div>
 
           <div className="digisphere-cta-meta">

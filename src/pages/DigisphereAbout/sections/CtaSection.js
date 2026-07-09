@@ -1,10 +1,11 @@
 import React from "react";
 import "./CTASection.css";
-import whiteArrow from "../../../assets/about-page/arrow-icon1.svg";
-import blackArrow from "../../../assets/about-page/arrow-icon2.svg";
 
 import Reveal from "../../../animations/Reveal";
 import { fadeUp } from "../../../animations/variants";
+import Button from "../../../components/Button/Button";
+import { FaArrowRight } from "react-icons/fa6";
+import { RxPeople } from "react-icons/rx";
 
 const CTASection = () => {
   return (
@@ -50,14 +51,13 @@ const CTASection = () => {
           </Reveal>
           <Reveal variant={fadeUp} delay={0.3}>
             <div className="cta-buttons">
-              <button className="btn-primary-cta">
+              <Button variant="primary" icon={<FaArrowRight/>}>
                 Book a Free Digital Audit
-                <img src={whiteArrow} alt="arrow" />
-              </button>
-              <button className="btn-ghost-cta">
+              </Button>
+                
+              <Button variant="secondary" icon={<RxPeople/>} iconPosition="left">
                 Talk To Our Team
-                <img src={blackArrow} alt="arrow" />
-              </button>
+              </Button>
             </div>
           </Reveal>
           <Reveal variant={fadeUp} delay={0.4}>

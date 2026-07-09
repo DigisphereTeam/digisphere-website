@@ -49,53 +49,11 @@
     align-items: center;
   }
 
-  .btn-books,
-  .btn-call {
-    justify-content: center;
-    text-align: center;
-  }
 }
 .nav-btn-book {
   text-decoration: none;
   color: #ffffff;
   padding: 8px 15px;
-}
-
-.btn-books {
-  display: flex;
-  gap: 10px;
-  font-size: 14px;
-  background: #057dcd;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s ease;
-  cursor: pointer !important;
-}
-.btn-books:hover {
-  background-color: rgba(4, 100, 164, 1);
-}
-
-.btn-call {
-  display: flex;
-  gap: 10px;
-  font-size: 14px;
-  border: 2px solid #e2e8f0;
-  border-radius: 10px;
-  background: #ffffff;
-  color: #000000;
-  padding: 10px 20px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.btn-call:hover {
-  background: #f1f5f9;
-  border-color: #f1f5f9;
-  color: #057dcd;
-  transform: translateY(-3px);
 }
 
 .nav-btn-book {
@@ -1342,39 +1300,6 @@
   flex-wrap: wrap;
 }
 
-.digisphere-cta-primary-btn {
-  background: rgba(5, 125, 205, 1);
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.digisphere-cta-primary-btn:hover {
-  background: rgba(4, 100, 164, 1);
-  box-shadow: rgba(5, 125, 205, 0.2);
-}
-
-.digisphere-cta-secondary-btn {
-  background: #ffffff;
-  color: rgba(15, 23, 42, 1);
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  padding: 12px 22px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.digisphere-cta-secondary-btn:hover {
-  background: #f8fafc;
-}
-
 /* Bottom Text */
 
 .digisphere-cta-meta {
@@ -1431,12 +1356,6 @@
   .digisphere-cta-buttons {
     flex-direction: column;
     align-items: center;
-  }
-
-  .digisphere-cta-primary-btn,
-  .digisphere-cta-secondary-btn {
-    width: 100%;
-    max-width: 320px;
   }
 
   .digisphere-cta-meta {
@@ -1560,12 +1479,14 @@
 @media (max-width: 991px) {
   .digisphere-hero-title {
     font-size: 40px !important;
+    text-align: center;
   }
   .digisphere-hero-secondtitle {
     font-size: 36px !important;
   }
   .digisphere-hero-desc {
     font-size: 14x !important;
+    text-align: center;
   }
   .digiphere-stats h6 {
     font-size: 18px !important;

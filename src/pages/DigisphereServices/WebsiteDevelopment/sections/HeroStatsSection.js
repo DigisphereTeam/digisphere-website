@@ -69,7 +69,7 @@ const HeroStatsSection = () => {
           <div className="col-lg-6 col-12">
             <Reveal variant={fadeUp} delay={0.1}>
               <div className="hero-content">
-                <span className="hero-tag">WEBSITE DESIGN & DEVELOPMENT</span>
+                <span className="hero-tag">Website Design & Development</span>
 
                 <h1 className="hero-title">
                   Websites that work as hard
@@ -140,8 +140,8 @@ const HeroStatsSection = () => {
                   </div>
 
                   <div className="website-buttons">
-                    <button className="primary">Start Free Trial</button>
-                    <button className="secondary">Learn More</button>
+                    <button className="web-primary">Start Free Trial</button>
+                    <button className="web-secondary">Learn More</button>
                   </div>
                 </div>
 

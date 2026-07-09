@@ -12,7 +12,7 @@
 
 .stats-header h2 {
   font-size: 40px;
-  font-weight: 800;
+  font-weight: 600;
   color: #111827;
   margin: 0;
   letter-spacing: -0.02em;
@@ -43,7 +43,7 @@
 
 .stat-value {
   font-size: 40px;
-  font-weight: 800;
+  font-weight: 600;
   color: #057DCD;
   line-height: 1.1;
   margin-bottom: 12px;

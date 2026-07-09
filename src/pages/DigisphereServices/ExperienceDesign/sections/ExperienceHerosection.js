@@ -6,7 +6,7 @@ import { fadeUp } from "../../../../animations/variants";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "../../../../components/Button/Button";
 import pen from "../../../../assets/pen.svg";
-import Layers from "../../../../assets/Layers.svg";
+import FigmaWorkspaceSimulator from "./FigmaWorkspaceSimulator";
 const stats = [
   {
     end: 68,
@@ -69,13 +69,7 @@ const ExperinceHerosection = () => {
           </div>
 
           <div className="col-lg-6 col-12">
-            <div className="hero-image-wrapper">
-              <img
-                src={Layers}
-                alt="Website Development"
-                className="Experince-hero-image"
-              />
-            </div>
+            <FigmaWorkspaceSimulator />
           </div>
         </div>
       </div>
