@@ -1,13 +1,14 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState } from 'react';
 import "./ContactUs.css";
-import time from "../../assets/contactus/time.svg"
-import phone from "../../assets/contactus/phone.svg"
-import locationicon from "../../assets/contactus/locationicon.svg"
-import email from "../../assets/contactus/email.svg"
+import time from "../../assets/contactus/time.svg";
+import phone from "../../assets/contactus/phone.svg";
+import locationicon from "../../assets/contactus/locationicon.svg";
+import email from "../../assets/contactus/email.svg";
 
+const API_URL = 'https://annapurnafarms.digispheretech.in/contact-us/digisphere'; 
 
 const ContactUs = () => {
-    const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     fullName: '',
     companyName: '',
     email: '',
@@ -16,16 +17,58 @@ const ContactUs = () => {
     projectDetails: ''
   });
 
+  // Status can be: 'idle', 'submitting', 'success', 'error'
+  const [status, setStatus] = useState('idle');
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
+    setStatus('submitting');
+
+    // Mapping your state properties to what the backend expects
+    const payload = {
+      full_name: formData.fullName.trim(),
+      company_name: formData.companyName.trim(),
+      email: formData.email.trim(),
+      phone_number: formData.phoneNumber.trim(),
+      service_required: formData.serviceNeeded.trim(),
+      project_description: formData.projectDetails.trim()
+    };
+
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        // Clear out the form inputs on success
+        setFormData({
+          fullName: '',
+          companyName: '',
+          email: '',
+          phoneNumber: '',
+          serviceNeeded: '',
+          projectDetails: ''
+        });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('API Integration Error:', error);
+      setStatus('error');
+    }
   };
+
   return (
-  <div className="contact-page-wrapper">
+    <div className="contact-page-wrapper">
       <div className="container">
         
         {/* Header Section */}
@@ -124,9 +167,27 @@ const ContactUs = () => {
               </div>
 
               <div className="form-actions">
-                <button type="submit" className="btn-submit">
-                  Send Message <i className="bi bi-arrow-right"></i>
+                {/* Button is disabled while status is 'submitting' to prevent double click submissions */}
+                <button 
+                  type="submit" 
+                  className="btn-submit" 
+                  disabled={status === 'submitting'}
+                >
+                  {status === 'submitting' ? 'Sending...' : 'Send Message'} <i className="bi bi-arrow-right"></i>
                 </button>
+
+                {/* Inline Status Notifications */}
+                {status === 'success' && (
+                  <p style={{ color: '#28a745', marginTop: '15px', fontWeight: '500' }}>
+                    Thank you! Your request has been successfully submitted.
+                  </p>
+                )}
+                {status === 'error' && (
+                  <p style={{ color: '#dc3545', marginTop: '15px', fontWeight: '500' }}>
+                    Something went wrong. Please check your network or try again later.
+                  </p>
+                )}
+
                 <p className="form-footer-note">
                   We respond within 1 business day. No spam, no commission.
                 </p>
@@ -168,19 +229,19 @@ const ContactUs = () => {
                 <h3 className="panel-title-dark">Vijayawada Office</h3>
                 <div className="info-list">
                   <div className="info-item item-align-start">
-                 <img src={locationicon}/>
+                    <img src={locationicon} alt="location"/>
                     <span>5th Floor,502, Veeramachaneni Residency, Ring Rd, Ramavarapadu, Kanuru, Andhra Pradesh 520004</span>
                   </div>
                   <div className="info-item">
-                    <img src={phone}/>
+                    <img src={phone} alt="phone"/>
                     <a href="tel:+918143878627" className="link-accent">+91 81438 78627</a>
                   </div>
                   <div className="info-item">
-                      <img src={email}/>
+                    <img src={email} alt="email"/>
                     <a href="mailto:info@digispidertech.in" className="link-muted">info@digispidertech.in</a>
                   </div>
                   <div className="info-item">
-                     <img src={time}/>
+                    <img src={time} alt="time"/>
                     <span>Mon–Sat: 9am – 7pm IST</span>
                   </div>
                 </div>
@@ -191,19 +252,19 @@ const ContactUs = () => {
                 <h3 className="panel-title-dark">Hyderabad Office</h3>
                 <div className="info-list">
                   <div className="info-item item-align-start">
-                     <img src={locationicon}/>
+                    <img src={locationicon} alt="location"/>
                     <span>HITEC City, Madhapur<br />Hyderabad, Telangana 500081</span>
                   </div>
                   <div className="info-item">
-                       <img src={phone}/>
+                    <img src={phone} alt="phone"/>
                     <a href="tel:+91401234567" className="link-muted">+91 40 123 4567</a>
                   </div>
                   <div className="info-item">
-                       <img src={email}/>
+                    <img src={email} alt="email"/>
                     <a href="mailto:info@digispidertech.in" className="link-muted">info@digispidertech.in</a>
                   </div>
                   <div className="info-item">
-                   <img src={time}/>
+                    <img src={time} alt="time"/>
                     <span>Mon–Sat: 9am – 7pm IST</span>
                   </div>
                 </div>
@@ -215,7 +276,7 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ContactUs
+export default ContactUs;
