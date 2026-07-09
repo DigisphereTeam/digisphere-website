@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./CyberSecurity.css";
 import tickIcon from "../../../assets/digital-marketing/tick-icon.svg";
 import ServicesGrid from "../../../components/ServicesGrid/ServicesGrid";
@@ -18,7 +18,44 @@ import Risk from "../../../assets/Cybersecurity/Risk Assessment.svg";
 import Data from "../../../assets/Cybersecurity/Data Protection.svg";
 import Incident from "../../../assets/Cybersecurity/Incident.svg";
 import Architecture from "../../../assets/Cybersecurity/Architecture.svg";
+
 const CyberSecurity = () => {
+  // 1. Helper function to find out what week of the year it currently is
+  const getWeekNumber = () => {
+    const now = new Date();
+    const startOfYear = new Date(now.getFullYear(), 0, 1);
+    const pastDaysOfYear = (now - startOfYear) / 86400000;
+    return Math.ceil((pastDaysOfYear + startOfYear.getDay() + 1) / 7);
+  };
+
+  const currentWeek = getWeekNumber();
+
+  // 2. Put your 10 unique numbers for "Threats Blocked" inside this array
+  const threatNumbersPool = [
+    1847, // Week 1
+    1932, // Week 2
+    1654, // Week 3
+    2105, // Week 4
+    1789, // Week 5
+    2044, // Week 6
+    1890, // Week 7
+    2210, // Week 8
+    1567, // Week 9
+    1985  // Week 10
+  ];
+
+  // 3. Put your 10 unique numbers for "Today's Alerts" inside this array
+  const alertNumbersPool = [
+    23, 14, 32, 45, 19, 28, 9, 21, 37, 12
+  ];
+
+  // Using % ensures that the index cleanly rotates between 0 and 9 based on the current week
+  const poolIndex = currentWeek % threatNumbersPool.length;
+
+  const dynamicThreats = threatNumbersPool[poolIndex];
+  const dynamicAlerts = alertNumbersPool[poolIndex];
+  const dynamicVulnerabilities = currentWeek % 2 === 0 ? 0 : 1;
+
   const stats = [
     {
       end: 18,
@@ -35,7 +72,6 @@ const CyberSecurity = () => {
     {
       end: 95,
       suffix: "%",
-
       label: "Cyberattacks start with phishing",
     },
     {
@@ -45,6 +81,7 @@ const CyberSecurity = () => {
       label: "Avg. cost per hour of breach downtime",
     },
   ];
+
   const services = [
     {
       icon: VAPT,
@@ -57,7 +94,6 @@ const CyberSecurity = () => {
         "Detailed remediation report",
       ],
     },
-
     {
       icon: Monitoring,
       title: "Security Monitoring (SOC) ",
@@ -69,7 +105,6 @@ const CyberSecurity = () => {
         "Incident response SLA",
       ],
     },
-
     {
       icon: Risk,
       title: " Compliance & Risk Assessment",
@@ -81,7 +116,6 @@ const CyberSecurity = () => {
         "Audit readiness support",
       ],
     },
-
     {
       icon: Data,
       title: "Data Protection & Encryption",
@@ -93,7 +127,6 @@ const CyberSecurity = () => {
         "DLP tool configuration",
       ],
     },
-
     {
       icon: Incident,
       title: "Incident Response",
@@ -105,7 +138,6 @@ const CyberSecurity = () => {
         "Recovery & hardening plan",
       ],
     },
-
     {
       icon: Architecture,
       title: "Security Architecture Review",
@@ -118,6 +150,7 @@ const CyberSecurity = () => {
       ],
     },
   ];
+
   const MarketingFaqData = [
     {
       question: "How long does a VAPT engagement take?",
@@ -140,6 +173,7 @@ const CyberSecurity = () => {
         "Yes. We offer flexible security retainer plans that provide ongoing access to security expertise, regular assessments, remediation support, and proactive security guidance throughout the year.",
     },
   ];
+
   const activity = [
     {
       title: "Port Scan Detected",
@@ -160,15 +194,44 @@ const CyberSecurity = () => {
       color: "#EF4444",
     },
   ];
+
+  // Radar threat dot appearance controls
+  const [showDot1, setShowDot1] = useState(false);
+  const [showDot2, setShowDot2] = useState(false);
+  const [showDot3, setShowDot3] = useState(false);
+
+  useEffect(() => {
+    // Dot 1 renders after 5 seconds
+    const timer1 = setTimeout(() => {
+      setShowDot1(true);
+    }, 5000);
+
+    // Dot 2 renders after 15 seconds (10s delay after Dot 1)
+    const timer2 = setTimeout(() => {
+      setShowDot2(true);
+    }, 15000);
+
+    // Dot 3 renders after 25 seconds (10s delay after Dot 2)
+    const timer3 = setTimeout(() => {
+      setShowDot3(true);
+    }, 25000);
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      clearTimeout(timer3);
+    };
+  }, []);
+
   return (
     <>
       <section className="hero-stats-section">
         <div className="hero-wrapper">
-          <div className="row align-items-center">
+          <div className="row mt-4">
             <div className="col-lg-6 col-12">
               <Reveal variant={fadeUp} delay={0.1}>
                 <div className="Digital-hero-content">
-                  <p class="Digi-digital-badge">
+                  <p className="Digi-digital-badge">
                     <img className="pen-image" src={Cybersecurity} alt="pen" />{" "}
                     Cybersecurity
                   </p>
@@ -199,17 +262,16 @@ const CyberSecurity = () => {
             <div className="col-lg-6 col-12">
               <div className="CybersecurityDashboard">
                 {/* Header */}
-                
                 <div className="CybersecurityHeader">
-                  <div className="dashboard-card dashboard-card-1">
-                  <img src={Aligned} alt="Analytics" />
-                </div>
+                  <div className="dashboard-card dashboard-card-cyber">
+                    <img src={Aligned} alt="Analytics" />
+                  </div>
 
                   <div className="CybersecurityHeaderLeft">
                     <img src={soc} alt="SOC" className="CybersecurityLogo" />
 
                     <div className="CybersecurityHeaderContent">
-                      <h2>SOC Dashboard - Live</h2>
+                      <h2>SOC Dashboard -<span>Live</span></h2>
                       <p>Monitoring 247 endpoints</p>
                     </div>
                   </div>
@@ -219,6 +281,7 @@ const CyberSecurity = () => {
                     <span>Protected</span>
                   </div>
                 </div>
+
                 {/* Main */}
                 <div className="row g-2 CybersecurityContent">
                   {/* RADAR */}
@@ -231,7 +294,20 @@ const CyberSecurity = () => {
 
                         <div className="CybersecurityScanner"></div>
 
-                        <span className="CybersecurityTarget CybersecurityTargetOne"></span>
+                        {/* Dot 1: Triggers at 5 seconds */}
+                        {showDot1 && (
+                          <span className="CybersecurityTarget CybersecurityTargetOne blinking danger"></span>
+                        )}
+
+                        {/* Dot 2: Triggers at 15 seconds */}
+                        {showDot2 && (
+                          <span className="CybersecurityTarget CybersecurityTargetTwo blinking danger"></span>
+                        )}
+
+                        {/* Dot 3: Triggers at 25 seconds */}
+                        {showDot3 && (
+                          <span className="CybersecurityTarget CybersecurityTargetThree blinking danger"></span>
+                        )}
                       </div>
 
                       <h3 className="Threat-Radar">Threat Radar</h3>
@@ -241,23 +317,35 @@ const CyberSecurity = () => {
                   {/* STATS */}
                   <div className="col-lg-6 col-12">
                     <div className="CybersecurityStats">
+                      
+                      {/* Card 1: Threats Blocked */}
                       <div className="CybersecurityStatCard CybersecurityGreen">
                         <small>Threats Blocked</small>
-                        <h1>1,847</h1>
+                        <h1>
+                          <Counter end={dynamicThreats} />
+                        </h1> 
                       </div>
 
+                      {/* Card 2: Today's Alerts */}
                       <div className="CybersecurityStatCard CybersecurityOrange">
                         <small>Today's Alerts</small>
-                        <h1>23</h1>
+                        <h1>
+                          <Counter end={dynamicAlerts} />
+                        </h1>
                       </div>
 
+                      {/* Card 3: Open Vulnerabilities */}
                       <div className="CybersecurityStatCard CybersecurityBlue">
                         <small>Open Vulnerabilities</small>
-                        <h1>0</h1>
+                        <h1>
+                          <Counter end={dynamicVulnerabilities} />
+                        </h1>
                       </div>
+
                     </div>
                   </div>
                 </div>
+
                 {/* Activity */}
                 <div className="CybersecurityActivity">
                   {activity.map((item, index) => (
@@ -324,7 +412,7 @@ const CyberSecurity = () => {
         <FAQSection
           eyebrow="FAQ"
           title="Security questions answered."
-          description="Every business situation is different. Talk to our security team."
+          description="Every business situation is different."
           linkText="Talk to our team."
           link="/contact"
           faqs={MarketingFaqData}
@@ -345,4 +433,5 @@ const CyberSecurity = () => {
     </>
   );
 };
+
 export default CyberSecurity;

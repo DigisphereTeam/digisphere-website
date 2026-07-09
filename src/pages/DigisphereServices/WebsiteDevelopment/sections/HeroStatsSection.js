@@ -65,7 +65,7 @@ const HeroStatsSection = () => {
   return (
     <section className="hero-stats-section">
       <div className="hero-wrapper container">
-        <div className="row align-items-center">
+        <div className="row mt-4">
           <div className="col-lg-6 col-12">
             <Reveal variant={fadeUp} delay={0.1}>
               <div className="hero-content">

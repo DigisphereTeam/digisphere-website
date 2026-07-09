@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoArrowForwardSharp } from "react-icons/io5";
 import { NavLink, Link, useLocation } from "react-router-dom";
-import digilogo from "../../assets/digispherelogo.svg";
+import digilogo from "../../assets/digispherelogo.jpg";
 import AbouUs from "../../assets/Lead Generationicon.svg";
 import CaseStudies from "../../assets/Marketing ROI.svg";
 import pen from "../../assets/pen.svg";
@@ -352,7 +352,7 @@ const DigisphereHeader = () => {
     location.pathname.startsWith("/whitepapers");
   return (
     <nav ref={menuRef} className="custom-navbar navbar navbar-expand-lg">
-      <div className="container-fluid custom-container">
+      <div className="container custom-container">
         <Link className="navbar-brand fw-bold" to="/" onClick={closeNavbar}>
           <img
             src={digilogo}

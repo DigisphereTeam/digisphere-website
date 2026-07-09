@@ -17,7 +17,7 @@
   border-radius: 40px;
   border: 0.5px solid #057dcd33;
   letter-spacing: 0.5px;
-  margin-top: 70px;
+
 }
 .digisphere-hero-title {
   font-weight: 600;
@@ -120,10 +120,7 @@
   background-color: #e2e8f0;
 }
 
-.digisphere-right {
-  margin: 50px auto;
-  padding: 100px 20px 20px 40px;
-}
+
 
 .top-grid {
   display: grid;
@@ -1913,7 +1910,7 @@
   margin: 0;
 }
 
-.traffic-bars {
+.home-traffic-bars {
   position: absolute;
   bottom: 45px;
   left: 20px;
@@ -1924,14 +1921,14 @@
   gap: 8px;
 }
 
-.bar-wrapper {
+.home-bar-wrapper {
   flex: 1;
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.traffic-bar {
+.home-traffic-bar {
   width: 100%;
   background: #057dcd;
   border-radius: 4px 4px 0 0;
@@ -1939,7 +1936,7 @@
   transition: 0.3s;
 }
 
-.traffic-bar:hover {
+.home-traffic-bar:hover {
   background: #0464a4;
 }
 
@@ -1959,13 +1956,13 @@
 }
 
 /* Normal bars → show on hover */
-.bar-wrapper:hover .bar-tooltip {
+.home-bar-wrapper:hover .bar-tooltip {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
 
 /* Highest & Lowest bars → always visible */
-.bar-wrapper.fixed-tooltip .bar-tooltip {
+.home-bar-wrapper.fixed-tooltip .bar-tooltip {
   opacity: 1;
   /* transform: translateX(-50%) translateY(0); */
 }
@@ -1988,7 +1985,7 @@
     padding: 10px 15px;
   }
 
-  .traffic-bars {
+  .home-traffic-bars {
     height: 120px;
     bottom: 35px;
     left: 15px;
@@ -2017,7 +2014,7 @@
     padding: 10px;
   }
 
-  .traffic-bars {
+  .home-traffic-bars {
     height: 100px;
     bottom: 30px;
     left: 10px;

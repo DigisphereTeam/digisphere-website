@@ -1,5 +1,6 @@
-import React from "react";
-import "./ManagedItServices.css"
+import React, { useState, useEffect } from "react";
+
+import "./ManagedItServices.css";
 import { FaArrowRight } from "react-icons/fa";
 import Counter from "../../../components/Counter/Counter";
 import Reveal from "../../../animations/Reveal";
@@ -18,6 +19,14 @@ import backupRecoveryIcon from "../../../assets/managed-it/backup-icon.svg";
 import softwareLicenceIcon from "../../../assets/managed-it/software-licence-icon.svg";
 import itStrategyIcon from "../../../assets/managed-it/itstrategy-icon.svg";
 import Button from "../../../components/Button/Button";
+import SystemHealth from "../../../assets/managed-it/SystemHealth.svg";
+import CPU from "../../../assets/managed-it/CPU.svg";
+import CountUp from "react-countup";
+import Memory from "../../../assets/managed-it/Memory.svg";
+import Network from "../../../assets/managed-it/Network.svg";
+import HelpDesk from "../../../assets/managed-it/HelpDesk.svg";
+import { Headphones } from "lucide-react";
+import critical from "../../../assets/managed-it/Critical response.svg";
 
 const ManagedItServices = () => {
   const marketingStats = [
@@ -135,54 +144,241 @@ const ManagedItServices = () => {
         "Yes, we provide full cross-platform support. Our team is highly experienced in managing, securing, and maintaining Windows, macOS, and Linux environments, including mixed networks and hybrid infrastructures.",
     },
   ];
+  const servers = [
+    {
+      name: "Web Server 01",
+      color: "success",
+      uptime: "99.98%",
+    },
+    {
+      name: "DB Server 01",
+      color: "success",
+      uptime: "99.99%",
+    },
+    {
+      name: "File Server",
+      color: "success",
+      uptime: "99.95%",
+    },
+    {
+      name: "Email Server",
+      color: "warning",
+      uptime: "98.2%",
+    },
+  ];
+  const tickets = [
+    {
+      id: "TKT-2842",
+      title: "Password reset needed",
+      color: "#22c55e",
+    },
+    {
+      id: "TKT-2843",
+      title: "Slow computer — reception",
+      color: "#f59e0b",
+    },
+    {
+      id: "TKT-2842",
+      title: "Password reset needed",
+      color: "#22c55e",
+    },
+    {
+      id: "TKT-2842",
+      title: "Password reset needed",
+      color: "#22c55e",
+    },
+  ];
+  const [cpu, setCpu] = useState(0);
+  const [memory, setMemory] = useState(0);
+  const [network, setNetwork] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCpu(33);
+      setMemory(66);
+      setNetwork(28);
+    }, 300);
+  }, []);
 
   return (
-  <>
+    <>
       <section>
         <div className="hero-stats-section">
           <div className="container">
-            <div className="row "style={{marginTop:"50px"}}>
+            <div className="row mt-4">
               <div className="col-lg-6">
                 <div className="digital-hero-content">
-                <p class="Digi-badge">
-                  <img className="pen-image" src={heroLabelIcon} alt="" />{" "}
-                  Managed IT Service
-                </p>
-                <h2 className="hero-title">
-                  IT that just works,
-                  <span>so you can focus on business.</span>
-                </h2>
-                <p className="hero-description">
-                  End-to-end IT management — help desk, endpoint management,
-                  servers, networks, backups, and security — delivered as a
-                  predictable monthly service with SLA guarantees.
-                </p>
-                <div className="hero-buttons">
-                  <Button icon={<FaArrowRight />}>Get IT Assessment</Button>
-                  <Button variant="secondary">View Plans</Button>
-                </div>
+                  <p class="Digi-badge">
+                    <img className="pen-image" src={heroLabelIcon} alt="" />{" "}
+                    Managed IT Service
+                  </p>
+                  <h2 className="hero-title">
+                    IT that just works,
+                    <br />
+                    <span>
+                      so you can focus on <br />
+                      business.
+                    </span>
+                  </h2>
+                  <p className="hero-description">
+                    End-to-end IT management — help desk, endpoint management,
+                    servers, networks, backups, and security — delivered as a
+                    predictable monthly service with SLA guarantees.
+                  </p>
+                  <div className="hero-buttons">
+                    <Button icon={<FaArrowRight />}>Get IT Assessment</Button>
+                    <Button variant="secondary">View Plans</Button>
+                  </div>
                 </div>
               </div>
               <div className="col-lg-6 col-12">
-            <div className="hero-dashboard">
-              {/* Main Dashboard */}
-              <div className="dashboard-main" >
-                <img
-                  src={dashboardTop}
-                  className="managed-hero-image"
-                  alt="Dashboard"
-                />
-              </div>
-               <div className="dashboard-main">
-                <img src={dashboardBottom} className="managedit-hero-image" alt="Positions" />
-              </div>
+                <div className="py-2">
+                  <div className="health-card">
+                    <div className="sla-card">
+                      <img src={critical} alt="Critical" className="floating-img" />
+                    </div>
+                    {/* Header */}
 
-              {/* Top Right Floating Card */}
-              <div className="dashboard-card managed-dashboard-card">
-                <img src={Critical} alt="Analytics" />
+                    <div className="d-flex justify-content-between align-items-center mb-2">
+                      <div className="d-flex align-items-center">
+                        <div className="monitor-icon">
+                          <img
+                            className="SystemHealth"
+                            src={SystemHealth}
+                            alt=""
+                          />
+                        </div>
+
+                        <div className="ms-2">
+                          <h5 className="System-Health  mb-0">
+                            System Health Monitor
+                          </h5>
+                        </div>
+                      </div>
+
+                      <div className="Systems-status">
+                        <span className="green-dot"></span>
+                        All Systems OK
+                      </div>
+                    </div>
+
+                    {/* Cards */}
+
+                    <div className="row g-3 mb-3">
+                      <div className="col-md-4">
+                        <div className="metric-card">
+                          <div className="text-cpu">
+                            <img src={CPU} alt="CPU" /> CPU
+                          </div>
+
+                          <div className="progress mt-2">
+                            <div
+                              className="progress-bar cpu-bar"
+                              style={{ width: `${cpu}%` }}
+                            ></div>
+                          </div>
+
+                          <h2 className="metric-cpu">
+                            <CountUp end={33} duration={2} />%
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div className="col-md-4">
+                        <div className="metric-card">
+                          <div className="text-Memory ">
+                            <img src={Memory} alt="Memory" /> Memory
+                          </div>
+                          <div className="progress mt-2">
+                            <div
+                              className="progress-bar Memory-bar"
+                              style={{ width: `${memory}%` }}
+                            ></div>
+                          </div>
+
+                          <h2 className="metric-Memory">
+                            <CountUp end={66} duration={2} />%
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div className="col-md-4">
+                        <div className="metric-card">
+                          <div className="text-Network ">
+                            <img src={Network} alt="Network" />
+                            Network
+                          </div>
+
+                          <div className="progress mt-2">
+                            <div
+                              className="progress-bar network-bar"
+                              style={{ width: `${network}%` }}
+                            ></div>
+                          </div>
+
+                          <h2 className="metric-Network">
+                            <CountUp end={28} duration={2} />%
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Server List */}
+
+                    <div className="server-list">
+                      {servers.map((server, index) => (
+                        <div
+                          className="server-row d-flex justify-content-between align-items-center "
+                          key={index}
+                        >
+                          <div>
+                            <span
+                              className={`server-dot bg-${server.color}`}
+                            ></span>
+                            {server.name}
+                          </div>
+
+                          <div className="uptime">Uptime {server.uptime}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="queue-card">
+                  <div className="queue-header">
+                    <div className="header-left">
+                      <div className="icon-box">
+                        <img src={HelpDesk} alt="HelpDesk" />
+                      </div>
+
+                      <span className="help-title">Help Desk · Live Queue</span>
+                    </div>
+
+                    <span className="response-time">Avg. response: 14 min</span>
+                  </div>
+
+                  <div className="queue-list">
+                    {tickets.map((ticket, index) => (
+                      <div className="ticket-row" key={index}>
+                        <div className="ticket-left">
+                          <span
+                            className="status-dot"
+                            style={{ background: ticket.color }}
+                          />
+
+                          <div>
+                            <div className="ticket-title">{ticket.title}</div>
+                            <div className="ticket-id">{ticket.id}</div>
+                          </div>
+                        </div>
+
+                        <button className="open-btn">Open</button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
             </div>
           </div>
         </div>
@@ -243,8 +439,7 @@ const ManagedItServices = () => {
           </button>
         </div>
       </section>
-      </>
-  
+    </>
   );
 };
 export default ManagedItServices;
