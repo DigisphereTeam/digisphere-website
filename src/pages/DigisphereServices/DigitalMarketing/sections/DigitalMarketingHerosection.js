@@ -1,24 +1,22 @@
 import React from "react";
 import "./DigitalMarketingHerosection.css";
-import Campaign from "../../../../assets/digital-marketing/Campaign Analytics.svg";
-import Conversion from "../../../../assets/digital-marketing/Conversion.svg";
-import Position from "../../../../assets/digital-marketing/Position.svg";
-import NewLead from "../../../../assets/digital-marketing/NewLeads.svg";
 import pen from "../../../../assets/pen.svg";
 import Button from "../../../../components/Button/Button";
 import Reveal from "../../../../animations/Reveal";
 import { fadeUp } from "../../../../animations/variants";
 import { FaArrowRight } from "react-icons/fa";
+import HeroDashboard from "./HeroDashboard.js";
 
 const DigitalMarketingHerosection = () => {
   return (
     <section className="hero-stats-section">
       <div className="hero-wrapper">
-        <div className="row align-items-center">
+        <div className="row mt-4">
           <div className="col-lg-6 col-12">
             <Reveal variant={fadeUp} delay={0.1}>
               <div className="Digital-hero-content">
-                <p class="Digi-digital-badge">
+                {/* Fixed: changed 'class' to 'className' */}
+                <p className="Digi-digital-badge">
                   <img className="pen-image" src={pen} alt="pen" /> 
                   Digital Marketing
                 </p>
@@ -47,31 +45,7 @@ const DigitalMarketingHerosection = () => {
             </Reveal>
           </div>
           <div className="col-lg-6 col-12">
-            <div className="hero-dashboard">
-              {/* Main Dashboard */}
-              <div className="dashboard-main">
-                <img
-                  src={Campaign}
-                  className="digital-hero-image"
-                  alt="Dashboard"
-                />
-              </div>
-               <div className="dashboard-main">
-                <img src={Conversion} className="digitaldigtal-hero-image" alt="Positions" />
-              </div>
-
-              {/* Top Right Floating Card */}
-              <div className="dashboard-card dashboard-card-1">
-                <img src={NewLead} alt="Analytics" />
-              </div>
-
-
-              {/* Bottom Floating Badge */}
-             
-              <div className="dashboard-card dashboard-card-4">
-                <img src={Position} alt="Positions" />
-              </div>
-            </div>
+            <HeroDashboard />
           </div>
         </div>
       </div>

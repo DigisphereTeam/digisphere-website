@@ -1,0 +1,414 @@
+.dashboard {
+  width: 100%;
+  max-width: 760px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #eef2f6;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+
+  overflow: hidden;
+}
+
+/* Header Section styling */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  background-color: #E2E8F0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+/* 
+.icon-container-main {
+  width: 42px;
+  height: 42px;
+  background-color: #0284c7;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.icon-container-main img {
+  width: 36px;
+  height: 36px;
+}
+
+.header-text h3 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.header-text span {
+  font-size: 10px;
+  color: #64748b;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  background: #f0fdf4;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #22c55e;
+  border-radius: 50%;
+}
+
+.status-text {
+  font-size: 10px;
+  font-weight: 600;
+  color: #15803d;
+}
+
+/* Body Container Styling */
+.dashboard-body {
+  padding:14px 14px;
+}
+
+.cards-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.marketing-metric-card {
+  flex: 1;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.card-title {
+  font-size: 10px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.card-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.card-value {
+  margin: 0 0 4px 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  text-align: start;
+}
+
+/* Color variations matching the mockup precisely */
+.card-growth {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-growth.green {
+  color: #10b981;
+}
+
+.card-growth.blue {
+  color: #0284c7;
+}
+
+.card-growth.purple {
+  color: #8b5cf6;
+}
+
+/* Layout Split setup */
+.dashboard-content {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard-content h4 {
+  font-size: 10px;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 0.05em;
+}
+
+.graph-section {
+  flex: 2.6;
+}
+
+.graph-container {
+  width: 100%;
+}
+
+.bars-wrapper {
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.bar-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar-track {
+  width: 100%;
+  height: calc(100% - 24px);
+  display: flex;
+  align-items: flex-end;
+}
+
+.bar-fill {
+  width: 100%;
+ background: linear-gradient(0deg, #057DCD 0%, rgba(5, 125, 205, 0.5) 100%);
+
+  border-radius: 2px 2px 0 0;
+}
+
+.bar-label {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.channels-section {
+  flex: 1.1;
+}
+
+.channels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.channel-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 600;
+
+}
+
+.channel-name {
+  color: #475569;
+  font-size: 10px;
+}
+
+.channel-percentage {
+  color: #0f172a;
+}
+
+.channel-progress-track {
+  height: 6px;
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.channel-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Responsiveness fallback rules */
+@media (max-width: 640px) {
+  .cards-row {
+    flex-direction: column;
+  }
+  .dashboard-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .bars-wrapper {
+    gap: 4px;
+  }
+  .bar-label {
+    font-size: 9px;
+  }
+}
+/* Container Layout wrapper for multiple cards */
+.marketing-dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space separating the two main dashboard structures */
+  width: 100%;
+  max-width: 1200px; /* Adjust layout constraints to your container spec */
+  margin: 0 auto;
+}
+
+/* Standalone Funnel Card Concept matching image constraints */
+.marketing-funnel-card {
+  background: #ffffff;
+  border-radius: 20px; /* Perfectly aligns with modern component framing styles */
+  padding: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+}
+
+.marketing-funnel-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #4a5568;
+  margin-bottom: 10px;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.marketing-funnel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+}
+
+.marketing-funnel-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.marketing-funnel-label {
+  width: 110px;
+  font-size: 10px;
+  color: #53637e;
+  font-weight: 500;
+  text-align: end;
+  padding-right: 20px;
+}
+
+.marketing-funnel-track {
+  flex-grow: 1;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.marketing-funnel-bar {
+  height: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items:start;
+  justify-content: flex-end;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+/* Custom Image Gradients */
+.marketing-impressions {
+  background: linear-gradient(90deg, #c3e5f7 0%, #0087d3 100%);
+}
+
+.marketing-clicks {
+  background: linear-gradient(90deg, #ccd8ff 0%, #2b7fff 100%);
+}
+
+.marketing-leads {
+  background: linear-gradient(90deg, #d3ccff 0%, #6860f0 100%);
+}
+
+.marketing-customers {
+  background: linear-gradient(90deg, #e3ccff 0%, #9047f2 100%);
+}
+
+.marketing-funnel-value {
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.marketing-relative-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Top Right Badge */
+.marketing-top-badge {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 125px;
+  z-index: 20;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,.15));
+}
+
+/* Bottom Right Badge */
+.marketing-bottom-badge {
+  position: absolute;
+  right: -18px;
+  bottom: -22px;
+  width: 110px;
+  z-index: 20;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,.15));
+}
+.marketing-relative-container {
+  position: relative;
+}
+
+.top-floating-image {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 133px;
+  z-index: 100;
+}
+
+.bottom-floating-image {
+  position: absolute;
+  right: -28px;
+  bottom: -36px;
+  width: 110px;
+  z-index: 100;
+}
+.top-floating-image,
+.bottom-floating-image {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

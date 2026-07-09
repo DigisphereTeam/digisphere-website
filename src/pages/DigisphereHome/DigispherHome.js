@@ -469,7 +469,7 @@ const DigispherHome = () => {
     <div className="digisphere-page-container">
       <section className="Digisphere-section">
         <div className="container">
-          <div className="row">
+          <div className="row mt-5">
             <div className="col-lg-6 Digisphere-left">
               <Reveal variant={fadeRight} delay={0.1}>
                 <p class="Digisphere-badge">
@@ -644,11 +644,11 @@ const DigispherHome = () => {
                     </motion.h4>
                   </div>
 
-                  <div className="traffic-bars">
+                  <div className="home-traffic-bars">
                     {bars.map((height, index) => (
                       <div
                         key={index}
-                        className={`bar-wrapper ${
+                        className={`home-bar-wrapper ${
                           height === maxHeight || height === minHeight
                             ? "fixed-tooltip"
                             : ""
@@ -660,7 +660,7 @@ const DigispherHome = () => {
                         </span>
 
                         <motion.div
-                          className="traffic-bar"
+                          className="home-traffic-bar"
                           variants={barVariants}
                           initial="hidden"
                           whileInView="visible"

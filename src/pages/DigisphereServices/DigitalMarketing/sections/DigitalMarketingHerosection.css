@@ -195,3 +195,123 @@ body {
   overflow-x: hidden;
 }
 /* new */
+/* .dashboard-card {
+  background: white;
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.12);
+} */
+
+.icon-box {
+  width: 44px;
+  height: 44px;
+  /* background: #1677ff; */
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.live-status {
+  color: #16c784;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #16c784;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.metric-card {
+  border: 1px solid #e8edf4;
+  border-radius: 18px;
+  padding: 18px;
+  transition: .3s;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+}
+
+.metric-card h2 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.metric-card small {
+  color: #6b7280;
+}
+
+.positive {
+  color: #16c784;
+  font-size: 13px;
+}
+
+.blue {
+  color: #3B82F6;
+  font-size: 13px;
+}
+
+.purple {
+  color: #8B5CF6;
+  font-size: 13px;
+}
+
+.section-title {
+  color: #4b5563;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.chart {
+  height: 220px;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 180px;
+}
+
+.bar-wrapper {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bar {
+  width: 100%;
+  background: linear-gradient(
+      180deg,
+      #68b6ff,
+      #228be6
+  );
+  border-radius: 6px 6px 0 0;
+}
+
+.months {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: gray;
+  font-size: 13px;
+}
+
+.progress-custom {
+  height: 7px;
+  background: #edf1f7;
+  border-radius: 20px;
+}
+
+.progress-bar {
+  border-radius: 20px;
+}

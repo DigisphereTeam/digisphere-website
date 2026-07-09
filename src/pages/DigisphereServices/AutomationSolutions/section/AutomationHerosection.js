@@ -37,60 +37,60 @@ const AutomationHerosection = () => {
       label: "Average ROI payback period",
     },
   ];
-  const autosteps = [
-    { title: "Trigger", subtitle: "Form submitted", icon: Zap },
-    { title: "Validate", subtitle: "Check data", icon: Check },
-    { title: "Process", subtitle: "Transform", icon: Settings },
-    { title: "Notify", subtitle: "Send alert", icon: Bell },
-    { title: "Log", subtitle: "Save to CRM", icon: FileText },
+    const autosteps = [
+      { title: "Trigger", subtitle: "Form submitted", icon: Zap },
+      { title: "Validate", subtitle: "Check data", icon: Check },
+      { title: "Process", subtitle: "Transform", icon: Settings },
+      { title: "Notify", subtitle: "Send alert", icon: Bell },
+      { title: "Log", subtitle: "Save to CRM", icon: FileText },
+    ];
+    const automations = [
+    {
+      id: 1,
+      name: "Invoice Generation",
+      schedule: "Daily 11pm",
+      color: "#10B981",
+      status: "Success",
+      time: "2m ago",
+    },
+    {
+      id: 2,
+      name: "Lead Assignment",
+      schedule: "Real-time",
+      color: "#3B82F6",
+      status: "Running...",
+      time: "now",
+    },
+    {
+      id: 3,
+      name: "Reminder Emails",
+      schedule: "Mon & Thu",
+      color: "#10B981",
+      status: "Success",
+      time: "6h ago",
+    },
+    {
+      id: 4,
+      name: "Report Sync",
+      schedule: "Weekly Sun",
+      color: "#10B981",
+      status: "Success",
+      time: "1d ago",
+    },
   ];
-  const automations = [
-  {
-    id: 1,
-    name: "Invoice Generation",
-    schedule: "Daily 11pm",
-    color: "#10B981",
-    status: "Success",
-    time: "2m ago",
-  },
-  {
-    id: 2,
-    name: "Lead Assignment",
-    schedule: "Real-time",
-    color: "#3B82F6",
-    status: "Running...",
-    time: "now",
-  },
-  {
-    id: 3,
-    name: "Reminder Emails",
-    schedule: "Mon & Thu",
-    color: "#10B981",
-    status: "Success",
-    time: "6h ago",
-  },
-  {
-    id: 4,
-    name: "Report Sync",
-    schedule: "Weekly Sun",
-    color: "#10B981",
-    status: "Success",
-    time: "1d ago",
-  },
-];
-  const [activeStep, setActiveStep] = useState(0);
-  const [completed, setCompleted] = useState([]);
+    const [activeStep, setActiveStep] = useState(0);
+    const [completed, setCompleted] = useState([]);
 
-  useEffect(() => {
-    if (activeStep >= autosteps.length) return;
+    useEffect(() => {
+      if (activeStep >= autosteps.length) return;
 
-    const timer = setTimeout(() => {
-      setCompleted((prev) => [...prev, activeStep]);
-      setActiveStep((prev) => prev + 1);
-    }, 500);
+      const timer = setTimeout(() => {
+        setCompleted((prev) => [...prev, activeStep]);
+        setActiveStep((prev) => prev + 1);
+      }, 500);
 
-    return () => clearTimeout(timer);
-  }, [activeStep]);
+      return () => clearTimeout(timer);
+    }, [activeStep]);
 
 //   useEffect(() => {
 //   const timer = setTimeout(() => {
@@ -111,7 +111,7 @@ const AutomationHerosection = () => {
     <>
       <section className="devops-hero-section">
         <div className="hero-wrapper">
-          <div className="row align-items-center">
+          <div className="row mt-4">
             <div className="col-lg-6 col-12">
               <Reveal variant={fadeUp} delay={0.1}>
                 <div className="devops-hero-content">

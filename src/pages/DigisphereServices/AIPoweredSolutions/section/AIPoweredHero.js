@@ -9,8 +9,11 @@ import Button from "../../../../components/Button/Button";
 import aiIcon from "../../../../assets/AI-Powered/aiIcon.svg";
 import DigisphereAI from "../../../../assets/AI-Powered/DigisphereAI.svg";
 import NeuralNetwork from "../../../../assets/AI-Powered/NeuralNetwork.svg";
-
+import AIAssistant from "../../../../assets/AI-Powered/AIAssistant.svg";
+import botavatar from "../../../../assets/AI-Powered/botavatar.svg";
+import arrow from "../../../../assets/AI-Powered/arrow.svg";
 const AIPoweredHero = () => {
+  const [userLoading, setUserLoading] = useState(false);
   const stats = [
     {
       end: 35,
@@ -33,62 +36,86 @@ const AIPoweredHero = () => {
       label: "Client satisfaction across projects",
     },
   ];
-  const autoMessages = [
-    "👋 Hello! How can I help you today?",
-    "I can help you build websites.",
-    "I can create React apps.",
-    "I can design UI animations.",
+  const layers = [
+    { label: "Input", count: 3 },
+    { label: "Hidden", count: 5 },
+    { label: "Hidden", count: 4 },
+    { label: "Output", count: 2 },
   ];
-
-  const [messages, setMessages] = useState([
-    {
-      id: 1,
-      sender: "bot",
-      text: "👋 Hello! How can I help you today?",
-    },
-    {
-      id: 2,
-      sender: "bot",
-      text: "I can create AI powered websites.",
-    },
-    {
-      id: 3,
-      sender: "bot",
-      text: "I can build React applications.",
-    },
-    {
-      id: 4,
-      sender: "bot",
-      text: "I can automate your business workflow.",
-    },
-    {
-      id: 5,
-      sender: "bot",
-      text: "Let's create something amazing.",
-    },
-  ]);
-
+  const conversation = [
+    { sender: "bot", text: "👋 Hello! How can I help you today?" },
+    { sender: "user", text: "I need a React website." },
+    { sender: "bot", text: "Sure! I can build modern React applications." },
+    { sender: "user", text: "Can you add AI features?" },
+    { sender: "bot", text: "Absolutely! I can integrate OpenAI APIs." },
+    { sender: "user", text: "That's great!" },
+  ];
+  const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [typing, setTyping] = useState(false);
 
+  // ADD THESE TWO
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+
   const bottomRef = useRef(null);
-
   useEffect(() => {
-    const chatBox = document.querySelector(".chat-body");
+    let typingTimer;
+    let typingEffect;
 
-    const scroll = setInterval(() => {
-      if (chatBox) {
-        chatBox.scrollTop += 1;
+    if (currentIndex >= conversation.length) {
+      typingTimer = setTimeout(() => {
+        setMessages([]);
+        setCurrentIndex(0);
+      }, 500);
 
-        // Reset when reaching bottom (loop)
-        if (chatBox.scrollTop + chatBox.clientHeight >= chatBox.scrollHeight) {
-          chatBox.scrollTop = 0;
+      return () => clearTimeout(typingTimer);
+    }
+
+    const message = conversation[currentIndex];
+
+    setTyping(true);
+
+    typingTimer = setTimeout(() => {
+      setTyping(false);
+
+      let text = "";
+      let charIndex = 0;
+
+      typingEffect = setInterval(() => {
+        text += message.text[charIndex];
+
+        setDisplayText(text);
+
+        charIndex++;
+
+        if (charIndex >= message.text.length) {
+          clearInterval(typingEffect);
+
+          setMessages((prev) => [
+            ...prev,
+            {
+              id: Date.now(),
+              sender: message.sender,
+              text: text,
+            },
+          ]);
+
+          setDisplayText("");
+
+          setTimeout(() => {
+            setCurrentIndex((prev) => prev + 1);
+          }, 500);
         }
-      }
-    }, 30);
+      }, 0);
+    }, 500);
 
-    return () => clearInterval(scroll);
-  }, []);
+    return () => {
+      clearTimeout(typingTimer);
+      clearInterval(typingEffect);
+    };
+  }, [currentIndex]);
+
   const sendMessage = () => {
     if (!input.trim()) return;
 
@@ -113,7 +140,7 @@ const AIPoweredHero = () => {
       };
 
       setMessages((prev) => [...prev, botMessage]);
-    }, 1800);
+    }, 500);
   };
 
   const handleKey = (e) => {
@@ -126,7 +153,7 @@ const AIPoweredHero = () => {
     <>
       <section className="devops-hero-section">
         <div className="hero-wrapper">
-          <div className="row align-items-center">
+          <div className="row mt-4">
             <div className="col-lg-6 col-12">
               <Reveal variant={fadeUp} delay={0.1}>
                 <div className="devops-hero-content">
@@ -162,70 +189,125 @@ const AIPoweredHero = () => {
 
             <div className="col-lg-6 col-12">
               <div className="chat-wrapper">
-                {/* Header */}
-
+                {/* Header Section */}
                 <div className="chat-header">
                   <div className="header-left">
                     <div className="avatar">
-                      <FaRobot />
+                      <img
+                        className="avatar-ai"
+                        src={AIAssistant}
+                        alt="AIAssistant"
+                      />
                     </div>
-
                     <div>
-                      <h3>AI Assistant</h3>
-
+                      <h3>Digisphere AI Assistant</h3>
                       <span className="online">
-                        <FaCircle />
-                        Online
+                        <FaCircle /> Online • GPT-4
                       </span>
                     </div>
                   </div>
                 </div>
 
-                {/* Chat Body */}
-
+                {/* Main Chat Stream Container */}
                 <div className="chat-body">
                   <div className="chat-scroll">
+                    {/* 1. Loop over actual text rows */}
                     {messages.map((msg) => (
                       <div
                         key={msg.id}
-                        className={`message-row ${
-                          msg.sender === "user" ? "user" : "bot"
-                        }`}
+                        className={`message-row ${msg.sender === "user" ? "user" : "bot"}`}
                       >
                         {msg.sender === "bot" && (
                           <div className="bot-avatar">
-                            <FaRobot />
+                            <img
+                              className="bot"
+                              src={botavatar}
+                              alt="botavatar"
+                            />
                           </div>
                         )}
-
                         <div
-                          className={`message ${
-                            msg.sender === "user"
-                              ? "user-message"
-                              : "bot-message"
-                          }`}
+                          className={`message ${msg.sender === "user" ? "user-message" : "bot-message"}`}
                         >
                           {msg.text}
                         </div>
                       </div>
                     ))}
+
+                    {/* 2. Bot Typing Indicator (Left Side) */}
+                    {typing && (
+                      <div className="message-row bot fallback-row-reset">
+                        <div className="bot-avatar">
+                          <FaRobot />
+                        </div>
+                        <div className="typing-box">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* 3. User Loading Indicator (Right Side) */}
+                    {userLoading && (
+                      <div className="message-row user fallback-row-reset">
+                        <div className="typing-box user-loading">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Scroll anchor element */}
+                    <div ref={bottomRef} style={{ clear: "both" }}></div>
                   </div>
                 </div>
 
-                {/* Input */}
-
+                {/* Sticky Input Control Bar */}
                 <div className="chat-input">
                   <input
                     type="text"
-                    placeholder="Type your message..."
+                    placeholder="Ask anything..."
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKey}
                   />
-
                   <button onClick={sendMessage}>
-                    <FaPaperPlane />
+                    <img className="arrow" src={arrow} alt="arrow" />
                   </button>
+                </div>
+              </div>
+              <div className=" mt-3">
+                <div className="network-card ">
+                  <small className="Neural-network text-uppercase text-secondary fw-light">
+                    Neural Network ·Processing
+                  </small>
+
+                  <div className="d-flex justify-content-around align-items-end ">
+                    {layers.map((layer, layerIndex) => (
+                      <div key={layerIndex} className="text-center">
+                        <div className="layer">
+                          {[...Array(layer.count)].map((_, nodeIndex) => (
+                            <div
+                              key={nodeIndex}
+                              className="node"
+                              style={{
+                                animationDelay: `${
+                                  (layer.count - nodeIndex) * 0.25 +
+                                  layerIndex * 0.5
+                                }s`,
+                              }}
+                            ></div>
+                          ))}
+                        </div>
+
+                        <small className="title-Processing mt-2 d-block">
+                          {layer.label}
+                        </small>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

@@ -279,7 +279,7 @@ color: #10B981;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 6px 0;
+  padding: 3px 0;
 }
 
 .automation-item:last-child {
