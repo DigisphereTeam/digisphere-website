@@ -14,20 +14,24 @@ import Reveal from "../../../../animations/Reveal";
 import { fadeUp } from "../../../../animations/variants";
 import { text } from "framer-motion/client";
 import { Link } from "react-router-dom";
+import aws from "../../../../assets/CloudServiecs/awslogo.svg";
+import azure from "../../../../assets/CloudServiecs/azure.svg";
+import gcp from "../../../../assets/CloudServiecs/gcp.svg";
+
 const Fullstackcloud = () => {
     const toolchainData = [
     {
-      title: "AWS Logo",
+      icon: aws,
       tools: ["Amazon Web Services"],
       text:["EC2, RDS, Lambda, S3, CloudFront, EKS, Route53"],
     },
     {
-      title: "Azure Logo",
+      icon:azure,
       tools: ["Microsoft Azure"],
       text:["App Services, AKS, Azure SQL, Blob, Active Directory"],
     },
     {
-      title: "GCP Logo",
+      icon:gcp,
       tools: ["Google Cloud Platform"],
       text:["Compute Engine, GKE, Cloud SQL, BigQuery, Cloud Run"],
     },
@@ -149,7 +153,7 @@ const Fullstackcloud = () => {
               <div key={index} className="col-lg-4 col-md-6">
                 <Reveal variant={fadeUp} delay={index*0.15}>
                 <div className="toolchain">
-                  <h1>{item.title}</h1>
+                   <img className="major-clouds" src={item.icon} alt='Icon' />
 
                   <h6> 
                     {item.tools.map((tool, idx) => (

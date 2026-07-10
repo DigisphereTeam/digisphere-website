@@ -179,7 +179,7 @@ const DevOpsHeroSection = () => {
                 {autosteps.map((step, index) => (
                   <React.Fragment key={index}>
                     <div
-                      className={`step-card ${
+                      className={`auto-step-card ${
                         completed.includes(index)
                           ? "done"
                           : activeStep === index
@@ -207,7 +207,7 @@ const DevOpsHeroSection = () => {
                       </div>
 
                       <h6>{step.title}</h6>
-                      <small
+                      <span
                         className={
                           completed.includes(index)
                             ? "status-passed"
@@ -221,7 +221,7 @@ const DevOpsHeroSection = () => {
                           : activeStep === index
                             ? "Running..."
                             : step.subtitle}
-                      </small>
+                      </span>
                     </div>
 
                     {index !== autosteps.length - 1 && (

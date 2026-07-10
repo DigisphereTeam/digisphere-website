@@ -2,7 +2,7 @@ import React from "react";
 import "./ResultsSection.css";
 
 import professionalImg from "../../../../assets/website-development/professional-services.jpg";
-import consultingImg from "../../../../assets/website-development/technology-consulting.png";
+import consultingImg from "../../../../assets/website-development/TechnologyConsulting.png";
 import ecommerceImg from "../../../../assets/website-development/ecommerce-retail.svg";
 
 import professionalIcon from "../../../../assets/website-development/professional-services-icon.svg";

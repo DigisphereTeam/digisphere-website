@@ -1,10 +1,6 @@
-
-
-/* .custom-container {
-  padding-left: 6% !important;
-  padding-right: 5.8% !important;
-} */
-
+/* ==========================================================================
+   1. Brand & Structural CSS 
+   ========================================================================== */
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -15,238 +11,6 @@
   height: 45px;
   object-fit: contain;
 }
-
-.nav-link {
-  color: #0f172a !important;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 8px 4px 0px 0px !important;
-  transition: color 0.2s ease-in-out;
-}
-
-/* React Router NavLink automatically injects the .active class on the matching link */
-.nav-link:hover {
-  color: #0464a4 !important;
-}
-
-
-/* Desktop Button Sizes */
-.work-btn,
-.talk-btn {
-  padding: 7px 15px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease-in-out;
-}
-
-.work-btn {
-  border: 1px solid #d1d5db;
-  background: #ffffff;
-  color: #1f2937;
-}
-
-.work-btn:hover {
-  background: #f1f5f9;
-}
-
-.talk-btn {
-  border: none;
-  background: #057dcd;
-  color: #ffffff;
-}
-
-.talk-btn:hover {
-  background: #0464a4;
-}
-
-
-
-/* Mobile responsive layout overrides */
-@media (max-width: 991.98px) {
-  .navbar-nav {
-    padding-top: 20px;
-    width: 100%;
-  }
-
-  .nav-buttons-container {
-    width: 100%;
-    margin-top: 15px;
-  }
-
-  .work-btn,
-  .talk-btn {
-    padding: 6px 12px !important;
-    font-size: 12.5px !important;
-    border-radius: 5px !important;
-  }
-}
-
-/* new css */
-.mega-dropdown {
-  position: static !important;
-}
-
-.mega-menu {
-  width: 1000px;
-  left: 50% !important;
-  transform: translateX(-50%);
-  border: none;
-  border-radius: 20px;
-  padding: 30px;
-  margin-top: 12px;
-  box-shadow: 10px 20px 50px rgba(65, 64, 64, 0.12);
-  display: none;
-  z-index: 9999;
-}
-
-.mega-heading {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color:#475569;
-  margin-bottom: 30px;
-}
-
-.mega-link {
-  display: flex;
-  gap: 12px;
-  text-decoration: none;
-  margin-bottom: 18px;
-  color: #111;
-}
-
-.mega-link:hover {
-  color: #0d6efd;
-}
-
-.icon-box {
-  color: #0d6efd;
-  width: 25px;
-  height: 25px;
-
-}
-
-.mega-link h6 {
-  margin-bottom: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #0F172A;
-}
-
-.mega-link p {
-  margin: 0;
-  font-size: 12px;
-  color:#475569;
-}
-/* .service-image{
-  width: 18px;
-  height: 18px;
-} */
-
-.Build-service-card {
-  background: #eef6ff;
-  padding: 25px;
-  border-radius: 18px;
-  height: 100%;
-}
-
-.Build-service-card h3 {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 20px;
-}
-
-.Build-service-card p {
-  font-size: 14px;
-  color:#475569;
-  font-family: 400;
-}
-
-.stats div {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-
-.explore-btn {
-  display: inline-block;
-  margin-top: 20px;
-  font-size: 14px;
-  text-decoration: none;
-  color: #057DCD;
-  font-weight: 600;
-}
-
-
-
-.Projects span {
-  font-size: 12px;
-  font-weight: 400;
-}
-.Projects strong {
-  font-size: 12px;
-  font-weight: 700;
-}
-@media (max-width: 992px) {
-  .mega-menu {
-    position: static;
-    width: 100%;
-    transform: none;
-    margin-top: 0;
-    box-shadow: none;
-    border-radius: 24px;
-    padding: 20px;
-  }
-  .mega-link{
-    margin-bottom: 10px;
-  }
-
-  /* .mega-dropdown:hover .mega-menu {
-    display: block;
-  } */
-  .nav-item  {
-    align-items: center !important;
-  }
-
-  .Build-service-card {
-    margin-top: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .mega-menu {
-    padding: 15px;
-    display: none;
-    z-index: 9999;
-    transform: none;
-  }
-
-  .mega-link {
-    margin-bottom: 14px;
-  }
-
-  .icon-box {
-    width: 36px;
-    height: 36px;
-    font-size: 16px;
-  }
-
-  .Build-service-card h3 {
-    font-size: 24px;
-  }
-
-  .Build-service-card {
-    padding: 20px;
-  }
-  
-}
-
-
 
 .custom-navbar {
   background: #ffffff;
@@ -260,30 +24,85 @@
   font-weight: 400;
 }
 
-/* .custom-container {
-  padding-left: 6% !important;
-  padding-right: 5.8% !important;
-} */
+/* ==========================================================================
+   2. Nav Links, Buttons & Active States (Text-Only Underline Fix)
+   ========================================================================== */
+.nav-link {
+  color: #0f172a !important;
+  font-size: 14px;
+  font-weight: 600; /* Font weight is already bold here */
+  padding: 8px 0px 2px 0px !important; 
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: color 0.2s ease-in-out;
+}
 
-.navbar-brand {
-  display: flex;
+.custom-navbar .nav-link,
+.custom-navbar .nav-button {
+  position: relative;
+  display: inline-flex !important;
   align-items: center;
+  width: fit-content;
 }
 
-.Digisphere-logo-image {
-  width: 170px;
-  height: 45px;
-  object-fit: contain;
+/* Color updates for Hover AND Active states (No font-weight change here to prevent moving) */
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active,
+.custom-navbar .nav-button:hover,
+.custom-navbar .nav-button.active,
+.nav-button.active {
+  color: #057DCD !important;
 }
 
-
-/* React Router NavLink automatically injects the .active class on the matching link */
-.nav-link:hover {
-  color: #0464a4 !important;
+/* Underline Animation Setup */
+.custom-navbar .nav-link::after,
+.custom-navbar .nav-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0;
+  height: 3px;
+  background: #057DCD;
+  transition: width .3s ease;
 }
 
+/* Keeps the Underline locked at exactly 100% text footprint width */
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link.active::after,
+.custom-navbar .nav-button:hover::after,
+.custom-navbar .nav-button.active::after {
+  width: 100%;
+}
 
-/* Desktop Button Sizes */
+/* Specific override for Dropdown Container: Keeps the line locked to the word footprint */
+.navbar-nav .nav-item.dropdown .nav-link {
+  position: relative;
+  width: fit-content;
+  display: inline-flex !important;
+}
+
+/* Handles arrow margins if present inside helper containers */
+.navbar-nav .nav-item.dropdown .nav-link .dropdown-icon,
+.navbar-nav .nav-item.dropdown .nav-link span:not(:first-child),
+.navbar-nav .nav-item.dropdown .nav-link i {
+  position: relative;
+  margin-left: 4px;
+}
+
+/* Excludes the dropdown arrow from layout width sizing so underline ignores it */
+.navbar-nav .nav-item.dropdown .nav-link:hover::after,
+.navbar-nav .nav-item.dropdown .nav-link.active::after {
+  width: calc(100% - 16px); 
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* ==========================================================================
+   3. Actions Buttons Styles ("Let's Talk" / "Work")
+   ========================================================================== */
 .work-btn,
 .talk-btn {
   padding: 7px 15px;
@@ -317,31 +136,9 @@
   background: #0464a4;
 }
 
-.dropdown-toggle::after {
-  display: none !important;
-}
-
-/* Mobile responsive layout overrides */
-@media (max-width: 991.98px) {
-  .navbar-nav {
-    padding-top: 20px;
-    width: 100%;
-  }
-
-  .nav-buttons-container {
-    width: 100%;
-    margin-top: 15px;
-  }
-
-  .work-btn,
-  .talk-btn {
-    padding: 6px 12px !important;
-    font-size: 12.5px !important;
-    border-radius: 5px !important;
-  }
-}
-
-/* new css */
+/* ==========================================================================
+   4. Mega Menu Setup (With Smooth Hover Effects)
+   ========================================================================== */
 .mega-dropdown {
   position: static !important;
 }
@@ -359,55 +156,87 @@
   z-index: 9999;
 }
 
+/* Bootstrap trigger visibility class */
+.mega-menu.show {
+  display: block;
+}
+
 .mega-heading {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
-  color:#475569;
-  margin-bottom: 30px;
+  color: #475569;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
+/* --- Interactive Mega Links Styling --- */
 .mega-link {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 12px;
   color: #111;
+  background: transparent;
+  transition: all 0.25s ease-in-out;
 }
 
+/* Micro-interaction when hover state hits an item */
 .mega-link:hover {
-  color: #0d6efd;
+  background-color: #f8fafc; /* Subtle grey canvas highlight */
+  color: #136AD0;
 }
 
 .icon-box {
-  color: #0d6efd;
+  color: #136AD0;
   width: 25px;
   height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
 
+/* Moves the icon slightly forward to guide focus */
+.mega-link:hover .icon-box {
+  transform: translateX(3px);
 }
 
 .mega-link h6 {
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   font-size: 14px;
   font-weight: 600;
   color: #0F172A;
+  transition: color 0.2s ease-in-out;
+}
+
+.mega-link:hover h6 {
+  color: #136AD0; /* Changes headers inside the link to brand blue */
 }
 
 .mega-link p {
   margin: 0;
-  font-size: 12px;
-  color:#475569;
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.4;
 }
-/* .service-image{
-  width: 18px;
-  height: 18px;
-} */
 
+/* --- Blue Sidebar Featured Card Styles --- */
 .Build-service-card {
-  background: #eef6ff;
+  background: #EEF7FE;
   padding: 25px;
   border-radius: 18px;
   height: 100%;
+  border: 1px solid transparent;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Gives the static card depth when interacting near it */
+.Build-service-card:hover {
+  background: #EEF7FE;
+  border-color: rgba(19, 106, 208, 0.15);
 }
 
 .Build-service-card h3 {
@@ -415,173 +244,166 @@
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 20px;
+  color: #0F172A;
 }
 
 .Build-service-card p {
   font-size: 14px;
-  color:#475569;
-  font-family: 400;
+  color: #475569;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .stats div {
   display: flex;
   justify-content: space-between;
   margin-bottom: 12px;
+  border-bottom: 1px dashed rgba(71, 85, 105, 0.15);
+  padding-bottom: 6px;
+}
+
+.stats div:last-child {
+  border-bottom: none;
 }
 
 .explore-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin-top: 20px;
   font-size: 14px;
   text-decoration: none;
   color: #057DCD;
-  font-weight: 600;
+  font-weight: 700;
+  transition: gap 0.2s ease-in-out;
 }
 
-.navbar-nav .nav-item.dropdown .nav-link {
-    width: fit-content;
-    display: inline-flex !important;
+.explore-btn:hover {
+  color: #136AD0;
+  gap: 10px; /* Extends arrow outward on hover */
 }
 
 .Projects span {
   font-size: 12px;
   font-weight: 400;
+  color: #475569;
 }
+
 .Projects strong {
   font-size: 12px;
   font-weight: 700;
-}
-@media (max-width: 992px) {
-  .mega-menu {
-    position: static;
-    width: 100%;
-    transform: none;
-    margin-top: 0;
-    box-shadow: none;
-    border-radius: 24px;
-    padding: 20px;
-  }
-  .mega-link{
-    margin-bottom: 10px;
-  }
-
-  /* .mega-dropdown:hover .mega-menu {
-    display: block;
-  } */
-  .nav-item  {
-    align-items: center !important;
-  }
-
-  .Build-service-card {
-    margin-top: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .mega-menu {
-    padding: 15px;
-    display: none;
-    z-index: 9999;
-    transform: none;
-  }
-
-  .mega-link {
-    margin-bottom: 14px;
-  }
-
-  .icon-box {
-    width: 36px;
-    height: 36px;
-    font-size: 16px;
-  }
-
-  .Build-service-card h3 {
-    font-size: 24px;
-  }
-
-  .Build-service-card {
-    padding: 20px;
-  }
-  
+  color: #0F172A;
 }
 
+/* ==========================================================================
+   5. Media Queries / Responsiveness
+   ========================================================================== */
+
+/* --- TABLET PORTRAIT & SMALLER (Max-width: 991px) --- */
 @media (max-width: 991px) {
+  .custom-navbar {
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    padding-top: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    margin: 8px 0;
+    justify-content: center;
+  }
+
+  .nav-buttons-container {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* Dropdown & Underline Adjustments for Mobile Menu Stack */
   .navbar-nav .nav-item.dropdown .nav-link {
     width: 100%;
     display: flex !important;
     justify-content: center !important;
     align-items: center;
-    text-align: center;
+  }
+  
+  .navbar-nav .nav-item.dropdown .nav-link:hover::after,
+  .navbar-nav .nav-item.dropdown .nav-link.active::after {
+    width: 100% !important;
+  }
+
+  /* Mega Menu conversion to full-width mobile accordion style */
+  .mega-menu {
+    position: static !important;
+    width: 100% !important;
+    transform: none !important;
+    margin-top: 10px;
+    box-shadow: none;
+    border-radius: 14px;
+    padding: 20px;
+    background: #f8fafc; /* Subtle tint background layout color for stacked menus */
+  }
+
+  .Build-service-card {
+    margin-top: 20px;
+    height: auto;
   }
 }
 
-/* .custom-navbar .nav-link,
-.custom-navbar .nav-button {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-} */
+/* --- MOBILE DEVICES (Max-width: 767px) --- */
+@media (max-width: 767px) {
+  .Digisphere-logo-image {
+    width: 140px; /* Scales down logo slightly for small screens */
+    height: auto;
+  }
 
-.custom-navbar .nav-link,
-.custom-navbar .nav-button {
-  position: relative;
-  display: inline-block;
-  width: fit-content;
-}
+  .work-btn,
+  .talk-btn {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+    width: 100%; /* Makes buttons fill width on small mobile screens */
+    text-align: center;
+  }
 
-.custom-navbar .nav-link::after,
-.custom-navbar .nav-button::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 2px;
-  background: #136AD0;
-  transition: width .3s ease;
-}
+  .nav-buttons-container {
+    flex-direction: column; /* Stacks "Let's Talk" and "Work" buttons vertically */
+    gap: 8px;
+  }
 
-.custom-navbar .nav-link:hover::after,
-.custom-navbar .nav-button:hover::after,
-.custom-navbar .nav-button.active::after {
-  width: 100%;
-}
-.custom-navbar .nav-link::after,
-.custom-navbar .nav-button::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0px;
-  width: 0;
-  height: 2px;
-  background: #136AD0;
-  transition: width .3s ease;
-}
+  .mega-menu {
+    padding: 15px;
+  }
 
-.custom-navbar .nav-link:hover,
-.custom-navbar .nav-button:hover {
-  color: #136AD0 !important;
-}
+  .mega-link {
+    padding: 8px;
+    margin-bottom: 6px;
+    gap: 10px;
+  }
 
-.custom-navbar .nav-link:hover::after,
-.custom-navbar .nav-button:hover::after,
-.custom-navbar .nav-button.active::after {
-  width: 100%;
-}
+  .icon-box {
+    width: 22px;
+    height: 22px;
+  }
 
+  .mega-link h6 {
+    font-size: 13px;
+  }
 
-.custom-navbar .nav-button.active {
-  color: #136AD0 !important;
-}
-.nav-button.active {
-  color: #0d6efd;
-  font-weight: 600;
-}
+  .mega-link p {
+    font-size: 11.5px;
+  }
 
-/* .nav-button.active::after {
-  content: "";
-  display: block;
-  height: 2px;
-  background: #0d6efd;
-  margin-top: 4px;
-} */
+  .Build-service-card {
+    padding: 15px;
+  }
+
+  .Build-service-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}

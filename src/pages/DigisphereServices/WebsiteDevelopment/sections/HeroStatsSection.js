@@ -69,32 +69,37 @@ const HeroStatsSection = () => {
         <div className="row mt-5">
           <div className="col-lg-6 col-12">
             <Reveal variant={fadeUp} delay={0.1}>
-            <div className="Digital-hero-content">
-                  <p className="Digi-digital-badge">
+              <div className="Digital-hero-content">
+                <p className="Digi-digital-badge">
                   Website Design & Development
-                  </p>
+                </p>
 
-                  <h1 className="hero-title">
-                    Find your vulnerabilities
-                    <span>before attackers do.</span>
-                  </h1>
+                <h1 className="hero-title">
+                  Websites that work as hard <br />
+                  <span>as your business does.</span>
+                </h1>
 
-                  <p className="hero-description">
-                    VAPT, SOC monitoring, compliance assessments, and security
-                    architecture reviews — we protect your business from
-                    breaches, ransomware, and regulatory penalties.
-                  </p>
+                <p className="hero-description">
+                  A website is not a brochure. It is your best salesperson
+                  working 24 hours a day. We design and build websites that load
+                  fast, rank on search engines, and convert visitors into
+                  enquiries, bookings, and sales.
+                </p>
 
-                  <div className="hero-buttons">
-                    <Link to="/contact"><Button variant="primary" icon={<FaArrowRight />}>
-                      <span>Request Security Assessment </span>
-                    </Button></Link>
+                <div className="hero-buttons">
+                  <Link to="/contact">
+                    <Button variant="primary" icon={<FaArrowRight />}>
+                      <span>Start Free Digital Audit </span>
+                    </Button>
+                  </Link>
 
-                    <Link to="/contact"><Button variant="secondary">
-                      <span>Our Services</span>
-                    </Button></Link>
-                  </div>
+                  <Link to="/contact">
+                    <Button variant="secondary"  icon={<FaArrowRight />}>
+                      <span>View Website Projects</span>
+                    </Button>
+                  </Link>
                 </div>
+              </div>
             </Reveal>
           </div>
 
@@ -213,11 +218,24 @@ const HeroStatsSection = () => {
 
               {/* FOOTER */}
               <div className="website-footer">
-                <div className="logo"></div>
-                <span>500+ Reviews</span>
-                <span>|</span>
-                <span>Trusted by 1000+</span>
-              </div>
+  {/* Left Section: Stars & Reviews */}
+  <div className="footer-item">
+    <div className="stars">⭐⭐⭐⭐⭐</div>
+    <span>500+ Reviews</span>
+  </div>
+
+  <span className="divider">|</span>
+
+  {/* Right Section: Checkmark & Trust Text */}
+  <div className="footer-item">
+    <div className="checkmark-circle">
+      <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 4.5L4 7.5L11 1" stroke="#0f172a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    </div>
+    <span>Trusted by 1000+</span>
+  </div>
+</div>
             </div>
           </div>
         </div>

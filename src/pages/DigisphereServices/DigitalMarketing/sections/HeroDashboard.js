@@ -32,24 +32,46 @@ const channels = [
 ];
 
 const funnelData = [
-  { label: 'Impressions', value: 124000, displayValue: '124K', percentage: 100, class: 'marketing-impressions' },
-  { label: 'Clicks', value: 18400, displayValue: '18.4K', percentage: 78, class: 'marketing-clicks' },
-  { label: 'Leads', value: 2310, displayValue: '2,310', percentage: 52, class: 'marketing-leads' },
-  { label: 'Customers', value: 387, displayValue: '387', percentage: 28, class: 'marketing-customers' }
+  {
+    label: "Impressions",
+    value: 124000,
+    displayValue: "124K",
+    percentage: 100,
+    class: "marketing-impressions",
+  },
+  {
+    label: "Clicks",
+    value: 18400,
+    displayValue: "18.4K",
+    percentage: 78,
+    class: "marketing-clicks",
+  },
+  {
+    label: "Leads",
+    value: 2310,
+    displayValue: "2,310",
+    percentage: 52,
+    class: "marketing-leads",
+  },
+  {
+    label: "Customers",
+    value: 387,
+    displayValue: "387",
+    percentage: 28,
+    class: "marketing-customers",
+  },
 ];
 
 export default function HeroDashboard() {
   return (
     <div className="marketing-dashboard-wrapper">
-      
       {/* Container for Main Analytics Card + Top Floating Badge */}
       <div className="marketing-relative-container">
-<img
-    src={NewLeadsBadge}
-    alt="New Leads"
-    className="top-floating-image"
-  />
-      
+        <img
+          src={NewLeadsBadge}
+          alt="New Leads"
+          className="top-floating-image"
+        />
 
         {/* Main Dashboard Card */}
         <motion.div
@@ -79,9 +101,30 @@ export default function HeroDashboard() {
           <div className="dashboard-body">
             {/* Metric Cards Row */}
             <div className="cards-row ">
-              <Card title="ROAS" value={4.2} suffix="x" growth="+0.6x this month" icon={ROAS} variant="green" />
-              <Card title="Conv. Rate" value={3.8} suffix="%" growth="+1.2% this month" icon={Conv} variant="blue" />
-              <Card title="CPL" prefix="₹" value={284} growth="-₹48 this month" icon={cpl} variant="purple" />
+              <Card
+                title="ROAS"
+                value={4.2}
+                suffix="x"
+                growth="+0.6x this month"
+                icon={ROAS}
+                variant="green"
+              />
+              <Card
+                title="Conv. Rate"
+                value={3.8}
+                suffix="%"
+                growth="+1.2% this month"
+                icon={Conv}
+                variant="blue"
+              />
+              <Card
+                title="CPL"
+                prefix="₹"
+                value={284}
+                growth="-₹48 this month"
+                icon={cpl}
+                variant="purple"
+              />
             </div>
 
             {/* Bottom Content Breakdown */}
@@ -142,16 +185,17 @@ export default function HeroDashboard() {
 
       {/* Container for Conversion Funnel Card + Bottom Floating Badge */}
       <div className="marketing-relative-container">
-        
         {/* Conversion Funnel Card */}
-        <motion.div 
+        <motion.div
           className="marketing-funnel-card"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h4 className="marketing-funnel-title">CONVERSION FUNNEL • THIS MONTH</h4>
+          <h4 className="marketing-funnel-title">
+            CONVERSION FUNNEL • THIS MONTH
+          </h4>
           <div className="marketing-funnel-list">
             {funnelData.map((item, i) => (
               <div className="marketing-funnel-row" key={i}>
@@ -161,14 +205,18 @@ export default function HeroDashboard() {
                     className={`marketing-funnel-bar ${item.class}`}
                     initial={{ width: "0%" }}
                     whileInView={{ width: `${item.percentage}%` }}
-                    transition={{ duration: 0.8, delay: i * 0.12, ease: [0.25, 1, 0.5, 1] }}
+                    transition={{
+                      duration: 0.8,
+                      delay: i * 0.12,
+                      ease: [0.25, 1, 0.5, 1],
+                    }}
                     viewport={{ once: true }}
                   >
-                    <motion.span 
+                    <motion.span
                       className="marketing-funnel-value"
                       initial={{ opacity: 0, x: -8 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: (i * 0.12) + 0.5 }}
+                      transition={{ duration: 0.3, delay: i * 0.12 + 0.5 }}
                       viewport={{ once: true }}
                     >
                       {item.displayValue}
@@ -179,18 +227,25 @@ export default function HeroDashboard() {
             ))}
           </div>
         </motion.div>
-          <img
-    src={SEORankingBadge}
-    alt="SEO Ranking"
-    className="bottom-floating-image"
-  />
+        <img
+          src={SEORankingBadge}
+          alt="SEO Ranking"
+          className="bottom-floating-image"
+        />
       </div>
-
     </div>
   );
 }
 
-function Card({ title, value, suffix = "", prefix = "", growth, icon, variant }) {
+function Card({
+  title,
+  value,
+  suffix = "",
+  prefix = "",
+  growth,
+  icon,
+  variant,
+}) {
   return (
     <motion.div
       className="marketing-metric-card"
@@ -205,7 +260,11 @@ function Card({ title, value, suffix = "", prefix = "", growth, icon, variant })
       </div>
       <h2 className="card-value">
         {prefix}
-        <CountUp end={value} duration={1.5} decimals={value % 1 !== 0 ? 1 : 0} />
+        <CountUp
+          end={value}
+          duration={1.5}
+          decimals={value % 1 !== 0 ? 1 : 0}
+        />
         {suffix}
       </h2>
       <small className={`card-growth ${variant}`}>{growth}</small>

@@ -61,6 +61,7 @@ import { useInView } from "framer-motion";
 import ProcessCards from "../../components/ProcessCards/ProcessCards";
 import Button from "../../components/Button/Button";
 import { IoChatbubbleOutline } from "react-icons/io5";
+import { path } from "framer-motion/client";
 
 const CountUp = ({ end, suffix = "", duration = 2000, startAnimation }) => {
   const [count, setCount] = useState(0);
@@ -308,6 +309,7 @@ const DigispherHome = () => {
       description:
         "High-performance websites that convert visitors into customers",
       highlight: "3-5x higher conversion rates",
+      path:"/services/webdevelopment",
     },
     {
       icon: WebApplicationIcon,
@@ -315,30 +317,35 @@ const DigispherHome = () => {
       description:
         "Custom applications that streamline operations and save time",
       highlight: "10+ hours saved weekly",
+      path:"",
     },
     {
       icon: DigitalMarketingIcon,
       title: "Digital Marketing",
       description: "SEO and paid ads strategies that bring qualified leads",
       highlight: "60-80% more enquiries",
+      path:"/services/digital-marketing",
     },
     {
       icon: ExperienceDesignIcon,
       title: "Experience Design",
       description: "User experiences that delight customers and build loyalty",
       highlight: "2x engagement increase",
+      path:"/services/experience-design",
     },
     {
       icon: CloudServicesIcon,
       title: "Cloud Services",
       description: "Scalable infrastructure on AWS, Azure, and Google Cloud",
       highlight: "99.9% uptime guarantee",
+      path:"/services/cloudServices",
     },
     {
       icon: CyberSecurityIcon,
       title: "Cybersecurity",
       description: "Enterprise-grade security and compliance frameworks",
       highlight: "Zero security incidents",
+      path:"/services/cyber-security",
     },
   ];
   const steps = [
@@ -492,8 +499,14 @@ const DigispherHome = () => {
                 </p>
 
                 <div class="digisphere-hero-buttons">
-                  <Link to="/contact"><Button icon={<FaArrowRight/>}>Start Free Digital Audit</Button></Link>
-                  <Link to="/contact"><Button variant="secondary" icon={<FaArrowRight/>}>See Our Work</Button></Link>
+                  <Link to="/contact">
+                    <Button icon={<FaArrowRight />}>
+                      Start Free Digital Audit
+                    </Button>
+                  </Link>
+                  <Link to="/contact">
+                    <Button variant="secondary">See Our Work</Button>
+                  </Link>
                 </div>
                 <div className="digiphere-stats py-3">
                   <div className="digisphere-Projects-Delivered">
@@ -596,7 +609,7 @@ const DigispherHome = () => {
               </Reveal>
             </div>
             <div className="row  align-items-center pair-row my-5">
-              <div className="col-lg-6 digisphere-per order-1"order-lg-1>
+              <div className="col-lg-6 digisphere-per order-1" order-lg-1>
                 <div class="digisphere-service-icon">
                   <img src={analyticsIcon} alt="analyticsIcon" />
                 </div>
@@ -680,54 +693,54 @@ const DigispherHome = () => {
             </div>
             <div className="row  align-items-center pair-row ">
               <div className="col-lg-6 digisphere-left-per order-2 order-lg-1">
-                 <motion.div
-        className="progress-card"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
-      >
-        {tasks.map((task, index) => (
-          <div className="progress-item" key={index}>
-            <div
-              className="progress-icon"
-              style={{
-                backgroundColor: `${task.color}20`,
-              }}
-            >
-              <div
-                className="icon-dot"
-                style={{
-                  backgroundColor: task.color,
-                }}
-              />
-            </div>
-
-            <div className="progress-content">
-              <div className="progress-track">
                 <motion.div
-                  className="progress-fill"
-                  style={{
-                    backgroundColor: task.color,
-                  }}
-                  initial={{ width: 0 }}
-                  whileInView={{ width: task.progress }}
+                  className="progress-card"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
-                  transition={{
-                    duration: 1.2,
-                    delay: index * 0.25,
-                    ease: "easeOut",
-                  }}
-                />
-              </div>
+                  transition={{ duration: 0.8 }}
+                >
+                  {tasks.map((task, index) => (
+                    <div className="progress-item" key={index}>
+                      <div
+                        className="progress-icon"
+                        style={{
+                          backgroundColor: `${task.color}20`,
+                        }}
+                      >
+                        <div
+                          className="icon-dot"
+                          style={{
+                            backgroundColor: task.color,
+                          }}
+                        />
+                      </div>
 
-              <p>
-                {task.title} ({task.progress})
-              </p>
-            </div>
-          </div>
-        ))}
-      </motion.div>
+                      <div className="progress-content">
+                        <div className="progress-track">
+                          <motion.div
+                            className="progress-fill"
+                            style={{
+                              backgroundColor: task.color,
+                            }}
+                            initial={{ width: 0 }}
+                            whileInView={{ width: task.progress }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{
+                              duration: 1.2,
+                              delay: index * 0.25,
+                              ease: "easeOut",
+                            }}
+                          />
+                        </div>
+
+                        <p>
+                          {task.title} ({task.progress})
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </motion.div>
               </div>
               <div className="col-lg-6 digisphere-right-per order-1 order-lg-2 ">
                 <div class="digisphere-service-icon">
@@ -904,10 +917,12 @@ const DigispherHome = () => {
                     {item.highlight}
                   </p>
 
-                  <button className="digisphere-business-needs-link">
+                  <Link to={item.path}
+                    className="digisphere-business-needs-link"
+                  >
                     Learn more
                     <span>→</span>
-                  </button>
+                  </Link>
                 </div>
               </Reveal>
             ))}
@@ -983,7 +998,7 @@ const DigispherHome = () => {
           </Reveal>
           {/* Cards */}
           <div>
-            <ProcessCards cards={steps} colClass="col-12 col-md-6 col-lg"/>
+            <ProcessCards cards={steps} colClass="col-12 col-md-6 col-lg" />
           </div>
         </div>
       </section>
@@ -1144,8 +1159,18 @@ const DigispherHome = () => {
           </p>
 
           <div className="digisphere-cta-buttons">
-            <Link to="/contact"><Button icon={<FaArrowRight/>}>Book Your Free Audit</Button></Link>
-            <Link to="/contact"><Button variant="secondary" icon={<IoChatbubbleOutline/> } iconPosition="left">Chat on WhatsApp</Button></Link>
+            <Link to="/contact">
+              <Button icon={<FaArrowRight />}>Book Your Free Audit</Button>
+            </Link>
+            <Link to="/contact">
+              <Button
+                variant="secondary"
+                icon={<IoChatbubbleOutline />}
+                iconPosition="left"
+              >
+                Chat on WhatsApp
+              </Button>
+            </Link>
           </div>
 
           <div className="digisphere-cta-meta">

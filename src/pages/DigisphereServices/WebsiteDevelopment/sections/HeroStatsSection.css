@@ -617,13 +617,42 @@
 ========================= */
 .website-footer {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 10px;
-  font-size: 9px;
-  color: #64748b;
+  gap: 24px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #475569; /* Slate gray text color matching the image */
+  font-size: 15px;
 }
 
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stars {
+  font-size: 14px;
+  
+}
+
+.divider {
+  color: #e2e8f0; /* Soft gray for the vertical divider */
+  font-weight: 300;
+}
+
+.checkmark-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #e6f4f1; /* Light mint/teal circle tint */
+  border-radius: 50%;
+}
 /* =========================
    RESPONSIVE
 ========================= */
@@ -654,6 +683,9 @@
   .hero-title {
     font-size: 28px;
     text-align: center;
+  }
+  .website-wrapper{
+    margin-top: 30px;
   }
 
   .hero-description {

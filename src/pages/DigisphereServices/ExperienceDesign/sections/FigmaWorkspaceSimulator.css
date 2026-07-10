@@ -193,9 +193,37 @@
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Responsiveness Settings */
-@media (max-width: 991px) {
-  .figma-workspace-layout { height: auto; flex-direction: column; }
-  .figma-sidebar { width: 100%; border: none !important; }
-  .figma-center-canvas { width: 100%; min-height: 320px; }
+/* --- Responsiveness Settings --- */
+
+/* Tablet Optimization (962px and below) */
+@media (max-width: 962px) {
+  .figma-workspace-layout {
+    height: auto;
+  }
+  .figma-sidebar {
+    width: 28%; /* Give sidebars slightly more breathing room */
+  }
+  .figma-center-canvas {
+    width: 44%;
+  }
+}
+
+/* Mobile & Small Tablet Optimization (768px and below) */
+@media (max-width: 768px) {
+  .figma-workspace-layout {
+    flex-direction: column;
+    height: auto;
+  }
+  .figma-sidebar {
+    width: 100%;
+    border: none !important;
+  }
+  .figma-center-canvas {
+    width: 100%;
+    min-height: 320px;
+  }
+  .figma-top-bar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
