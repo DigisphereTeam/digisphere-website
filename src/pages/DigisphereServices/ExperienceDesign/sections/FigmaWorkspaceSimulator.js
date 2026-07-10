@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./FigmaWorkspaceSimulator.css";
 
 // Import your canvas center asset images here
@@ -10,13 +10,29 @@ import spacingImg from "../../../../assets/spacing-center.svg";
 const FigmaWorkspaceSimulator = () => {
   const [activeLayer, setActiveLayer] = useState("Colours");
 
-  // Keep all configurations—including the unique static indicator dot color—inside the array
+  // Layer configuration array
   const layersData = [
     { id: "Typography", dotColor: "#3b82f6", bg: "#e0f2fe", color: "#3b82f6", image: typographyImg },
     { id: "Colours", dotColor: "#8b5cf6", bg: "#f3e8ff", color: "#8b5cf6", image: colorsImg },
     { id: "Components", dotColor: "#10b981", bg: "#d1fae5", color: "#10b981", image: componentsImg },
     { id: "Spacing", dotColor: "#f59e0b", bg: "#fef3c7", color: "#f59e0b", image: spacingImg }
   ];
+
+  // AUTOMATIC LOOP LOGIC
+  useEffect(() => {
+    // Switches to the next layer every 3000ms (3 seconds)
+    const interval = setInterval(() => {
+      setActiveLayer((currentId) => {
+        const currentIndex = layersData.findIndex((layer) => layer.id === currentId);
+        // Calculate next index loop safely back to 0 using modulo
+        const nextIndex = (currentIndex + 1) % layersData.length;
+        return layersData[nextIndex].id;
+      });
+    }, 1500);
+
+    // Cleans up interval when user changes page/unmounts component to prevent memory leaks
+    return () => clearInterval(interval);
+  }, [layersData.length]);
 
   const currentCenterImage = layersData.find(l => l.id === activeLayer)?.image || colorsImg;
 
@@ -51,9 +67,8 @@ const FigmaWorkspaceSimulator = () => {
                   key={layer.id}
                   className={`layer-item ${isSelected ? "selected" : ""}`}
                   style={isSelected ? { backgroundColor: layer.bg, color: layer.color } : {}}
-                  onClick={() => setActiveLayer(layer.id)}
+                  onClick={() => setActiveLayer(layer.id)} // Manual overrides still work!
                 >
-                  {/* The dot now always displays its correct unique identity color regardless of selection state */}
                   <span 
                     className="layer-indicator-dot" 
                     style={{ backgroundColor: layer.dotColor }}

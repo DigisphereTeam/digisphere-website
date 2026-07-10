@@ -19,7 +19,7 @@ const TeamSection = () => {
     description: "UX strategist creating user-centered digital experiences.",
   },
   {
-    initial: "PK",
+    initials: "SP",
     name: "Shiva Prasanna Kumar",
     role: "UI/UX Designer",
     description: "Creative designer crafting intuitive and visually engaging user interfaces.",

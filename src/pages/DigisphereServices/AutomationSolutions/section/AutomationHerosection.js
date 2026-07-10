@@ -173,7 +173,7 @@ const AutomationHerosection = () => {
                   {autosteps.map((step, index) => (
                     <React.Fragment key={index}>
                       <div
-                        className={`step-card ${
+                        className={`auto-step-card ${
                           completed.includes(index)
                             ? "done"
                             : activeStep === index

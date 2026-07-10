@@ -89,7 +89,7 @@ color: #10B981;
 
 
 /* Individual Card */
-.step-card {
+.auto-step-card {
   flex: 1;
   min-width: 0;
   height: 78px;
@@ -110,7 +110,7 @@ color: #10B981;
 }
 
 
-.step-card h6 {
+.auto-step-card h6 {
   margin: 4px 0 2px;
   font-size: 10px;
   font-weight: 600;
@@ -118,7 +118,7 @@ color: #10B981;
 }
 
 
-.step-card small {
+.auto-step-card small {
   font-size: 8px;
   color: #6b7280;
   white-space: nowrap;
@@ -148,23 +148,23 @@ color: #10B981;
 
 
 /* Active Blue */
-.step-card.active {
+.auto-step-card.active {
   border-color: #057DCD;
   background: #eef6ff;
 }
 
-.step-card.active .icon {
+.auto-step-card.active .icon {
   color: #057DCD;
 }
 
 
 /* Completed Green */
-.step-card.done {
+.auto-step-card.done {
   border:2px solid #10B981;
   background: #edfff7;
 }
 
-.step-card.done .icon {
+.auto-step-card.done .icon {
   color: #10B981;
 }
 
@@ -199,17 +199,20 @@ color: #10B981;
 }
 
 /* Bootstrap col-lg-6 support */
-@media(max-width:1200px){
+@media(max-width:962px){
 
-  .step-card {
+  .auto-step-card {
     height:70px;
   }
+    .workflow-wrapper{
+    margin-top: 30px;
+  }
 
-  .step-card h6 {
+  .auto-step-card h6 {
     font-size:9px;
   }
 
-  .step-card small {
+  .auto-step-card small {
     font-size:7px;
   }
 
@@ -224,7 +227,7 @@ color: #10B981;
 @media(max-width:768px){
 
   .workflow-wrapper{
-    padding:12px;
+    margin-top: 30px;
   }
 
   .autosteps{
@@ -235,30 +238,30 @@ color: #10B981;
     width:6px;
   }
 
-  .step-card{
-    height:65px;
+  .auto-step-card{
+    height:55px;
   }
 
-  .step-card h6{
+  .auto-step-card h6{
     font-size:8px;
   }
 
-  .step-card small{
+  .auto-step-card small{
     display:none;
   }
 }
 /* Default icons */
-.step-card .icon {
+.auto-step-card .icon {
   color: #64748b;
 }
 
 /* Active icon blue */
-.step-card.active .icon {
+.auto-step-card.active .icon {
   color: #057DCD;
 }
 
 /* Completed tick green */
-.step-card.done .icon {
+.auto-step-card.done .icon {
   color: #10B981;
 }
 .automation-card {

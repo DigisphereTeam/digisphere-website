@@ -242,9 +242,12 @@
 }
 
 /* Responsiveness fallback rules */
-@media (max-width: 640px) {
+@media (max-width: 962px) {
   .cards-row {
     flex-direction: column;
+  }
+  .marketing-relative-container{
+    margin-top: 30px;
   }
   .dashboard-content {
     flex-direction: column;

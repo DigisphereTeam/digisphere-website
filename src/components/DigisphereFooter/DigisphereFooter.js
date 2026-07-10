@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./DigisphereFooter.css";
-import digilogo from "../../assets/digispherelogo.jpg";
+import footerlogo from "../../assets/footerlogo.png";
 // Asset Imports
 import linkedinIcon from "../../assets/LinkedinIcon.png";
 import instaIcon from "../../assets/instaIcon.png";
@@ -14,7 +14,7 @@ const SOCIAL_LINKS = [
 ];
 
 const SERVICES_LINKS = [
-  { to: "/services/webdevelopment", label: "Website Development" },
+  { to: "/services/webdevelopment", label: "Website design & Development" },
   { to: "/services/digital-marketing", label: "Digital Marketing" },
   { to: "/services/automation", label: "Automation Solution" },
   { to: "/services/aipowered", label: "AI-Powered Solution" },
@@ -27,15 +27,11 @@ const SERVICES_LINKS = [
 
 const COMPANY_LINKS = [
   { to: "/about", label: "About Us" },
-  { label: "Careers" },
-  { label: "Our Work" },
-  { label: "Case Studies" },
-  { label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 
 const OFFICES = [
-  { title: "Hyderabad Office", lines: ["HITEC City, Madhapur", "Telangana"], className: "mt-4" },
+  { title: "Hyderabad Office", lines: ["HITEC City, Madhapur", "Telangana"],  },
   { title: "Vijayawada Office", lines: ["5th Floor,502, Veeramachaneni Residency, Ring Rd, Ramavarapadu, Kanuru, Andhra Pradesh 520004"], className: "" }
 ];
 
@@ -57,7 +53,7 @@ const DigisphereFooter = memo(() => {
           <div className="col-lg-4 mb-4">
             <Link className="navbar-brand fw-bold" to="/" onClick={()=>{<DigispherHome/>}}>
           <img
-            src={digilogo}
+            src={footerlogo}
             alt="Digisphere Logo"
             className="Digisphere-logo-image"
           />
