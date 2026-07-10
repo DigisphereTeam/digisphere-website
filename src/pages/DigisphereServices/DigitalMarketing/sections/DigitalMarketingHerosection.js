@@ -6,6 +6,7 @@ import Reveal from "../../../../animations/Reveal";
 import { fadeUp } from "../../../../animations/variants";
 import { FaArrowRight } from "react-icons/fa";
 import HeroDashboard from "./HeroDashboard.js";
+import { Link } from "react-router-dom";
 
 const DigitalMarketingHerosection = () => {
   return (
@@ -33,13 +34,13 @@ const DigitalMarketingHerosection = () => {
                 </p>
 
                 <div className="hero-buttons">
-                  <Button variant="primary" icon={<FaArrowRight />}>
+                  <Link to="/contact"><Button variant="primary" icon={<FaArrowRight />}>
                     <span>Start a Design Project </span>
-                  </Button>
+                  </Button></Link>
 
-                  <Button variant="secondary">
+                  <Link to="/contact"><Button variant="secondary">
                     <span>Our Services</span>
-                  </Button>
+                  </Button></Link>
                 </div>
               </div>
             </Reveal>

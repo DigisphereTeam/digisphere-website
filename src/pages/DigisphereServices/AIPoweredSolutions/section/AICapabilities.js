@@ -12,6 +12,7 @@ import { fadeUp } from "../../../../animations/variants";
 import ProcessCards from "../../../../components/ProcessCards/ProcessCards";
 import FAQSection from "../../../../components/FaqSection/FAQSection";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const AICapabilities = () => {
   const MarketingProcessSteps = [
@@ -177,9 +178,9 @@ const AICapabilities = () => {
             estimates.
           </p>
           <div className="marketing-btn">
-            <button>
+            <Link to="/contact"><button>
              Book AI Strategy Session<FaArrowRight />
-            </button>
+            </button></Link>
           </div>
         </div>
       </section>

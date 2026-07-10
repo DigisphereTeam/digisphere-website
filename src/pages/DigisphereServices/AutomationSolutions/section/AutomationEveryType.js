@@ -11,6 +11,7 @@ import NotificationAutomation from "../../../../assets/Automation/NotificationAu
 import Report from "../../../../assets/Automation/Report Automation.svg";
 import Calendar from "../../../../assets/Automation/Calendar Automation.svg";
 import Engines from "../../../../assets/Automation/Engines.svg";
+import { Link } from "react-router-dom";
 const devopsServices = [
   {
     icon: Process,
@@ -194,9 +195,9 @@ const AutomationEveryType = () => {
           the top 3 automation opportunities with estimated time savings.
         </p>
         <div className="marketing-btn">
-          <button>
+          <Link to="/contact"><button>
            Book Free Process Audit <FaArrowRight />
-          </button>
+          </button></Link>
         </div>
       </section>
     </>

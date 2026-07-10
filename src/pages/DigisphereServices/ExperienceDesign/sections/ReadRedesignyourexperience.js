@@ -2,6 +2,7 @@ import React from 'react'
 
 import "./ReadRedesignyourexperience.css";
 import { HiOutlineArrowSmallRight } from "react-icons/hi2";
+import { Link } from 'react-router-dom';
 
 
 
@@ -18,10 +19,10 @@ const ReadRedesignyourexperience = () => {
           the top three experience improvements that will drive the most impact.
         </p>
 
-        <button className="request-ux">
+        <Link to="/contact"><button className="request-ux">
           Request UX Audit
           <HiOutlineArrowSmallRight />
-        </button>
+        </button></Link>
       </div>
     </section>
   )

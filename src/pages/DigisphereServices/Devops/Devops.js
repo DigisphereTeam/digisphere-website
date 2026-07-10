@@ -14,6 +14,7 @@ import devopsIcon6 from "../../../assets/devops/devops-icon6.svg";
 import { FaArrowRight } from "react-icons/fa";
 import FAQSection from "../../../components/FaqSection/FAQSection";
 import DevOpsHeroSection from "./DevopsHeroSection";
+import { Link } from "react-router-dom";
 
 const Devops = () => {
   const devopsStats = [
@@ -233,9 +234,9 @@ const Devops = () => {
           current practices and give you a prioritised improvement roadmap.
         </p>
         <div className="marketing-btn">
-          <button>
+          <Link to="/contact"><button>
             Get Devops Assessment <FaArrowRight />
-          </button>
+          </button></Link>
         </div>
       </section>
     </div>

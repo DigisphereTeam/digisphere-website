@@ -13,6 +13,7 @@ import { FaArrowRight } from "react-icons/fa";
 import Reveal from "../../../animations/Reveal";
 import { fadeUp } from "../../../animations/variants";
 import Button from "../../../components/Button/Button";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -47,13 +48,13 @@ export default function HeroSection() {
 
               <Reveal variant={fadeUp} delay={0.4}>
                 <div className="about-hero-actions">
-                  <Button variant="primary" icon={<FaArrowRight />}>
+                  <Link to="/contact"><Button variant="primary" icon={<FaArrowRight />}>
                     Meet The Team                 
-                  </Button >
+                  </Button ></Link>
 
-                  <Button variant="secondary" icon={<FaArrowRight />}>
+                  <Link to="/contact"><Button variant="secondary" icon={<FaArrowRight />}>
                     See Our Work
-                  </Button>
+                  </Button></Link>
                 </div>
               </Reveal>
             </div>

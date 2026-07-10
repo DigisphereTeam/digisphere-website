@@ -492,8 +492,8 @@ const DigispherHome = () => {
                 </p>
 
                 <div class="digisphere-hero-buttons">
-                  <Button icon={<FaArrowRight/>}>Start Free Digital Audit</Button>
-                  <Button variant="secondary" icon={<FaArrowRight/>}>See Our Work</Button>
+                  <Link to="/contact"><Button icon={<FaArrowRight/>}>Start Free Digital Audit</Button></Link>
+                  <Link to="/contact"><Button variant="secondary" icon={<FaArrowRight/>}>See Our Work</Button></Link>
                 </div>
                 <div className="digiphere-stats py-3">
                   <div className="digisphere-Projects-Delivered">
@@ -1144,8 +1144,8 @@ const DigispherHome = () => {
           </p>
 
           <div className="digisphere-cta-buttons">
-            <Button icon={<FaArrowRight/>}>Book Your Free Audit</Button>
-            <Button variant="secondary" icon={<IoChatbubbleOutline/> } iconPosition="left">Chat on WhatsApp</Button>
+            <Link to="/contact"><Button icon={<FaArrowRight/>}>Book Your Free Audit</Button></Link>
+            <Link to="/contact"><Button variant="secondary" icon={<IoChatbubbleOutline/> } iconPosition="left">Chat on WhatsApp</Button></Link>
           </div>
 
           <div className="digisphere-cta-meta">

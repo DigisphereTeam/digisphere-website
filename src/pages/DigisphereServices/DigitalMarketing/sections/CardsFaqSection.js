@@ -4,6 +4,7 @@ import './CardsFaqSection.css'
 import ProcessCards from "../../../../components/ProcessCards/ProcessCards";
 import FAQSection from "../../../../components/FaqSection/FAQSection";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const CardsFaqSection = () => {
   const MarketingProcessSteps = [
@@ -91,7 +92,7 @@ const CardsFaqSection = () => {
           biggest growth opportunities — no pitch, no strings.
         </p>
         <div className="marketing-btn">
-          <button>Book Free Audit <FaArrowRight/></button>
+          <Link to="/contact"><button>Book Free Audit <FaArrowRight/></button></Link>
         </div>
       </div>
     </section>

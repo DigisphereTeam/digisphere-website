@@ -7,11 +7,10 @@ import { fadeUp } from "../../../../animations/variants";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "../../../../components/Button/Button";
 import aiIcon from "../../../../assets/AI-Powered/aiIcon.svg";
-import DigisphereAI from "../../../../assets/AI-Powered/DigisphereAI.svg";
-import NeuralNetwork from "../../../../assets/AI-Powered/NeuralNetwork.svg";
 import AIAssistant from "../../../../assets/AI-Powered/AIAssistant.svg";
 import botavatar from "../../../../assets/AI-Powered/botavatar.svg";
 import arrow from "../../../../assets/AI-Powered/arrow.svg";
+import { Link } from "react-router-dom";
 const AIPoweredHero = () => {
   const [userLoading, setUserLoading] = useState(false);
   const stats = [
@@ -175,13 +174,13 @@ const AIPoweredHero = () => {
                   </p>
 
                   <div className="hero-buttons">
-                    <Button variant="primary" icon={<FaArrowRight />}>
+                    <Link to="/contact"><Button variant="primary" icon={<FaArrowRight />}>
                       <span>Explore AI for Your Business</span>
-                    </Button>
+                    </Button></Link>
 
-                    <Button variant="secondary">
+                    <Link to="/contact"><Button variant="secondary">
                       <span>See Our Solutions</span>
-                    </Button>
+                    </Button></Link>
                   </div>
                 </div>
               </Reveal>

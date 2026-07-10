@@ -1,19 +1,16 @@
 import React, { memo, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./DigisphereFooter.css";
-
+import digilogo from "../../assets/digispherelogo.jpg";
 // Asset Imports
 import linkedinIcon from "../../assets/LinkedinIcon.png";
 import instaIcon from "../../assets/instaIcon.png";
-import facebookIcon from "../../assets/FacebookIcon.png";
-import twitterIcon from "../../assets/TwiterIcon.png";
+import DigispherHome from "../../pages/DigisphereHome/DigispherHome";
 
 // Static Navigation Datasets
 const SOCIAL_LINKS = [
-  { href: "https://linkedin.com", icon: linkedinIcon, label: "LinkedIn" },
-  { href: "https://instagram.com", icon: instaIcon, label: "Instagram" },
-  { href: "https://facebook.com", icon: facebookIcon, label: "Facebook" },
-  { href: "https://twitter.com", icon: twitterIcon, label: "Twitter" },
+  { href: "https://www.linkedin.com/company/digisphere-tech/", icon: linkedinIcon, label: "LinkedIn" },
+  { href: "https://www.instagram.com/digispheretech/", icon: instaIcon, label: "Instagram" },
 ];
 
 const SERVICES_LINKS = [
@@ -30,16 +27,16 @@ const SERVICES_LINKS = [
 
 const COMPANY_LINKS = [
   { to: "/about", label: "About Us" },
-  { to: "/careers", label: "Careers" },
-  { to: "/work", label: "Our Work" },
-  { to: "/case-studies", label: "Case Studies" },
-  { to: "/blog", label: "Blog" },
+  { label: "Careers" },
+  { label: "Our Work" },
+  { label: "Case Studies" },
+  { label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 
 const OFFICES = [
   { title: "Hyderabad Office", lines: ["HITEC City, Madhapur", "Telangana"], className: "mt-4" },
-  { title: "Vijayawada Office", lines: ["MG Road, Labbipet", "Andhra Pradesh"], className: "" }
+  { title: "Vijayawada Office", lines: ["5th Floor,502, Veeramachaneni Residency, Ring Rd, Ramavarapadu, Kanuru, Andhra Pradesh 520004"], className: "" }
 ];
 
 const DigisphereFooter = memo(() => {
@@ -58,7 +55,13 @@ const DigisphereFooter = memo(() => {
           
           {/* Brand Info & Social Stack */}
           <div className="col-lg-4 mb-4">
-            <h4 className="footer-logo">Digisphere</h4>
+            <Link className="navbar-brand fw-bold" to="/" onClick={()=>{<DigispherHome/>}}>
+          <img
+            src={digilogo}
+            alt="Digisphere Logo"
+            className="Digisphere-logo-image"
+          />
+        </Link>
             <p className="footer-description">
               We build websites, applications, and marketing systems that grow
               businesses — and the infrastructure that keeps them running.
@@ -130,7 +133,7 @@ const DigisphereFooter = memo(() => {
         {/* Dynamic Legal & Copyright Context */}
         <div className="footer-bottom">
           <div className="footer-copy">
-            © {currentYear} Digisphere Tech. All rights reserved.
+            © {currentYear} Digisphere. All rights reserved.
           </div>
         </div>
 
