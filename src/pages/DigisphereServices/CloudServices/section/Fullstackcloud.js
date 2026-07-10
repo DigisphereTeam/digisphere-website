@@ -13,6 +13,7 @@ import { FaArrowRight } from "react-icons/fa";
 import Reveal from "../../../../animations/Reveal";
 import { fadeUp } from "../../../../animations/variants";
 import { text } from "framer-motion/client";
+import { Link } from "react-router-dom";
 const Fullstackcloud = () => {
     const toolchainData = [
     {
@@ -187,9 +188,9 @@ const Fullstackcloud = () => {
           infrastructure and give you a migration or optimisation roadmap.
         </p>
         <div className="marketing-btn">
-          <button>
+          <Link to="/contact"><button>
             Get Free Cloud Assessment <FaArrowRight />
-          </button>
+          </button></Link>
         </div>
       </div>
     </>

@@ -27,6 +27,7 @@ import Network from "../../../assets/managed-it/Network.svg";
 import HelpDesk from "../../../assets/managed-it/HelpDesk.svg";
 import { Headphones } from "lucide-react";
 import critical from "../../../assets/managed-it/Critical response.svg";
+import { Link } from "react-router-dom";
 
 const ManagedItServices = () => {
   const marketingStats = [
@@ -226,8 +227,8 @@ const ManagedItServices = () => {
                     predictable monthly service with SLA guarantees.
                   </p>
                   <div className="hero-buttons">
-                    <Button icon={<FaArrowRight />}>Get IT Assessment</Button>
-                    <Button variant="secondary">View Plans</Button>
+                   <Link to="/contact"><Button icon={<FaArrowRight />}>Get IT Assessment</Button></Link>
+                    <Link to="/contact"><Button variant="secondary">View Plans</Button></Link>
                   </div>
                 </div>
               </div>
@@ -434,9 +435,9 @@ const ManagedItServices = () => {
           environment assessment.
         </p>
         <div className="marketing-btn">
-          <button>
+          <Link to="/contact"><button>
             Book Free IT Assessment <FaArrowRight />
-          </button>
+          </button></Link>
         </div>
       </section>
     </>

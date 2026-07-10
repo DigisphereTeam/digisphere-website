@@ -20,6 +20,7 @@ import {
   ShieldCheck,
   FileText,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 const DevOpsHeroSection = () => {
   const autosteps = [
     { title: "Source", icon: Zap },
@@ -142,13 +143,13 @@ const DevOpsHeroSection = () => {
                 </p>
 
                 <div className="hero-buttons">
-                  <Button variant="primary" icon={<FaArrowRight />}>
+                  <Link to="/contact"><Button variant="primary" icon={<FaArrowRight />}>
                     <span>Start DevOps Assessment</span>
-                  </Button>
+                  </Button></Link>
 
-                  <Button variant="secondary">
+                  <Link to="/contact"><Button variant="secondary">
                     <span>Our Services</span>
-                  </Button>
+                  </Button></Link>
                 </div>
               </div>
             </Reveal>

@@ -9,6 +9,7 @@ import DigisphereAI from "../../../../assets/AI-Powered/DigisphereAI.svg";
 import NeuralNetwork from "../../../../assets/AI-Powered/NeuralNetwork.svg";
 import CloudServices from "../../../../assets/servicesDropdown/CloudServices.svg";
 import aws from "../../../../assets/CloudServiecs/aws.svg";
+import { Link } from "react-router-dom";
 
 const CloudServicesHero = () => {
   const stats = [
@@ -136,13 +137,13 @@ const CloudServicesHero = () => {
                   </p>
 
                   <div className="hero-buttons">
-                    <Button variant="primary" icon={<FaArrowRight />}>
+                    <Link to="/contact"><Button variant="primary" icon={<FaArrowRight />}>
                       <span>Get Cloud Assessment </span>
-                    </Button>
+                    </Button></Link>
 
-                    <Button variant="secondary">
+                    <Link to="/contact"><Button variant="secondary">
                       <span>Our Services </span>
-                    </Button>
+                    </Button></Link>
                   </div>
                 </div>
               </Reveal>

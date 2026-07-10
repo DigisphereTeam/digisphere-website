@@ -18,6 +18,7 @@ import Risk from "../../../assets/Cybersecurity/Risk Assessment.svg";
 import Data from "../../../assets/Cybersecurity/Data Protection.svg";
 import Incident from "../../../assets/Cybersecurity/Incident.svg";
 import Architecture from "../../../assets/Cybersecurity/Architecture.svg";
+import { Link } from "react-router-dom";
 
 const CyberSecurity = () => {
   // 1. Helper function to find out what week of the year it currently is
@@ -248,13 +249,13 @@ const CyberSecurity = () => {
                   </p>
 
                   <div className="hero-buttons">
-                    <Button variant="primary" icon={<FaArrowRight />}>
+                    <Link to="/contact"><Button variant="primary" icon={<FaArrowRight />}>
                       <span>Request Security Assessment </span>
-                    </Button>
+                    </Button></Link>
 
-                    <Button variant="secondary">
+                    <Link to="/contact"><Button variant="secondary">
                       <span>Our Services</span>
-                    </Button>
+                    </Button></Link>
                   </div>
                 </div>
               </Reveal>

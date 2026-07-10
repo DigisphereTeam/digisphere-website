@@ -238,7 +238,7 @@ const ContactUs = () => {
                   </div>
                   <div className="info-item">
                     <img src={email} alt="email"/>
-                    <a href="mailto:info@digispidertech.in" className="link-muted">info@digispidertech.in</a>
+                    <a href="mailto:info@digispheretech.in" className="link-muted">info@digispheretech.in</a>
                   </div>
                   <div className="info-item">
                     <img src={time} alt="time"/>
@@ -257,11 +257,11 @@ const ContactUs = () => {
                   </div>
                   <div className="info-item">
                     <img src={phone} alt="phone"/>
-                    <a href="tel:+91401234567" className="link-muted">+91 40 123 4567</a>
+                    <a href="tel:+918143878627" className="link-accent">+91 81438 78627</a>
                   </div>
                   <div className="info-item">
                     <img src={email} alt="email"/>
-                    <a href="mailto:info@digispidertech.in" className="link-muted">info@digispidertech.in</a>
+                    <a href="mailto:info@digispheretech.in" className="link-muted">info@digispheretech.in</a>
                   </div>
                   <div className="info-item">
                     <img src={time} alt="time"/>

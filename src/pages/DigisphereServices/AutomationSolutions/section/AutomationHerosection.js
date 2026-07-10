@@ -13,6 +13,7 @@ import Automations from "../../../../assets/Automation/Automations.svg";
 import { motion } from "framer-motion";
 import { FaCheck, FaDatabase, FaCog, FaBell, FaCube } from "react-icons/fa";
 import { Zap, CheckCircle, Settings, Bell, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AutomationHerosection = () => {
   const stats = [
@@ -133,13 +134,13 @@ const AutomationHerosection = () => {
                   </p>
 
                   <div className="hero-buttons">
-                    <Button variant="primary" icon={<FaArrowRight />}>
+                    <Link to="/contact"><Button variant="primary" icon={<FaArrowRight />}>
                       <span>Map Your Workflows </span>
-                    </Button>
+                    </Button></Link>
 
-                    <Button variant="secondary">
+                    <Link to="/contact"><Button variant="secondary">
                       <span>See What We Automate</span>
-                    </Button>
+                    </Button></Link>
                   </div>
                 </div>
               </Reveal>
