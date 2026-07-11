@@ -121,7 +121,7 @@ const AutomationHerosection = () => {
                     Automation Solutions
                   </p>
 
-                  <h1 className="devops-title">
+                  <h1 className="automation-title">
                     Replace repetitive work
                     <br />
                     <span>with intelligent systems.</span>

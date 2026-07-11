@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoArrowForwardSharp } from "react-icons/io5";
 import { NavLink, Link, useLocation } from "react-router-dom";
-import digilogo from "../../assets/digispherelogo.jpg";
+import digilogo from "../../assets/digishperelogo.png";
 import AbouUs from "../../assets/Lead Generationicon.svg";
 import CaseStudies from "../../assets/Marketing ROI.svg";
 import pen from "../../assets/pen.svg";

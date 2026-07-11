@@ -237,9 +237,9 @@ const CyberSecurity = () => {
                     Cybersecurity
                   </p>
 
-                  <h1 className="hero-title">
+                  <h1 className="cyber-hero-title">
                     Find your vulnerabilities
-                    <span>before attackers do.</span>
+                    <span> before attackers do.</span>
                   </h1>
 
                   <p className="hero-description">

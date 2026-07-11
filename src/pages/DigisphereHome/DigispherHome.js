@@ -485,7 +485,8 @@ const DigispherHome = () => {
                   Technology that works for your business
                 </p>
                 <h1 className="digisphere-hero-title">
-                  Technology that{" "}
+                  Technology that
+                  <br/>
                   <span className="digisphere-hero-secondtitle">
                     grows your business.
                   </span>

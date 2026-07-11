@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./DigisphereFooter.css";
-import footerlogo from "../../assets/footerlogo.png";
+import footerlogo from "../../assets/footerlogo (2).png";
 // Asset Imports
 import linkedinIcon from "../../assets/LinkedinIcon.png";
 import instaIcon from "../../assets/instaIcon.png";
@@ -55,7 +55,7 @@ const DigisphereFooter = memo(() => {
           <img
             src={footerlogo}
             alt="Digisphere Logo"
-            className="Digisphere-logo-image"
+            className="Digispherefooter-logo-image"
           />
         </Link>
             <p className="footer-description">

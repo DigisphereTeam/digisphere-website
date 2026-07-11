@@ -7,8 +7,7 @@
 }
 
 .Digisphere-logo-image {
-  width: 170px;
-  height: 45px;
+  height: 50px;
   object-fit: contain;
 }
 
@@ -30,7 +29,7 @@
 .nav-link {
   color: #0f172a !important;
   font-size: 14px;
-  font-weight: 600; /* Font weight is already bold here */
+  font-weight: 600;
   padding: 8px 0px 2px 0px !important; 
   margin-left: 10px;
   margin-right: 10px;
@@ -45,7 +44,7 @@
   width: fit-content;
 }
 
-/* Color updates for Hover AND Active states (No font-weight change here to prevent moving) */
+/* Color updates for Hover AND Active states */
 .custom-navbar .nav-link:hover,
 .custom-navbar .nav-link.active,
 .custom-navbar .nav-button:hover,
@@ -75,7 +74,7 @@
   width: 100%;
 }
 
-/* Specific override for Dropdown Container: Keeps the line locked to the word footprint */
+/* Specific override for Dropdown Container */
 .navbar-nav .nav-item.dropdown .nav-link {
   position: relative;
   width: fit-content;
@@ -185,7 +184,7 @@
 
 /* Micro-interaction when hover state hits an item */
 .mega-link:hover {
-  background-color: #f8fafc; /* Subtle grey canvas highlight */
+  background-color: #f8fafc;
   color: #136AD0;
 }
 
@@ -213,7 +212,7 @@
 }
 
 .mega-link:hover h6 {
-  color: #136AD0; /* Changes headers inside the link to brand blue */
+  color: #136AD0;
 }
 
 .mega-link p {
@@ -233,7 +232,6 @@
   transition: all 0.25s ease-in-out;
 }
 
-/* Gives the static card depth when interacting near it */
 .Build-service-card:hover {
   background: #EEF7FE;
   border-color: rgba(19, 106, 208, 0.15);
@@ -280,7 +278,7 @@
 
 .explore-btn:hover {
   color: #136AD0;
-  gap: 10px; /* Extends arrow outward on hover */
+  gap: 10px;
 }
 
 .Projects span {
@@ -299,7 +297,7 @@
    5. Media Queries / Responsiveness
    ========================================================================== */
 
-/* --- TABLET PORTRAIT & SMALLER (Max-width: 991px) --- */
+/* --- TABLET PORTRAIT & MOBILE BREAKPOINT (Max-width: 991px) --- */
 @media (max-width: 991px) {
   .custom-navbar {
     padding: 10px 0;
@@ -314,30 +312,42 @@
   .nav-link {
     margin: 8px 0;
     justify-content: center;
+    width: 100%;
   }
 
+  /* FIX: Disables full-width sliding animations on touch devices */
+  .custom-navbar .nav-link::after,
+  .custom-navbar .nav-button::after,
+  .navbar-nav .nav-item.dropdown .nav-link::after {
+    display: none !important;
+  }
+
+  /* Full width container layout for mobile stacks */
   .nav-buttons-container {
     width: 100%;
     margin-top: 15px;
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column; 
+    gap: 8px;
   }
 
-  /* Dropdown & Underline Adjustments for Mobile Menu Stack */
+  .work-btn,
+  .talk-btn {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+    width: 100%; 
+    text-align: center;
+  }
+
+  /* Centered link layouts inside responsive menus */
   .navbar-nav .nav-item.dropdown .nav-link {
     width: 100%;
     display: flex !important;
     justify-content: center !important;
     align-items: center;
   }
-  
-  .navbar-nav .nav-item.dropdown .nav-link:hover::after,
-  .navbar-nav .nav-item.dropdown .nav-link.active::after {
-    width: 100% !important;
-  }
 
-  /* Mega Menu conversion to full-width mobile accordion style */
+  /* Converts the giant desktop menu to clean accordion panels */
   .mega-menu {
     position: static !important;
     width: 100% !important;
@@ -346,37 +356,7 @@
     box-shadow: none;
     border-radius: 14px;
     padding: 20px;
-    background: #f8fafc; /* Subtle tint background layout color for stacked menus */
-  }
-
-  .Build-service-card {
-    margin-top: 20px;
-    height: auto;
-  }
-}
-
-/* --- MOBILE DEVICES (Max-width: 767px) --- */
-@media (max-width: 767px) {
-  .Digisphere-logo-image {
-    width: 140px; /* Scales down logo slightly for small screens */
-    height: auto;
-  }
-
-  .work-btn,
-  .talk-btn {
-    padding: 8px 14px !important;
-    font-size: 13px !important;
-    width: 100%; /* Makes buttons fill width on small mobile screens */
-    text-align: center;
-  }
-
-  .nav-buttons-container {
-    flex-direction: column; /* Stacks "Let's Talk" and "Work" buttons vertically */
-    gap: 8px;
-  }
-
-  .mega-menu {
-    padding: 15px;
+    background: #f8fafc; 
   }
 
   .mega-link {
@@ -399,11 +379,25 @@
   }
 
   .Build-service-card {
+    margin-top: 20px;
+    height: auto;
     padding: 15px;
   }
 
   .Build-service-card h3 {
     font-size: 18px;
     margin-bottom: 12px;
+  }
+}
+
+/* --- SMALL MOBILE PHONES SPECIFIC (Max-width: 767px) --- */
+@media (max-width: 767px) {
+  .Digisphere-logo-image {
+    width: 140px; 
+    height: auto;
+  }
+
+  .mega-menu {
+    padding: 15px; 
   }
 }

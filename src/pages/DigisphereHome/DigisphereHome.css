@@ -441,6 +441,9 @@
   .digisphere-service-grid {
     grid-template-columns: 1fr;
   }
+  .Digisphere-badge{
+    text-align: center;
+  }
   .digisphere-right {
     margin: 20px auto;
     padding: 20px;
@@ -451,6 +454,9 @@
   .digisphere-left-per {
     margin: 20px auto;
     padding: 20px;
+  }
+  .Digisphere-left{
+    text-align: center;
   }
 
   .digisphere-wrapper {
@@ -1479,7 +1485,10 @@
 
 @media (max-width: 991px) {
   .digisphere-hero-title {
-    font-size: 40px !important;
+    font-size: 36px !important;
+    text-align: center;
+  }
+  .Digisphere-left{
     text-align: center;
   }
   .digisphere-hero-secondtitle {
@@ -1565,7 +1574,7 @@
     font-size: 65px;
   }
   .digisphere-hero-title {
-    font-size: 36px !important;
+    font-size: 32px !important;
   }
   .digisphere-hero-secondtitle {
     font-size: 32px;
@@ -2101,11 +2110,15 @@
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .progress-card {
     width: 100%;
     padding: 12px;
   }
+  
+.digi-engagement-header h2{
+  font-size: 32px;
+}
 
   .progress-item {
     gap: 12px;

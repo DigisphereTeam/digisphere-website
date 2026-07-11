@@ -110,9 +110,7 @@
     margin-top: 60px;
   }
 
-  .devops-title {
-    font-size: 50px;
-  }
+ 
   .devops-title {
     font-size: 36px;
   }
@@ -124,7 +122,7 @@
 
 /* MOBILE */
 
-@media (max-width: 767px) {
+@media (max-width: 576px) {
     .devops-hero-section {
     padding: 30px 0;
   }
