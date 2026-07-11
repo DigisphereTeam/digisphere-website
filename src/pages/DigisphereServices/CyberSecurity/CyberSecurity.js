@@ -55,7 +55,7 @@ const CyberSecurity = () => {
 
   const dynamicThreats = threatNumbersPool[poolIndex];
   const dynamicAlerts = alertNumbersPool[poolIndex];
-  const dynamicVulnerabilities = currentWeek % 2 === 0 ? 0 : 1;
+  
 
   const stats = [
     {
@@ -277,10 +277,7 @@ const CyberSecurity = () => {
                     </div>
                   </div>
 
-                  <div className="CybersecurityLiveStatus">
-                    <span className="CybersecurityLiveDot"></span>
-                    <span>Protected</span>
-                  </div>
+                 
                 </div>
 
                 {/* Main */}
@@ -338,9 +335,7 @@ const CyberSecurity = () => {
                       {/* Card 3: Open Vulnerabilities */}
                       <div className="CybersecurityStatCard CybersecurityBlue">
                         <small>Open Vulnerabilities</small>
-                        <h1>
-                          <Counter end={dynamicVulnerabilities} />
-                        </h1>
+                        <h1>0</h1>
                       </div>
 
                     </div>
@@ -426,9 +421,9 @@ const CyberSecurity = () => {
           security gaps in your current setup — no strings attached.
         </p>
         <div className="marketing-btn">
-          <button>
+          <Link to="/contact"><button>
             Book Security Consultation <FaArrowRight />
-          </button>
+          </button></Link>
         </div>
       </div>
     </>
