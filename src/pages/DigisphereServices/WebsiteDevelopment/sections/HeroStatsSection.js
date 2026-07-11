@@ -74,7 +74,7 @@ const HeroStatsSection = () => {
                   Website Design & Development
                 </p>
 
-                <h1 className="hero-title">
+                <h1 className="website-hero-title">
                   Websites that work as hard <br />
                   <span>as your business does.</span>
                 </h1>
