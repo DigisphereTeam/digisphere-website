@@ -54,8 +54,22 @@
 }
 
 /* MOBILE */
+
 @media (max-width: 576px) {
+  
+  /* 1. Target any Link wrapping your custom buttons */
+  a:has(> .custom-btn), 
+  .btn-link {
+    display: block !important;
+    width: 100% !important;
+    text-decoration: none !important;
+  }
+
+  /* 2. Force the button itself to expand completely */
   .custom-btn {
-    width: 100%;
+    display: flex !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-decoration: none !important;
   }
 }
