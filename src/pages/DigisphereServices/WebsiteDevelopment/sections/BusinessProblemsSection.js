@@ -12,21 +12,20 @@ import DropOffAnimation from "./DropOffAnimation";
 import SeoRankingAnimation from "./SeoRankingAnimation";
 
 const BusinessProblemsSection = () => {
-  // Datasets mimicking your actual design percentages
   const dropOffData = [
-  { percentage: 85, numericValue: 85, suffix: "%" },
-  { percentage: 70, numericValue: 70, suffix: "%" },
-  { percentage: 50, numericValue: 50, suffix: "%" },
-  { percentage: 30, numericValue: 30, suffix: "%" },
-  { percentage: 15, numericValue: 15, suffix: "%" },
-];
+    { percentage: 85, numericValue: 85, suffix: "%" },
+    { percentage: 70, numericValue: 70, suffix: "%" },
+    { percentage: 50, numericValue: 50, suffix: "%" },
+    { percentage: 30, numericValue: 30, suffix: "%" },
+    { percentage: 15, numericValue: 15, suffix: "%" },
+  ];
 
   const funnelData = [
-  { label: "Visitors", percentage: 100, numericValue: 1000, suffix: "", color: "#0066cc" },
-  { label: "Engaged", percentage: 65, numericValue: 400, suffix: "", color: "#0044cc" },
-  { label: "Interested", percentage: 35, numericValue: 120, suffix: "", color: "#8b5cf6" },
-  { label: "Converted", percentage: 10, numericValue: 8, suffix: "", color: "#ef4444" },
-];
+    { label: "Visitors", percentage: 100, numericValue: 1000, suffix: "", color: "#0066cc" },
+    { label: "Engaged", percentage: 65, numericValue: 400, suffix: "", color: "#0044cc" },
+    { label: "Interested", percentage: 35, numericValue: 120, suffix: "", color: "#8b5cf6" },
+    { label: "Converted", percentage: 10, numericValue: 8, suffix: "", color: "#ef4444" },
+  ];
 
   return (
     <section className="business-problems-section">
@@ -70,9 +69,14 @@ const BusinessProblemsSection = () => {
           </div>
 
           <div className="col-lg-6">
-            <div className="problem-image">
-              {/* Row 1 Interactive Line Animation */}
+            <div className="problem-image dynamic-chart-container">
               <DropOffAnimation title="Visitor Drop-off Rate" data={dropOffData} isRedTheme={true} icon={dropOffIcon}/>
+              {/* Bulletproof HTML Mobile Floating Overlay labels */}
+              <div className="mobile-percentage-overlay">
+                {dropOffData.map((item, idx) => (
+                  <span key={idx}>{item.percentage}%</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -81,7 +85,6 @@ const BusinessProblemsSection = () => {
         <div className="problem-row row align-items-center">
           <div className="col-lg-6 order-lg-1 order-2">
             <div className="problem-image">
-              {/* Row 2 Delayed Color Change Animation */}
               <SeoRankingAnimation />
             </div>
           </div>
@@ -140,9 +143,14 @@ const BusinessProblemsSection = () => {
           </div>
 
           <div className="col-lg-6">
-            <div className="problem-image">
-              {/* Row 3 Interactive Funnel Line Animation */}
+            <div className="problem-image dynamic-chart-container">
               <DropOffAnimation title="Conversion Funnel" data={funnelData} isRedTheme={false} icon={funnelIcon} />
+              {/* Bulletproof HTML Mobile Floating Overlay labels */}
+              <div className="mobile-percentage-overlay">
+                {funnelData.map((item, idx) => (
+                  <span key={idx}>{item.percentage}%</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

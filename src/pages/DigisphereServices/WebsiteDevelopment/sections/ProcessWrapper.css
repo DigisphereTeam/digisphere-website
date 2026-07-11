@@ -23,4 +23,12 @@
     .process-wrapper{
         padding-top: 40px;
     }
+    .wrapper-title{
+        font-size: 32px;
+    }
+}
+@media (max-width: 962px){
+  .wrapper-title{
+        font-size: 36px;
+    }
 }
