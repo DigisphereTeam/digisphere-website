@@ -23,9 +23,9 @@ const CTASection = () => {
                   our business goals instead of just delivering a website."
                 </p>
                 <div className="author-row">
-                  <div className="author-avatar">MK</div>
+                  <div className="author-avatar">KR</div>
                   <div className="author-info">
-                    <p className="author-name">Manish Kumar</p>
+                    <p className="author-name"></p>Karthik Reddy
                     <p className="author-title">CEO, TechVision Solutions</p>
                   </div>
                 </div>
