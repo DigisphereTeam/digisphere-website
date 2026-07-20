@@ -61,7 +61,7 @@ import { useInView } from "framer-motion";
 import ProcessCards from "../../components/ProcessCards/ProcessCards";
 import Button from "../../components/Button/Button";
 import { IoChatbubbleOutline } from "react-icons/io5";
-import { path } from "framer-motion/client";
+
 
 const CountUp = ({ end, suffix = "", duration = 2000, startAnimation }) => {
   const [count, setCount] = useState(0);
@@ -244,26 +244,32 @@ const DigispherHome = () => {
   ];
   const services = [
     { icon: <img src={Design} alt="Analytics" />, name: "Website Design" },
+    { icon: <img src={ux} alt="Analytics" />, name: "UX Design" },
     {
       icon: <img src={Development} alt="Analytics" />,
       name: "Web Development",
     },
-    { icon: <img src={SEO} alt="Analytics" />, name: "SEO" },
-    { icon: <img src={Google} alt="Analytics" />, name: "Google Ads" },
-    { icon: <img src={Meta} alt="Analytics" />, name: "Meta Ads" },
-    { icon: <img src={ux} alt="Analytics" />, name: "UX Design" },
+    { icon: <img src={Automation} alt="Analytics" />, name: "Automation" },
+
     {
       icon: <img src={Infrastructure} alt="Analytics" />,
       name: "Cloud Services",
     },
-    {
+     { icon: <img src={DevOps} alt="Analytics" />, name: "DevOps" },
+       { icon: <img src={Managed} alt="Analytics" />, name: "Managed IT" },
+       { icon: <img src={Monitoring} alt="Analytics" />, name: "Monitoring" },
+{
       icon: <img src={Cybersecurity} alt="Analytics" />,
       name: "Cybersecurity",
     },
-    { icon: <img src={Managed} alt="Analytics" />, name: "Managed IT" },
-    { icon: <img src={DevOps} alt="Analytics" />, name: "DevOps" },
-    { icon: <img src={Monitoring} alt="Analytics" />, name: "Monitoring" },
-    { icon: <img src={Automation} alt="Analytics" />, name: "Automation" },
+    { icon: <img src={SEO} alt="Analytics" />, name: "SEO" },
+    { icon: <img src={Google} alt="Analytics" />, name: "Google Ads" },
+    { icon: <img src={Meta} alt="Analytics" />, name: "Meta Ads" },
+
+ 
+  
+   
+    
   ];
   const beforeItems = [
     {
@@ -309,7 +315,7 @@ const DigispherHome = () => {
       description:
         "High-performance websites that convert visitors into customers",
       highlight: "3-5x higher conversion rates",
-      path:"/services/webdevelopment",
+      path: "/services/webdevelopment",
     },
     {
       icon: WebApplicationIcon,
@@ -317,35 +323,35 @@ const DigispherHome = () => {
       description:
         "Custom applications that streamline operations and save time",
       highlight: "10+ hours saved weekly",
-      path:"",
+      path: "",
     },
     {
       icon: DigitalMarketingIcon,
       title: "Digital Marketing",
       description: "SEO and paid ads strategies that bring qualified leads",
       highlight: "60-80% more enquiries",
-      path:"/services/digital-marketing",
+      path: "/services/digital-marketing",
     },
     {
       icon: ExperienceDesignIcon,
       title: "Experience Design",
       description: "User experiences that delight customers and build loyalty",
       highlight: "2x engagement increase",
-      path:"/services/experience-design",
+      path: "/services/experience-design",
     },
     {
       icon: CloudServicesIcon,
       title: "Cloud Services",
       description: "Scalable infrastructure on AWS, Azure, and Google Cloud",
       highlight: "99.9% uptime guarantee",
-      path:"/services/cloudServices",
+      path: "/services/cloudServices",
     },
     {
       icon: CyberSecurityIcon,
       title: "Cybersecurity",
       description: "Enterprise-grade security and compliance frameworks",
       highlight: "Zero security incidents",
-      path:"/services/cyber-security",
+      path: "/services/cyber-security",
     },
   ];
   const steps = [
@@ -403,16 +409,16 @@ const DigispherHome = () => {
       quote:
         "Our website traffic doubled within three months. The team delivered exceptional results and exceeded expectations.",
       badge: "2x Website Traffic",
-      initials: "SJ",
-      name: "Sarah Johnson",
+      initials: "HV",
+      name: "Harsha Vardhan",
       role: "CEO, Bright Labs",
     },
     {
       quote:
         "The ROI on our campaigns improved dramatically. Working with Digisphere was one of our best business decisions.",
       badge: "Higher ROI",
-      initials: "ML",
-      name: "Michael Lee",
+      initials: "SK",
+      name: "Sai Kiran Kumar",
       role: "Founder, GrowthHub",
     },
   ];
@@ -486,7 +492,7 @@ const DigispherHome = () => {
                 </p>
                 <h1 className="digisphere-hero-title">
                   Technology that
-                  <br/>
+                  <br />
                   <span className="digisphere-hero-secondtitle">
                     grows your business.
                   </span>
@@ -918,7 +924,8 @@ const DigispherHome = () => {
                     {item.highlight}
                   </p>
 
-                  <Link to={item.path}
+                  <Link
+                    to={item.path}
                     className="digisphere-business-needs-link"
                   >
                     Learn more

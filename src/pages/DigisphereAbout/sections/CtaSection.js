@@ -25,7 +25,7 @@ const CTASection = () => {
                 <div className="author-row">
                   <div className="author-avatar">KR</div>
                   <div className="author-info">
-                    <p className="author-name"></p>Karthik Reddy
+                    <p className="author-name"></p>Manish Kumar
                     <p className="author-title">CEO, TechVision Solutions</p>
                   </div>
                 </div>
