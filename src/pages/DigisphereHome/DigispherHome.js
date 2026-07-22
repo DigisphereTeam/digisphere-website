@@ -323,7 +323,7 @@ const DigispherHome = () => {
       description:
         "Custom applications that streamline operations and save time",
       highlight: "10+ hours saved weekly",
-      path: "",
+      path: "/services/webapplications",
     },
     {
       icon: DigitalMarketingIcon,

@@ -11,10 +11,13 @@ import ManagedItServices from "./pages/DigisphereServices/MangedItServices/Manag
 import ExperienceDesign from "./pages/DigisphereServices/ExperienceDesign/ExperienceDesign.js";
 import Devops from "./pages/DigisphereServices/Devops/Devops.js";
 import CyberSecurity from "./pages/DigisphereServices/CyberSecurity/CyberSecurity.js";
+
 import Automation from "./pages/DigisphereServices/AutomationSolutions/Automation.js";
 import AIPowered from "./pages/DigisphereServices/AIPoweredSolutions/AIPowered.js";
 import CloudServices from "./pages/DigisphereServices/CloudServices/CloudServices.js";
 import ContactUs from "./pages/ContactUs/ContactUs.js";
+import WebApplications from "./pages/DigisphereServices/webApplications/WebApplications.js";
+
 
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -116,6 +119,7 @@ const App = () => {
         />
         <Route path="/services/devops" element={<Devops />} />
         <Route path="/services/cyber-security" element={<CyberSecurity />} />
+          <Route path="/services/webapplications" element={<WebApplications/>} />
         <Route path="/services/automation" element={<Automation />} />
         <Route path="/services/aipowered" element={<AIPowered/>} />
         <Route path="/services/cloudservices" element={<CloudServices/>} />

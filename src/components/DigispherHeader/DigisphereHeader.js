@@ -1,21 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoArrowForwardSharp } from "react-icons/io5";
-import { NavLink, Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import digilogo from "../../assets/digishperelogo.png";
-import AbouUs from "../../assets/Lead Generationicon.svg";
-import CaseStudies from "../../assets/Marketing ROI.svg";
 import pen from "../../assets/pen.svg";
-import Blog from "../../assets/resourcesdropdown/Blog.svg";
-import Careers from "../../assets/resourcesdropdown/Careers.svg";
-import Contact from "../../assets/resourcesdropdown/Contact.svg";
-import DocumentationIcon from "../../assets/resourcesdropdown/Documentation.svg";
-import FAQs from "../../assets/resourcesdropdown/FAQs.svg";
-import HelpCenter from "../../assets/resourcesdropdown/HelpCenter.svg";
-import HowWeWork from "../../assets/resourcesdropdown/HowWeWork.svg";
-import SuccessStories from "../../assets/resourcesdropdown/SuccessStories.svg";
-import TechnologyGuides from "../../assets/resourcesdropdown/TechnologyGuides.svg";
 import AIPowered from "../../assets/servicesDropdown/AI-Powered.svg";
 import AutomationSolutions from "../../assets/servicesDropdown/AutomationSolutions.svg";
 import CloudServices from "../../assets/servicesDropdown/CloudServices.svg";
@@ -101,6 +89,14 @@ const DigisphereHeader = () => {
       {
         heading: "CUSTOM SOLUTIONS",
         items: [
+               {
+            title: "Web Applications",
+            desc: "Customportals,dashboards,and business software.",
+            path: "/services/webapplications",
+            icon: (
+              <img className="service-image" src={WebApplications} alt="WebApplications" />
+            ),
+          },
          
           {
             title: "Automation Solutions",
