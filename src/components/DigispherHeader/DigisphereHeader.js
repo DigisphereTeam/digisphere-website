@@ -289,6 +289,12 @@ const DigisphereHeader = () => {
                 </div>
               </div>
             </li>
+             <li className="nav-item">
+              <NavLink className="nav-link" to="/Industries" onClick={closeNavbar}>
+                Industries
+              </NavLink>
+            </li>
+
           </ul>
 
           {/* RIGHT BUTTONS */}

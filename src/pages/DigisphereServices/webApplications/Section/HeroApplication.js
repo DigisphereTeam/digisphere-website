@@ -250,7 +250,7 @@ const HeroApplication = () => {
                     </div>
 
                     {/* Bottom Chart & Activity Feed */}
-                    <div className="bottom-grid">
+                    <div className="web-bottom-grid">
                       <div>
                         <div className="webapplication-section-title">
                           Monthly Revenue

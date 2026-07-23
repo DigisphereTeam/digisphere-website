@@ -269,7 +269,7 @@
   margin-bottom: 20px;
 }
 
-.bottom-grid {
+.web-bottom-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 16px;
@@ -399,7 +399,7 @@
 
 @media (max-width: 576px) {
   .stats-grid,
-  .bottom-grid {
+  .web-bottom-grid {
     grid-template-columns: 1fr;
   }
   .portal-card {
