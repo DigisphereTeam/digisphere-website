@@ -17,7 +17,7 @@ import AIPowered from "./pages/DigisphereServices/AIPoweredSolutions/AIPowered.j
 import CloudServices from "./pages/DigisphereServices/CloudServices/CloudServices.js";
 import ContactUs from "./pages/ContactUs/ContactUs.js";
 import WebApplications from "./pages/DigisphereServices/webApplications/WebApplications.js";
-
+import Industries from "./pages/Industries/Industries.js"
 
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -124,7 +124,9 @@ const App = () => {
         <Route path="/services/aipowered" element={<AIPowered/>} />
         <Route path="/services/cloudservices" element={<CloudServices/>} />
         <Route path="/contact" element={<ContactUs />} />
+         <Route path="/industries" element={<Industries/>} />
       </Routes>
+     
 
       <DigisphereFooter />
 
