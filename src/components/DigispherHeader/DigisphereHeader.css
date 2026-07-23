@@ -401,3 +401,198 @@
     padding: 15px; 
   }
 }
+
+/* ==========================================================================
+   MEGA DROPDOWN & RESOURCES MENU STYLES
+   ========================================================================== */
+
+/* Parent item positioning */
+.mega-dropdown {
+  position: static !important;
+}
+
+/* Mega menu overlay container */
+.mega-menu {
+  width: 1000px;
+  left: 50% !important;
+  transform: translateX(-50%);
+  border: none;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  display: none;
+  z-index: 9999;
+}
+
+/* Category Column Headers */
+.mega-heading {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+/* Links & Items */
+.mega-link {
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.mega-link:hover {
+  color: #0d6efd;
+}
+
+.icon-box {
+  color: #0d6efd;
+  width: 25px;
+  height: 25px;
+}
+
+.mega-link h6 {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.mega-link p {
+  margin: 0;
+  font-size: 12px;
+  color: #475569;
+}
+
+/* Featured Audit/Service Card (Right Column) */
+.Build-service-card {
+  background: #eef6ff;
+  padding: 25px;
+  border-radius: 18px;
+  height: 100%;
+}
+
+.Build-service-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.Build-service-card p {
+  font-size: 14px;
+  color: #475569;
+  font-weight: 400;
+}
+
+/* Key Stats inside Featured Card */
+.stats div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.Projects span {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.Projects strong {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.explore-btn {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #057DCD;
+  font-weight: 600;
+}
+
+/* Navigation Button Underline Hover States */
+.custom-navbar .nav-link,
+.custom-navbar .nav-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-navbar .nav-link::after,
+.custom-navbar .nav-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0;
+  height: 2px;
+  background: #136AD0;
+  transition: width .3s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-button:hover,
+.custom-navbar .nav-button.active {
+  color: #136AD0 !important;
+}
+
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-button:hover::after,
+.custom-navbar .nav-button.active::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .mega-menu {
+    position: static;
+    width: 100%;
+    transform: none;
+    margin-top: 0;
+    box-shadow: none;
+    border-radius: 24px;
+    padding: 20px;
+  }
+
+  .mega-link {
+    margin-bottom: 10px;
+  }
+
+  .Build-service-card {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mega-menu {
+    padding: 15px;
+    display: none;
+    z-index: 9999;
+    transform: none;
+  }
+
+  .mega-link {
+    margin-bottom: 14px;
+  }
+
+  .icon-box {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .Build-service-card h3 {
+    font-size: 24px;
+  }
+
+  .Build-service-card {
+    padding: 20px;
+  }
+}
