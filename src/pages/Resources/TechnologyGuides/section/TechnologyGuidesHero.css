@@ -49,7 +49,7 @@
 }
 
 .Guides-category-count {
-  font-size:10px;
+  font-size: 10px;
   color: #94A3B8;
 }
 
@@ -70,9 +70,9 @@
 }
 
 .Guides-badge-featured {
-  background-color:#E8F4FD;
+  background-color: #E8F4FD;
   color: #057DCD;
-  font-size:12px;
+  font-size: 12px;
   font-weight: 600;
   padding: 4px 12px;
   border-radius: 20px;
@@ -133,7 +133,7 @@
 
 /* Bottom Blue Stats Bar */
 .Guides-stats-blue-bar {
-  background-color:#057DCD;
+  background-color: #057DCD;
   border-radius: 14px;
   padding: 12px 20px;
   display: flex;
@@ -157,4 +157,114 @@
   font-size: 10px;
   opacity: 0.85;
   color: #FFFFFFB2;
+}
+
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVE SIZES)
+   ========================================== */
+
+/* Tablet Screens (max-width: 991px) */
+@media (max-width: 991px) {
+  .Guides-right-container {
+    max-width: 100%;
+  }
+
+  .Guides-featured-card {
+    padding: 16px;
+  }
+
+  .Guides-featured-title {
+    font-size: 15px;
+  }
+
+  .Guides-featured-description {
+    font-size: 12px;
+  }
+
+  .Guides-stats-blue-bar {
+    padding: 12px 16px;
+  }
+
+  .Guides-stat-blue-num {
+    font-size: 15px;
+  }
+
+  .Guides-stat-blue-lbl {
+    font-size: 10px;
+  }
+}
+
+/* Mobile Screens (max-width: 576px) */
+@media (max-width: 576px) {
+  .Guides-category-card {
+    padding: 10px;
+  }
+
+  .Guides-category-icon-wrapper {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+  }
+
+  .Guides-category-icon-wrapper svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .Guides-category-title {
+    font-size: 10px;
+  }
+
+  .Guides-category-count {
+    font-size: 9px;
+  }
+
+  .Guides-featured-card {
+    padding: 14px;
+  }
+
+  .Guides-featured-header {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .Guides-badge-featured {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+
+  .Guides-read-time {
+    font-size: 11px;
+  }
+
+  .Guides-featured-title {
+    font-size: 14px;
+  }
+
+  .Guides-featured-description {
+    font-size: 11px;
+  }
+
+  .Guides-badge-level {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+
+  .Guides-read-link {
+    font-size: 11px;
+  }
+
+  .Guides-stats-blue-bar {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .Guides-stat-blue-num {
+    font-size: 14px;
+  }
+
+  .Guides-stat-blue-lbl {
+    font-size: 9px;
+    text-align: center;
+  }
 }

@@ -160,7 +160,7 @@ const sectionsData = [
 
 const CardsTechnology = () => {
   return (
-    <div className="container py-5 tech-guide-container">
+    <div className="container  tech-guide-container mt-5">
       {sectionsData.map((section, idx) => (
         <div key={idx} className="mb-5">
           {/* Section Header */}

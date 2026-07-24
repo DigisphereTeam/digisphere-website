@@ -20,7 +20,7 @@ const TechnologyGuidesHero = () => {
   return (
     <section className="industries-hero-section">
       <div className="container">
-        <div className="row align-items-center g-5 mb-5">
+        <div className="row align-items-center g-5">
           
           {/* Left Column: Slides in from Left */}
           <div className="col-lg-6">
