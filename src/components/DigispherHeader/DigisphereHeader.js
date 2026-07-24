@@ -191,7 +191,7 @@ const DigisphereHeader = () => {
           {
             title: "About Us",
             desc: "Our story, team, and mission.",
-            path: "/services/webdevelopment",
+            path: "/About",
             icon: (
               <img className="service-image" src={AbouUs} alt="WebsiteDesign" />
             ),
@@ -217,7 +217,7 @@ const DigisphereHeader = () => {
           {
             title: "Contact",
             desc: "Get in touch with our team.",
-            path: "/services/webdevelopment",
+            path: "/Contact",
             icon: (
               <img
                 className="service-image"
@@ -241,7 +241,7 @@ const DigisphereHeader = () => {
           {
             title: "Case Studies",
             desc: "Real results from real clients.",
-            path: "/services/automation",
+            path: "/Resources/casestudies",
             icon: <img className="service-image" src={CaseStudies} alt="pen" />,
           },
           {
@@ -255,7 +255,7 @@ const DigisphereHeader = () => {
           {
             title: "Technology Guides",
             desc: "Deep-dives on tools and stacks.",
-            path: "/services/ai",
+            path: "/Resources/technologyguides",
             icon: (
               <img className="service-image" src={TechnologyGuides} alt="pen" />
             ),

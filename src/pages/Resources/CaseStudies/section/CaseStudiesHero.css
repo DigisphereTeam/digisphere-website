@@ -1,0 +1,192 @@
+/* Container */
+.case-stats-widget-container {
+  background-color: transparent;
+}
+
+/* Top 3 Stat Cards */
+.case-top-stat-card {
+  background-color: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.case-stat-number {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.case-stat-card-label {
+  font-size: 12px;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* Industry Card & Progress Bars */
+.case-industry-success-card {
+  background-color: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.case-industry-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 0.8px;
+}
+
+.case-industry-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a5568;
+  width: 80px;
+  text-align: end;
+}
+
+.case-attributed {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Progress Track and Bar */
+.case-progress-track {
+  height: 10px;
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.case-progress-fill {
+  height: 100%;
+  background-color: #057dcd;
+  border-radius: 10px;
+  width: 0%;
+  transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Right Side Count Up Number */
+.case-industry-rate {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #057dcd;
+  width: 38px;
+  text-align: right;
+  display: inline-block;
+  font-variant-numeric: tabular-nums; /* Prevents text width shifting during count up */
+}
+
+/* Bottom Revenue Pill */
+.case-revenue-pill {
+  background-color: #057dcd;
+  border-radius: 12px;
+  font-size: 0.88rem;
+}
+
+.case-revenue-subtext {
+  font-size: 12px;
+  opacity: 0.85;
+  color: #ffffffb2;
+}
+
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVE SIZES)
+   ========================================== */
+
+/* Tablet Screens (max-width: 991px) */
+@media (max-width: 991px) {
+  .case-stat-number {
+    font-size: 20px;
+  }
+  .industries-main-section {
+    margin-top: 40px;
+  }
+
+  .case-stat-card-label {
+    font-size: 11px;
+  }
+
+  .case-industry-title {
+    font-size: 11px;
+  }
+
+  .case-industry-name {
+    font-size: 11px;
+    width: 70px;
+  }
+
+  .case-attributed {
+    font-size: 13px;
+  }
+
+  .case-progress-track {
+    height: 8px;
+  }
+
+  .case-industry-rate {
+    font-size: 0.78rem;
+    width: 34px;
+  }
+
+  .case-revenue-pill {
+    font-size: 0.82rem;
+  }
+
+  .case-revenue-subtext {
+    font-size: 11px;
+  }
+}
+
+/* Mobile Screens (max-width: 576px) */
+@media (max-width: 576px) {
+  .case-stat-number {
+    font-size: 17px;
+  }
+  .industries-main-section {
+    margin-top: 40px;
+  }
+
+  .case-stat-card-label {
+    font-size: 10px;
+  }
+
+  .case-industry-title {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .case-industry-name {
+    font-size: 10px;
+    width: 60px;
+  }
+
+  .case-attributed {
+    font-size: 12px;
+  }
+
+  .case-progress-track {
+    height: 7px;
+  }
+
+  .case-industry-rate {
+    font-size: 0.72rem;
+    width: 30px;
+  }
+
+  .case-revenue-pill {
+    font-size: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 4px;
+  }
+
+  .case-revenue-subtext {
+    font-size: 10px;
+  }
+}

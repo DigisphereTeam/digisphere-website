@@ -1,0 +1,160 @@
+/* Container */
+.Guides-right-container {
+  width: 100%;
+  max-width: 600px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Category Cards (2x2 grid) */
+.Guides-category-card {
+  background-color: #ffffff;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.Guides-category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.Guides-category-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  background-color: #e6f0fa;
+  color: #0070cc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.Guides-category-icon-wrapper svg {
+  width: 20px;
+  height: 20px;
+}
+
+.Guides-category-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+
+.Guides-category-count {
+  font-size:10px;
+  color: #94A3B8;
+}
+
+/* Featured Guide Card */
+.Guides-featured-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.Guides-featured-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.Guides-badge-featured {
+  background-color:#E8F4FD;
+  color: #057DCD;
+  font-size:12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.Guides-read-time {
+  font-size: 12px;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.Guides-clock-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.Guides-featured-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.35;
+}
+
+.Guides-featured-description {
+  font-size: 11px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.Guides-featured-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Guides-badge-level {
+  background-color: #F0FDF4;
+  color: #10B981;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.Guides-read-link {
+  color: #057DCD;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.Guides-read-link:hover {
+  opacity: 0.8;
+}
+
+/* Bottom Blue Stats Bar */
+.Guides-stats-blue-bar {
+  background-color:#057DCD;
+  border-radius: 14px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.Guides-stat-blue-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Guides-stat-blue-num {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.Guides-stat-blue-lbl {
+  font-size: 10px;
+  opacity: 0.85;
+  color: #FFFFFFB2;
+}
