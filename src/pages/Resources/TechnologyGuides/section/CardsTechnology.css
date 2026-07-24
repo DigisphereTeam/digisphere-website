@@ -1,0 +1,99 @@
+
+
+/* Section Header */
+.tech-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 6px;
+}
+.tech-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.tech-section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+/* Cards Styling */
+.tech-article-card {
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  background-color: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tech-article-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Level Badges */
+.tech-level-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.tech-level-badge.tech-beginner {
+  background-color: #10B98115;
+  color: #10B981;
+  font-size: 10px;
+}
+
+.tech-level-badge.tech-intermediate {
+  background-color: #057DCD15;
+  color: #057DCD;
+  font-size: 10px;
+}
+
+/* Metadata */
+.tech-read-time {
+  font-size: 10px;
+  color: #94A3B8;
+}
+
+/* Card Typography */
+.tech-article-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.tech-article-desc {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Action Links */
+.tech-read-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #057DCD;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tech-read-link:hover {
+  color: #1d4ed8;
+}
+
+.tech-read-link .tech-arrow {
+  margin-left: 4px;
+  transition: transform 0.2s ease;
+}
+
+.tech-read-link:hover .tech-arrow {
+  transform: translateX(3px);
+}

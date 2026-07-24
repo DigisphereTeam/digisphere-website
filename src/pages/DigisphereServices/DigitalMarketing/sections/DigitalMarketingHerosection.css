@@ -200,16 +200,6 @@ body {
   box-shadow: 0 20px 40px rgba(0,0,0,.12);
 } */
 
-.icon-box {
-  width: 44px;
-  height: 44px;
-  /* background: #1677ff; */
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .live-status {
   color: #16c784;
   font-weight: 600;

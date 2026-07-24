@@ -2,6 +2,9 @@ import React from "react";
 import "./AllIndustriesc.css";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Reveal from "../../../animations/Reveal";
+import { fadeUp } from "../../../animations/variants";
+
 import indaustries1 from "../../../assets/Industries/Healthcare.svg";
 import indaustries2 from "../../../assets/Industries/Education.svg";
 import indaustries3 from "../../../assets/Industries/Finance.svg";
@@ -165,81 +168,89 @@ const AllIndustries = () => {
       <section className="industries-section mb-5 mt-5">
         <div className="container">
           {/* Header */}
-          <div className="industries-header">
-            <span className="industries-badge">ALL INDUSTRIES</span>
-            <h2 className="industries-title">
-              Built for your world, not just your tech stack.
-            </h2>
-          </div>
+          <Reveal variant={fadeUp} delay={0.1}>
+            <div className="industries-header">
+              <span className="industries-badge">ALL INDUSTRIES</span>
+              <h2 className="industries-title">
+                Built for your world, not just your tech stack.
+              </h2>
+            </div>
+          </Reveal>
 
           {/* Bootstrap Grid Columns */}
           <div className="row g-4">
-            {industriesData.map((item) => (
+            {industriesData.map((item, index) => (
               <div key={item.id} className="col-lg-4 col-md-6 col-12">
-                <div className="industries-card">
-                  {/* Top Row: Icon Image + Counter */}
-                  <div className="industries-card-top">
-                    <div className="industries-icon-wrapper">
-                      <img
-                        src={item.icon}
-                        alt={item.title}
-                        className="industries-icon-img"
-                      />
+                <Reveal variant={fadeUp} delay={0.15 + (index % 3) * 0.1}>
+                  <div className="industries-card">
+                    {/* Top Row: Icon Image + Counter */}
+                    <div className="industries-card-top">
+                      <div className="industries-icon-wrapper">
+                        <img
+                          src={item.icon}
+                          alt={item.title}
+                          className="industries-icon-img"
+                        />
+                      </div>
+                      <div className="industries-count-wrapper">
+                        <span className="industries-count-number">
+                          {item.count}
+                        </span>
+                        <span className="industries-count-label">
+                          {item.countLabel}
+                        </span>
+                      </div>
                     </div>
-                    <div className="industries-count-wrapper">
-                      <span className="industries-count-number">
-                        {item.count}
-                      </span>
-                      <span className="industries-count-label">
-                        {item.countLabel}
-                      </span>
+
+                    {/* Main Content */}
+                    <h3 className="industries-card-title">{item.title}</h3>
+                    <p className="industries-card-subtitle">{item.subtitle}</p>
+                    <p className="industries-card-description">
+                      {item.description}
+                    </p>
+
+                    {/* Bullets List */}
+                    <ul className="industries-card-bullets">
+                      {item.bullets.map((bullet, idx) => (
+                        <li key={idx}>
+                          <span className="industries-bullet-dot">•</span>
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* CTA Link */}
+                    <div className="industries-card-cta">
+                      <a href="#discuss">
+                        <span>Discuss Your Project</span>
+                        <FaArrowRight className="industries-arrow-icon" />
+                      </a>
                     </div>
                   </div>
-
-                  {/* Main Content */}
-                  <h3 className="industries-card-title">{item.title}</h3>
-                  <p className="industries-card-subtitle">{item.subtitle}</p>
-                  <p className="industries-card-description">
-                    {item.description}
-                  </p>
-
-                  {/* Bullets List */}
-                  <ul className="industries-card-bullets">
-                    {item.bullets.map((bullet, idx) => (
-                      <li key={idx}>
-                        <span className="industries-bullet-dot">•</span>
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* CTA Link */}
-                  <div className="industries-card-cta">
-                    <a href="#discuss">
-                      <span>Discuss Your Project</span>
-                      <FaArrowRight className="industries-arrow-icon" />
-                    </a>
-                  </div>
-                </div>
+                </Reveal>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <div className="marketing-banner-section">
-        <h2 className="marketing-banner-header">Don't see your industry?</h2>
-        <p className="marketing-banner-description">
-          We work with businesses of all types. Tell us your challenge — we'll
-          figure out if and how we can help.
-        </p>
-        <div className="marketing-btn">
-          <Link to="/contact">
-            <button>
-              Start a Conversation<FaArrowRight />
-            </button>
-          </Link>
+
+      {/* Marketing Banner */}
+      
+        <div className="marketing-banner-section">
+          <h2 className="marketing-banner-header">Don't see your industry?</h2>
+          <p className="marketing-banner-description">
+            We work with businesses of all types. Tell us your challenge — we'll
+            figure out if and how we can help.
+          </p>
+          <div className="marketing-btn">
+            <Link to="/contact">
+              <button>
+                Start a Conversation <FaArrowRight />
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
+    
     </>
   );
 };

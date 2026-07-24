@@ -15,6 +15,7 @@ const SOCIAL_LINKS = [
 
 const SERVICES_LINKS = [
   { to: "/services/webdevelopment", label: "Website design & Development" },
+   { to: "/services/webapplications", label: "WebApplications" },
   { to: "/services/digital-marketing", label: "Digital Marketing" },
   { to: "/services/automation", label: "Automation Solution" },
   { to: "/services/aipowered", label: "AI-Powered Solution" },
@@ -27,7 +28,9 @@ const SERVICES_LINKS = [
 
 const COMPANY_LINKS = [
   { to: "/about", label: "About Us" },
+  { to: "/Resources/casestudies", label: "Case Studies" }, 
   { to: "/contact", label: "Contact" },
+
 ];
 
 const OFFICES = [

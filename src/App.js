@@ -17,7 +17,9 @@ import AIPowered from "./pages/DigisphereServices/AIPoweredSolutions/AIPowered.j
 import CloudServices from "./pages/DigisphereServices/CloudServices/CloudServices.js";
 import ContactUs from "./pages/ContactUs/ContactUs.js";
 import WebApplications from "./pages/DigisphereServices/webApplications/WebApplications.js";
-import Industries from "./pages/Industries/Industries.js"
+import Industries from "./pages/Industries/Industries.js";
+import CaseStudies from "./pages/Resources/CaseStudies/CaseStudies.js";
+import TechnologyGuides from "./pages/Resources/TechnologyGuides/TechnologyGuides.js";
 
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -33,7 +35,7 @@ const App = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    
+
     // Clean up event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -44,7 +46,7 @@ const App = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
@@ -97,7 +99,7 @@ const App = () => {
       `}</style>
 
       <DigispherHeader />
-      
+
       <Routes>
         <Route path="/" element={<DigisphereHome />} />
         <Route path="/about" element={<DigisphereAbout />} />
@@ -119,14 +121,15 @@ const App = () => {
         />
         <Route path="/services/devops" element={<Devops />} />
         <Route path="/services/cyber-security" element={<CyberSecurity />} />
-          <Route path="/services/webapplications" element={<WebApplications/>} />
+        <Route path="/services/webapplications" element={<WebApplications />} />
         <Route path="/services/automation" element={<Automation />} />
-        <Route path="/services/aipowered" element={<AIPowered/>} />
-        <Route path="/services/cloudservices" element={<CloudServices/>} />
+        <Route path="/services/aipowered" element={<AIPowered />} />
+        <Route path="/services/cloudservices" element={<CloudServices />} />
         <Route path="/contact" element={<ContactUs />} />
-         <Route path="/industries" element={<Industries/>} />
+        <Route path="/industries" element={<Industries />} />
+        <Route path="/Resources/casestudies" element={<CaseStudies />} />
+        <Route path="/Resources/technologyguides" element={<TechnologyGuides/>} />
       </Routes>
-     
 
       <DigisphereFooter />
 
