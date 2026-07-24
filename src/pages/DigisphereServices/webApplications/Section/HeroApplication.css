@@ -268,6 +268,11 @@
   gap: 12px;
   margin-bottom: 20px;
 }
+.web-hero-wrapper{
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-bottom: 70px;
+}
 
 .web-bottom-grid {
   display: grid;

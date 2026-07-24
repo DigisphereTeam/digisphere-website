@@ -3,7 +3,18 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoArrowForwardSharp } from "react-icons/io5";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import digilogo from "../../assets/digishperelogo.png";
+import AbouUs from "../../assets/Lead Generationicon.svg";
+import CaseStudies from "../../assets/Marketing ROI.svg";
 import pen from "../../assets/pen.svg";
+import Blog from "../../assets/resourcesdropdown/Blog.svg";
+import Careers from "../../assets/resourcesdropdown/Careers.svg";
+import Contact from "../../assets/resourcesdropdown/Contact.svg";
+import Documentation from "../../assets/resourcesdropdown/Documentation.svg";
+import FAQs from "../../assets/resourcesdropdown/FAQs.svg";
+import HelpCenter from "../../assets/resourcesdropdown/HelpCenter.svg";
+import HowWeWork from "../../assets/resourcesdropdown/HowWeWork.svg";
+import SuccessStories from "../../assets/resourcesdropdown/SuccessStories.svg";
+import TechnologyGuides from "../../assets/resourcesdropdown/TechnologyGuides.svg";
 import AIPowered from "../../assets/servicesDropdown/AI-Powered.svg";
 import AutomationSolutions from "../../assets/servicesDropdown/AutomationSolutions.svg";
 import CloudServices from "../../assets/servicesDropdown/CloudServices.svg";
@@ -13,17 +24,6 @@ import DigitalMarketing from "../../assets/servicesDropdown/DigitalMarketing.svg
 import Managed from "../../assets/servicesDropdown/Managed.svg";
 import WebApplications from "../../assets/servicesDropdown/WebApplications.svg";
 import WebsiteDesign from "../../assets/servicesDropdown/Website Design & Development.svg";
-import AbouUs from "../../assets/Lead Generationicon.svg";
-import HowWeWork from "../../assets/resourcesdropdown/HowWeWork.svg";
-import Careers from "../../assets/resourcesdropdown/Careers.svg";
-import Contact from "../../assets/resourcesdropdown/Contact.svg";
-import Blog from "../../assets/resourcesdropdown/Blog.svg";
-import CaseStudies from "../../assets/Marketing ROI.svg";
-import SuccessStories from "../../assets/resourcesdropdown/SuccessStories.svg";
-import TechnologyGuides from "../../assets/resourcesdropdown/TechnologyGuides.svg";
-import FAQs from "../../assets/resourcesdropdown/FAQs.svg";
-import HelpCenter from "../../assets/resourcesdropdown/HelpCenter.svg";
-import Documentation from "../../assets/resourcesdropdown/Documentation.svg";
 
 import "./DigisphereHeader.css";
 
@@ -199,7 +199,7 @@ const DigisphereHeader = () => {
           {
             title: "How We Work",
             desc: "Our engagement process explained.",
-            path: "/services/digital-marketing",
+            // path: "",
             icon: (
               <img
                 className="service-image"
@@ -211,7 +211,6 @@ const DigisphereHeader = () => {
           {
             title: "Careers",
             desc: "Join a growing tech team.",
-            path: "/services/experience-design",
             icon: <img className="service-image" src={Careers} alt="pen" />,
           },
           {
@@ -235,7 +234,6 @@ const DigisphereHeader = () => {
           {
             title: "Blog",
             desc: "Tech insights and practical guides.",
-            path: "/services/web-applications",
             icon: <img className="service-image" src={Blog} alt="Blog" />,
           },
           {
@@ -247,7 +245,6 @@ const DigisphereHeader = () => {
           {
             title: "Success Stories",
             desc: "How clients grew with us.",
-            path: "/services/ai",
             icon: (
               <img className="service-image" src={SuccessStories} alt="pen" />
             ),
@@ -268,13 +265,11 @@ const DigisphereHeader = () => {
           {
             title: "FAQs",
             desc: "Answers to common questions.",
-            path: "/resources/faqs",
             icon: <img className="service-image" src={FAQs} alt="FAQs" />,
           },
           {
             title: "Help Center",
             desc: "Support resources and docs.",
-            path: "/resources/help-center",
             icon: (
               <img
                 className="service-image"
@@ -286,7 +281,6 @@ const DigisphereHeader = () => {
           {
             title: "Documentation",
             desc: "Technical references and guides.",
-            path: "/resources/documentation",
             icon: (
               <img
                 className="service-image"
@@ -519,7 +513,7 @@ const DigisphereHeader = () => {
                       </div>
 
                       <Link
-                        to="/services"
+                        to="/contact"
                         className="explore-btn"
                         onClick={() => {
                           setIsResourcesOpen(false);
