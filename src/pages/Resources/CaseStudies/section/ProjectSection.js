@@ -107,7 +107,7 @@ const caseStudiesData = [
 
 const ProjectSection = () => {
   return (
-    <section className="project-section py-5">
+    <section className="project-section ">
       <div className="container">
         {caseStudiesData.map((item) => {
           const isImageLeft = item.imagePosition === 'left';
