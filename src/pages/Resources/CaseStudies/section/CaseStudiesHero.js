@@ -6,9 +6,13 @@ import Icon87 from "../../../../assets/CaseStudies/Icon87.svg";
 import Reveal from "../../../../animations/Reveal";
 import { fadeLeft, fadeUp } from "../../../../animations/variants";
 
-// Helper component to count up the percentage numbers smoothly
-const CountUp = ({ target, start, duration = 1200, delay = 0 }) => {
+// Helper component to count up numbers smoothly with optional suffix (e.g. "+", "%")
+const CountUp = ({ value, start, duration = 1200, delay = 0 }) => {
   const [count, setCount] = useState(0);
+
+  // Extract raw number and suffix (e.g., "336+" -> target: 336, suffix: "+")
+  const numericTarget = parseInt(value, 10) || 0;
+  const suffix = typeof value === "string" ? value.replace(/[0-9]/g, "") : "";
 
   useEffect(() => {
     if (!start) return;
@@ -21,10 +25,10 @@ const CountUp = ({ target, start, duration = 1200, delay = 0 }) => {
       const step = (timestamp) => {
         if (!startTime) startTime = timestamp;
         const progress = Math.min((timestamp - startTime) / duration, 1);
-        
+
         // Ease-out quad function for natural deceleration
         const easeOutProgress = 1 - (1 - progress) * (1 - progress);
-        setCount(Math.floor(easeOutProgress * target));
+        setCount(Math.floor(easeOutProgress * numericTarget));
 
         if (progress < 1) {
           animationFrame = requestAnimationFrame(step);
@@ -38,9 +42,14 @@ const CountUp = ({ target, start, duration = 1200, delay = 0 }) => {
       clearTimeout(timer);
       if (animationFrame) cancelAnimationFrame(animationFrame);
     };
-  }, [target, start, duration, delay]);
+  }, [numericTarget, start, duration, delay]);
 
-  return <span>{count}%</span>;
+  return (
+    <span>
+      {count}
+      {suffix}
+    </span>
+  );
 };
 
 const CaseStudiesHero = () => {
@@ -78,18 +87,21 @@ const CaseStudiesHero = () => {
       number: "336+",
       label: "Projects",
       icon: Icon336,
+      delay: "0.1s",
     },
     {
       id: 2,
       number: "316+",
       label: "Clients",
       icon: Icon316,
+      delay: "0.2s",
     },
     {
       id: 3,
       number: "87%",
       label: "Retention",
       icon: Icon87,
+      delay: "0.3s",
     },
   ];
 
@@ -104,14 +116,12 @@ const CaseStudiesHero = () => {
   return (
     <section className="case-hero-section">
       <div className="container">
-        <div className="row align-items-center g-5 mb-5 ">
+        <div className="row align-items-center g-5 mb-5">
           {/* Left Column: Text Content */}
-         <div className="col-lg-6">
+          <div className="col-lg-6">
             <Reveal variant={fadeLeft} delay={0.1}>
               <div className="industries-main-section">
-               <p class="Digisphere-badge">
-                 Case Studies
-                </p>
+                <p className="Digisphere-badge">Case Studies</p>
                 <h1 className="industries-hero-title">
                   Work we're
                   <br />
@@ -151,8 +161,11 @@ const CaseStudiesHero = () => {
           {/* Right Column: Compact Visual Grid */}
           <div className="col-lg-6">
             <Reveal variant={fadeUp} delay={0.2}>
-              <div className="case-stats-widget-container p-3" ref={widgetRef}>
-                {/* Top 3 Stat Cards */}
+              <div
+                className="case-stats-widget-container p-3"
+                ref={widgetRef}
+              >
+                {/* Top 3 Stat Cards with CountUp */}
                 <div className="row g-2 mb-3">
                   {topStats.map((item) => (
                     <div key={item.id} className="col-4">
@@ -165,22 +178,36 @@ const CaseStudiesHero = () => {
                             height="20"
                           />
                         </div>
-                        <div className="case-stat-number">{item.number}</div>
-                        <div className="case-stat-card-label">{item.label}</div>
+                        <div className="case-stat-number">
+                          <CountUp
+                            value={item.number}
+                            start={isVisible}
+                            delay={item.delay}
+                            duration={1200}
+                          />
+                        </div>
+                        <div className="case-stat-card-label">
+                          {item.label}
+                        </div>
                       </div>
                     </div>
                   ))}
                 </div>
 
-                {/* Middle Success Rate Card with Animated Bars and Numbers */}
+                {/* Middle Success Rate Card */}
                 <div className="case-industry-success-card p-4 mb-3">
                   <h6 className="case-industry-title mb-3">
                     SUCCESS RATE BY INDUSTRY
                   </h6>
                   <div className="d-flex flex-column gap-3">
                     {industryData.map((item, index) => (
-                      <div key={index} className="d-flex align-items-center">
-                        <span className="case-industry-name">{item.industry}</span>
+                      <div
+                        key={index}
+                        className="d-flex align-items-center"
+                      >
+                        <span className="case-industry-name">
+                          {item.industry}
+                        </span>
                         <div className="flex-grow-1 mx-3 case-progress-track">
                           <div
                             className="case-progress-fill"
@@ -196,7 +223,7 @@ const CaseStudiesHero = () => {
                         </div>
                         <span className="case-industry-rate">
                           <CountUp
-                            target={item.rate}
+                            value={`${item.rate}%`}
                             start={isVisible}
                             delay={item.delay}
                             duration={1200}
@@ -228,7 +255,9 @@ const CaseStudiesHero = () => {
                       ₹50Cr+ client revenue attributed
                     </span>
                   </div>
-                  <span className="case-revenue-subtext">Across all projects</span>
+                  <span className="case-revenue-subtext">
+                    Across all projects
+                  </span>
                 </div>
               </div>
             </Reveal>
