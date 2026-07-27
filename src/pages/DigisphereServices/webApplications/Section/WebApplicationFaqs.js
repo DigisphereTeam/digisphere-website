@@ -2,6 +2,7 @@ import React from "react";
 import FAQSection from "../../../../components/FaqSection/FAQSection";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import BookingSection from "../../../../components/BookingSection/BookingSection.js"
 const WebApplicationFaqs = () => {
   const DesignFaqData = [
     {
@@ -38,22 +39,12 @@ const WebApplicationFaqs = () => {
           faqs={DesignFaqData}
         />
       </div>
-      <div className="marketing-banner-section">
-        <h2 className="marketing-banner-header">
-          Have a software idea? Let's scope it.{" "}
-        </h2>
-        <p className="marketing-banner-description">
-          Book a free discovery call. We'll review your requirements, flag
-          technical risks, and give you a realistic scope estimate.
-        </p>
-        <div className="marketing-btn">
-          <Link to="/contact">
-            <button>
-              Book Discovery Call <FaArrowRight />
-            </button>
-          </Link>
-        </div>
-      </div>
+    <BookingSection
+        title="Have a software idea? Let's scope it."
+        description="Book a free discovery call. We'll review your requirements, flag technical risks, and give you a realistic scope estimate."
+        buttonText="Book Discovery Call"
+        buttonLink="/contact"
+      />
     </>
   );
 };

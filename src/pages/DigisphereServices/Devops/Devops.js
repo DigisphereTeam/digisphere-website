@@ -15,6 +15,8 @@ import { FaArrowRight } from "react-icons/fa";
 import FAQSection from "../../../components/FaqSection/FAQSection";
 import DevOpsHeroSection from "./DevopsHeroSection";
 import { Link } from "react-router-dom";
+import BookingSection from "../../../components/BookingSection/BookingSection.js"
+
 
 const Devops = () => {
   const devopsStats = [
@@ -225,20 +227,12 @@ const Devops = () => {
           faqs={DevopsFaqData}
         />
       </section>
-      <section className="marketing-banner-section">
-        <h2 className="marketing-banner-header">
-          Ready to modernise your engineering workflow?
-        </h2>
-        <p className="marketing-banner-description">
-          Start with a free DevOps maturity assessment. We'll benchmark your
-          current practices and give you a prioritised improvement roadmap.
-        </p>
-        <div className="marketing-btn">
-          <Link to="/contact"><button>
-            Get Devops Assessment <FaArrowRight />
-          </button></Link>
-        </div>
-      </section>
+      <BookingSection
+        title="Ready to modernise your engineering workflow?"
+        description="Start with a free DevOps maturity assessment. We'll benchmark your current practices and give you a prioritised improvement roadmap."
+        buttonText="Get DevOps Assessment "
+        buttonLink="/contact"
+      />
     </div>
   );
 };

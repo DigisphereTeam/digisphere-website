@@ -11,6 +11,7 @@ import NotificationAutomation from "../../../../assets/Automation/NotificationAu
 import Report from "../../../../assets/Automation/Report Automation.svg";
 import Calendar from "../../../../assets/Automation/Calendar Automation.svg";
 import Engines from "../../../../assets/Automation/Engines.svg";
+import BookingSection from "../../../../components/BookingSection/BookingSection.js"
 import { Link } from "react-router-dom";
 const devopsServices = [
   {
@@ -186,20 +187,12 @@ const AutomationEveryType = () => {
           faqs={FaqData}
         />
       </section>
-      <section className="marketing-banner-section">
-        <h2 className="marketing-banner-header">
-          Ready to automate your busiest workflows?
-        </h2>
-        <p className="marketing-banner-description">
-          Start with a free process audit. We'll map your workflows and identify
-          the top 3 automation opportunities with estimated time savings.
-        </p>
-        <div className="marketing-btn">
-          <Link to="/contact"><button>
-           Book Free Process Audit <FaArrowRight />
-          </button></Link>
-        </div>
-      </section>
+      <BookingSection
+        title="Ready to automate your busiest workflows?"
+        description="Start with a free process audit. We'll map your workflows and identify the top 3 automation opportunities with estimated time savings."
+        buttonText="Book Free Process Audit "
+        buttonLink="/contact"
+      />
     </>
   );
 };

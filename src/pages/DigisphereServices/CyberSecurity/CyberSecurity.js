@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./CyberSecurity.css";
+import BookingSection from "../../../components/BookingSection/BookingSection.js"
+
 import tickIcon from "../../../assets/digital-marketing/tick-icon.svg";
 import ServicesGrid from "../../../components/ServicesGrid/ServicesGrid";
 import Cybersecurity from "../../../assets/Cybersecurity/Cybersecurity (2).svg";
@@ -414,18 +416,12 @@ const CyberSecurity = () => {
           faqs={MarketingFaqData}
         />
       </div>
-      <div className="marketing-banner-section">
-        <h2 className="marketing-banner-header">Don't wait for a breach.</h2>
-        <p className="marketing-banner-description">
-          Book a free 30-minute security consultation. We'll identify the top 3
-          security gaps in your current setup — no strings attached.
-        </p>
-        <div className="marketing-btn">
-          <Link to="/contact"><button>
-            Book Security Consultation <FaArrowRight />
-          </button></Link>
-        </div>
-      </div>
+     <BookingSection
+        title="Don't wait for a breach."
+        description="Book a free 30-minute security consultation. We'll identify the top 3 security gaps in your current setup — no strings attached."
+        buttonText="Book Security Consultation "
+        buttonLink="/contact"
+      />
     </>
   );
 };

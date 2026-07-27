@@ -28,6 +28,8 @@ import HelpDesk from "../../../assets/managed-it/HelpDesk.svg";
 import { Headphones } from "lucide-react";
 import critical from "../../../assets/managed-it/Critical response.svg";
 import { Link } from "react-router-dom";
+import BookingSection from "../../../components/BookingSection/BookingSection.js"
+
 
 const ManagedItServices = () => {
   const marketingStats = [
@@ -426,20 +428,12 @@ const ManagedItServices = () => {
           faqs={ItServicesFaqData}
         />
       </section>
-      <section className="marketing-banner-section">
-        <h2 className="marketing-banner-header">
-          Tired of reactive firefighting?
-        </h2>
-        <p className="marketing-banner-description">
-          Switch to a proactive managed IT partner. Start with a free IT
-          environment assessment.
-        </p>
-        <div className="marketing-btn">
-          <Link to="/contact"><button>
-            Book Free IT Assessment <FaArrowRight />
-          </button></Link>
-        </div>
-      </section>
+      <BookingSection
+        title="Tired of reactive IT firefighting?"
+        description="Switch to a proactive managed IT partner. Start with a free IT environment assessment."
+        buttonText="Book Free IT Assessment "
+        buttonLink="/contact"
+      />
     </>
   );
 };
