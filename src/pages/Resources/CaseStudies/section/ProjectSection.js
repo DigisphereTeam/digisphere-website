@@ -166,19 +166,19 @@ const ProjectSection = () => {
                   </div>
 
                   {/* Metrics / Stats Row */}
-                  <div className="row g-2 mb-4">
-                    {item.stats.map((stat, idx) => (
-                      <div key={idx} className="col-4">
-                        <Reveal variant={fadeUp} delay={0.3 + idx * 0.1}>
-                          <div className="project-stat-card p-3 text-center">
-                            <div className="project-stat-value">{stat.value}</div>
-                            <div className="project-stat-label">{stat.label}</div>
-                          </div>
-                        </Reveal>
-                      </div>
-                    ))}
-                  </div>
-
+                <div className="row g-2 mb-4">
+  {item.stats.map((stat, idx) => (
+    <div key={idx} className="col-4">
+      {/* Pass h-100 or style={{ height: '100%' }} to Reveal */}
+      <Reveal variant={fadeUp} delay={0.3 + idx * 0.1} className="h-100">
+        <div className="project-stat-card p-3 text-center">
+          <div className="project-stat-value">{stat.value}</div>
+          <div className="project-stat-label">{stat.label}</div>
+        </div>
+      </Reveal>
+    </div>
+  ))}
+</div>
                   {/* CTA Button */}
                   <button className="btn btn-outline-secondary project-start-btn">
                     Start a Similar Project <IoArrowForward />

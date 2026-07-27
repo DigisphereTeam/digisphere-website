@@ -67,6 +67,15 @@
   color: #ffffffb2;
 }
 
+/* Base styling for smooth transition on the icon */
+.case-btn button svg {
+  transition: transform 0.3s ease;
+}
+
+/* On button hover, slide the arrow 5px to the right */
+.case-btn button:hover svg {
+  transform: translateX(5px);
+}
 /* ==========================================
    MEDIA QUERIES (RESPONSIVE SIZES)
    ========================================== */

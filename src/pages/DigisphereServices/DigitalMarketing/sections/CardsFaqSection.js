@@ -1,11 +1,11 @@
 import React from "react";
-import './CardsFaqSection.css'
+import "./CardsFaqSection.css";
 
 import ProcessCards from "../../../../components/ProcessCards/ProcessCards";
 import FAQSection from "../../../../components/FaqSection/FAQSection";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import BookingSection from "../../../../components/BookingSection/BookingSection.js"
 const CardsFaqSection = () => {
   const MarketingProcessSteps = [
     {
@@ -60,13 +60,9 @@ const CardsFaqSection = () => {
       <div className="marketing-process-wrapper">
         <div className="container py-4">
           <div className="cardsfaq-header">
-            <span className="cardsfaq-subtitle">
-              OUR PROCESS
-            </span>
-            
-            <h2 className="cardsfaq-title">
-              From audit to growth in 90 days.
-            </h2>
+            <span className="cardsfaq-subtitle">OUR PROCESS</span>
+
+            <h2 className="cardsfaq-title">From audit to growth in 90 days.</h2>
           </div>
 
           <ProcessCards
@@ -85,16 +81,12 @@ const CardsFaqSection = () => {
           faqs={MarketingFaqData}
         />
       </div>
-      <div className="marketing-banner-section">
-        <h2 className="marketing-banner-header">Ready to grow your pipeline?</h2>
-        <p className="marketing-banner-description">
-          Book a free 30-minute digital marketing audit. We'll identify your 
-          biggest growth opportunities — no pitch, no strings.
-        </p>
-        <div className="marketing-btn">
-          <Link to="/contact"><button>Book Free Audit <FaArrowRight/></button></Link>
-        </div>
-      </div>
+      <BookingSection
+        title="Ready to grow your pipeline?"
+        description="Book a free 30-minute digital marketing audit. We'll identify your biggest growth opportunities — no pitch, no strings."
+        buttonText="Book Free Audit "
+        buttonLink="/contact"
+      />
     </section>
   );
 };

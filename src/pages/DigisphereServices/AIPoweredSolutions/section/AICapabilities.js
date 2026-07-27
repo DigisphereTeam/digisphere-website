@@ -13,6 +13,8 @@ import ProcessCards from "../../../../components/ProcessCards/ProcessCards";
 import FAQSection from "../../../../components/FaqSection/FAQSection";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import BookingSection from "../../../../components/BookingSection/BookingSection.js"
+
 
 const AICapabilities = () => {
   const MarketingProcessSteps = [
@@ -168,21 +170,12 @@ const AICapabilities = () => {
             faqs={MarketingFaqData}
           />
         </div>
-        <div className="marketing-banner-section">
-          <h2 className="marketing-banner-header">
-            Curious what AI can do for your business?
-          </h2>
-          <p className="marketing-banner-description">
-            Book a free 45-minute AI strategy session. We'll review your
-            operations and identify your top 3 AI opportunities with honest ROI
-            estimates.
-          </p>
-          <div className="marketing-btn">
-            <Link to="/contact"><button>
-             Book AI Strategy Session<FaArrowRight />
-            </button></Link>
-          </div>
-        </div>
+      <BookingSection
+        title="Curious what AI can do for your business?"
+        description="Book a free 45-minute AI strategy session. We'll review your operations and identify your top 3 AI opportunities with honest ROI estimates."
+        buttonText="Book AI Strategy Session "
+        buttonLink="/contact"
+      />
       </section>
     </>
   );

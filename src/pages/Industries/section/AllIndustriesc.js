@@ -14,6 +14,8 @@ import indaustries6 from "../../../assets/Industries/RealEstate.svg";
 import indaustries7 from "../../../assets/Industries/Logistics.svg";
 import indaustries8 from "../../../assets/Industries/Startups.svg";
 import indaustries9 from "../../../assets/Industries/Professional.svg";
+import BookingSection from "../../../components/BookingSection/BookingSection.js"
+
 
 const industriesData = [
   {
@@ -236,20 +238,12 @@ const AllIndustries = () => {
 
       {/* Marketing Banner */}
       
-        <div className="marketing-banner-section">
-          <h2 className="marketing-banner-header">Don't see your industry?</h2>
-          <p className="marketing-banner-description">
-            We work with businesses of all types. Tell us your challenge — we'll
-            figure out if and how we can help.
-          </p>
-          <div className="marketing-btn">
-            <Link to="/contact">
-              <button>
-                Start a Conversation <FaArrowRight />
-              </button>
-            </Link>
-          </div>
-        </div>
+       <BookingSection
+        title="Don't see your industry?"
+        description="We work with businesses of all types. Tell us your challenge — we'll figure out if and how we can help."
+        buttonText="Start a Conversation"
+        buttonLink="/contact"
+      />
     
     </>
   );
