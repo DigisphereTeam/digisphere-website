@@ -211,6 +211,7 @@ const DigisphereHeader = () => {
           {
             title: "Careers",
             desc: "Join a growing tech team.",
+             path: "/Resources/careers",
             icon: <img className="service-image" src={Careers} alt="pen" />,
           },
           {
@@ -234,6 +235,7 @@ const DigisphereHeader = () => {
           {
             title: "Blog",
             desc: "Tech insights and practical guides.",
+            path: "/Resources/blogs",
             icon: <img className="service-image" src={Blog} alt="Blog" />,
           },
           {

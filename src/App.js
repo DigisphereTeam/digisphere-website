@@ -20,6 +20,8 @@ import WebApplications from "./pages/DigisphereServices/webApplications/WebAppli
 import Industries from "./pages/Industries/Industries.js";
 import CaseStudies from "./pages/Resources/CaseStudies/CaseStudies.js";
 import TechnologyGuides from "./pages/Resources/TechnologyGuides/TechnologyGuides.js";
+import Blogs from "./pages/Resources/Blogs/Blogs.js";
+import Careers from "./pages/Resources/Careers/Careers.js";
 
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -129,6 +131,8 @@ const App = () => {
         <Route path="/industries" element={<Industries />} />
         <Route path="/Resources/casestudies" element={<CaseStudies />} />
         <Route path="/Resources/technologyguides" element={<TechnologyGuides/>} />
+        <Route path="/Resources/blogs" element={<Blogs/>} />
+        <Route path="/Resources/careers" element={<Careers/>} />
       </Routes>
 
       <DigisphereFooter />
