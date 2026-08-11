@@ -22,6 +22,10 @@ import CaseStudies from "./pages/Resources/CaseStudies/CaseStudies.js";
 import TechnologyGuides from "./pages/Resources/TechnologyGuides/TechnologyGuides.js";
 import Blogs from "./pages/Resources/Blogs/Blogs.js";
 import Careers from "./pages/Resources/Careers/Careers.js";
+import SuccessStoriesHero from "./pages/Resources/SuccessStories/section/SuccessStoriesHero.js";
+import SuccessStories from "./pages/Resources/SuccessStories/SuccessStories.js";
+import HowWeWork from "./pages/Resources/HowWeWork/HowWeWork.js";
+import FinOps from "./pages/DigisphereServices/FinOps/FinOps.js";
 
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -133,6 +137,9 @@ const App = () => {
         <Route path="/Resources/technologyguides" element={<TechnologyGuides/>} />
         <Route path="/Resources/blogs" element={<Blogs/>} />
         <Route path="/Resources/careers" element={<Careers/>} />
+        <Route path="/Resources/successstories" element={<SuccessStories/>} />
+        <Route path="/Resources/howwework" element={<HowWeWork/>} />
+         <Route path="/services/finops" element={<FinOps/>} />
       </Routes>
 
       <DigisphereFooter />

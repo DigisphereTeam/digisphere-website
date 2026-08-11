@@ -21,6 +21,7 @@ const SERVICES_LINKS = [
   { to: "/services/aipowered", label: "AI-Powered Solution" },
   { to: "/services/experience-design", label: "Experience Design" },
   { to: "/services/cloudservices", label: "Cloud Services" },
+   { to: "/services/finops", label: "FinOps" },
   { to: "/services/cyber-security", label: "Cybersecurity" },
   { to: "/services/managed-it-services", label: "Managed IT" },
   { to: "/services/devops", label: "DevOps" },
@@ -28,8 +29,11 @@ const SERVICES_LINKS = [
 
 const COMPANY_LINKS = [
   { to: "/about", label: "About Us" },
+  { to: "/Resources/careers" , label: "Careers" }, 
   { to: "/Resources/casestudies", label: "Case Studies" }, 
-  { to: "/contact", label: "Contact" },
+  { to: "/Resources/blogs", label: "Blogs" }, 
+  { to: "/industries", label: "Industries" }, 
+  { to: "/contact", label: "Contact" }, 
 
 ];
 

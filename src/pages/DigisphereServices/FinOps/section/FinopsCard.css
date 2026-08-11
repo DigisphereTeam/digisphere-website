@@ -1,0 +1,160 @@
+/* Section Base */
+.finops-approach-section {
+  padding: 80px 0;
+  background-color: #f8fafc;
+}
+
+.approach-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Titles */
+.approach-subtitle {
+  color: #057DCD;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.approach-title {
+  color: #0F172A;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 48px;
+}
+
+/* Main Outer Wrapper with Border and Rounded Corners */
+.approach-card-wrapper {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+/* 4-Column Grid Layout */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Individual Step Card with Dividers */
+.approach-step-card {
+  padding: 32px;
+  position: relative;
+  background: #ffffff;
+}
+
+/* Vertical Divider line between columns (except last) */
+.approach-step-card:not(:last-child) {
+  border-right: 1px solid #e2e8f0;
+}
+
+/* Large Watermark Number */
+.approach-step-number {
+  font-size: 48px;
+  font-family: Outfit;
+  font-weight: 800;
+  color:#057DCD1A;
+  line-height: 1;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Timeframe Label */
+.approach-timeframe {
+  color: #057DCD;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Step Header */
+.approach-step-title {
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Description Text */
+.approach-step-desc {
+  color:#475569;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .approach-step-card:nth-child(2) {
+    border-right: none;
+  }
+  
+  .approach-step-card:nth-child(1),
+  .approach-step-card:nth-child(2) {
+    border-bottom: 1px solid #e2e8f0;
+  }
+}
+
+@media (max-width: 576px) {
+  .approach-title {
+    font-size: 1.75rem;
+    margin-bottom: 32px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-step-card {
+    border-right: none !important;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 28px 24px;
+  }
+
+  .approach-step-card:last-child {
+    border-bottom: none;
+  }
+}
+.approach-step-card {
+  position: relative; /* Essential for positioning the arrow */
+}
+
+.approach-step-arrow {
+  position: absolute;
+  top: 190px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  background-color: #057DCD;
+ box-shadow: 0px 2px 4px -2px #0000001A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 10px;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Hide arrows when stacked vertically on mobile */
+@media (max-width: 991px) {
+  .approach-step-arrow {
+    display: none;
+  }
+}

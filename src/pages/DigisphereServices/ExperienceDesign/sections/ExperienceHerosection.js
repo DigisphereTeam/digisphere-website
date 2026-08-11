@@ -2,7 +2,7 @@ import React from "react";
 import "./ExperienceHerosection.css";
 import Reveal from "../../../../animations/Reveal";
 import Counter from "../../../../components/Counter/Counter";
-import { fadeUp } from "../../../../animations/variants";
+import { fadeRight, fadeUp } from "../../../../animations/variants";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "../../../../components/Button/Button";
 import pen from "../../../../assets/pen.svg";
@@ -68,10 +68,11 @@ const ExperinceHerosection = () => {
               </div>
             </Reveal>
           </div>
-
-          <div className="col-lg-6 col-12">
-            <FigmaWorkspaceSimulator />
-          </div>
+<div className="col-lg-6 col-12">
+  <Reveal variant={fadeRight} delay={0.2}>
+    <FigmaWorkspaceSimulator />
+  </Reveal>
+</div>
         </div>
       </div>
 

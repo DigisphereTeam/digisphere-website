@@ -82,7 +82,7 @@ const marketingServices = [
   },
 ];
 
-function MarketingServices() {
+const MarketingServices =()=> {
   return (
     <ServicesGrid
       sectionLabel="What We Do"

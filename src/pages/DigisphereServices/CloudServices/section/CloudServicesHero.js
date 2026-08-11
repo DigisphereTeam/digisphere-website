@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./CloudServicesHero.css";
 import Counter from "../../../../components/Counter/Counter";
 import Reveal from "../../../../animations/Reveal";
-import { fadeUp } from "../../../../animations/variants";
+import { fadeUp, fadeRight } from "../../../../animations/variants";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "../../../../components/Button/Button";
 import DigisphereAI from "../../../../assets/AI-Powered/DigisphereAI.svg";
@@ -150,97 +150,106 @@ const CloudServicesHero = () => {
             </div>
 
             <div className="col-lg-6 col-12">
-              <div className="aws-wrapper">
-                <div className="aws-card">
-                  <div className="header">
-                    <div className="title-aws">
-                      <img className="cloud-icon" src={aws} alt="aws" />
+      {/* Top Card: AWS Architecture (Fade Up) */}
+      <Reveal variant={fadeUp} delay={0.1}>
+        <div className="aws-wrapper">
+          <div className="aws-card">
+            <div className="header">
+              <div className="title-aws">
+                <img className="cloud-icon" src={aws} alt="aws" />
 
-                      <div>
-                        <h2>AWS Architecture · Production</h2>
-                        <p>Multi-region · Auto-scaled</p>
-                      </div>
-                    </div>
-
-                    <div className="status">
-                      <span></span>
-                      All operational
-                    </div>
-                  </div>
-
-                  <div className="cloud-grid">
-                    {cards.map((card, index) => (
-                      <div
-                        className={`service-card ${index === activeIndex ? "active" : ""}`}
-                        key={index}
-                      >
-                        <h4>{card}</h4>
-
-                        {index === activeIndex && (
-                          <div className="active-text">
-                            <span className="dot"></span>
-                            active
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="traffic-box">
-                    <div className="traffic-title">LIVE TRAFFIC FLOW</div>
-
-                    <div className="traffic">
-                      <span>Users</span>
-
-                      <div className="line-aws">
-                        <div className="flow"></div>
-                      </div>
-
-                      <span>CDN</span>
-
-                      <div className="line-aws">
-                        <div className="flow flow2"></div>
-                      </div>
-
-                      <span>App</span>
-                    </div>
-                  </div>
+                <div>
+                  <h2>AWS Architecture · Production</h2>
+                  <p>Multi-region · Auto-scaled</p>
                 </div>
               </div>
-              <div className="health-card">
-                <h4 className="title-multi">MULTI-REGION HEALTH</h4>
 
-                {regions.map((item, index) => (
-                  <div className="region" key={index}>
-                    <div className="top-row">
-                      <div className="left">
-                        <span
-                          className="status-dot"
-                          style={{ background: item.color }}
-                        ></span>
-
-                        <span className="region-name">{item.name}</span>
-
-                        <span className="region-code">({item.code})</span>
-                      </div>
-
-                      <span className="cpu">CPU {item.cpu}%</span>
-                    </div>
-
-                    <div className="progress-bg">
-                      <div
-                        className="progress-fill"
-                        style={{
-                          width: animate ? `${item.progress}%` : "0%",
-                          background: item.color,
-                          transitionDelay: `${index * 200}ms`,
-                        }}
-                      />
-                    </div>
-                  </div>
-                ))}
+              <div className="status">
+                <span></span>
+                All operational
               </div>
             </div>
+
+            <div className="cloud-grid">
+              {cards.map((card, index) => (
+                <div
+                  className={`service-card ${
+                    index === activeIndex ? "active" : ""
+                  }`}
+                  key={index}
+                >
+                  <h4>{card}</h4>
+
+                  {index === activeIndex && (
+                    <div className="active-text">
+                      <span className="dot"></span>
+                      active
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="traffic-box">
+              <div className="traffic-title">LIVE TRAFFIC FLOW</div>
+
+              <div className="traffic">
+                <span>Users</span>
+
+                <div className="line-aws">
+                  <div className="flow"></div>
+                </div>
+
+                <span>CDN</span>
+
+                <div className="line-aws">
+                  <div className="flow flow2"></div>
+                </div>
+
+                <span>App</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+
+      {/* Bottom Card: Multi-Region Health (Fade Right) */}
+      <Reveal variant={fadeRight} delay={0.3}>
+        <div className="health-card">
+          <h4 className="title-multi">MULTI-REGION HEALTH</h4>
+
+          {regions.map((item, index) => (
+            <div className="region" key={index}>
+              <div className="top-row">
+                <div className="left">
+                  <span
+                    className="status-dot"
+                    style={{ background: item.color }}
+                  ></span>
+
+                  <span className="region-name">{item.name}</span>
+
+                  <span className="region-code">({item.code})</span>
+                </div>
+
+                <span className="cpu">CPU {item.cpu}%</span>
+              </div>
+
+              <div className="progress-bg">
+                <div
+                  className="progress-fill"
+                  style={{
+                    width: animate ? `${item.progress}%` : "0%",
+                    background: item.color,
+                    transitionDelay: `${index * 200}ms`,
+                  }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </Reveal>
+    </div>
           </div>
         </div>
       </section>
