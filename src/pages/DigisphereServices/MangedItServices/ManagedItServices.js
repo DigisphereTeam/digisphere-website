@@ -4,7 +4,7 @@ import "./ManagedItServices.css";
 import { FaArrowRight } from "react-icons/fa";
 import Counter from "../../../components/Counter/Counter";
 import Reveal from "../../../animations/Reveal";
-import { fadeUp } from "../../../animations/variants";
+import { fadeRight, fadeUp } from "../../../animations/variants";
 import FAQSection from "../../../components/FaqSection/FAQSection";
 import ServicesGrid from "../../../components/ServicesGrid/ServicesGrid";
 import Critical from "../../../assets/managed-it/Critical response.svg";
@@ -28,8 +28,7 @@ import HelpDesk from "../../../assets/managed-it/HelpDesk.svg";
 import { Headphones } from "lucide-react";
 import critical from "../../../assets/managed-it/Critical response.svg";
 import { Link } from "react-router-dom";
-import BookingSection from "../../../components/BookingSection/BookingSection.js"
-
+import BookingSection from "../../../components/BookingSection/BookingSection.js";
 
 const ManagedItServices = () => {
   const marketingStats = [
@@ -229,158 +228,175 @@ const ManagedItServices = () => {
                     predictable monthly service with SLA guarantees.
                   </p>
                   <div className="hero-buttons">
-                   <Link to="/contact"><Button icon={<FaArrowRight />}>Get IT Assessment</Button></Link>
-                    <Link to="/contact"><Button variant="secondary">View Plans</Button></Link>
+                    <Link to="/contact">
+                      <Button icon={<FaArrowRight />}>Get IT Assessment</Button>
+                    </Link>
+                    <Link to="/contact">
+                      <Button variant="secondary">View Plans</Button>
+                    </Link>
                   </div>
                 </div>
               </div>
               <div className="col-lg-6 col-12">
-                <div className="py-2">
-                  <div className="health-card">
-                    <div className="sla-card">
-                      <img src={critical} alt="Critical" className="floating-img" />
+                {/* Top Card: System Health Monitor (Fade Up) */}
+                <Reveal variant={fadeUp} delay={0.1}>
+                  <div className="py-2">
+                    <div className="health-card">
+                      <div className="sla-card">
+                        <img
+                          src={critical}
+                          alt="Critical"
+                          className="floating-img"
+                        />
+                      </div>
+
+                      {/* Header */}
+                      <div className="d-flex justify-content-between align-items-center mb-2">
+                        <div className="d-flex align-items-center">
+                          <div className="monitor-icon">
+                            <img
+                              className="SystemHealth"
+                              src={SystemHealth}
+                              alt=""
+                            />
+                          </div>
+
+                          <div className="ms-2">
+                            <h5 className="System-Health mb-0">
+                              System Health Monitor
+                            </h5>
+                          </div>
+                        </div>
+
+                        <div className="Systems-status">
+                          <span className="green-dot"></span>
+                          All Systems OK
+                        </div>
+                      </div>
+
+                      {/* Metric Cards */}
+                      <div className="row g-3 mb-3">
+                        <div className="col-md-4">
+                          <div className="metric-card">
+                            <div className="text-cpu">
+                              <img src={CPU} alt="CPU" /> CPU
+                            </div>
+
+                            <div className="progress mt-2">
+                              <div
+                                className="progress-bar cpu-bar"
+                                style={{ width: `${cpu}%` }}
+                              ></div>
+                            </div>
+
+                            <h2 className="metric-cpu">
+                              <CountUp end={33} duration={2} />%
+                            </h2>
+                          </div>
+                        </div>
+
+                        <div className="col-md-4">
+                          <div className="metric-card">
+                            <div className="text-Memory">
+                              <img src={Memory} alt="Memory" /> Memory
+                            </div>
+
+                            <div className="progress mt-2">
+                              <div
+                                className="progress-bar Memory-bar"
+                                style={{ width: `${memory}%` }}
+                              ></div>
+                            </div>
+
+                            <h2 className="metric-Memory">
+                              <CountUp end={66} duration={2} />%
+                            </h2>
+                          </div>
+                        </div>
+
+                        <div className="col-md-4">
+                          <div className="metric-card">
+                            <div className="text-Network">
+                              <img src={Network} alt="Network" />
+                              Network
+                            </div>
+
+                            <div className="progress mt-2">
+                              <div
+                                className="progress-bar network-bar"
+                                style={{ width: `${network}%` }}
+                              ></div>
+                            </div>
+
+                            <h2 className="metric-Network">
+                              <CountUp end={28} duration={2} />%
+                            </h2>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Server List */}
+                      <div className="server-list">
+                        {servers.map((server, index) => (
+                          <div
+                            className="server-row d-flex justify-content-between align-items-center"
+                            key={index}
+                          >
+                            <div>
+                              <span
+                                className={`server-dot bg-${server.color}`}
+                              ></span>
+                              {server.name}
+                            </div>
+
+                            <div className="uptime">Uptime {server.uptime}</div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    {/* Header */}
+                  </div>
+                </Reveal>
 
-                    <div className="d-flex justify-content-between align-items-center mb-2">
-                      <div className="d-flex align-items-center">
-                        <div className="monitor-icon">
-                          <img
-                            className="SystemHealth"
-                            src={SystemHealth}
-                            alt=""
-                          />
+                {/* Bottom Card: Help Desk Live Queue (Fade Right) */}
+                <Reveal variant={fadeRight} delay={0.3}>
+                  <div className="queue-card">
+                    <div className="queue-header">
+                      <div className="header-left">
+                        <div className="icon-box">
+                          <img src={HelpDesk} alt="HelpDesk" />
                         </div>
 
-                        <div className="ms-2">
-                          <h5 className="System-Health  mb-0">
-                            System Health Monitor
-                          </h5>
-                        </div>
+                        <span className="help-title">
+                          Help Desk · Live Queue
+                        </span>
                       </div>
 
-                      <div className="Systems-status">
-                        <span className="green-dot"></span>
-                        All Systems OK
-                      </div>
+                      <span className="response-time">
+                        Avg. response: 14 min
+                      </span>
                     </div>
 
-                    {/* Cards */}
-
-                    <div className="row g-3 mb-3">
-                      <div className="col-md-4">
-                        <div className="metric-card">
-                          <div className="text-cpu">
-                            <img src={CPU} alt="CPU" /> CPU
-                          </div>
-
-                          <div className="progress mt-2">
-                            <div
-                              className="progress-bar cpu-bar"
-                              style={{ width: `${cpu}%` }}
-                            ></div>
-                          </div>
-
-                          <h2 className="metric-cpu">
-                            <CountUp end={33} duration={2} />%
-                          </h2>
-                        </div>
-                      </div>
-
-                      <div className="col-md-4">
-                        <div className="metric-card">
-                          <div className="text-Memory ">
-                            <img src={Memory} alt="Memory" /> Memory
-                          </div>
-                          <div className="progress mt-2">
-                            <div
-                              className="progress-bar Memory-bar"
-                              style={{ width: `${memory}%` }}
-                            ></div>
-                          </div>
-
-                          <h2 className="metric-Memory">
-                            <CountUp end={66} duration={2} />%
-                          </h2>
-                        </div>
-                      </div>
-
-                      <div className="col-md-4">
-                        <div className="metric-card">
-                          <div className="text-Network ">
-                            <img src={Network} alt="Network" />
-                            Network
-                          </div>
-
-                          <div className="progress mt-2">
-                            <div
-                              className="progress-bar network-bar"
-                              style={{ width: `${network}%` }}
-                            ></div>
-                          </div>
-
-                          <h2 className="metric-Network">
-                            <CountUp end={28} duration={2} />%
-                          </h2>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Server List */}
-
-                    <div className="server-list">
-                      {servers.map((server, index) => (
-                        <div
-                          className="server-row d-flex justify-content-between align-items-center "
-                          key={index}
-                        >
-                          <div>
+                    <div className="queue-list">
+                      {tickets.map((ticket, index) => (
+                        <div className="ticket-row" key={index}>
+                          <div className="ticket-left">
                             <span
-                              className={`server-dot bg-${server.color}`}
-                            ></span>
-                            {server.name}
+                              className="status-dot"
+                              style={{ background: ticket.color }}
+                            />
+
+                            <div>
+                              <div className="ticket-title">{ticket.title}</div>
+                              <div className="ticket-id">{ticket.id}</div>
+                            </div>
                           </div>
 
-                          <div className="uptime">Uptime {server.uptime}</div>
+                          <button className="open-btn">Open</button>
                         </div>
                       ))}
                     </div>
                   </div>
-                </div>
-
-                <div className="queue-card">
-                  <div className="queue-header">
-                    <div className="header-left">
-                      <div className="icon-box">
-                        <img src={HelpDesk} alt="HelpDesk" />
-                      </div>
-
-                      <span className="help-title">Help Desk · Live Queue</span>
-                    </div>
-
-                    <span className="response-time">Avg. response: 14 min</span>
-                  </div>
-
-                  <div className="queue-list">
-                    {tickets.map((ticket, index) => (
-                      <div className="ticket-row" key={index}>
-                        <div className="ticket-left">
-                          <span
-                            className="status-dot"
-                            style={{ background: ticket.color }}
-                          />
-
-                          <div>
-                            <div className="ticket-title">{ticket.title}</div>
-                            <div className="ticket-id">{ticket.id}</div>
-                          </div>
-                        </div>
-
-                        <button className="open-btn">Open</button>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                </Reveal>
               </div>
             </div>
           </div>

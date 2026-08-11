@@ -1,0 +1,185 @@
+.career-openings-section {
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+}
+
+.career-subtitle {
+  color: #057DCD;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+}
+
+.career-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.career-header-desc {
+  font-size: 18px;
+  color: #64748b;
+  margin: 0;
+}
+
+.career-email-link {
+  color: #057DCD;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.career-email-link:hover {
+  color: #057DCD;
+}
+
+/* Card Styling */
+.career-job-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.career-job-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.career-job-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+
+/* Metadata */
+.career-job-meta {
+  font-size: 14px;
+  color: #475569;
+}
+
+.career-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.career-meta-icon {
+  color: #057DCD;
+}
+
+.career-job-type-badge {
+  background-color: #E8F4FD;
+  color: #057DCD;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 12px;
+}
+
+/* Tech Tags */
+.career-tag-badge {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+/* Apply Button */
+.career-apply-btn {
+  display: inline-flex;
+  align-items: center; /* Crucial for aligning the diagonal arrow */
+  justify-content: center;
+  gap: 4px; /* Optional ms-1 class replacement */
+  background-color: #057DCD !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.career-apply-btn:hover {
+  background-color: #0465a7 !important;
+}
+
+
+/* ==========================================
+   TABLET & SMALL DESKTOP STYLES (max-width: 991px)
+   ========================================== */
+@media (max-width: 991px) {
+  .career-title {
+    font-size: 32px;
+  }
+
+  .career-header-desc {
+    font-size: 16px;
+  }
+
+  /* Padding adjustments for mid-sized screens */
+  .career-job-card {
+    padding: 20px;
+  }
+
+  .career-apply-btn {
+    width: 100%; /* Full-width button on tablets for better touch targets */
+    padding: 12px 20px;
+  }
+}
+
+/* ==========================================
+   MOBILE STYLES (max-width: 576px)
+   ========================================== */
+@media (max-width: 576px) {
+  .career-title {
+    font-size: 26px;
+    letter-spacing: -0.3px;
+  }
+
+  .career-subtitle {
+    font-size: 12px;
+  }
+
+  .career-header-desc {
+    font-size: 15px;
+  }
+
+  .career-job-card {
+    padding: 16px;
+  }
+
+  .career-job-title {
+    font-size: 18px;
+  }
+
+  /* Stack metadata items vertically if space gets tight */
+  .career-job-meta {
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    gap: 8px;
+  }
+
+  /* Wrap technology tags gracefully */
+  .career-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .career-apply-btn {
+    width: 100%;
+    font-size: 14px !important;
+    padding: 12px 16px;
+  }
+}

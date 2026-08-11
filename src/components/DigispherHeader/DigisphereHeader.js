@@ -26,6 +26,7 @@ import WebApplications from "../../assets/servicesDropdown/WebApplications.svg";
 import WebsiteDesign from "../../assets/servicesDropdown/Website Design & Development.svg";
 
 import "./DigisphereHeader.css";
+import { path } from "framer-motion/client";
 
 const DigisphereHeader = () => {
   const navigate = useNavigate();
@@ -133,6 +134,12 @@ const DigisphereHeader = () => {
               <img className="service-image" src={AIPowered} alt="AIPowered" />
             ),
           },
+          {
+            title: "Managed IT",
+            desc: "End-to-end IT support and maintenance.",
+            path: "/services/managed-it-services",
+            icon: <img className="service-image" src={Managed} alt="Managed" />,
+          },
         ],
       },
       {
@@ -142,6 +149,18 @@ const DigisphereHeader = () => {
             title: "Cloud Services",
             desc: "AWS, Azure and Google Cloud solutions.",
             path: "/services/cloudServices",
+            icon: (
+              <img
+                className="service-image"
+                src={CloudServices}
+                alt="CloudServices"
+              />
+            ),
+          },
+          {
+            title: "FinOps",
+            desc: "Optimize cloud costs and maximize value.",
+            path: "/services/finops",
             icon: (
               <img
                 className="service-image"
@@ -162,12 +181,7 @@ const DigisphereHeader = () => {
               />
             ),
           },
-          {
-            title: "Managed IT",
-            desc: "End-to-end IT support and maintenance.",
-            path: "/services/managed-it-services",
-            icon: <img className="service-image" src={Managed} alt="Managed" />,
-          },
+
           {
             title: "DevOps",
             desc: "CI/CD, Kubernetes and automation.",
@@ -199,7 +213,7 @@ const DigisphereHeader = () => {
           {
             title: "How We Work",
             desc: "Our engagement process explained.",
-            // path: "",
+            path: "/Resources/howwework",
             icon: (
               <img
                 className="service-image"
@@ -211,7 +225,7 @@ const DigisphereHeader = () => {
           {
             title: "Careers",
             desc: "Join a growing tech team.",
-             path: "/Resources/careers",
+            path: "/Resources/careers",
             icon: <img className="service-image" src={Careers} alt="pen" />,
           },
           {
@@ -247,6 +261,7 @@ const DigisphereHeader = () => {
           {
             title: "Success Stories",
             desc: "How clients grew with us.",
+            path: "/Resources/successstories",
             icon: (
               <img className="service-image" src={SuccessStories} alt="pen" />
             ),

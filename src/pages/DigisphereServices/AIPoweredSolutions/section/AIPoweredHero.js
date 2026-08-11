@@ -3,7 +3,7 @@ import { FaRobot, FaPaperPlane, FaCircle } from "react-icons/fa";
 import "./AIPoweredHero.css";
 import Counter from "../../../../components/Counter/Counter";
 import Reveal from "../../../../animations/Reveal";
-import { fadeUp } from "../../../../animations/variants";
+import { fadeUp, fadeRight } from "../../../../animations/variants";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "../../../../components/Button/Button";
 import aiIcon from "../../../../assets/AI-Powered/aiIcon.svg";
@@ -186,130 +186,141 @@ const AIPoweredHero = () => {
               </Reveal>
             </div>
 
-            <div className="col-lg-6 col-12">
-              <div className="chat-wrapper">
-                {/* Header Section */}
-                <div className="chat-header">
-                  <div className="header-left">
-                    <div className="avatar">
-                      <img
-                        className="avatar-ai"
-                        src={AIAssistant}
-                        alt="AIAssistant"
-                      />
-                    </div>
-                    <div>
-                      <h3>Digisphere AI Assistant</h3>
-                      <span className="online">
-                        <FaCircle /> Online • GPT-4
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Main Chat Stream Container */}
-                <div className="chat-body">
-                  <div className="chat-scroll">
-                    {/* 1. Loop over actual text rows */}
-                    {messages.map((msg) => (
-                      <div
-                        key={msg.id}
-                        className={`message-row ${msg.sender === "user" ? "user" : "bot"}`}
-                      >
-                        {msg.sender === "bot" && (
-                          <div className="bot-avatar">
-                            <img
-                              className="bot"
-                              src={botavatar}
-                              alt="botavatar"
-                            />
-                          </div>
-                        )}
-                        <div
-                          className={`message ${msg.sender === "user" ? "user-message" : "bot-message"}`}
-                        >
-                          {msg.text}
-                        </div>
-                      </div>
-                    ))}
-
-                    {/* 2. Bot Typing Indicator (Left Side) */}
-                    {typing && (
-                      <div className="message-row bot fallback-row-reset">
-                        <div className="bot-avatar">
-                          <FaRobot />
-                        </div>
-                        <div className="typing-box">
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* 3. User Loading Indicator (Right Side) */}
-                    {userLoading && (
-                      <div className="message-row user fallback-row-reset">
-                        <div className="typing-box user-loading">
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Scroll anchor element */}
-                    <div ref={bottomRef} style={{ clear: "both" }}></div>
-                  </div>
-                </div>
-
-                {/* Sticky Input Control Bar */}
-                <div className="chat-input">
-                  <input
-                    type="text"
-                    placeholder="Ask anything..."
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    onKeyDown={handleKey}
-                  />
-                  <button onClick={sendMessage}>
-                    <img className="arrow" src={arrow} alt="arrow" />
-                  </button>
-                </div>
+           <div className="col-lg-6 col-12">
+      {/* 1. Main Chat Wrapper (Fades from bottom) */}
+      <Reveal variant={fadeUp} delay={0.1}>
+        <div className="chat-wrapper">
+          {/* Header Section */}
+          <div className="chat-header">
+            <div className="header-left">
+              <div className="avatar">
+                <img
+                  className="avatar-ai"
+                  src={AIAssistant}
+                  alt="AIAssistant"
+                />
               </div>
-              <div className=" mt-3">
-                <div className="network-card ">
-                  <small className="Neural-network text-uppercase text-secondary fw-light">
-                    Neural Network ·Processing
-                  </small>
-
-                  <div className="d-flex justify-content-around align-items-end ">
-                    {layers.map((layer, layerIndex) => (
-                      <div key={layerIndex} className="text-center">
-                        <div className="layer">
-                          {[...Array(layer.count)].map((_, nodeIndex) => (
-                            <div
-                              key={nodeIndex}
-                              className="node"
-                              style={{
-                                animationDelay: `${
-                                  (layer.count - nodeIndex) * 0.25 +
-                                  layerIndex * 0.5
-                                }s`,
-                              }}
-                            ></div>
-                          ))}
-                        </div>
-
-                        <small className="title-Processing mt-2 d-block">
-                          {layer.label}
-                        </small>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              <div>
+                <h3>Digisphere AI Assistant</h3>
+                <span className="online">
+                  <FaCircle /> Online • GPT-4
+                </span>
               </div>
             </div>
+          </div>
+
+          {/* Main Chat Stream Container */}
+          <div className="chat-body">
+            <div className="chat-scroll">
+              {/* 1. Loop over actual text rows */}
+              {messages.map((msg) => (
+                <div
+                  key={msg.id}
+                  className={`message-row ${
+                    msg.sender === "user" ? "user" : "bot"
+                  }`}
+                >
+                  {msg.sender === "bot" && (
+                    <div className="bot-avatar">
+                      <img
+                        className="bot"
+                        src={botavatar}
+                        alt="botavatar"
+                      />
+                    </div>
+                  )}
+                  <div
+                    className={`message ${
+                      msg.sender === "user" ? "user-message" : "bot-message"
+                    }`}
+                  >
+                    {msg.text}
+                  </div>
+                </div>
+              ))}
+
+              {/* 2. Bot Typing Indicator (Left Side) */}
+              {typing && (
+                <div className="message-row bot fallback-row-reset">
+                  <div className="bot-avatar">
+                    <FaRobot />
+                  </div>
+                  <div className="typing-box">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              )}
+
+              {/* 3. User Loading Indicator (Right Side) */}
+              {userLoading && (
+                <div className="message-row user fallback-row-reset">
+                  <div className="typing-box user-loading">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              )}
+
+              {/* Scroll anchor element */}
+              <div ref={bottomRef} style={{ clear: "both" }}></div>
+            </div>
+          </div>
+
+          {/* Sticky Input Control Bar */}
+          <div className="chat-input">
+            <input
+              type="text"
+              placeholder="Ask anything..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKey}
+            />
+            <button onClick={sendMessage}>
+              <img className="arrow" src={arrow} alt="arrow" />
+            </button>
+          </div>
+        </div>
+      </Reveal>
+
+      {/* 2. Neural Network Card (Fades from the right) */}
+      <Reveal variant={fadeRight} delay={0.3}>
+        <div className="mt-3">
+          <div className="network-card">
+            <small className="Neural-network text-uppercase text-secondary fw-light">
+              Neural Network ·Processing
+            </small>
+
+            <div className="d-flex justify-content-around align-items-end">
+              {layers.map((layer, layerIndex) => (
+                <div key={layerIndex} className="text-center">
+                  <div className="layer">
+                    {[...Array(layer.count)].map((_, nodeIndex) => (
+                      <div
+                        key={nodeIndex}
+                        className="node"
+                        style={{
+                          animationDelay: `${
+                            (layer.count - nodeIndex) * 0.25 +
+                            layerIndex * 0.5
+                          }s`,
+                        }}
+                      ></div>
+                    ))}
+                  </div>
+
+                  <small className="title-Processing mt-2 d-block">
+                    {layer.label}
+                  </small>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    </div>
           </div>
         </div>
       </section>

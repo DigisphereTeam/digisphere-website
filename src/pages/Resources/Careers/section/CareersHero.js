@@ -1,68 +1,76 @@
 import React from "react";
-import "./CareersHero.css"
+import "./CareersHero.css";
 import Reveal from "../../../../animations/Reveal";
 import { fadeLeft, fadeUp } from "../../../../animations/variants";
 import { FaArrowRight } from "react-icons/fa";
-import { 
-  LuCode, 
-  LuLayers, 
-  LuPalette, 
-  LuShieldCheck, 
-  LuMegaphone 
-} from 'react-icons/lu';
-
+import Engineering from "../../../../assets/Careers/Engineering.svg";
+import DevOpsLead from "../../../../assets/Careers/DevOpsLead.svg";
+import Cybersecurity from "../../../../assets/Careers/Cybersecurity (4).svg";
+import Marketing from "../../../../assets/Careers/Marketing (2).svg";
+import {
+  LuCode,
+  LuLayers,
+  LuPalette,
+  LuShieldCheck,
+  LuMegaphone,
+} from "react-icons/lu";
 
 const positions = [
   {
     id: 1,
-    avatarText: 'FE',
-    title: 'Frontend Engineer',
-    category: 'Engineering',
-    icon: <LuCode size={12} className="careers-badge-icon" />
+    avatarText: "FE",
+    avatarColor: "#057DCD",
+    title: "Frontend Engineer",
+    category: "Engineering",
+    icon: <img src={Engineering} alt="" className="careers-badge-icon" />,
   },
   {
     id: 2,
-    avatarText: 'KR',
-    title: 'DevOps Lead',
-    category: 'Infrastructure',
-    icon: <LuLayers size={12} className="careers-badge-icon" />
+    avatarText: "KR",
+    avatarColor: "#0591E8",
+    title: "DevOps Lead",
+    category: "Infrastructure",
+    icon: <img src={DevOpsLead} alt="" className="careers-badge-icon" />,
   },
   {
     id: 3,
-    avatarText: 'UX',
-    title: 'UX Designer',
-    category: 'Design',
-    icon: <LuPalette size={12} className="careers-badge-icon" />
+    avatarText: "UX",
+    avatarColor: "#0464A4",
+    title: "UX Designer",
+    category: "Design",
+    icon: <img src={DevOpsLead} alt="" className="careers-badge-icon" />,
   },
   {
     id: 4,
-    avatarText: 'FD',
-    title: 'Full Stack Dev',
-    category: 'Engineering',
-    icon: <LuCode size={12} className="careers-badge-icon" />
+    avatarText: "FD",
+    avatarColor: "#057DCD",
+    title: "Full Stack Dev",
+    category: "Engineering",
+    icon: <img src={Engineering} alt="" className="careers-badge-icon" />,
   },
   {
     id: 5,
-    avatarText: 'SA',
-    title: 'Security Analyst',
-    category: 'Cybersecurity',
-    icon: <LuShieldCheck size={12} className="careers-badge-icon" />
+    avatarText: "SA",
+    avatarColor: "#0591E8",
+    title: "Security Analyst",
+    category: "Cybersecurity",
+    icon: <img src={Cybersecurity} alt="" className="careers-badge-icon" />,
   },
   {
     id: 6,
-    avatarText: 'DM',
-    title: 'Digital Marketing',
-    category: 'Marketing',
-    icon: <LuMegaphone size={12} className="careers-badge-icon" />
-  }
+    avatarText: "DM",
+    avatarColor: "#0464A4",
+    title: "Digital Marketing",
+    category: "Marketing",
+    icon: <img src={Marketing} alt="" className="careers-badge-icon" />,
+  },
 ];
 const CareersHero = () => {
-
   return (
     <>
       <section className="case-hero-section ">
         <div className="container">
-          <div className="row align-items-center g-5 mb-5">
+          <div className="row  g-5 mb-5 mt-1">
             {/* Left Column */}
             <div className="col-lg-6">
               <Reveal variant={fadeLeft} delay={0.1}>
@@ -96,61 +104,73 @@ const CareersHero = () => {
                       <span className="industries-stat-value">2</span>
                       <span className="industries-stat-label">Offices</span>
                     </div>
-                     <div className="industries-stat-item">
+                    <div className="industries-stat-item">
                       <span className="industries-stat-value">87%</span>
-                      <span className="industries-stat-label">Client retention</span>
+                      <span className="industries-stat-label">
+                        Client retention
+                      </span>
                     </div>
                   </div>
                 </div>
               </Reveal>
             </div>
             <div className="col-12 col-lg-6 careers-right-wrapper">
-      <div className="careers-right-container text-center">
-        
-        {/* Top Hiring Badge */}
-        <div className="careers-hiring-badge-wrapper mb-4">
-          <span className="careers-hiring-badge">
-            We're Hiring — 6 Open Positions
-          </span>
-        </div>
-
-        {/* 3x2 Grid Cards */}
-        <div className="row g-3">
-          {positions.map((item) => (
-            <div key={item.id} className="col-4">
-              <div className="careers-role-card card h-100 border-0 align-items-center justify-content-between p-3">
-                
-                {/* Circle Avatar */}
-                <div className="careers-avatar-circle">
-                  {item.avatarText}
-                </div>
-
-                {/* Title / Subtitle Info */}
-                <div className="careers-info-block my-1">
-                  {item.subtitle && (
-                    <div className="careers-subtitle">{item.subtitle}</div>
-                  )}
-                  <div className={item.subtitle ? "careers-title-small" : "careers-title"}>
-                    {item.title}
+              <div className="careers-right-container text-center">
+                {/* Top Hiring Badge */}
+                <Reveal variant={fadeUp} delay={0.1}>
+                  <div className="careers-hiring-badge-wrapper mb-4">
+                    <span className="careers-hiring-badge">
+                      We're Hiring — 6 Open Positions
+                    </span>
                   </div>
-                </div>
+                </Reveal>
 
-                {/* Category Pill */}
-                <div className="careers-category-wrapper mt-2">
-                  <span className="careers-category-pill">
-                    {item.icon}
-                    {item.category}
-                  </span>
-                </div>
+                {/* 3x2 Grid Cards */}
+                <div className="row g-3">
+                  {positions.map((item, index) => (
+                    <div key={item.id} className="col-4">
+                      <Reveal variant={fadeUp} delay={0.2 + index * 0.1}>
+                        <div className="careers-role-card card h-100 border-0 align-items-center justify-content-between">
+                          {/* Circle Avatar */}
+                          <div
+                            className="careers-avatar-circle"
+                            style={{ backgroundColor: item.avatarColor }}
+                          >
+                            {item.avatarText}
+                          </div>
 
+                          {/* Title / Subtitle Info */}
+                          <div className="careers-info-block my-1">
+                            {item.subtitle && (
+                              <div className="careers-subtitle">
+                                {item.subtitle}
+                              </div>
+                            )}
+                            <div
+                              className={
+                                item.subtitle
+                                  ? "careers-title-small"
+                                  : "careers-title"
+                              }
+                            >
+                              {item.title}
+                            </div>
+                          </div>
+
+                          {/* Category Pill */}
+                          <div className="careers-category-wrapper mt-2">
+                            <span className="careers-category-pill">
+                              {item.icon}
+                              {item.category}
+                            </span>
+                          </div>
+                        </div>
+                      </Reveal>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          ))}
-        </div>
-
-      </div>
-    </div>
-         
           </div>
         </div>
       </section>

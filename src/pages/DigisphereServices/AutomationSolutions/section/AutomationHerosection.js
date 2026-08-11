@@ -147,169 +147,176 @@ const AutomationHerosection = () => {
             </div>
 
             <div className="col-lg-6 col-12">
-              <div className="workflow-wrapper">
-                {/* Header */}
-                <div className="workflow-header">
-                  <div className="Onboarding-Workflow">
-                    <div className="logo">
-                      <img
-                        className="Onbord-logo"
-                        src={Onboard}
-                        alt="Onboard"
-                      />
-                    </div>
+      {/* Top Section: Workflow Wrapper */}
+      <Reveal variant={fadeUp} delay={0.1}>
+        <div className="workflow-wrapper">
+          {/* Header */}
+          <div className="workflow-header">
+            <div className="Onboarding-Workflow">
+              <div className="logo">
+                <img
+                  className="Onbord-logo"
+                  src={Onboard}
+                  alt="Onboard"
+                />
+              </div>
 
-                    <div>
-                      <h6>Lead Onboarding Workflow</h6>
-                      <p>Running · 284 executions today</p>
-                    </div>
+              <div>
+                <h6>Lead Onboarding Workflow</h6>
+                <p>Running · 284 executions today</p>
+              </div>
+            </div>
+
+            <span className="auto-status">● Active</span>
+          </div>
+
+          {/* Steps */}
+          <div className="autosteps">
+            {autosteps.map((step, index) => (
+              <React.Fragment key={index}>
+                <div
+                  className={`auto-step-card ${
+                    completed.includes(index)
+                      ? "done"
+                      : activeStep === index
+                        ? "active"
+                        : ""
+                  }`}
+                >
+                  <div className="icon">
+                    {completed.includes(index) ? (
+                      <Check size={20} />
+                    ) : (
+                      (() => {
+                        const Icon = step.icon;
+
+                        return (
+                          <Icon
+                            size={20}
+                            className={activeStep === index ? "rotate-icon" : ""}
+                          />
+                        );
+                      })()
+                    )}
                   </div>
 
-                  <span className="auto-status">● Active</span>
+                  <h6>{step.title}</h6>
+                  <small>{step.subtitle}</small>
                 </div>
 
-                {/* Steps */}
-                <div className="autosteps">
-                  {autosteps.map((step, index) => (
-                    <React.Fragment key={index}>
-                      <div
-                        className={`auto-step-card ${
-                          completed.includes(index)
-                            ? "done"
-                            : activeStep === index
-                              ? "active"
-                              : ""
-                        }`}
-                      >
-                        <div className="icon">
-  {completed.includes(index) ? (
-    <Check size={20} />
-  ) : (
-    (() => {
-      const Icon = step.icon;
+                {index !== autosteps.length - 1 && (
+                  <div className="connector"></div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      </Reveal>
 
-      return (
-        <Icon
-          size={20}
-          className={activeStep === index ? "rotate-icon" : ""}
-        />
-      );
-    })()
-  )}
-</div>
+      {/* Bottom Section: Active Automations Card */}
+      <Reveal variant={fadeUp} delay={0.3}>
+        <div className="automation-card">
+          <div className="card-header">
+            <h5 className="Active-Automations mb-0">Active Automations</h5>
+            <span className="text-primary small fw-semibold">
+              12 running
+            </span>
+          </div>
 
-                        <h6>{step.title}</h6>
-                        <small>{step.subtitle}</small>
-                      </div>
+          <div className="automation-item">
+            <div className="d-flex align-items-start">
+              <span
+                className="rounded-circle me-3 mt-2"
+                style={{
+                  width: "8px",
+                  height: "8px",
+                  background: "#10b981",
+                }}
+              ></span>
 
-                      {index !== autosteps.length - 1 && (
-                        <div className="connector"></div>
-                      )}
-                    </React.Fragment>
-                  ))}
-                </div>
+              <div>
+                <div className="Invoice-Generation">Invoice Generation</div>
+                <small className="text-muted">Daily 11pm</small>
               </div>
-               <div className="automation-card">
-        <div className="card-header">
-          <h5 className="Active-Automations mb-0">Active Automations</h5>
-          <span className="text-primary small fw-semibold">
-            12 running
-          </span>
-        </div>
+            </div>
 
-        <div className="automation-item">
-          <div className="d-flex align-items-start">
-            <span
-              className="rounded-circle me-3 mt-2"
-              style={{
-                width: "8px",
-                height: "8px",
-                background: "#10b981",
-              }}
-            ></span>
-
-            <div>
-              <div className="Invoice-Generation">Invoice Generation</div>
-              <small className="text-muted">Daily 11pm</small>
+            <div className="text-end">
+              <div className="success">Success</div>
+              <small className="text-muted">2m ago</small>
             </div>
           </div>
 
-          <div className="text-end">
-            <div className="success">Success</div>
-            <small className="text-muted">2m ago</small>
-          </div>
-        </div>
+          <div className="automation-item">
+            <div className="d-flex align-items-start">
+              <span
+                className="rounded-circle me-3 mt-2"
+                style={{
+                  width: "8px",
+                  height: "8px",
+                  background: "#3b82f6",
+                }}
+              ></span>
 
-        <div className="automation-item">
-          <div className="d-flex align-items-start">
-            <span
-              className="rounded-circle me-3 mt-2"
-              style={{
-                width: "8px",
-                height: "8px",
-                background: "#3b82f6",
-              }}
-            ></span>
+              <div>
+                <div className="Invoice-Generation">Lead Assignment</div>
+                <small className="text-muted">Real-time</small>
+              </div>
+            </div>
 
-            <div>
-              <div className="Invoice-Generation">Lead Assignment</div>
-              <small className="text-muted">Real-time</small>
+            <div className="text-end">
+              <div className="text-primary">Running...</div>
+              <small className="text-muted">now</small>
             </div>
           </div>
 
-          <div className="text-end">
-            <div className="text-primary ">Running...</div>
-            <small className="text-muted">now</small>
-          </div>
-        </div>
+          <div className="automation-item">
+            <div className="d-flex align-items-start">
+              <span
+                className="rounded-circle me-3 mt-2"
+                style={{
+                  width: "8px",
+                  height: "8px",
+                  background: "#10b981",
+                }}
+              ></span>
 
-        <div className="automation-item">
-          <div className="d-flex align-items-start">
-            <span
-              className="rounded-circle me-3 mt-2"
-              style={{
-                width: "8px",
-                height: "8px",
-                background: "#10b981",
-              }}
-            ></span>
+              <div>
+                <div className="Invoice-Generation">Reminder Emails</div>
+                <small className="text-muted">Mon & Thu</small>
+              </div>
+            </div>
 
-            <div>
-              <div className="Invoice-Generation">Reminder Emails</div>
-              <small className="text-muted">Mon & Thu</small>
+            <div className="text-end">
+              <div className="success">Success</div>
+              <small className="text-muted">6h ago</small>
             </div>
           </div>
 
-          <div className="text-end">
-            <div className="success">Success</div>
-            <small className="text-muted">6h ago</small>
-          </div>
-        </div>
+          <div className="automation-item border-0 pb-0">
+            <div className="d-flex align-items-start">
+              <span
+                className="rounded-circle me-3 mt-2"
+                style={{
+                  width: "8px",
+                  height: "8px",
+                  background: "#10b981",
+                }}
+              ></span>
 
-        <div className="automation-item border-0 pb-0">
-          <div className="d-flex align-items-start">
-            <span
-              className="rounded-circle me-3 mt-2"
-              style={{
-                width: "8px",
-                height: "8px",
-                background: "#10b981",
-              }}
-            ></span>
+              <div>
+                <div className="Invoice-Generation">Report Sync</div>
+                <small className="text-muted">Weekly Sun</small>
+              </div>
+            </div>
 
-            <div>
-              <div className="Invoice-Generation">Report Sync</div>
-              <small className="text-muted">Weekly Sun</small>
+            <div className="text-end">
+              <div className="success">Success</div>
+              <small className="text-muted">1d ago</small>
             </div>
           </div>
-
-          <div className="text-end">
-            <div className="success">Success</div>
-            <small className="text-muted">1d ago</small>
-          </div>
         </div>
-      </div>
-            </div>
+      </Reveal>
+    </div>
           </div>
         </div>
       </section>

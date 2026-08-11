@@ -9,7 +9,7 @@ import kubernetesCard from "../../../assets/devops/kubernetes-card.svg";
 import { FaCheck, FaDatabase, FaCog, FaBell, FaCube } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import Reveal from "../../../animations/Reveal";
-import { fadeUp } from "../../../animations/variants";
+import { fadeUp,fadeRight} from "../../../animations/variants";
 import Button from "../../../components/Button/Button";
 import Pipeline from "../../../assets/devops/Pipeline.svg";
 import RecentBuilds from "../../../assets/devops/RecentBuilds.svg";
@@ -152,151 +152,159 @@ const DevOpsHeroSection = () => {
         </div>
 
         <div className="col-lg-6 col-12">
-          <div className="workflow-wrapper">
-            {/* Header */}
-            <div className="workflow-header">
-              <div className="Onboarding-Workflow">
-                <div className="logo">
-                  <img className="Onbord-logo" src={Pipeline} alt="Pipeline" />
-                </div>
-
-                <div>
-                  <h6>CI/CD Pipeline · main branch </h6>
-                  <p>Build #848 running</p>
-                </div>
+      {/* Main CI/CD Workflow Box (Fade Up) */}
+      <Reveal variant={fadeUp} delay={0.1}>
+        <div className="workflow-wrapper">
+          {/* Header */}
+          <div className="workflow-header">
+            <div className="Onboarding-Workflow">
+              <div className="logo">
+                <img className="Onbord-logo" src={Pipeline} alt="Pipeline" />
               </div>
 
-              <span className="auto-status">● Active</span>
+              <div>
+                <h6>CI/CD Pipeline · main branch </h6>
+                <p>Build #848 running</p>
+              </div>
             </div>
 
-            {/* Steps */}
-            <div className="autosteps">
-              {autosteps.map((step, index) => (
-                <React.Fragment key={index}>
-                  <div
-                    className={`auto-step-card ${
-                      completed.includes(index)
-                        ? "done"
-                        : activeStep === index
-                          ? "active"
-                          : ""
-                    }`}
-                  >
-                    <div className="icon">
-                      {completed.includes(index) ? (
-                        <Check size={20} />
-                      ) : (
-                        (() => {
-                          const Icon = step.icon;
-
-                          return (
-                            <Icon
-                              size={20}
-                              className={
-                                activeStep === index ? "rotate-icon" : ""
-                              }
-                            />
-                          );
-                        })()
-                      )}
-                    </div>
-
-                    <h6>{step.title}</h6>
-                    <span
-                      className={
-                        completed.includes(index)
-                          ? "status-passed"
-                          : activeStep === index
-                            ? "status-running"
-                            : "status-default"
-                      }
-                    >
-                      {completed.includes(index)
-                        ? "Passed"
-                        : activeStep === index
-                          ? "Running..."
-                          : step.subtitle}
-                    </span>
-                  </div>
-
-                  {index !== autosteps.length - 1 && (
-                    <div className="connector"></div>
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-            <div className="workflow-metrics">
-              {metrics.map((item, index) => (
-                <div className="metric-cards" key={item.id}>
-                  <div className="metric-title">{item.title}</div>
-
-                  <div className="metric-value">
-                    {item.value % 1 === 0
-                      ? Math.floor(counts[index])
-                      : counts[index].toFixed(1)}
-                    {item.suffix}
-                  </div>
-
-                  <div className={`metric-change ${item.type}`}>
-                    {item.change}
-                  </div>
-                </div>
-              ))}
-            </div>
+            <span className="auto-status">● Active</span>
           </div>
-          <div className="recent-builds-card">
-            <div className="d-flex justify-content-between align-items-center mb-3">
-              <h5 className="mb-0 fw-bold" style={{ fontSize: "12px" }}>
-                Recent Builds
-              </h5>
-              <small
-                className="text-muted"
-                style={{ fontSize: "10px", fontWeight: "700" }}
-              >
-                Updated just now
-              </small>
-            </div>
 
-            {builds.map((build) => (
-              <div
-                key={build.id}
-                className="Recent-Builds d-flex justify-content-between  align-items-center"
-              >
-                <div className="d-flex align-items-center">
-                  <div className="icon-circle">
-                    <img
-                      src={RecentBuilds}
-                      alt="RecentBuilds"
-                      className="rotate-icon"
-                    />
+          {/* Steps */}
+          <div className="autosteps">
+            {autosteps.map((step, index) => (
+              <React.Fragment key={index}>
+                <div
+                  className={`auto-step-card ${
+                    completed.includes(index)
+                      ? "done"
+                      : activeStep === index
+                      ? "active"
+                      : ""
+                  }`}
+                >
+                  <div className="icon">
+                    {completed.includes(index) ? (
+                      <Check size={20} />
+                    ) : (
+                      (() => {
+                        const Icon = step.icon;
+                        return (
+                          <Icon
+                            size={20}
+                            className={
+                              activeStep === index ? "rotate-icon" : ""
+                            }
+                          />
+                        );
+                      })()
+                    )}
                   </div>
 
-                  <div className="ms-3">
-                    <div className=" devops-hotfix d-flex">
-                      <span className="fw-semibold mr-2">{build.id}</span>
-
-                      <span
-                        className={`badge ${
-                          build.branch === "main"
-                            ? "bg-secondary-subtle text-dark"
-                            : "bg-light text-secondary border"
-                        }`}
-                      >
-                        {build.branch}
-                      </span>
-                    </div>
-
-                    <small className="text-muted">
-                      {build.title} - {build.author}
-                    </small>
-                  </div>
+                  <h6>{step.title}</h6>
+                  <span
+                    className={
+                      completed.includes(index)
+                        ? "status-passed"
+                        : activeStep === index
+                        ? "status-running"
+                        : "status-default"
+                    }
+                  >
+                    {completed.includes(index)
+                      ? "Passed"
+                      : activeStep === index
+                      ? "Running..."
+                      : step.subtitle}
+                  </span>
                 </div>
 
-                <small className="text-muted">{build.time}</small>
+                {index !== autosteps.length - 1 && (
+                  <div className="connector"></div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+
+          {/* Metrics */}
+          <div className="workflow-metrics">
+            {metrics.map((item, index) => (
+              <div className="metric-cards" key={item.id}>
+                <div className="metric-title">{item.title}</div>
+
+                <div className="metric-value">
+                  {item.value % 1 === 0
+                    ? Math.floor(counts[index] || 0)
+                    : (counts[index] || 0).toFixed(1)}
+                  {item.suffix}
+                </div>
+
+                <div className={`metric-change ${item.type}`}>
+                  {item.change}
+                </div>
               </div>
             ))}
           </div>
         </div>
+      </Reveal>
+
+      {/* Recent Builds Card (Fade Right) */}
+      <Reveal variant={fadeRight} delay={0.3}>
+        <div className="recent-builds-card">
+          <div className="d-flex justify-content-between align-items-center mb-3">
+            <h5 className="mb-0 fw-bold" style={{ fontSize: "12px" }}>
+              Recent Builds
+            </h5>
+            <small
+              className="text-muted"
+              style={{ fontSize: "10px", fontWeight: "700" }}
+            >
+              Updated just now
+            </small>
+          </div>
+
+          {builds.map((build) => (
+            <div
+              key={build.id}
+              className="Recent-Builds d-flex justify-content-between align-items-center"
+            >
+              <div className="d-flex align-items-center">
+                <div className="icon-circle">
+                  <img
+                    src={RecentBuilds}
+                    alt="RecentBuilds"
+                    className="rotate-icon"
+                  />
+                </div>
+
+                <div className="ms-3">
+                  <div className="devops-hotfix d-flex">
+                    <span className="fw-semibold mr-2">{build.id}</span>
+
+                    <span
+                      className={`badge ${
+                        build.branch === "main"
+                          ? "bg-secondary-subtle text-dark"
+                          : "bg-light text-secondary border"
+                      }`}
+                    >
+                      {build.branch}
+                    </span>
+                  </div>
+
+                  <small className="text-muted">
+                    {build.title} - {build.author}
+                  </small>
+                </div>
+              </div>
+
+              <small className="text-muted">{build.time}</small>
+            </div>
+          ))}
+        </div>
+      </Reveal>
+    </div>
       </div>
     </div>
   );

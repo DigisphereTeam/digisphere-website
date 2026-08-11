@@ -117,6 +117,7 @@ const HeroApplication = () => {
   ];
 
   return (
+    
     <>
       <div className="web-hero-wrapper">
         <div className="row mt-5">
@@ -157,169 +158,168 @@ const HeroApplication = () => {
             </Reveal>
           </div>
 
-          <div className="col-lg-6 col-12">
-            <div className="portal-card-wrapper">
-              <div className="portal-card">
-                {/* 🟢 TOP RIGHT FLOATING CARD */}
-                <div className="floating-ssl-card">
-                  <div className="ssl-icon-box">
-                    <FaLock className="ssl-icon" />
+        <div className="col-lg-6 col-12">
+      <Reveal variant={fadeUp} delay={0.1}>
+        <div className="portal-card-wrapper">
+          <div className="portal-card">
+            {/* TOP RIGHT FLOATING CARD */}
+            <div className="floating-ssl-card">
+              <div className="ssl-icon-box">
+                <FaLock className="ssl-icon" />
+              </div>
+              <div>
+                <div className="ssl-subtitle">SSL Secured</div>
+                <div className="ssl-title">Role-Based Access</div>
+              </div>
+            </div>
+
+            {/* Top Navbar */}
+            <header className="portal-navbar flex-between">
+              <div className="flex-center gap-sm">
+                <div className="portal-logo-icon">
+                  <img src={BusinessOs} alt="BusinessOs" />
+                </div>
+                <span className="portal-title">BusinessOS Portal</span>
+              </div>
+
+              <div className="flex-center gap-md">
+                <div className="portal-bell-icon">
+                  <span className="portal-bell-dot"></span>
+                </div>
+              </div>
+            </header>
+
+            {/* Content Body */}
+            <div className="portal-body">
+              {/* Navigation Tabs Bar */}
+              <div className="portal-tabs-bar flex-between">
+                <ul className="portal-tabs">
+                  <li>
+                    <button className="portal-tab-btn active">Overview</button>
+                  </li>
+                  <li>
+                    <button className="portal-tab-btn">Orders</button>
+                  </li>
+                  <li>
+                    <button className="portal-tab-btn">Revenue</button>
+                  </li>
+                </ul>
+
+                <div className="live-indicator">
+                  <span className="live-dot"></span> Live
+                </div>
+              </div>
+
+              {/* Dashboard Main View */}
+              <div className="portal-main-dashboard">
+                {/* Top Stat Cards with CountUp */}
+                <div className="stats-grid">
+                  <div className="stat-box">
+                    <div className="flex-align-start">
+                      <span className="web-stat-label">Total Orders</span>
+                      <img src={TotalOrders} alt="TotalOrders" />
+                    </div>
+                    <div className="web-stat-value">
+                      <CountUp value={1310} />
+                    </div>
+                    <span className="stat-badge badge-blue">+12.4%</span>
                   </div>
+
+                  <div className="stat-box">
+                    <div className="flex-align-start">
+                      <span className="web-stat-label">Revenue</span>
+                      <img src={Revenue} alt="Revenue" />
+                    </div>
+                    <div className="web-stat-value">
+                      <CountUp value={668} prefix="₹" suffix="K" />
+                    </div>
+                    <span className="stat-badge badge-green">+8.7%</span>
+                  </div>
+
+                  <div className="stat-box">
+                    <div className="flex-align-start">
+                      <span className="web-stat-label">Active Users</span>
+                      <img src={ActiveUsers} alt="ActiveUsers" />
+                    </div>
+                    <div className="web-stat-value">
+                      <CountUp value={284} />
+                    </div>
+                    <span className="stat-badge badge-purple">+23</span>
+                  </div>
+                </div>
+
+                {/* Bottom Chart & Activity Feed */}
+                <div className="web-bottom-grid">
                   <div>
-                    <div className="ssl-subtitle">SSL Secured</div>
-                    <div className="ssl-title">Role-Based Access</div>
-                  </div>
-                </div>
-
-                {/* Top Navbar */}
-                <header className="portal-navbar flex-between">
-                  <div className="flex-center gap-sm">
-                    <div className="portal-logo-icon">
-                      <img src={BusinessOs} alt="BusinessOs" />
+                    <div className="webapplication-section-title">
+                      Monthly Revenue
                     </div>
-                    <span className="portal-title">BusinessOS Portal</span>
-                  </div>
-
-                  <div className="flex-center gap-md">
-                    <div className="portal-bell-icon">
-                      <span className="portal-bell-dot"></span>
-                    </div>
-               
-                  </div>
-                </header>
-
-                {/* Content Body */}
-                <div className="portal-body">
-                  {/* Navigation Tabs Bar */}
-                  <div className="portal-tabs-bar flex-between">
-                    <ul className="portal-tabs">
-                      <li>
-                        <button className="portal-tab-btn active">
-                          Overview
-                        </button>
-                      </li>
-                      <li>
-                        <button className="portal-tab-btn">Orders</button>
-                      </li>
-                      <li>
-                        <button className="portal-tab-btn">Revenue</button>
-                      </li>
-                    </ul>
-
-                    <div className="live-indicator">
-                      <span className="live-dot"></span> Live
+                    <div className="bars-wrapper">
+                      {graphData.map((item, i) => (
+                        <div key={i} className="bar-column">
+                          <div className="bar-track">
+                            <motion.div
+                              className="bar-fill"
+                              initial={{ height: 0 }}
+                              whileInView={{ height: item.height }}
+                              transition={{
+                                duration: 0.6,
+                                delay: i * 0.05,
+                              }}
+                              viewport={{ once: true }}
+                            />
+                          </div>
+                          <span className="bar-label">{item.month}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  {/* Dashboard Main View */}
-                  <div className="portal-main-dashboard">
-                    {/* Top Stat Cards with CountUp */}
-                    <div className="stats-grid">
-                      <div className="stat-box">
-                        <div className="flex-align-start">
-                          <span className="web-stat-label">Total Orders</span>
-                          <img src={TotalOrders} alt="TotalOrders" />
-                        </div>
-                        <div className="web-stat-value">
-                          <CountUp value={1310} />
-                        </div>
-                        <span className="stat-badge badge-blue">+12.4%</span>
-                      </div>
-
-                      <div className="stat-box">
-                        <div className="flex-align-start">
-                          <span className="web-stat-label">Revenue</span>
-                          <img src={Revenue} alt="Revenue" />
-                        </div>
-                        <div className="web-stat-value">
-                          <CountUp value={668} prefix="₹" suffix="K" />
-                        </div>
-                        <span className="stat-badge badge-green">+8.7%</span>
-                      </div>
-
-                      <div className="stat-box">
-                        <div className="flex-align-start">
-                          <span className="web-stat-label">Active Users</span>
-                          <img src={ActiveUsers} alt="ActiveUsers" />
-                        </div>
-                        <div className="web-stat-value">
-                          <CountUp value={284} />
-                        </div>
-                        <span className="stat-badge badge-purple">+23</span>
-                      </div>
+                  <div>
+                    <div className="webapplication-section-title">
+                      Live Activity
                     </div>
-
-                    {/* Bottom Chart & Activity Feed */}
-                    <div className="web-bottom-grid">
-                      <div>
-                        <div className="webapplication-section-title">
-                          Monthly Revenue
+                    <div className="activity-feed">
+                      {activities.map((act, idx) => (
+                        <div key={idx} className="activity-row">
+                          <span
+                            className="activity-dot-indicator"
+                            style={{ backgroundColor: act.dotColor }}
+                          ></span>
+                          <div>
+                            <div className="activity-name">{act.title}</div>
+                            <div className="activity-time">{act.meta}</div>
+                          </div>
                         </div>
-                        <div className="bars-wrapper">
-                          {graphData.map((item, i) => (
-                            <div key={i} className="bar-column">
-                              <div className="bar-track">
-                                <motion.div
-                                  className="bar-fill"
-                                  initial={{ height: 0 }}
-                                  whileInView={{ height: item.height }}
-                                  transition={{
-                                    duration: 0.6,
-                                    delay: i * 0.05,
-                                  }}
-                                  viewport={{ once: true }}
-                                />
-                              </div>
-                              <span className="bar-label">{item.month}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div>
-                        <div className="webapplication-section-title">
-                          Live Activity
-                        </div>
-                        <div className="activity-feed">
-                          {activities.map((act, idx) => (
-                            <div key={idx} className="activity-row">
-                              <span
-                                className="activity-dot-indicator"
-                                style={{ backgroundColor: act.dotColor }}
-                              ></span>
-                              <div>
-                                <div className="activity-name">{act.title}</div>
-                                <div className="activity-time">{act.meta}</div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
-                </div>
-
-                {/* 🔵 BOTTOM LEFT FLOATING CODE CARD */}
-                <div className="floating-api-card">
-                  <div className="api-header flex-center gap-xs">
-                    <FaCode className="api-icon" />
-                    <span>API Response</span>
-                  </div>
-                  <pre className="api-code">
-                    <code>
-                      {"{\n"}
-                      {'  "status": '}
-                      <span className="json-string">"success"</span>
-                      {",\n"}
-                      {'  "orders": '}
-                      <span className="json-number">1318</span>
-                      {"\n}"}
-                    </code>
-                  </pre>
                 </div>
               </div>
             </div>
+
+            {/* BOTTOM LEFT FLOATING CODE CARD */}
+            <div className="floating-api-card">
+              <div className="api-header flex-center gap-xs">
+                <FaCode className="api-icon" />
+                <span>API Response</span>
+              </div>
+              <pre className="api-code">
+                <code>
+                  {"{\n"}
+                  {'  "status": '}
+                  <span className="json-string">"success"</span>
+                  {",\n"}
+                  {'  "orders": '}
+                  <span className="json-number">1318</span>
+                  {"\n}"}
+                </code>
+              </pre>
+            </div>
           </div>
+        </div>
+      </Reveal>
+    </div>
         </div>
       </div>
     </>

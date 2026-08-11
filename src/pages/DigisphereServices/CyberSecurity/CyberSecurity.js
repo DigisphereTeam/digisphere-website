@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./CyberSecurity.css";
-import BookingSection from "../../../components/BookingSection/BookingSection.js"
-
+import BookingSection from "../../../components/BookingSection/BookingSection.js";
 import tickIcon from "../../../assets/digital-marketing/tick-icon.svg";
 import ServicesGrid from "../../../components/ServicesGrid/ServicesGrid";
 import Cybersecurity from "../../../assets/Cybersecurity/Cybersecurity (2).svg";
 import Button from "../../../components/Button/Button";
 import Reveal from "../../../animations/Reveal";
 import FAQSection from "../../../components/FaqSection/FAQSection";
-import { fadeUp } from "../../../animations/variants";
+import { fadeUp,fadeRight } from "../../../animations/variants";
 import { FaArrowRight } from "react-icons/fa";
 
 import Counter from "../../../components/Counter/Counter.js";
@@ -44,20 +43,17 @@ const CyberSecurity = () => {
     1890, // Week 7
     2210, // Week 8
     1567, // Week 9
-    1985  // Week 10
+    1985, // Week 10
   ];
 
   // 3. Put your 10 unique numbers for "Today's Alerts" inside this array
-  const alertNumbersPool = [
-    23, 14, 32, 45, 19, 28, 9, 21, 37, 12
-  ];
+  const alertNumbersPool = [23, 14, 32, 45, 19, 28, 9, 21, 37, 12];
 
   // Using % ensures that the index cleanly rotates between 0 and 9 based on the current week
   const poolIndex = currentWeek % threatNumbersPool.length;
 
   const dynamicThreats = threatNumbersPool[poolIndex];
   const dynamicAlerts = alertNumbersPool[poolIndex];
-  
 
   const stats = [
     {
@@ -251,125 +247,130 @@ const CyberSecurity = () => {
                   </p>
 
                   <div className="hero-buttons">
-                    <Link to="/contact"><Button variant="primary" icon={<FaArrowRight />}>
-                      <span>Request Security Assessment </span>
-                    </Button></Link>
+                    <Link to="/contact">
+                      <Button variant="primary" icon={<FaArrowRight />}>
+                        <span>Request Security Assessment </span>
+                      </Button>
+                    </Link>
 
-                    <Link to="/contact"><Button variant="secondary">
-                      <span>Our Services</span>
-                    </Button></Link>
+                    <Link to="/contact">
+                      <Button variant="secondary">
+                        <span>Our Services</span>
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </Reveal>
             </div>
             <div className="col-lg-6 col-12">
-              <div className="CybersecurityDashboard">
-                {/* Header */}
-                <div className="CybersecurityHeader">
-                  <div className="dashboard-card dashboard-card-cyber">
-                    <img src={Aligned} alt="Analytics" />
-                  </div>
+              {/* Outer Wrapper with Fade Right Reveal */}
+              <Reveal variant={fadeRight} delay={0.2}>
+                <div className="CybersecurityDashboard">
+                  {/* Header */}
+                  <div className="CybersecurityHeader">
+                    <div className="dashboard-card dashboard-card-cyber">
+                      <img src={Aligned} alt="Analytics" />
+                    </div>
 
-                  <div className="CybersecurityHeaderLeft">
-                    <img src={soc} alt="SOC" className="CybersecurityLogo" />
+                    <div className="CybersecurityHeaderLeft">
+                      <img src={soc} alt="SOC" className="CybersecurityLogo" />
 
-                    <div className="CybersecurityHeaderContent">
-                      <h2>SOC Dashboard -<span>Live</span></h2>
-                      <p>Monitoring 247 endpoints</p>
+                      <div className="CybersecurityHeaderContent">
+                        <h2>
+                          SOC Dashboard -<span>Live</span>
+                        </h2>
+                        <p>Monitoring 247 endpoints</p>
+                      </div>
                     </div>
                   </div>
 
-                 
-                </div>
+                  {/* Main */}
+                  <div className="row g-2 CybersecurityContent">
+                    {/* RADAR */}
+                    <div className="col-lg-6 col-12">
+                      <div className="CybersecurityRadarCard">
+                        <div className="CybersecurityRadar">
+                          <div className="CybersecurityCircle CybersecurityCircle1"></div>
+                          <div className="CybersecurityCircle CybersecurityCircle2"></div>
+                          <div className="CybersecurityCircle CybersecurityCircle3"></div>
 
-                {/* Main */}
-                <div className="row g-2 CybersecurityContent">
-                  {/* RADAR */}
-                  <div className="col-lg-6 col-12">
-                    <div className="CybersecurityRadarCard">
-                      <div className="CybersecurityRadar">
-                        <div className="CybersecurityCircle CybersecurityCircle1"></div>
-                        <div className="CybersecurityCircle CybersecurityCircle2"></div>
-                        <div className="CybersecurityCircle CybersecurityCircle3"></div>
+                          <div className="CybersecurityScanner"></div>
 
-                        <div className="CybersecurityScanner"></div>
+                          {/* Dot 1: Triggers at 5 seconds */}
+                          {showDot1 && (
+                            <span className="CybersecurityTarget CybersecurityTargetOne blinking danger"></span>
+                          )}
 
-                        {/* Dot 1: Triggers at 5 seconds */}
-                        {showDot1 && (
-                          <span className="CybersecurityTarget CybersecurityTargetOne blinking danger"></span>
-                        )}
+                          {/* Dot 2: Triggers at 15 seconds */}
+                          {showDot2 && (
+                            <span className="CybersecurityTarget CybersecurityTargetTwo blinking danger"></span>
+                          )}
 
-                        {/* Dot 2: Triggers at 15 seconds */}
-                        {showDot2 && (
-                          <span className="CybersecurityTarget CybersecurityTargetTwo blinking danger"></span>
-                        )}
+                          {/* Dot 3: Triggers at 25 seconds */}
+                          {showDot3 && (
+                            <span className="CybersecurityTarget CybersecurityTargetThree blinking danger"></span>
+                          )}
+                        </div>
 
-                        {/* Dot 3: Triggers at 25 seconds */}
-                        {showDot3 && (
-                          <span className="CybersecurityTarget CybersecurityTargetThree blinking danger"></span>
-                        )}
+                        <h3 className="Threat-Radar">Threat Radar</h3>
                       </div>
-
-                      <h3 className="Threat-Radar">Threat Radar</h3>
                     </div>
-                  </div>
 
-                  {/* STATS */}
-                  <div className="col-lg-6 col-12">
-                    <div className="CybersecurityStats">
-                      
-                      {/* Card 1: Threats Blocked */}
-                      <div className="CybersecurityStatCard CybersecurityGreen">
-                        <small>Threats Blocked</small>
-                        <h1>
-                          <Counter end={dynamicThreats} />
-                        </h1> 
-                      </div>
+                    {/* STATS */}
+                    <div className="col-lg-6 col-12">
+                      <div className="CybersecurityStats">
+                        {/* Card 1: Threats Blocked */}
+                        <div className="CybersecurityStatCard CybersecurityGreen">
+                          <small>Threats Blocked</small>
+                          <h1>
+                            <Counter end={dynamicThreats} />
+                          </h1>
+                        </div>
 
-                      {/* Card 2: Today's Alerts */}
-                      <div className="CybersecurityStatCard CybersecurityOrange">
-                        <small>Today's Alerts</small>
-                        <h1>
-                          <Counter end={dynamicAlerts} />
-                        </h1>
-                      </div>
+                        {/* Card 2: Today's Alerts */}
+                        <div className="CybersecurityStatCard CybersecurityOrange">
+                          <small>Today's Alerts</small>
+                          <h1>
+                            <Counter end={dynamicAlerts} />
+                          </h1>
+                        </div>
 
-                      {/* Card 3: Open Vulnerabilities */}
-                      <div className="CybersecurityStatCard CybersecurityBlue">
-                        <small>Open Vulnerabilities</small>
-                        <h1>0</h1>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-                {/* Activity */}
-                <div className="CybersecurityActivity">
-                  {activity.map((item, index) => (
-                    <div className="CybersecurityActivityCard" key={index}>
-                      <div className="CybersecurityActivityLeft">
-                        <span
-                          className="CybersecurityActivityDot"
-                          style={{ background: item.color }}
-                        ></span>
-
-                        <div className="CybersecurityActivityInfo">
-                          <h4>{item.title}</h4>
-                          <span>{item.ip}</span>
+                        {/* Card 3: Open Vulnerabilities */}
+                        <div className="CybersecurityStatCard CybersecurityBlue">
+                          <small>Open Vulnerabilities</small>
+                          <h1>0</h1>
                         </div>
                       </div>
-
-                      <div className="CybersecurityActivityRight">
-                        <button className="CybersecurityBlockedButton">
-                          {item.status}
-                        </button>
-                        <span className="CybersecurityTime">now</span>
-                      </div>
                     </div>
-                  ))}
+                  </div>
+
+                  {/* Activity */}
+                  <div className="CybersecurityActivity">
+                    {activity.map((item, index) => (
+                      <div className="CybersecurityActivityCard" key={index}>
+                        <div className="CybersecurityActivityLeft">
+                          <span
+                            className="CybersecurityActivityDot"
+                            style={{ background: item.color }}
+                          ></span>
+
+                          <div className="CybersecurityActivityInfo">
+                            <h4>{item.title}</h4>
+                            <span>{item.ip}</span>
+                          </div>
+                        </div>
+
+                        <div className="CybersecurityActivityRight">
+                          <button className="CybersecurityBlockedButton">
+                            {item.status}
+                          </button>
+                          <span className="CybersecurityTime">now</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </div>
@@ -416,7 +417,7 @@ const CyberSecurity = () => {
           faqs={MarketingFaqData}
         />
       </div>
-     <BookingSection
+      <BookingSection
         title="Don't wait for a breach."
         description="Book a free 30-minute security consultation. We'll identify the top 3 security gaps in your current setup — no strings attached."
         buttonText="Book Security Consultation "
