@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f1f5f9;
+  background: #E8F4FD;
   padding: 12px 16px;
   border-bottom: 1px solid #e2e8f0;
   font-size: 13px;
@@ -67,7 +67,7 @@
 
 .figma-sidebar {
   width: 23%;
-  background: #f8fafc;
+  background: #E8F4FD;
   padding: 16px;
   font-size: 12px;
   display: flex;

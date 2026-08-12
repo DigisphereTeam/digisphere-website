@@ -8,6 +8,9 @@
 .CybersecurityHeaderContent span {
   color: #10b981;
 }
+.security-section{
+  background-color: #F8FAFC;
+}
 
 /* ================= HEADER ================= */
 .CybersecurityHeader {

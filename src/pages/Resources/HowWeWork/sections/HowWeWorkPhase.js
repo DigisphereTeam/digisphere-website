@@ -145,7 +145,8 @@ const HowWeWorkPhase = () => {
   ))}
 </div>
       </section>
-      <div className="container">
+      <section className="cardsfaq-section">
+      <div className="container mt-5">
         <div className="cardsfaq-header">
           <span className="cardsfaq-subtitle">OUR Commitments</span>
 
@@ -159,6 +160,7 @@ const HowWeWorkPhase = () => {
           colClass="col-12 col-sm-6 col-lg-3"
         />
       </div>
+      </section>
       <BookingSection
         title="Ready to start the process?"
         description="The first step is a free 30-minute discovery call. No obligation, no pitch — just a focused conversation about your goals."
