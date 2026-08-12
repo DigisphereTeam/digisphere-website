@@ -137,7 +137,7 @@
 
 .success-title {
   font-size: 1.75rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #0f172a;
   margin-bottom: 24px;
 }
@@ -186,4 +186,107 @@
 .success-cta-btn:hover {
   background-color: #f1f5f9;
   border-color: #cbd5e1;
+}
+/* ==========================================
+   BREAKPOINTS: 992px & 576px
+   ========================================== */
+
+/* --- Laptops & Desktops (992px and above) --- */
+@media (min-width: 992px) {
+  /* Styles for desktops & large screens */
+  .success-section {
+    padding-top: 60px;
+  }
+
+  .success-title {
+    font-size: 1.85rem;
+  }
+
+  .success-testimonial-box {
+    min-height: 240px;
+  }
+}
+
+/* --- Tablets & Mobile Landscape (Up to 991px) --- */
+@media (max-width: 991px) {
+  /* Styles for tablets and smaller screens */
+  .success-section {
+    padding-top: 40px;
+  }
+
+  .success-title {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+
+  .success-testimonial-box {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .success-metric-value {
+    font-size: 22px;
+  }
+  .success-badge {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+}
+
+/* --- Mobile / Small Screens (Up to 575px) --- */
+@media (max-width: 575px) {
+  /* Styles for mobile phones */
+  .success-section {
+    padding-top: 30px;
+  }
+
+  .success-title {
+    font-size: 1.25rem;
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+
+  .success-testimonial-box {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .success-quote-text2 {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .success-author-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .success-metric-card {
+    padding: 10px 4px;
+  }
+
+  .success-metric-value {
+    font-size: 18px;
+  }
+
+  .success-metric-label {
+    font-size: 10px;
+  }
+
+  /* Full-width call-to-action button for narrow screens */
+  .success-cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 16px;
+  }
+  .success-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 14px;
+    letter-spacing: 0.2px;
+  }
+  .success-satisfaction-banner{
+    font-size: 12px;
+  }
 }

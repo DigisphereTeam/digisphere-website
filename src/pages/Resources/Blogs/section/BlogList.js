@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./BlogList.css";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Reveal from "../../../../animations/Reveal";
 import { fadeLeft, fadeUp } from "../../../../animations/variants";
@@ -13,6 +14,7 @@ import aiindia from "../../../../assets/Blogs/AI for Indian.svg";
 import CyberThreat from "../../../../assets/Blogs/Cyber Threat.svg";
 import cloudimage from "../../../../assets/Blogs/cloudimage.svg";
 import UXDesign from "../../../../assets/Blogs/UX Mistak.svg";
+import { path } from "framer-motion/client";
 const categories = [
   "All",
   "Web Development",
@@ -36,6 +38,7 @@ const articles = [
     readTime: "6 min read",
     readTimeIcon: <FiClock size={12} className="me-1 " />,
     image: DigitalMarketing,
+    path: "/services/digital-marketing",
   },
   {
     id: 2,
@@ -48,6 +51,7 @@ const articles = [
     readTime: "9 min read",
     readTimeIcon: <FiClock size={12} className="me-1" />,
     image: aiindia,
+    path: "/services/aipowered",
   },
   {
     id: 3,
@@ -60,6 +64,7 @@ const articles = [
     readTime: "8 min read",
     readTimeIcon: <FiClock size={12} className="me-1 " />,
     image: CyberThreat,
+    path: "/services/cyber-security",
   },
   {
     id: 4,
@@ -73,6 +78,7 @@ const articles = [
     readTime: "8 min read",
     readTimeIcon: <FiClock size={12} className="me-1 " />,
     image: cloudimage,
+    path: "/services/cloudservices",
   },
   {
     id: 5,
@@ -85,6 +91,7 @@ const articles = [
     readTime: "7 min read",
     readTimeIcon: <FiClock size={12} className="me-1 " />,
     image: UXDesign,
+    path: "/services/experience-design",
   },
 ];
 const BlogList = () => {
@@ -167,10 +174,15 @@ const BlogList = () => {
                       </span>
                     </div>
 
-                    <button className="blog-btn-primary">
-                      Read Article{" "}
-                      <FaArrowRight className="ms-2 blog-btn-arrow" />
-                    </button>
+                    <Link
+                      to="/services/webdevelopment"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <button className="blog-btn-primary">
+                        Read Article{" "}
+                        <FaArrowRight className="ms-2 blog-btn-arrow" />
+                      </button>
+                    </Link>
                   </motion.div>
                 </div>
               </div>
@@ -181,69 +193,70 @@ const BlogList = () => {
         </div>
       </div>
       <div className="latest-articel">
-  <div className="container">
-    <Reveal variant={fadeUp} delay={0.1}>
-      <h3 className="blog-section-title mb-4">Latest Articles</h3>
-    </Reveal>
-
-    {/* Articles Grid */}
-    <div className="row g-4">
-      {articles.map((item, index) => (
-        <div key={item.id} className="col-12 col-md-6 col-lg-4">
-          <Reveal variant={fadeUp} delay={0.15 * index}>
-            <motion.div
-              whileHover={{ y: -6 }}
-              transition={{ duration: 0.2 }}
-              className="blog-grid-card card h-100 border-0"
-            >
-              <div className="blog-card-img-wrapper">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="card-img-top blog-card-img"
-                />
-              </div>
-              <div className="card-body p-3 d-flex flex-column">
-                <div>
-                  <span className="blog-tag-pill mb-1 d-inline-block">
-                    {item.tag}
-                  </span>
-                  <h5 className="blog-card-grid-title mt-1 mb-2">
-                    {item.title}
-                  </h5>
-                  <p className="blog-card-grid-desc text-muted mb-3">
-                    {item.description}
-                  </p>
-                </div>
-
-                <div className="mt-auto pt-3 d-flex align-items-center justify-content-between border-top text-muted blog-meta">
-                  <div className="d-flex align-items-center gap-3">
-                    <span className="d-inline-flex align-items-center">
-                      {item.dateIcon}
-                      {item.date}
-                    </span>
-
-                    <span className="d-inline-flex align-items-center">
-                      {item.readTimeIcon}
-                      {item.readTime}
-                    </span>
-                  </div>
-                  <a href="#read" className="blog-read-link">
-                    Read{" "}
-                    <FaArrowRight
-                      size={11}
-                      className="ms-1 blog-link-arrow"
-                    />
-                  </a>
-                </div>
-              </div>
-            </motion.div>
+        <div className="container">
+          <Reveal variant={fadeUp} delay={0.1}>
+            <h3 className="blog-section-title mb-4">Latest Articles</h3>
           </Reveal>
+
+          {/* Articles Grid */}
+          <div className="row g-4">
+            {articles.map((item, index) => (
+              <div key={item.id} className="col-12 col-md-6 col-lg-4">
+                <Reveal variant={fadeUp} delay={0.15 * index}>
+                  <motion.div
+                    whileHover={{ y: -6 }}
+                    transition={{ duration: 0.2 }}
+                    className="blog-grid-card card h-100 border-0"
+                  >
+                    <div className="blog-card-img-wrapper">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="card-img-top blog-card-img"
+                      />
+                    </div>
+                    <div className="card-body p-3 d-flex flex-column">
+                      <div>
+                        <span className="blog-tag-pill mb-1 d-inline-block">
+                          {item.tag}
+                        </span>
+                        <h5 className="blog-card-grid-title mt-1 mb-2">
+                          {item.title}
+                        </h5>
+                        <p className="blog-card-grid-desc text-muted mb-3">
+                          {item.description}
+                        </p>
+                      </div>
+
+                      <div className="mt-auto pt-3 d-flex align-items-center justify-content-between border-top text-muted blog-meta">
+                        <div className="d-flex align-items-center gap-3">
+                          <span className="d-inline-flex align-items-center">
+                            {item.dateIcon}
+                            {item.date}
+                          </span>
+
+                          <span className="d-inline-flex align-items-center">
+                            {item.readTimeIcon}
+                            {item.readTime}
+                          </span>
+                        </div>
+
+                        <Link to={item.path} className="blog-read-link">
+                          Read{" "}
+                          <FaArrowRight
+                            size={11}
+                            className="ms-1 blog-link-arrow"
+                          />
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                </Reveal>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</div>
+      </div>
     </>
   );
 };

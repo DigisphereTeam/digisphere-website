@@ -12,6 +12,7 @@ import offer3 from "../../../../assets/Finops/offer3.svg";
 import offer4 from "../../../../assets/Finops/offer4.svg";
 import offer5 from "../../../../assets/Finops/offer5.svg";
 import offer6 from "../../../../assets/Finops/offer6.svg";
+
 const ApplicationsServices = [
   {
     icon: offer1,
@@ -130,7 +131,7 @@ const FinopsCard = () => {
       />
    <section className="finops-approach-section">
   <div className="container">
-    <div className="hero-wrapper">
+    <div className="finops-hero-wrapper">
       
       {/* Section Header */}
       <Reveal variant={fadeUp} delay={0.1}>

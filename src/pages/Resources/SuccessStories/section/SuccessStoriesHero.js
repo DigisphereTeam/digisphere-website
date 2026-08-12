@@ -10,31 +10,44 @@ import skilledition from "../../../../assets/success/skilledition (2).svg";
 const STATS_DATA = [
   { id: "stat-1", icon: Users, value: "316+", label: "Happy Clients" },
   { id: "stat-2", icon: Award, value: "87%", label: "Retained" },
-  { id: "stat-3", icon: TrendingUp, value: "₹50Cr+", label: "Revenue Generated" },
+  {
+    id: "stat-3",
+    icon: TrendingUp,
+    value: "₹50Cr+",
+    label: "Revenue Generated",
+  },
 ];
 
 const TESTIMONIALS_DATA = [
   {
     id: "test-1",
-    avatar: Ramakrishna,
-    quote: "Digisphere understood our clinical workflows before they touched the design. The patient p...",
-    author: "Dr. Ramakrishna Rao.Endocare Hospitals",
-
+    avatarText: "RR",
+    avatarColor: "#057DCD",
+    quote:
+      "Digisphere understood our clinical workflows before they touched the design. The patient p...",
+    author: "Dr. Ramakrishna Rao",
+    company: "Endocare Hospitals",
     rating: 5,
   },
   {
     id: "test-2",
-    avatar: ArvindSharma,
-    quote: "We went from managing 600 leads in spreadsheets to a full CRM with automated follow-up. Ou...",
-    author: "Arvind Sharma.RealProp Ventures",
+    avatarText: "AS",
+    avatarColor: "#057DCD",
+    quote:
+      "We went from managing 600 leads in spreadsheets to a full CRM with automated follow-up. Ou...",
+    author: "Arvind Sharma",
+    company: "RealProp Ventures",
     rating: 5,
   },
   {
     id: "test-3",
-    avatar: skilledition,
-    quote: "We launched in 8 weeks. That's not typical for an LMS build. Digisphere's process was so s...",
-    author: "Krishnareddy.Skilledition EdTech",
-        rating: 5,
+    avatarText: "KR",
+    avatarColor: "#057DCD",
+    quote:
+      "We launched in 8 weeks. That's not typical for an LMS build. Digisphere's process was so s...",
+    author: "Krishnareddy",
+    company: "Skilledition EdTech",
+    rating: 5,
   },
 ];
 
@@ -72,7 +85,9 @@ const SuccessStoriesHero = () => {
                   </div>
                   <div className="industries-stat-item">
                     <span className="industries-stat-value">₹50Cr+</span>
-                    <span className="industries-stat-label">Revenue generated</span>
+                    <span className="industries-stat-label">
+                      Revenue generated
+                    </span>
                   </div>
                 </div>
               </div>
@@ -96,27 +111,50 @@ const SuccessStoriesHero = () => {
 
                 {/* Testimonial Cards Stack */}
                 <div className="success-testimonials-stack">
-                  {TESTIMONIALS_DATA.map(({ id, avatar, quote, author, role, rating }) => (
-                    <article key={id} className="success-testimonial-card">
-                      <img
-                        src={avatar}
-                        alt={author}
-                        className="success-avatar"
-                        loading="lazy"
-                      />
-                      <div className="success-testimonial-body">
-                        <div className="success-stars-row">
-                          {Array.from({ length: rating }).map((_, i) => (
-                            <Star key={i} size={14} fill="currentColor" stroke="none" />
-                          ))}
+                  {TESTIMONIALS_DATA.map(
+                    ({
+                      id,
+                      avatarText,
+                      avatarColor,
+                      quote,
+                      author,
+                      company,
+                      rating,
+                    }) => (
+                      <article key={id} className="success-testimonial-card">
+                        <div
+                          className="success-avatar-badge"
+                          style={{ backgroundColor: avatarColor || "#057DCD" }}
+                        >
+                          {avatarText}
                         </div>
-                        <p className="success-quote-text">"{quote}"</p>
-                        <footer className="success-author-info">
-                          <strong>{author}</strong>
-                        </footer>
-                      </div>
-                    </article>
-                  ))}
+                        <div className="success-testimonial-body">
+                          <div className="success-stars-row">
+                            {Array.from({ length: rating }).map((_, i) => (
+                              <Star
+                                key={i}
+                                size={14}
+                                className="success-star-icon"
+                                fill="currentColor"
+                                stroke="none"
+                              />
+                            ))}
+                          </div>
+                          <p className="success-quote-text">"{quote}"</p>
+                          <footer className="success-author-info">
+                            <strong className="success-author-name">
+                              {author}
+                            </strong>
+                            {company && (
+                              <span className="success-author-company">
+                                {company}
+                              </span>
+                            )}
+                          </footer>
+                        </div>
+                      </article>
+                    ),
+                  )}
                 </div>
 
                 {/* Bottom Banner */}

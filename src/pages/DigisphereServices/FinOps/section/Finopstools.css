@@ -4,7 +4,11 @@
   background-color: #ffffff;
   font-family: inherit;
 }
-
+.finops-cloud-title{
+  font-size: 24px;
+  color:#057DCD;
+  font-weight: 800;
+}
 /* Header Styling */
 .tools-header-content {
   max-width: 650px;
@@ -51,7 +55,11 @@
   padding: 24px;
   transition: all 0.3s ease;
 }
-
+.tooling-icons{
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
 .tool-card:hover {
   border-color: #bae6fd;
   box-shadow: 0 10px 25px rgba(2, 132, 199, 0.08);
@@ -84,7 +92,9 @@
   .tools-title {
     font-size: 1.75rem;
   }
-  
+  .finops-wrapper{
+    margin-top: 20px;
+  }
   .tools-grid {
     grid-template-columns: 1fr;
   }

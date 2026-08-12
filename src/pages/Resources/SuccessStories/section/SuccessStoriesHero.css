@@ -141,3 +141,126 @@
   gap: 8px;
   box-shadow: 0 4px 12px rgba(0, 114, 206, 0.2);
 }
+.success-avatar-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+/* ==========================================
+   MEDIA QUERIES (992px & 576px)
+   ========================================== */
+
+/* --- Tablets & Medium Screens (Up to 991px) --- */
+@media (max-width: 991px) {
+  .success-container {
+    gap: 10px;
+  }
+
+  .success-stats-grid {
+    gap: 10px;
+  }
+
+  .success-stat-card {
+    padding: 10px 8px;
+    border-radius: 14px;
+  }
+
+  .success-stat-value {
+    font-size: 14px;
+  }
+
+  .success-stat-label {
+    font-size: 8.5px;
+  }
+
+  .success-testimonial-card {
+    padding: 12px;
+    gap: 12px;
+    border-radius: 14px;
+  }
+
+  .success-avatar,
+  .success-avatar-badge {
+    width: 38px;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .success-quote-text {
+    font-size: 10.5px;
+  }
+
+  .success-author-info {
+    font-size: 9.5px;
+  }
+
+  .success-satisfaction-banner {
+    padding: 10px 14px;
+    font-size: 13px;
+    border-radius: 14px;
+  }
+}
+
+/* --- Mobile / Small Screens (Up to 575px) --- */
+@media (max-width: 575px) {
+  .success-container {
+    gap: 8px;
+  }
+
+  .success-stats-grid {
+    gap: 8px;
+  }
+
+  .success-stat-card {
+    padding: 8px 4px;
+    border-radius: 12px;
+  }
+
+  .success-stat-value {
+    font-size: 13px;
+  }
+
+  .success-stat-label {
+    font-size: 8px;
+    white-space: normal;
+    line-height: 1.1;
+  }
+
+  .success-testimonial-card {
+    padding: 10px;
+    gap: 10px;
+    border-radius: 12px;
+  }
+
+  .success-avatar,
+  .success-avatar-badge {
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+  }
+
+  .success-quote-text {
+    font-size: 10px;
+    line-height: 1.35;
+    margin-bottom: 4px;
+  }
+
+  .success-author-info {
+    font-size: 9px;
+  }
+
+  .success-satisfaction-banner {
+    padding: 10px 12px;
+    font-size: 12px;
+    border-radius: 12px;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

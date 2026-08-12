@@ -223,10 +223,10 @@ const AllIndustries = () => {
 
                     {/* CTA Link */}
                     <div className="industries-card-cta">
-                      <a href="#discuss">
+                      <Link to="/contact">
                         <span>Discuss Your Project</span>
                         <FaArrowRight className="industries-arrow-icon" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </Reveal>
