@@ -98,9 +98,9 @@
 }
 
 .project-section .project-start-btn:hover {
-  background-color: #111;
-  color: #fff;
-  border-color: #111;
+  background-color: #f1f5f9;
+  color:#000000;
+  border-color: #cbd5e1;
 }
 
 .project-section .project-btn-arrow {

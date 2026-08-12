@@ -1,6 +1,6 @@
 import React from "react";
 import "./DigitalMarketingHerosection.css";
-import pen from "../../../../assets/pen.svg";
+import DigitalMarketing from "../../../../assets/digital-marketing/DigitalMarketing (3).svg";
 import Button from "../../../../components/Button/Button";
 import Reveal from "../../../../animations/Reveal";
 import { fadeUp } from "../../../../animations/variants";
@@ -18,29 +18,33 @@ const DigitalMarketingHerosection = () => {
               <div className="Digital-hero-content">
                 {/* Fixed: changed 'class' to 'className' */}
                 <p className="Digi-digital-badge">
-                  <img className="pen-image" src={pen} alt="pen" /> 
+                  <img className="pen-image" src={DigitalMarketing} alt="pen" />
                   Digital Marketing
                 </p>
 
                 <h1 className="hero-title">
-                  Design that earns
-                  <span> trust in seconds.</span>
+                  Marketing that moves revenue,
+                  <span> not metrics.</span>
                 </h1>
 
                 <p className="hero-description">
-                  We design digital experiences that users love and businesses
-                  profit from — grounded in research, refined through testing,
-                  and delivered production-ready in Figma.
+                  We build full-funnel digital marketing systems — SEO, paid
+                  ads, email, and content — engineered around your customer
+                  acquisition economics, not vanity dashboards.
                 </p>
 
                 <div className="hero-buttons">
-                  <Link to="/contact"><Button variant="primary" icon={<FaArrowRight />}>
-                    <span>Start a Design Project </span>
-                  </Button></Link>
+                  <Link to="/contact">
+                    <Button variant="primary" icon={<FaArrowRight />}>
+                      <span>Get Free Audit </span>
+                    </Button>
+                  </Link>
 
-                  <Link to="/contact"><Button variant="secondary">
-                    <span>Our Services</span>
-                  </Button></Link>
+                  <Link to="/contact">
+                    <Button variant="secondary">
+                      <span>Our Services</span>
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Reveal>

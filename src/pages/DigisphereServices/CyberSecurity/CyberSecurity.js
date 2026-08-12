@@ -407,7 +407,7 @@ const CyberSecurity = () => {
           tickIcon={tickIcon}
         />
       </section>
-      <div>
+      <div className="security-section">
         <FAQSection
           eyebrow="FAQ"
           title="Security questions answered."
@@ -415,6 +415,7 @@ const CyberSecurity = () => {
           linkText="Talk to our team."
           link="/contact"
           faqs={MarketingFaqData}
+          
         />
       </div>
       <BookingSection
