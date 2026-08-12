@@ -82,7 +82,8 @@
 .blogs-banner-title {
   font-size: 12px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.5;
+  letter-spacing: 1px;
   color: #FFFFFF;
 }
 

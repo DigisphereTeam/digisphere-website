@@ -1,10 +1,11 @@
 import React from "react";
-import { Briefcase, MapPin, Clock, ArrowRight } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { Briefcase, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import Reveal from "../../../../animations/Reveal";
-import { fadeUp} from "../../../../animations/variants";
+import { fadeUp } from "../../../../animations/variants";
 import "./CareersPositions.css";
-import  BookingSection from "../../../../components/BookingSection/BookingSection.js"
+import BookingSection from "../../../../components/BookingSection/BookingSection.js";
 import { FaArrowRight } from "react-icons/fa";
 
 const jobOpenings = [
@@ -57,10 +58,23 @@ const jobOpenings = [
     tags: ["B2B Sales", "CRM", "Proposal Writing", "Enterprise Accounts"],
   },
 ];
+
 const CareersPositions = () => {
+  const navigate = useNavigate();
+
+  const handleApply = (job) => {
+    navigate("/contact", {
+      state: {
+        jobTitle: job.title,
+        department: job.department,
+        type: "job_application",
+      },
+    });
+  };
+
   return (
     <>
-   <section className="career-openings-section py-5">
+      <section className="career-openings-section py-5">
         <div className="container">
           {/* Header */}
           <Reveal variant={fadeUp} delay={0.1}>
@@ -71,11 +85,13 @@ const CareersPositions = () => {
                 <p className="career-header-desc mt-2">
                   Don't see a perfect fit? Email us at{" "}
                   <a
-                    href="mailto:careers@digispheretech.in"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=careers@digispheretech.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="career-email-link"
                   >
                     careers@digispheretech.in
-                  </a>{" "}
+                  </a>
                   — we hire for talent, not just vacancies.
                 </p>
               </div>
@@ -141,6 +157,7 @@ const CareersPositions = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="career-apply-btn"
+                        onClick={() => handleApply(job)}
                       >
                         Apply Now <FaArrowRight size={14} className="ms-1" />
                       </motion.button>
@@ -153,15 +170,14 @@ const CareersPositions = () => {
         </div>
       </section>
 
-      {/* Bottom Call to Action Section with Scale/Zoom Reveal */}
-   
-        <BookingSection
-          title="Don't see your role listed?"
-          description="We're always looking for exceptional people. Send your portfolio and a note about how you'd contribute — we read every email."
-          buttonText="Send Open Application"
-          buttonLink="/contact"
-        />
-      </>
+      {/* Bottom Call to Action Section */}
+      <BookingSection
+        title="Don't see your role listed?"
+        description="We're always looking for exceptional people. Send your portfolio and a note about how you'd contribute — we read every email."
+        buttonText="Send Open Application"
+        buttonLink="/contact"
+      />
+    </>
   );
 };
 

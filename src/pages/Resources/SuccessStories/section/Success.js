@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react";
 import { motion } from "framer-motion";
-import "./Success.css"
+import { Link } from "react-router-dom";
+import "./Success.css";
 import { ArrowRight, Star, Quote } from "lucide-react";
-import  BookingSection from "../../../../components/BookingSection/BookingSection.js"
+import BookingSection from "../../../../components/BookingSection/BookingSection.js";
 const CASE_STUDIES = [
   {
     id: "endocare",
@@ -14,7 +15,8 @@ const CASE_STUDIES = [
     author: "Dr. Ramakrishna Rao",
     role: "Medical Director, Srinivasa Hospitals",
     location: "Vijayawada, AP",
-    avatar: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=150",
+    avatarText: "RR",
+    avatarColor: "#057DCD",
     rating: 5,
     before: "34% no-show rate, 4 hrs/day lost to phone bookings",
     after: "68% drop in no-shows, 2,400+ online bookings in month one",
@@ -35,7 +37,8 @@ const CASE_STUDIES = [
     author: "Arvind Sharma",
     role: "Managing Director, RealProp Ventures",
     location: "Hyderabad, TS",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150",
+    avatarText: "AS",
+    avatarColor: "#057DCD",
     rating: 5,
     before: "1.2% lead conversion, manual follow-up on spreadsheets",
     after: "3.8% conversion, ₹4.2Cr additional revenue attributed",
@@ -56,7 +59,8 @@ const CASE_STUDIES = [
     author: "Krishna Reddy",
     role: "Co-Founder & CEO, Skilledition EdTech",
     location: "Bangalore, KA",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150",
+    avatarText: "KR",
+    avatarColor: "#057DCD",
     rating: 5,
     before: "No product, pre-seed stage, manual tutoring operations",
     after: "MVP live, 94% beta retention, ₹1.2Cr seed round raised",
@@ -77,7 +81,8 @@ const CASE_STUDIES = [
     author: "Suresh Babu",
     role: "Operations Head, Coastal Logistics",
     location: "Visakhapatnam, AP",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150",
+    avatarText: "SB",
+    avatarColor: "#057DCD",
     rating: 5,
     before: "Zero real-time visibility, WhatsApp and Excel-based tracking",
     after: "31% fuel reduction, 99% on-time delivery improvement",
@@ -98,7 +103,8 @@ const CASE_STUDIES = [
     author: "CA Vikram Mehta",
     role: "Founder, Finvest Advisory",
     location: "Mumbai, MH",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150",
+    avatarText: "VM",
+    avatarColor: "#057DCD",
     rating: 5,
     before: "Failing annual cybersecurity audits, no client portal",
     after: "100% audit pass, 8 hrs/month reporting time saved per advisor",
@@ -119,7 +125,8 @@ const CASE_STUDIES = [
     author: "Arjun Gowda",
     role: "Managing Partner, Arjun Textiles",
     location: "Coimbatore, TN",
-    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=150",
+    avatarText: "AG",
+    avatarColor: "#057DCD",
     rating: 5,
     before: "Purely offline, no digital presence, manual orders",
     after: "₹28L online revenue in year one, 3x order volume",
@@ -134,14 +141,17 @@ const CASE_STUDIES = [
 const Success = () => {
   return (
     <>
- <section className="success-section py-5">
+     <section className="success-section py-5">
   <div className="container">
     {CASE_STUDIES.map((study) => {
       // Determine direction: Quote comes from left if study.quoteLeft is true, otherwise right
       const quoteFromLeft = study.quoteLeft;
 
       return (
-        <div key={study.id} className="row g-4 align-items-stretch mb-5 overflow-hidden">
+        <div
+          key={study.id}
+          className="row g-4 align-items-stretch mb-5 overflow-hidden"
+        >
           {/* Quote Column */}
           <motion.div
             initial={{ opacity: 0, x: quoteFromLeft ? -50 : 50 }}
@@ -158,13 +168,15 @@ const Success = () => {
 
               <div className="success-author-wrapper">
                 <div className="success-author-info">
-                  {study.avatar && (
-                    <img
-                      src={study.avatar}
-                      alt={study.author}
-                      className="success-author-avatar"
-                    />
-                  )}
+                  {/* Text Avatar Circle */}
+                  <div
+                    className="success-avatar-badge"
+                    style={{
+                      backgroundColor: study.avatarColor || "#057DCD",
+                    }}
+                  >
+                    {study.avatarText}
+                  </div>
                   <div>
                     <h4 className="success-author-name">{study.author}</h4>
                     <p className="success-author-role">{study.role}</p>
@@ -176,7 +188,12 @@ const Success = () => {
 
                 <div className="success-stars">
                   {Array.from({ length: study.rating }).map((_, i) => (
-                    <Star key={i} size={14} fill="#0072ce" color="#0072ce" />
+                    <Star
+                      key={i}
+                      size={14}
+                      fill="#0072ce"
+                      color="#0072ce"
+                    />
                   ))}
                 </div>
               </div>
@@ -222,8 +239,12 @@ const Success = () => {
                 {study.metrics.map((metric, idx) => (
                   <div key={idx} className="col-4">
                     <div className="success-metric-card h-100">
-                      <span className="success-metric-value">{metric.value}</span>
-                      <span className="success-metric-label">{metric.label}</span>
+                      <span className="success-metric-value">
+                        {metric.value}
+                      </span>
+                      <span className="success-metric-label">
+                        {metric.label}
+                      </span>
                     </div>
                   </div>
                 ))}
@@ -232,10 +253,12 @@ const Success = () => {
 
             {/* CTA Button */}
             <div>
-              <button className="success-cta-btn">
-                <span>Start a Similar Project</span>
-                <ArrowRight size={16} />
-              </button>
+              <Link to="/contact" style={{ textDecoration: "none" }}>
+                <button className="success-cta-btn">
+                  <span>Start a Similar Project</span>
+                  <ArrowRight size={16} />
+                </button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -243,14 +266,14 @@ const Success = () => {
     })}
   </div>
 </section>
-     <BookingSection
+      <BookingSection
         title="Be our next success story."
         description="Every story above started with a single conversation. Let's have ours."
         buttonText="Start a Conversation"
         buttonLink="/contact"
       />
-      </>
-  )
-}
+    </>
+  );
+};
 
-export default Success
+export default Success;

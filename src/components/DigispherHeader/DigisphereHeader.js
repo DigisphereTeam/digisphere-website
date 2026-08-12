@@ -6,6 +6,7 @@ import digilogo from "../../assets/digishperelogo.png";
 import AbouUs from "../../assets/Lead Generationicon.svg";
 import CaseStudies from "../../assets/Marketing ROI.svg";
 import pen from "../../assets/pen.svg";
+import Finopsicon from "../../assets/Finopsicon.svg";
 import Blog from "../../assets/resourcesdropdown/Blog.svg";
 import Careers from "../../assets/resourcesdropdown/Careers.svg";
 import Contact from "../../assets/resourcesdropdown/Contact.svg";
@@ -164,7 +165,7 @@ const DigisphereHeader = () => {
             icon: (
               <img
                 className="service-image"
-                src={CloudServices}
+                src={Finopsicon}
                 alt="CloudServices"
               />
             ),
