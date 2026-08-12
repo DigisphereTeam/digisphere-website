@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProjectSection.css";
+import { Link } from 'react-router-dom';
 import endocare from "../../../../assets/CaseStudies/endocare.svg";
 import SRSteelDoors from "../../../../assets/CaseStudies/SRSteelDoors.svg";
 import RealVentures from "../../../../assets/CaseStudies/RealVentures.svg";
@@ -206,9 +207,11 @@ const ProjectSection = () => {
                     ))}
                   </div>
                   {/* CTA Button */}
-                  <button className="btn btn-outline-secondary project-start-btn">
-                    Start a Similar Project <IoArrowForward />
-                  </button>
+                  <Link to="/contact">
+                    <button className="btn btn-outline-secondary project-start-btn">
+                      Start a Similar Project <IoArrowForward />
+                    </button>
+                  </Link>
                 </Reveal>
               </div>
             </div>
