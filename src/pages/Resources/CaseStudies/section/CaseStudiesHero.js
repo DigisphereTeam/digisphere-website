@@ -116,7 +116,7 @@ const CaseStudiesHero = () => {
   return (
     <section className="case-hero-section">
       <div className="container">
-        <div className="row align-items-center g-5 mb-5">
+        <div className="row align-items-center g-5 mb-1">
           {/* Left Column: Text Content */}
           <div className="col-lg-6">
             <Reveal variant={fadeLeft} delay={0.1}>

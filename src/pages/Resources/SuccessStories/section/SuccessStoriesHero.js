@@ -25,7 +25,7 @@ const TESTIMONIALS_DATA = [
     avatarColor: "#057DCD",
     quote:
       "Digisphere understood our clinical workflows before they touched the design. The patient p...",
-    author: "Dr. Ramakrishna Rao",
+    author: "Dr.T.Satish Chandra",
     company: "Endocare Hospitals",
     rating: 5,
   },
