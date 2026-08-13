@@ -139,10 +139,10 @@
   border-color: #e2e8f0;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.card-header title {
+.Home-card-header title {
   background-color: none;
 }
-.card-header {
+.Home-card-header {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -153,7 +153,7 @@
   padding: 0px 0px 10px !important;
   font-weight: 550;
 }
-.icon {
+.home-icon {
   padding: 0px;
 }
 .Digisphere-value {

@@ -12,7 +12,7 @@ const CASE_STUDIES = [
     title: "Endocare Hospitals",
     quote:
       "Digisphere understood our clinical workflows before they touched the design. The patient portal they built reduced our administrative burden dramatically — and patients love it.",
-    author: "Dr. Ramakrishna Rao",
+    author: "Dr.T.Satish Chandra",
     role: "Medical Director, Srinivasa Hospitals",
     location: "Vijayawada, AP",
     avatarText: "RR",

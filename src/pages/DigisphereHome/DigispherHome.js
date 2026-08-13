@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Container } from "react-bootstrap";
 import "./DigisphereHome.css";
+import { FaArrowRight } from "react-icons/fa";
 import { TiArrowUp } from "react-icons/ti";
-import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa6";
+import { motion } from "framer-motion"; 
 import Website from "../../assets/Website.svg";
 import Launchgrow from "../../assets/Launch & Grow.svg";
 import GenerationIcon from "../../assets/Lead Generationicon.svg";
@@ -542,9 +542,9 @@ const DigispherHome = () => {
                     delay={0.2}
                   >
                     <div className="card large-card" key={index}>
-                      <div className="card-header">
-                        <span className="icon">{card.icon}</span>
-                        <span className="title">{card.title}</span>
+                      <div className="Home-card-header">
+                        <span className="home-icon">{card.icon}</span>
+                        <span className="home-title">{card.title}</span>
                       </div>
 
                       <h2 className="Digisphere-value">
@@ -929,7 +929,7 @@ const DigispherHome = () => {
                     className="digisphere-business-needs-link"
                   >
                     Learn more
-                    <span>→</span>
+                    <span><FaArrowRight/></span>
                   </Link>
                 </div>
               </Reveal>
@@ -951,7 +951,7 @@ const DigispherHome = () => {
             More online enquiries within the first quarter.
           </p>
 
-          <Link className="digisphere-client-report__link">
+          <Link to="/contact "className="digisphere-client-report__link">
             How We Do It
             <span className="digisphere-client-report__arrow">
               <img src={howwedo} alt="Analytics" />

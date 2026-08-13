@@ -197,7 +197,7 @@ const CardsTechnology = () => {
                   </p>
 
                   {/* Read Link */}
-                  <Link to="#read" className="tech-read-link ">
+                  <Link to="/Resources/blogs" className="tech-read-link ">
                     Read Guide <span className="tech-arrow"><FaArrowRight /></span>
                   </Link>
                 </div>
