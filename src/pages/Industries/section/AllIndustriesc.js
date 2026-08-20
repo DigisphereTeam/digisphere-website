@@ -183,7 +183,7 @@ const AllIndustries = () => {
           <div className="row g-4">
             {industriesData.map((item, index) => (
               <div key={item.id} className="col-lg-4 col-md-6 col-12">
-                <Reveal variant={fadeUp} delay={0.15 + (index % 3) * 0.1}>
+                <Reveal variant={fadeUp} delay={0.15 + (index % 3) * 0.1} className="w-100 h-100">
                   <div className="industries-card">
                     {/* Top Row: Icon Image + Counter */}
                     <div className="industries-card-top">

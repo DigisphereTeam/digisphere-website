@@ -4,14 +4,33 @@
   margin-bottom: 40px;
 }
 
-.industries-badge {
-  display: block;
-  color: #057DCD;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+.industries-card {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.02),
+    0 1px 2px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.industries-card-cta {
+  margin-top: auto;
+  padding-top: 8px;
 }
 
 .industries-title {
@@ -23,18 +42,8 @@
   margin: 0;
 }
 
-/* Card Container */
-.industries-card {
-  height: 100%;
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
+
+
 
 .industries-card:hover {
   transform: translateY(-5px);
@@ -128,11 +137,6 @@
   margin-right: 8px;
 }
 
-/* CTA Link */
-.industries-card-cta {
-  margin-top: auto;
-  padding-top: 8px;
-}
 
 .industries-card-cta a {
   text-decoration: none;

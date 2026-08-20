@@ -17,14 +17,20 @@ const jobOpenings = [
     type: "Full-time",
     tags: ["React", "Node.js", "TypeScript", "PostgreSQL", "AWS"],
   },
-  {
-    title: "DevOps Engineer",
-    department: "Engineering",
-    location: "Hyderabad / Remote",
-    experience: "2–5 years",
-    type: "Full-time",
-    tags: ["Kubernetes", "Terraform", "AWS/GCP", "CI/CD", "Docker"],
-  },
+ {
+  title: "FinOps Sales Specialist",
+  department: "Sales",
+  location: "Hyderabad",
+  experience: "2–5 years",
+  type: "Full-time",
+  tags: [
+    "FinOps",
+    "Cloud Sales",
+    "Cost Optimization",
+    "B2B Sales",
+    "AWS/Azure/GCP"
+  ],
+},
   {
     title: "UI/UX Designer",
     department: "Design",
@@ -42,14 +48,6 @@ const jobOpenings = [
     tags: ["Google Ads", "Meta Ads", "SEO", "Analytics", "Content Strategy"],
   },
   {
-    title: "Cybersecurity Analyst",
-    department: "Security",
-    location: "Hyderabad",
-    experience: "2–4 years",
-    type: "Full-time",
-    tags: ["VAPT", "Network Security", "SIEM", "Compliance", "Python"],
-  },
-  {
     title: "Business Development Executive",
     department: "Sales",
     location: "Vijayawada / Hyderabad",
@@ -60,16 +58,11 @@ const jobOpenings = [
 ];
 
 const CareersPositions = () => {
-  const navigate = useNavigate();
+ const navigate = useNavigate(); // 2. Initialize navigate
 
+  // 3. Update handleApply to pass state
   const handleApply = (job) => {
-    navigate("/contact", {
-      state: {
-        jobTitle: job.title,
-        department: job.department,
-        type: "job_application",
-      },
-    });
+    navigate("/applying", { state: { job } });
   };
 
   return (
