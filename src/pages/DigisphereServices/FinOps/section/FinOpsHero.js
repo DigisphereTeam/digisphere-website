@@ -26,49 +26,50 @@ const FinOpsHero = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const services = [
+ const services = [
     {
       name: "EC2",
-      target: 1.19,
-      decimals: 2,
-      prefix: "₹",
-      suffix: "L",
+      target: 14.2,
+      decimals: 1,
+      prefix: "$",
+      suffix: "K",
       percentage: 65,
     },
     {
       name: "RDS",
-      target: 68100,
+      target: 8100,
       decimals: 0,
-      prefix: "₹",
-      suffix: "",
+      prefix: "$",
+      suffix: "k",
       highlight: true,
       percentage: 40,
     },
     {
       name: "S3",
-      target: 42500,
+      target: 5100,
       decimals: 0,
-      prefix: "₹",
-      suffix: "",
+      prefix: "$",
+      suffix: "k",
       percentage: 25,
     },
     {
       name: "Lambda",
-      target: 31200,
+      target: 3700,
       decimals: 0,
-      prefix: "₹",
-      suffix: "",
+      prefix: "$",
+      suffix: "k",
       percentage: 18,
     },
     {
       name: "CloudFront",
-      target: 22700,
+      target: 2700,
       decimals: 0,
-      prefix: "₹",
-      suffix: "",
+      prefix: "$",
+      suffix: "k",
       percentage: 12,
     },
   ];
+
   const marketingStats = [
     {
       end: 34,
@@ -77,13 +78,13 @@ const FinOpsHero = () => {
     },
     {
       end: 14,
-      suffix: "days",
+      suffix: " days",
       label: "Median time to first measurable savings",
     },
     {
-      prefix: "₹",
-      end: 2.4,
-      suffix: "cr",
+      prefix: "$",
+      end: 3.2,
+      suffix: "M+",
       label: "Total client cloud savings delivered",
     },
     {
@@ -177,12 +178,12 @@ const FinOpsHero = () => {
                     end={animate ? 2.7 : 0}
                     duration={1.5}
                     decimals={1}
-                    prefix="₹"
-                    suffix="L"
+                    prefix="$"
+                    suffix="k"
                   />
                 </h3>
                 <span className="finops-metric-sub">
-                  Before optimisation: ₹2.85L
+                  Before optimisation: $2.85k
                 </span>
               </div>
 
@@ -196,8 +197,9 @@ const FinOpsHero = () => {
                     end={animate ? 97200 : 0}
                     duration={1.5}
                     decimals={0}
-                    prefix="₹"
+                    prefix="$"
                     separator=","
+                    suffix="k"
                   />
                 </h3>
                 <span className="finops-savings-sub">
@@ -259,7 +261,7 @@ const FinOpsHero = () => {
                   Spend Anomaly Detected
                 </h6>
                 <span className="finops-alert-text">
-                  EC2 eu-west-1 spiked 340% vs 7-day avg · ₹18,400 above
+                  EC2 eu-west-1 spiked 340% vs 7-day avg · $18,400k above
                   baseline
                 </span>
               </div>
@@ -268,7 +270,6 @@ const FinOpsHero = () => {
           </div>
         </Reveal>
 
-        {/* 3. Bottom Stat Cards (Fade Up) */}
         <Reveal variant={fadeUp} delay={0.4}>
           <div className="finops-bottom-grid">
             <div className="finops-stat-card">

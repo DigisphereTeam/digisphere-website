@@ -7,6 +7,7 @@ import Engineering from "../../../../assets/Careers/Engineering.svg";
 import DevOpsLead from "../../../../assets/Careers/DevOpsLead.svg";
 import Cybersecurity from "../../../../assets/Careers/Cybersecurity (4).svg";
 import Marketing from "../../../../assets/Careers/Marketing (2).svg";
+import Finopsicon from "../../../../assets/Finopsicon.svg";
 import {
   LuCode,
   LuLayers,
@@ -26,11 +27,17 @@ const positions = [
   },
   {
     id: 2,
-    avatarText: "KR",
+    avatarText: "FS",
     avatarColor: "#0591E8",
-    title: "DevOps Lead",
-    category: "Infrastructure",
-    icon: <img src={DevOpsLead} alt="" className="careers-badge-icon" />,
+    title: "FinOps Sales",
+    category: "Sales",
+    icon: (
+      <img
+        src={Finopsicon}
+        alt="FinOps Sales"
+        className="careers-badge-icon"
+      />
+    ),
   },
   {
     id: 3,
@@ -47,14 +54,6 @@ const positions = [
     title: "Full Stack Dev",
     category: "Engineering",
     icon: <img src={Engineering} alt="" className="careers-badge-icon" />,
-  },
-  {
-    id: 5,
-    avatarText: "SA",
-    avatarColor: "#0591E8",
-    title: "Security Analyst",
-    category: "Cybersecurity",
-    icon: <img src={Cybersecurity} alt="" className="careers-badge-icon" />,
   },
   {
     id: 6,

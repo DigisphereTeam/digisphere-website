@@ -53,6 +53,7 @@ import logo8 from "../../assets/logo9-removebg-preview.png";
 import logo9 from "../../assets/logo10-removebg-preview.png";
 import logo10 from "../../assets/logo11-removebg-preview.png";
 import logo11 from "../../assets/logo12-removebg-preview - Copy.png";
+import logo12 from "../../assets/Logo14.png";
 
 import Reveal from "../../animations/Reveal";
 import { fadeLeft, fadeRight, fadeUp } from "../../animations/variants";
@@ -190,6 +191,7 @@ const DigispherHome = () => {
     logo9,
     logo10,
     logo11,
+    logo12,
   ];
   const topCards = [
     {

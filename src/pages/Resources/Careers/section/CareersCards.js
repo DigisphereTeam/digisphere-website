@@ -51,45 +51,72 @@ const benefitsData = [
 const CareersCards = () => {
   return (
     <>
-  <section className="career-why-section py-5">
-      <div className="container">
-        {/* Header */}
-        <Reveal variant={fadeUp} delay={0.1}>
-          <div className="row mb-4">
-            <div className="col-12">
-              <span className="career-section-subtitle">WHY DIGISPHERE</span>
-              <h2 className="career-section-title mt-2">
-                We take care of the people who take{" "}
-                <br className="d-none d-md-inline" />
-                care of our clients.
-              </h2>
-            </div>
-          </div>
-        </Reveal>
+<section className="career-why-section py-5">
+  <div className="container">
 
-        {/* Bootstrap Grid with career- prefixed cards */}
-        <div className="row g-4">
-          {benefitsData.map((benefit, index) => {
-            const IconComponent = benefit.icon;
-            return (
-              <div key={index} className="col-lg-4 col-md-6 col-12">
-                <Reveal variant={fadeUp} delay={0.2 + index * 0.1}>
-                  <div className="career-benefit-card h-100 p-4">
-                    <div className="career-icon-wrapper mb-3">
-                      <IconComponent className="career-card-icon" size={20} />
-                    </div>
-                    <h3 className="career-card-title h5">{benefit.title}</h3>
-                    <p className="career-card-description mb-0">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </Reveal>
-              </div>
-            );
-          })}
+    {/* Header */}
+    <Reveal variant={fadeUp} delay={0.1}>
+      <div className="row mb-4">
+        <div className="col-12">
+          <span className="career-section-subtitle">
+            WHY DIGISPHERE
+          </span>
+
+          <h2 className="career-section-title mt-2">
+            We take care of the people who take{" "}
+            <br className="d-none d-md-inline" />
+            care of our clients.
+          </h2>
         </div>
       </div>
-    </section>
+    </Reveal>
+
+    {/* Benefits Cards */}
+    <div className="row g-4">
+      {benefitsData.map((benefit, index) => {
+        const IconComponent = benefit.icon;
+
+        return (
+          <div
+            key={index}
+            className="col-lg-4 col-md-6 col-12 d-flex"
+          >
+            <div className="w-100 d-flex">
+              <Reveal
+                variant={fadeUp}
+                delay={0.2 + index * 0.1}
+                className="w-100"
+              >
+                <div className="career-benefit-card h-100 p-4">
+                  
+                  {/* Icon */}
+                  <div className="career-icon-wrapper mb-3">
+                    <IconComponent
+                      className="career-card-icon"
+                      size={20}
+                    />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="career-card-title h5">
+                    {benefit.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="career-card-description mb-0">
+                    {benefit.description}
+                  </p>
+
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
     </>
   )
 }

@@ -284,10 +284,12 @@ const DigisphereHeader = () => {
             title: "FAQs",
             desc: "Answers to common questions.",
             icon: <img className="service-image" src={FAQs} alt="FAQs" />,
+            path: "/Resources/faqspage",
           },
           {
             title: "Help Center",
             desc: "Support resources and docs.",
+            path:"/Resources/helpcenter",
             icon: (
               <img
                 className="service-image"
@@ -506,11 +508,12 @@ const DigisphereHeader = () => {
                   {/* Featured Callout Card inside Resources */}
                   <div className="col-lg-3">
                     <div className="Build-service-card">
-                      <h3>Free Digital Audit</h3>
+                      <h3>Free Cloud Audit</h3>
 
                       <p>
-                        30-minute consultation to review your digital setup and
-                        identify your biggest growth opportunities.
+                        30-minute consultation to review your cloud
+                        infrastructure, optimize architecture, and identify key
+                        performance and cost opportunities.
                       </p>
 
                       <div className="stats">

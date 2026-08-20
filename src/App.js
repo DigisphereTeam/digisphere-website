@@ -26,6 +26,9 @@ import SuccessStoriesHero from "./pages/Resources/SuccessStories/section/Success
 import SuccessStories from "./pages/Resources/SuccessStories/SuccessStories.js";
 import HowWeWork from "./pages/Resources/HowWeWork/HowWeWork.js";
 import FinOps from "./pages/DigisphereServices/FinOps/FinOps.js";
+import Applying from "./pages/Applying/Applying.js";
+import Faqspage from "./pages/Faqspage/Faqspage.js";
+import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -140,6 +143,9 @@ const App = () => {
         <Route path="/Resources/successstories" element={<SuccessStories/>} />
         <Route path="/Resources/howwework" element={<HowWeWork/>} />
          <Route path="/services/finops" element={<FinOps/>} />
+         <Route path="/applying" element={<Applying/>} />
+         <Route path="/Resources/faqspage" element={<Faqspage/>} />
+           <Route path="/Resources/helpcenter" element={<HelpCenter/>} />
       </Routes>
 
       <DigisphereFooter />
