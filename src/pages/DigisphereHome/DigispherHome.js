@@ -3,7 +3,8 @@ import { Container } from "react-bootstrap";
 import "./DigisphereHome.css";
 import { FaArrowRight } from "react-icons/fa";
 import { TiArrowUp } from "react-icons/ti";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
+import { MdHub } from "react-icons/md";
 import Website from "../../assets/Website.svg";
 import Launchgrow from "../../assets/Launch & Grow.svg";
 import GenerationIcon from "../../assets/Lead Generationicon.svg";
@@ -12,11 +13,13 @@ import Infrastructure from "../../assets/Cloud Infrastructure.svg";
 import Securitye from "../../assets/Security.svg";
 import Performance from "../../assets/Performance.svg";
 import DevOps from "../../assets/DevOps.svg";
-import analyticsIcon from "../../assets/Website AnalyticsIcon.svg";
 import manual from "../../assets/manual.svg";
-import infrastructure from "../../assets/infrastructure.svg";
 import Growth from "../../assets/Growth.svg";
+import Finopsicon from "../../assets/finopsicon2.svg";
+import infrastructure from "../../assets/infrastructure.svg";
+import analyticsIcon from "../../assets/Website AnalyticsIcon.svg";
 import Design from "../../assets/Website Design.svg";
+import whydigi from "../../assets/whysphere.svg";
 import Development from "../../assets/Web Development.svg";
 import SEO from "../../assets/SEO.svg";
 import Google from "../../assets/Google Ads.svg";
@@ -62,7 +65,6 @@ import { useInView } from "framer-motion";
 import ProcessCards from "../../components/ProcessCards/ProcessCards";
 import Button from "../../components/Button/Button";
 import { IoChatbubbleOutline } from "react-icons/io5";
-
 
 const CountUp = ({ end, suffix = "", duration = 2000, startAnimation }) => {
   const [count, setCount] = useState(0);
@@ -162,6 +164,33 @@ const AnimatedCounter = ({
     </span>
   );
 };
+const topCardsData = [
+  {
+    id: "free-always",
+    type: "left",
+    iconClass: "bi-infinity",
+    title: "Free, Always",
+    description:
+      "Experience zero-cost FinOps. Our core visibility and reporting engine is completely free forever, giving you immediate control without the procurement friction.",
+  },
+  {
+    id: "ai-rate-opt",
+    type: "center",
+    iconClass: "bi-cpu",
+    title: "AI Rate Optimization",
+    description:
+      "Dynamically adjust commitments and leverage spot instances with AI precision. Customers average over 30% savings without altering a single line of architecture.",
+    showChart: true,
+  },
+  {
+    id: "usage-intel",
+    type: "right",
+    iconClass: "bi-bar-chart-line",
+    title: "Usage Intelligence",
+    description:
+      "Continuous background analysis identifies orphaned resources and over-provisioned infrastructure in real time, turning complex telemetry into simple actions.",
+  },
+];
 
 const DigispherHome = () => {
   const tasks = [
@@ -257,21 +286,16 @@ const DigispherHome = () => {
       icon: <img src={Infrastructure} alt="Analytics" />,
       name: "Cloud Services",
     },
-     { icon: <img src={DevOps} alt="Analytics" />, name: "DevOps" },
-       { icon: <img src={Managed} alt="Analytics" />, name: "Managed IT" },
-       { icon: <img src={Monitoring} alt="Analytics" />, name: "Monitoring" },
-{
+    { icon: <img src={Finopsicon} alt="Analytics" />, name: "Finops" },
+    { icon: <img src={DevOps} alt="Analytics" />, name: "DevOps" },
+    { icon: <img src={Managed} alt="Analytics" />, name: "Managed IT" },
+    { icon: <img src={Monitoring} alt="Analytics" />, name: "Monitoring" },
+    {
       icon: <img src={Cybersecurity} alt="Analytics" />,
       name: "Cybersecurity",
     },
     { icon: <img src={SEO} alt="Analytics" />, name: "SEO" },
-    { icon: <img src={Google} alt="Analytics" />, name: "Google Ads" },
-    { icon: <img src={Meta} alt="Analytics" />, name: "Meta Ads" },
-
- 
-  
-   
-    
+    { icon: <img src={Google} alt="Analytics" />, name: "Google Ads,Meta Ads" },
   ];
   const beforeItems = [
     {
@@ -354,6 +378,29 @@ const DigispherHome = () => {
       description: "Enterprise-grade security and compliance frameworks",
       highlight: "Zero security incidents",
       path: "/services/cyber-security",
+    },
+  ];
+  const timelineStepsData = [
+    {
+      stepNumber: "01",
+      title: "Spend Visibility & Monitoring",
+      description:
+        "Establish an infallible single source of truth. We ingest massive streams of billing telemetry and translate them into intuitive, role-based dashboards that pinpoint exact cost centers in real-time.",
+      tags: ["Real-time alerts", "Custom dashboards", "Cost allocation"],
+    },
+    {
+      stepNumber: "02",
+      title: "AI Rate Optimization",
+      description:
+        "Our automated commitment engine acts as a high-frequency trading bot for cloud rates. We seamlessly buy, sell, and restructure Reserved Instances and Savings Plans to guarantee maximum coverage risk-free.",
+      tags: ["No engineering required", "100% automated", "Guaranteed ROI"],
+    },
+    {
+      stepNumber: "03",
+      title: "Continuous Usage Optimization",
+      description:
+        "Root out structural waste. We perform granular performance profiling on every instance to surface actionable right-sizing recommendations, terminate zombie assets, and shift workloads efficiently.",
+      tags: ["Right-sizing", "Zombie discovery", "Workload shifting"],
     },
   ];
   const steps = [
@@ -484,92 +531,261 @@ const DigispherHome = () => {
 
   return (
     <div className="digisphere-page-container">
-      <section className="Digisphere-section">
+      <section className="section mt-5">
         <div className="container">
-          <div className="row mt-5">
-            <div className="col-lg-6 Digisphere-left">
-              <Reveal variant={fadeRight} delay={0.1}>
-                <p class="Digisphere-badge">
-                  Technology that works for your business
-                </p>
-                <h1 className="digisphere-hero-title">
-                  Technology that
-                  <br />
-                  <span className="digisphere-hero-secondtitle">
-                    grows your business.
+          <div className="row">
+            <div className="home-wrapper">
+              {/* TOP CARDS SECTION */}
+              <div className="home-top-section text-center ">
+                <div className="container py-4">
+                  {/* Badge */}
+                  <span className=" home-top-badge px-3 py-2 mb-3">
+                    <i>
+                      <img className="Why-Digisphere" src={whydigi} />
+                    </i>{" "}
+                    Why Digisphere
                   </span>
-                </h1>
 
-                <p className="digisphere-hero-desc">
-                  We design and build the websites, applications, and marketing
-                  systems that bring in customers and keep them. Then we make
-                  sure the infrastructure behind them is fast, secure, and ready
-                  to scale.
-                </p>
+                  {/* Heading & Subtitle */}
+                  <h1 className="home-main-title fw-bold mb-3">
+                    Why Choose
+                    <span className="cloud-numericals"> Cloud Numericals?</span>
+                  </h1>
+                  <p className="home-main-subtitle text-secondary mx-auto">
+                    Stop guessing with your cloud spend. Our intelligent
+                    platform aligns FinOps best practices with autonomous AI to
+                    continuously eliminate waste without disrupting performance.
+                  </p>
 
-                <div class="digisphere-hero-buttons">
-                  <Link to="/contact">
-                    <Button icon={<FaArrowRight />}>
-                      Start Free Digital Audit
-                    </Button>
-                  </Link>
-                  <Link to="/contact">
-                    <Button variant="secondary">See Our Work</Button>
-                  </Link>
+                  {/* Feature Cards Grid */}
+                  <div className="card-section-wrapper">
+                    <div className="container py-5">
+                      <div className="row g-5 align-items-center justify-content-center">
+                        {/* Left Card */}
+                        <div className="col-lg-4 col-md-6">
+                          <div className="card custom-card card-left border-0 p-4">
+                            <div className="icon-box icon-box-white mb-4">
+                              <i className="bi bi-infinity free-always fs-4"></i>
+                            </div>
+                            <h4 className="fw-bold text-dark mb-3 free-always">
+                              Free, Always
+                            </h4>
+                            <p className=" card-description ">
+                              Experience zero-cost FinOps. Our core visibility
+                              and reporting engine is completely free forever,
+                              giving you immediate control without the
+                              procurement friction.
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Middle Card */}
+                        <div className="col-lg-4 col-md-6">
+                          <div className="card custom-card card-center border-0 overflow-hidden">
+                            <div className="p-4 pb-0">
+                              <div className="icon-box icon-box-blue mb-4">
+                                <i className="bi bi-cpu text-white fs-4"></i>
+                              </div>
+                              <h4 className="mb-3 Ai-rate-0ptimization">
+                                AI Rate Optimization
+                              </h4>
+                              <p className=" card-description">
+                                Dynamically adjust commitments and leverage spot
+                                instances with AI precision. Customers average
+                                over 30% savings without altering a single line
+                                of architecture.
+                              </p>
+                            </div>
+
+                            {/* Matching Wave SVG */}
+                            <div className="chart-container mt-2">
+                              <svg
+                                viewBox="0 0 500 150"
+                                className="w-100 d-block"
+                                preserveAspectRatio="none"
+                              >
+                                <defs>
+                                  <linearGradient
+                                    id="waveGradient"
+                                    x1="0"
+                                    y1="0"
+                                    x2="0"
+                                    y2="1"
+                                  >
+                                    <stop
+                                      offset="0%"
+                                      stopColor="#2563eb"
+                                      stopOpacity="0.35"
+                                    />
+                                    <stop
+                                      offset="100%"
+                                      stopColor="#2563eb"
+                                      stopOpacity="0.0"
+                                    />
+                                  </linearGradient>
+                                </defs>
+                                {/* Fill */}
+                                <path
+                                  d="M 0 115 C 60 115, 100 110, 150 110 C 200 110, 220 75, 275 75 C 330 75, 360 120, 400 120 C 440 120, 470 50, 500 50 L 500 150 L 0 150 Z"
+                                  fill="url(#waveGradient)"
+                                />
+                                {/* Smooth Curve Line */}
+                                <path
+                                  d="M 0 115 C 60 115, 100 110, 150 110 C 200 110, 220 75, 275 75 C 330 75, 360 120, 400 120 C 440 120, 470 50, 500 50"
+                                  fill="none"
+                                  stroke="#1d4ed8"
+                                  strokeWidth="6"
+                                  strokeLinecap="round"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Right Card */}
+                        <div className="col-lg-4 col-md-6">
+                          <div className="card custom-card card-right border-0 p-4">
+                            <div className="icon-box icon-box-white mb-4">
+                              <i className="bi bi-bar-chart-line free-always fs-4"></i>
+                            </div>
+                            <h4 className="fw-bold text-dark mb-3 Usage-intelligence ">
+                              Usage Intelligence
+                            </h4>
+                            <p className="card-description">
+                              Continuous background analysis identifies orphaned
+                              resources and over-provisioned infrastructure in
+                              real time, turning complex telemetry into simple
+                              actions.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="digiphere-stats py-3">
-                  <div className="digisphere-Projects-Delivered">
-                    <h6>336+</h6>
-                    <p>Projects Delivered</p>
-                  </div>
+              </div>
 
-                  <div className="digisphere-Clients">
-                    <h6>316+</h6>
-                    <p>Clients</p>
-                  </div>
-
-                  <div className="digisphere-growing">
-                    <p>Growing Nationwide</p>
-                  </div>
-                </div>
-              </Reveal>
-            </div>
-            <div className="col-lg-6 digisphere-right">
-              <div className="top-grid">
-                {topCards.map((card, index) => (
-                  <Reveal
-                    variant={
-                      index === 0 ? fadeLeft : index === 1 ? fadeRight : fadeUp
-                    }
-                    delay={0.2}
-                  >
-                    <div className="card large-card" key={index}>
-                      <div className="Home-card-header">
-                        <span className="home-icon">{card.icon}</span>
-                        <span className="home-title">{card.title}</span>
+              {/* TIMELINE SECTION */}
+              <div className="home-timeline-section py-5">
+                <div className="container">
+                  <div className="row align-items-center position-relative">
+                    {/* Left Column */}
+                    <div className="col-lg-5 mb-5 mb-lg-0 home-sticky-top">
+                      {/* Category Tag with Dot */}
+                      <div className="d-inline-flex align-items-center mb-3">
+                        <span className="home-dot text-primary me-2 fs-6">
+                          ●
+                        </span>
+                        <span className="What-We-Deliver tracking-wider text-uppercase fw-bold text-primary small p-0">
+                          What We Deliver
+                        </span>
                       </div>
 
-                      <h2 className="Digisphere-value">
-                        <AnimatedCounter
-                          end={card.end}
-                          prefix={card.prefix}
-                          suffix={card.suffix}
-                        />
+                      {/* Main Heading with Blue Underline Accent */}
+                      <h2 className="display-6 Complete-visibility fw-bold text-dark mb-4 lh-sm">
+                        Complete Visibility.
+                        <br />
+                         <span className="Smarter-control">Smarter Control.</span>
+                        <br />
+                        <span className="Smarter-control">
+                          Optimized Spend.
+                        </span>
                       </h2>
 
-                      <span className="Digisphere-label">{card.label}</span>
+                      {/* Description Text */}
+                      <p className="Optimized-spend text-secondary mb-4 fs-5 fw-normal pe-lg-4">
+                        A cohesive three-pillar strategy that transforms your
+                        cloud billing data into a competitive advantage.
+                      </p>
                     </div>
-                  </Reveal>
-                ))}
-              </div>
-              <div className="bottom-grid">
-                {bottomCards.map((card, index) => (
-                  <div className="card digi-small-card" key={index}>
-                    <div className="digi-icon center">{card.icon}</div>
-                    <span className="digi-small-title">{card.title}</span>
-                    <h3>{card.value}</h3>
+
+                    {/* Right Vertical Timeline Column */}
+                    <div className="col-lg-7 position-relative">
+                      {/* Vertical Line */}
+                      <div className="home-timeline-line"></div>
+
+                      {/* Step 01 */}
+                      <div className="home-timeline-step position-relative mb-4">
+                        <div className="home-step-number">01</div>
+                        <div className="card home-timeline-card p-4 border-0 shadow-sm">
+                          <h5 className="fw-bold mb-2">
+                            Spend Visibility & Monitoring
+                          </h5>
+                          <p className="text-muted small mb-3">
+                            Establish an infallible single source of truth. We
+                            ingest massive streams of billing telemetry and
+                            translate them into intuitive, role-based dashboards
+                            that pinpoint exact cost centers in real-time.
+                          </p>
+                          <div className="d-flex flex-wrap gap-2">
+                            <span className=" home-tag-badge">
+                              Real-time alerts
+                            </span>
+                            <span className=" home-tag-badge">
+                              Custom dashboards
+                            </span>
+                            <span className=" home-tag-badge">
+                              Cost allocation
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Step 02 */}
+                      <div className="home-timeline-step position-relative mb-4">
+                        <div className="home-step-number">02</div>
+                        <div className="card home-timeline-card p-4 border-0 shadow-sm">
+                          <h5 className="fw-bold mb-2">AI Rate Optimization</h5>
+                          <p className="text-muted small mb-3">
+                            Our automated commitment engine acts as a
+                            high-frequency trading bot for cloud rates. We
+                            seamlessly buy, sell, and restructure Reserved
+                            Instances and Savings Plans to guarantee maximum
+                            coverage risk-free.
+                          </p>
+                          <div className="d-flex flex-wrap gap-2">
+                            <span className=" home-tag-badge">
+                              No engineering required
+                            </span>
+                            <span className=" home-tag-badge">
+                              100% automated
+                            </span>
+                            <span className=" home-tag-badge">
+                              Guaranteed ROI
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Step 03 */}
+                      <div className="home-timeline-step position-relative">
+                        <div className="home-step-number">03</div>
+                        <div className="card home-timeline-card p-4 border-0 shadow-sm">
+                          <h5 className="fw-bold mb-2">
+                            Continuous Usage Optimization
+                          </h5>
+                          <p className="text-muted small mb-3">
+                            Root out structural waste. We perform granular
+                            performance profiling on every instance to surface
+                            actionable right-sizing recommendations, terminate
+                            zombie assets, and shift workloads efficiently.
+                          </p>
+                          <div className="d-flex flex-wrap gap-2">
+                            <span className=" home-tag-badge">
+                              Right-sizing
+                            </span>
+                            <span className=" home-tag-badge">
+                              Zombie discovery
+                            </span>
+                            <span className=" home-tag-badge">
+                              Workload shifting
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>
@@ -607,7 +823,7 @@ const DigispherHome = () => {
       <section className="section mt-5">
         <div className="container">
           <div className="row">
-            <div className="digisphere-dusinesses-growth">
+             <div className="digisphere-dusinesses-growth">
               <Reveal variant={fadeUp} delay={0.12}>
                 <h3 className="digisphere-growth-title">
                   Most businesses don't have a technology problem.
@@ -800,10 +1016,11 @@ const DigispherHome = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
       </section>
+
       <section className="digisphere-ecosystem-section">
         <div className="container">
           <Reveal variant={fadeRight}>
@@ -931,7 +1148,9 @@ const DigispherHome = () => {
                     className="digisphere-business-needs-link"
                   >
                     Learn more
-                    <span><FaArrowRight/></span>
+                    <span>
+                      <FaArrowRight />
+                    </span>
                   </Link>
                 </div>
               </Reveal>
@@ -953,7 +1172,7 @@ const DigispherHome = () => {
             More online enquiries within the first quarter.
           </p>
 
-          <Link to="/contact "className="digisphere-client-report__link">
+          <Link to="/contact " className="digisphere-client-report__link">
             How We Do It
             <span className="digisphere-client-report__arrow">
               <img src={howwedo} alt="Analytics" />
@@ -1172,7 +1391,11 @@ const DigispherHome = () => {
             <Link to="/contact">
               <Button icon={<FaArrowRight />}>Book Your Free Audit</Button>
             </Link>
-            <Link to="/contact">
+            <Link
+              to="https://wa.me/918143879627"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 icon={<IoChatbubbleOutline />}

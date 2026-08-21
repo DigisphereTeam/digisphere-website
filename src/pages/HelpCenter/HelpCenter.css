@@ -192,14 +192,10 @@
   }
 }
 
-/* Bottom Banner */
-/* Outer Container */
-/* Container Wrapper for Content Alignment */
-.help-bannerContainer {
+
+.help-banner-still {
   width: 100%;
-  max-width: 1200px; /* Standard container width matching typical page margins */
-  margin: 0 auto;
-  padding: 0 20px; /* Prevents edge touching on small screens */
+  
 }
 
 /* Updated Banner Styling */

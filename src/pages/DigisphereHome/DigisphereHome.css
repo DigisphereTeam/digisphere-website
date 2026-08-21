@@ -21,7 +21,7 @@
 }
 .digisphere-hero-title {
   font-weight: 600;
-  font-size: 46px;
+  font-size: 40px;
 }
 .digisphere-hero-secondtitle {
   font-weight: 700;
@@ -848,6 +848,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+}
+.free-always {
+  color: #057dcd;
 }
 
 .digisphere-process__card {
@@ -2137,5 +2140,380 @@
 
   .progress-content p {
     font-size: 11px;
+  }
+}
+/* New css */
+
+.free-always{
+  text-align: start;
+}
+.Usage-intelligence{
+  text-align: start;
+}
+.home-top-badge {
+  background-color: #e8edff;
+  color:#057dcd;
+  font-weight: 500;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.home-main-title {
+  font-size: 40px;
+  color:#0f172a;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.home-main-subtitle {
+  max-width: 550px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight:400 ;
+}
+.cloud-numericals{
+  color: #057dcd;
+  letter-spacing: 1px;
+}
+
+/* CardSection.css */
+
+/* Background wrapper with radial glow matching the image */
+.card-section-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Base Card Styles */
+.custom-card {
+  background: #f5f7fa !important;
+  backdrop-filter: blur(10px);
+  border-radius: 28px !important;
+  box-shadow: 1px solid #EDEDF9 ;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 40px 0px #00000008;
+  border:2px solid #edf2f7 ;
+
+}
+
+/* Left Card rotation & positioning */
+.card-left {
+  transform: rotate(-6deg) translateY(15px);
+  z-index: 1;
+  border:2px solid #edf2f7 ;
+
+}
+
+/* Middle elevated card */
+.card-center {
+  background: rgba(240, 243, 252, 0.95);
+  transform: translateY(-10px);
+  z-index: 3;
+}
+
+/* Right Card rotation & positioning */
+.card-right {
+  transform: rotate(6deg) translateY(15px);
+  z-index: 1;
+    border:2px solid #edf2f7 ;
+}
+.What-We-Deliver{
+  color: #0574be;
+  font-size: 14px;
+  font-weight: 500;
+}
+.Optimized-spend{
+  font-size: 16px;
+  font-weight: 500;
+}
+/* Icon Containers */
+.icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box-white {
+  background: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.icon-box-blue {
+  background: #057dcd;
+  box-shadow: 0 8px 20px rgba(29, 78, 216, 0.3);
+}
+
+/* Typography Details */
+.card-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #556070 !important;
+  text-align: start;
+}
+.Ai-rate-0ptimization{
+  text-align: start;
+  font-size: 20px;
+  font-weight: 600;
+  color:#0f172a ;
+}
+
+.chart-container {
+  width: 100%;
+  margin-bottom: -2px; /* Remove baseline gap */
+}
+
+/* Timeline Layout */
+.home-timeline-section {
+  border-top: 1px solid #e2e8f0;
+  background-color: #ffffff;
+}
+
+.home-sticky-top {
+  align-self: flex-start;
+  position: sticky;
+  top: 100px;
+}
+
+.home-dot {
+  font-size: 0.6rem;
+  vertical-align: middle;
+}
+
+.home-timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 14px;
+  width: 3px;
+  background-color: #E7E7F3;
+}
+
+.home-timeline-step {
+  padding-left: 60px;
+}
+
+.home-step-number {
+  position: absolute;
+  left: -18px;
+  top: 15px;
+  font-size: 48px;
+  font-weight: 900;
+  color: #E7E7F3;
+  line-height: 1;
+  z-index: 1;
+  padding-right: 10px;
+}
+
+.home-timeline-card {
+  background-color:#FAF8FF !important;
+  border-radius: 24px;
+  transition: all 0.3s ease;
+}
+.Smarter-control{
+  color:#057dcd;
+}
+.Complete-visibility{
+  font-size: 36px !important;
+  font-weight: 700 !important;
+}
+.buttom-bar{
+   height: '4px';
+    border-radius: '10px';
+    margin-top:'100px'; 
+    background-color:'#B4C5FF';
+}
+/* Add to your CSS file for exact sticky positioning */
+.home-sticky-top {
+  position: sticky;
+  top: 100px;
+}
+
+.tracking-wider {
+  letter-spacing: 0.08em;
+}
+.home-timeline-card:hover {
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+.Why-Digisphere{
+   width: 15px;
+  height: 15px; 
+  color: #057dcd !important;
+}
+.see-platform{
+  background: #057dcd;
+  color: #fff;
+}
+.home-tag-badge {
+  background-color:#EDEDF9;
+  color: #64748b;
+  font-weight: 500;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+}
+
+/* Responsive adjust */
+@media (max-width: 991px) {
+  .home-card-left, 
+  .home-card-right {
+    transform: none;
+  }
+  .home-timeline-line {
+    left: 20px;
+  }
+  .home-timeline-step {
+    padding-left: 80px;
+  }
+  .home-step-number {
+    left: 0;
+  }
+  .home-sticky-top {
+    position: relative;
+    top: 0;
+  }
+}
+@media (max-width: 992px) {
+  /* Layout Adjustments */
+  .card-section-wrapper {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  /* Reset Card Rotations & Elevations */
+  .card-left,
+  .card-center,
+  .card-right {
+    transform: none !important;
+  }
+
+  /* Typography Adjustments */
+  .home-main-title {
+    font-size: 32px;
+  }
+
+  .home-main-subtitle {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .Complete-visibility {
+    font-size: 28px !important;
+  }
+
+  .Ai-rate-0ptimization {
+    font-size: 18px;
+  }
+
+  /* Timeline Adjustments */
+  .home-sticky-top {
+    position: relative;
+    top: 0;
+    margin-bottom: 30px;
+  }
+
+  .home-timeline-line {
+    left: 18px;
+  }
+
+  .home-timeline-step {
+    padding-left: 65px;
+  }
+
+  .home-step-number {
+    left: -8px;
+    font-size: 40px;
+    top: 12px;
+  }
+
+  .buttom-bar {
+    margin-top: 60px;
+  }
+}
+
+
+/* ==========================================================================
+   Small Screens / Mobile (max-width: 576px)
+   ========================================================================== */
+@media (max-width: 576px) {
+  /* Layout & Spacing */
+  .card-section-wrapper {
+    padding: 30px 0;
+  }
+
+  .custom-card {
+    border-radius: 20px !important;
+    padding: 16px;
+  }
+
+  /* Typography Adjustments */
+  .home-top-badge {
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+  }
+
+  .home-main-title {
+    font-size: 24px;
+    margin-top: 12px;
+  }
+
+  .home-main-subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .Complete-visibility {
+    font-size: 22px !important;
+  }
+
+  .Ai-rate-0ptimization {
+    font-size: 16px;
+  }
+
+  .What-We-Deliver,
+  .Optimized-spend,
+  .card-description {
+    font-size: 13px;
+  }
+
+  /* Components & Icons */
+  .icon-box {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  .Why-Digisphere {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Timeline Adjustments for Mobile */
+  .home-timeline-line {
+    left: 10px;
+    width: 2px;
+  }
+
+  .home-timeline-step {
+    padding-left: 40px;
+  }
+
+  .home-step-number {
+    left: -14px;
+    font-size: 28px;
+    top: 10px;
+  }
+
+  .home-timeline-card {
+    border-radius: 16px;
+  }
+
+  .buttom-bar {
+    margin-top: 40px;
   }
 }
