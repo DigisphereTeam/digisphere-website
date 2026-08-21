@@ -1,83 +1,84 @@
-import React, { useState } from 'react';
-import"./HelpCenter.css"
-import { Link } from 'react-router-dom';
-import { 
-  HiOutlineQuestionMarkCircle, 
-  HiOutlineMagnifyingGlass, 
-  HiOutlineRocketLaunch, 
-  HiOutlineComputerDesktop, 
-  HiOutlineChartBar, 
-  HiOutlineCreditCard, 
-  HiOutlineWrenchScrewdriver, 
-  HiOutlineCheckCircle, 
-  HiOutlineEnvelope, 
-  HiOutlineMapPin, 
-  HiOutlineClock, 
-  HiArrowRight 
-} from 'react-icons/hi2';
-import './HelpCenter.css';
+import React, { useState } from "react";
+import "./HelpCenter.css";
+import { Link } from "react-router-dom";
+import {
+  HiOutlineQuestionMarkCircle,
+  HiOutlineMagnifyingGlass,
+  HiOutlineRocketLaunch,
+  HiOutlineComputerDesktop,
+  HiOutlineChartBar,
+  HiOutlineCreditCard,
+  HiOutlineWrenchScrewdriver,
+  HiOutlineCheckCircle,
+  HiOutlineEnvelope,
+  HiOutlineMapPin,
+  HiOutlineClock,
+  HiArrowRight,
+} from "react-icons/hi2";
+import "./HelpCenter.css";
 
 const helpCategories = [
   {
     id: 1,
-    title: 'Starting a Project',
+    title: "Starting a Project",
     icon: <HiOutlineRocketLaunch />,
     items: [
-      'Book a free consultation',
-      'Tell us what you need (website, app, or marketing)',
-      'Get a custom plan and quote',
+      "Book a free consultation",
+      "Tell us what you need (website, app, or marketing)",
+      "Get a custom plan and quote",
     ],
   },
   {
     id: 2,
-    title: 'Website & App Help',
+    title: "Website & App Help",
     icon: <HiOutlineComputerDesktop />,
     items: [
-      'Want a new website or app? We design and build it.',
-      'Want changes to your existing site? Just ask.',
-      "Not sure how to edit? We'll show you how.",
+      "Want a new website or app? We design and build it for you.",
+      "Want changes to your existing site? Just reach out — well take care of the updates.",
+      "Not sure how to make updates yourself? We'll walk you through it, step by step.",
     ],
   },
   {
     id: 3,
-    title: 'Marketing & SEO Help',
+    title: "Marketing & SEO Help",
     icon: <HiOutlineChartBar />,
     items: [
-      'Want more Google visitors? We handle SEO.',
-      'Need Instagram/Facebook help? We manage that.',
-      'Want to run ads? We set those up and track results.',
+      "Want more Google visitors? We handle SEO.",
+      "Need Instagram/Facebook help? We manage that.",
+      "Want to run ads? We set those up and track results.",
     ],
   },
   {
     id: 4,
-    title: 'Billing Help',
+    title: "Billing Help",
     icon: <HiOutlineCreditCard />,
     items: [
-      'Confused about pricing? We explain it upfront.',
-      'Need an invoice or receipt? Just ask us.',
+      "Confused about pricing? We break it down clearly upfront — no hidden costs.",
+      "Need an invoice or receipt? Just ask and we'll send it right over.",
+      "Have a billing question anytime? Reach out and we'll sort it out quickly.",
     ],
   },
   {
     id: 5,
-    title: 'Support After Launch',
+    title: "Support After Launch",
     icon: <HiOutlineWrenchScrewdriver />,
     items: [
       "Found a bug? Let us know and we'll fix it fast.",
       "Need small updates? We're happy to help anytime.",
-      'Want a support/maintenance plan? Ask us for options.',
+      "Want a support/maintenance plan? Ask us for options.",
     ],
   },
 ];
 
 const HelpCenter = () => {
-   const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log('Searching for:', searchQuery);
+    console.log("Searching for:", searchQuery);
   };
   return (
-   <div className="help-container">
+    <div className="help-container">
       {/* Top Header Badge */}
       <div className="help-badgeContainer">
         <span className="help-badge">
@@ -90,10 +91,9 @@ const HelpCenter = () => {
         Help Center <span className="help-waveEmoji"></span>
       </h1>
       <p className="help-subTitle">
-        Hi! Need help with something? Here's a quick guide to find exactly what you're
-        looking for to keep your digital presence growing.
+        Hi! Need help with something? Here's a quick guide to find exactly what
+        you're looking for to keep your digital presence growing.
       </p>
-
 
       {/* Grid of Help Cards */}
       <div className="help-grid">
@@ -113,48 +113,55 @@ const HelpCenter = () => {
         ))}
       </div>
 
-      {/* Bottom Contact Banner */}
-   <div className="help-bannerContainer">
-  <div className="help-banner">
-    {/* Left Content Column */}
-    <div className="help-leftContent">
-      <div className="help-bannerText">
-        <h2 className="help-bannerTitle">Still Need Help?</h2>
-        <p className="help-bannerSub">
-          We're here to assist you. Reach out directly or browse our FAQs for immediate answers.
-        </p>
-      </div>
+      <div className="container">
+        <div className="help-banner-still ">
+          <div className="help-banner">
+            {/* Left Content Column */}
+            <div className="help-leftContent">
+              <div className="help-bannerText">
+                <h2 className="help-bannerTitle">Still Need Help?</h2>
+                <p className="help-bannerSub">
+                  We're here to assist you. Reach out directly or browse our
+                  FAQs for immediate answers.
+                </p>
+              </div>
 
-      <div className="help-bannerDetails">
-        <div className="help-detailItem">
-          <HiOutlineEnvelope className="help-detailIcon" />
-          <div>
-            <div className="help-detailLabel">EMAIL US</div>
-            <div className="help-detailValue">info@digispheretech.in</div>
+              <div className="help-bannerDetails">
+                <div className="help-detailItem">
+                  <HiOutlineEnvelope className="help-detailIcon" />
+                  <div>
+                    <div className="help-detailLabel">EMAIL US</div>
+                    <div className="help-detailValue">
+                      info@digispheretech.in
+                    </div>
+                  </div>
+                </div>
+
+                <div className="help-detailItem">
+                  <HiOutlineMapPin className="help-detailIcon" />
+                  <div>
+                    <div className="help-detailLabel">LOCATION</div>
+                    <div className="help-detailValue">
+                      {" "}
+                      Hyderabad & Vijayawada
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="help-replyTime">
+                <HiOutlineClock className="help-clockIcon" />
+                <span>Reply Time: Within 1–2 days</span>
+              </div>
+            </div>
+
+            {/* Right Side Button */}
+            <Link to="/Resources/faqspage" className="help-faqBtn">
+              Check FAQs <HiArrowRight className="help-btnArrow" />
+            </Link>
           </div>
         </div>
-
-        <div className="help-detailItem">
-          <HiOutlineMapPin className="help-detailIcon" />
-          <div>
-            <div className="help-detailLabel">LOCATION</div>
-            <div className="help-detailValue"> Hyderabad & Vijayawada</div>
-          </div>
-        </div>
       </div>
-
-      <div className="help-replyTime">
-        <HiOutlineClock className="help-clockIcon" />
-        <span>Reply Time: Within 1–2 days</span>
-      </div>
-    </div>
-
-    {/* Right Side Button */}
-    <Link to="/Resources/faqspage" className="help-faqBtn">
-      Check FAQs <HiArrowRight className="help-btnArrow" />
-    </Link>
-  </div>
-</div>
     </div>
   );
 };
