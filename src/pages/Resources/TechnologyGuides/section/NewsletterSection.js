@@ -49,7 +49,7 @@ const NewsletterSection = () => {
               New guides every week.
             </h2>
             <p className="newsletter-description">
-              Subscribe to get new guides and articles in your inbox — written for business leaders making technology decisions, not developers.
+              Subscribe to get new guides and articles in your inbox  written for business leaders making technology decisions, not developers.
             </p>
           </div>
 

@@ -26,7 +26,7 @@ const industriesData = [
     title: "Healthcare",
     subtitle: "HIPAA-compliant digital health solutions",
     description:
-      "Patient portals, telemedicine platforms, hospital management systems, and healthcare data pipelines — built with clinical compliance from the ground up.",
+      "Patient portals, telemedicine platforms, hospital management systems, and healthcare data pipelines  built with clinical compliance from the ground up.",
     bullets: [
       "Patient management portals",
       "Telemedicine apps",
@@ -42,7 +42,7 @@ const industriesData = [
     title: "Education",
     subtitle: "Learning platforms that scale",
     description:
-      "LMS platforms, admission management systems, student portals, and e-learning apps — for schools, colleges, universities, and EdTech startups.",
+      "LMS platforms, admission management systems, student portals, and e-learning apps  for schools, colleges, universities, and EdTech startups.",
     bullets: [
       "Learning management systems",
       "Admission & fee portals",
@@ -138,7 +138,7 @@ const industriesData = [
     title: "Startups",
     subtitle: "MVP to scale — we build with you",
     description:
-      "We partner with founders from idea to Series A — designing MVPs, building the technical foundation, and setting up the infrastructure to scale fast.",
+      "We partner with founders from idea to Series A designing MVPs, building the technical foundation, and setting up the infrastructure to scale fast.",
     bullets: [
       "MVP design & development",
       "Technical co-founder support",

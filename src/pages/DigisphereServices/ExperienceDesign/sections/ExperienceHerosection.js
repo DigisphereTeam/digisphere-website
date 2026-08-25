@@ -26,11 +26,11 @@ const stats = [
 
     label: "Products designed and launched",
   },
- {
-  end: 4.9,
-  suffix: "/5",
-  label: "Client satisfaction across projects",
-}
+  {
+    end: 4.9,
+    suffix: "/5",
+    label: "Client satisfaction across projects",
+  },
 ];
 const ExperinceHerosection = () => {
   return (
@@ -52,31 +52,38 @@ const ExperinceHerosection = () => {
 
                 <p className="hero-description">
                   We design digital experiences that users love and businesses
-                  profit from — grounded in research, refined through testing,
-                  and delivered production-ready in Figma.
+                  profit from grounded in research, refined through testing, and
+                  delivered production-ready in Figma.
                 </p>
 
                 <div className="hero-buttons">
-                <Link to="/contact"><Button variant="primary" icon={<FaArrowRight />}>
-                    <span>Start a Design Project </span>
-                  </Button></Link>
+                  <Link to="/contact">
+                    <Button variant="primary" icon={<FaArrowRight />}>
+                      <span>Start a Design Project </span>
+                    </Button>
+                  </Link>
 
-                  <Link to="/contact"><Button variant="secondary">
-                    <span>Our Services</span>
-                  </Button></Link>
+                  <Link to="/contact">
+                    <Button variant="secondary">
+                      <span>Our Services</span>
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Reveal>
           </div>
-<div className="col-lg-6 col-12">
-  <Reveal variant={fadeRight} delay={0.2}>
-    <FigmaWorkspaceSimulator />
-  </Reveal>
-</div>
+          <div className="col-lg-6 col-12">
+            <Reveal variant={fadeRight} delay={0.2}>
+              <FigmaWorkspaceSimulator />
+            </Reveal>
+          </div>
         </div>
       </div>
 
-      <div className="container-fluid mt-5 px-5" style={{backgroundColor:"#0F172A",}}>
+      <div
+        className="container-fluid mt-5 px-5"
+        style={{ backgroundColor: "#0F172A" }}
+      >
         <div className="row g-4">
           {stats.map((item, index) => (
             <div key={index} className="col-lg-3 col-md-6 col-12">

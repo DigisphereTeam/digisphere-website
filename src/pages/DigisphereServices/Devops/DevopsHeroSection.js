@@ -130,7 +130,7 @@ const DevOpsHeroSection = () => {
 
               <p className="devops-description">
                 CI/CD, Kubernetes, infrastructure-as-code, monitoring, and
-                platform engineering — we modernise your engineering workflow so
+                platform engineering  we modernise your engineering workflow so
                 your team ships with confidence.
               </p>
 

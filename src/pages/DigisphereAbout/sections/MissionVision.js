@@ -7,8 +7,8 @@ import Reveal from "../../../animations/Reveal";
 import { fadeUp } from "../../../animations/variants";
 
 const cards=[
-  {icon:missionIcon,title:"Our Mission",content:"To make professional technology capability accessible to every business serious about growth — delivered with honesty, skill,and accountability"},
-  {icon:visionIcon,title:"Our Vision",content:"To become the technology partner growing businesses recommend first — recognized for outcomes, not outputs."}
+  {icon:missionIcon,title:"Our Mission",content:"To make professional technology capability accessible to every business serious about growth  delivered with honesty, skill,and accountability"},
+  {icon:visionIcon,title:"Our Vision",content:"To become the technology partner growing businesses recommend first  recognized for outcomes, not outputs."}
 ]
 const MissionVision = () => {
   return (

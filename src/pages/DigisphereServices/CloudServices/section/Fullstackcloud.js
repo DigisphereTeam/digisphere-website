@@ -9,11 +9,8 @@ import CloudManagement from "../../../../assets/CloudServiecs/CloudManagement.sv
 import DisasterRecovery from "../../../../assets/CloudServiecs/DisasterRecovery.svg";
 import CloudSecurity from "../../../../assets/CloudServiecs/CloudManagement.svg";
 import CloudOptimisation from "../../../../assets/CloudServiecs/CloudOptimisation.svg";
-import { FaArrowRight } from "react-icons/fa";
 import Reveal from "../../../../animations/Reveal";
 import { fadeUp } from "../../../../animations/variants";
-import { text } from "framer-motion/client";
-import { Link } from "react-router-dom";
 import aws from "../../../../assets/CloudServiecs/awslogo.svg";
 import azure from "../../../../assets/CloudServiecs/azure.svg";
 import gcp from "../../../../assets/CloudServiecs/gcp.svg";
@@ -44,7 +41,7 @@ const Fullstackcloud = () => {
       icon: Cloudigration,
       title: "Cloud Migration",
       description:
-        "We migrate your on-premise infrastructure to AWS, Azure, or Google Cloud with zero downtime — assessing, planning, and executing migrations that protect business continuity.",
+        "We migrate your on-premise infrastructure to AWS, Azure, or Google Cloud with zero downtime  assessing, planning, and executing migrations that protect business continuity.",
       points: [
         "Discovery & dependency mapping",
         "Zero-downtime migration strategy",
@@ -55,7 +52,7 @@ const Fullstackcloud = () => {
       icon: CloudArchitecture,
       title: "Cloud Architecture",
       description:
-        "Purpose-built cloud architectures for your workload — multi-tier VPCs, serverless functions, containerised microservices, and managed database clusters.",
+        "Purpose-built cloud architectures for your workload  multi-tier VPCs, serverless functions, containerised microservices, and managed database clusters.",
       points: [
         "Well-Architected Review",
         "Cost optimisation design",
@@ -66,7 +63,7 @@ const Fullstackcloud = () => {
       icon: CloudManagement,
       title: "Cloud Management",
       description:
-        "Ongoing cloud operations — monitoring, cost management, capacity planning, patching, and incident response — delivered as a managed service.",
+        "Ongoing cloud operations  monitoring, cost management, capacity planning, patching, and incident response  delivered as a managed service.",
       points: [
         "24/7 monitoring & alerting",
         "Monthly cost reports",
@@ -77,7 +74,7 @@ const Fullstackcloud = () => {
       icon: DisasterRecovery,
       title: "Disaster Recovery",
       description:
-        "Backup strategies, replication, and failover architectures that meet your RTO and RPO requirements — so a single failure can never stop your business.",
+        "Backup strategies, replication, and failover architectures that meet your RTO and RPO requirements  so a single failure can never stop your business.",
       points: [
         "RTO/RPO-based design",
         "Automated backup verification",

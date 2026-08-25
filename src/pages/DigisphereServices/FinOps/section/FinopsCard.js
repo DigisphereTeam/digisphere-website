@@ -18,7 +18,7 @@ const ApplicationsServices = [
     icon: offer1,
     title: "Cloud Cost Audit",
     description:
-      "We analyse your entire cloud bill — every service, region, and account — and identify waste, idle resources, overprovisioned instances, and architectural inefficiencies.",
+      "We analyse your entire cloud bill  every service, region, and account  and identify waste, idle resources, overprovisioned instances, and architectural inefficiencies.",
     points: [
       "Line-item audit across AWS, Azure, or GCP",
       "Idle and zombie resource identification",
@@ -48,7 +48,7 @@ const ApplicationsServices = [
     points: [
       "Tagging taxonomy design and documentation",
       "Automated tag policy enforcement",
-      "Cost centre and team-level allocation reports",
+      "Cost centre and team level allocation reports",
       "Showback and chargeback implementation",
     ],
   },
@@ -70,7 +70,7 @@ const ApplicationsServices = [
     icon: offer5,
     title: "Multi-Cloud Cost VisibilitySecure Internal Tools",
     description:
-      "Running on AWS and Azure? We unify cost data across clouds into a single view — normalised, categorised, and benchmarked against your peers.",
+      "Running on AWS and Azure? We unify cost data across clouds into a single view  normalised, categorised, and benchmarked against your peers.",
     points: [
       "Unified dashboard across all cloud accounts",
       "Cross-cloud cost normalisation",
@@ -83,7 +83,7 @@ const ApplicationsServices = [
     icon: offer6,
     title: "FinOps Practice Setup",
     description:
-      "FinOps is not a tool — it's a culture change. We help engineering, finance, and product teams build the workflows, rituals, and accountability structures that make cost efficiency stick.",
+      "FinOps is not a tool  it's a culture change. We help engineering, finance, and product teams build the workflows, rituals, and accountability structures that make cost efficiency stick.",
     points: [
       "FinOps team structure and RACI definition",
       "Unit economics framework (cost per customer, feature)",
@@ -103,7 +103,7 @@ const steps = [
     step: "02",
     timeframe: "WEEK 2",
     title: "Identify & Prioritise",
-    desc: "We rank every savings opportunity by impact and effort — from quick wins (idle resources) to strategic moves (RI purchasing, architectural refactoring).",
+    desc: "We rank every savings opportunity by impact and effort  from quick wins (idle resources) to strategic moves (RI purchasing, architectural refactoring).",
   },
   {
     step: "03",
@@ -125,7 +125,7 @@ const FinopsCard = () => {
       <ServicesGrid
         sectionLabel="What We Offer"
         heading="Full-spectrum cloud financial management."
-        description="From one-time audits to ongoing FinOps programme management — every service is designed to deliver measurable savings."
+        description="From one-time audits to ongoing FinOps programme management  every service is designed to deliver measurable savings."
         services={ApplicationsServices}
         tickIcon={tickIcon}
       />

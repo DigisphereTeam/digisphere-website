@@ -7,12 +7,8 @@ import { fadeUp } from "../../../../animations/variants";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "../../../../components/Button/Button";
 import AutomationSolutions from "../../../../assets/servicesDropdown/AutomationSolutions.svg";
-import Onboarding from "../../../../assets/Automation/Onboarding Workflow.svg";
 import Onboard from "../../../../assets/Automation/Onboarding.svg";
-import Automations from "../../../../assets/Automation/Automations.svg";
-import { motion } from "framer-motion";
-import { FaCheck, FaDatabase, FaCog, FaBell, FaCube } from "react-icons/fa";
-import { Zap, CheckCircle, Settings, Bell, FileText } from "lucide-react";
+import { Zap,  Settings, Bell, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const AutomationHerosection = () => {
@@ -45,40 +41,7 @@ const AutomationHerosection = () => {
       { title: "Notify", subtitle: "Send alert", icon: Bell },
       { title: "Log", subtitle: "Save to CRM", icon: FileText },
     ];
-    const automations = [
-    {
-      id: 1,
-      name: "Invoice Generation",
-      schedule: "Daily 11pm",
-      color: "#10B981",
-      status: "Success",
-      time: "2m ago",
-    },
-    {
-      id: 2,
-      name: "Lead Assignment",
-      schedule: "Real-time",
-      color: "#3B82F6",
-      status: "Running...",
-      time: "now",
-    },
-    {
-      id: 3,
-      name: "Reminder Emails",
-      schedule: "Mon & Thu",
-      color: "#10B981",
-      status: "Success",
-      time: "6h ago",
-    },
-    {
-      id: 4,
-      name: "Report Sync",
-      schedule: "Weekly Sun",
-      color: "#10B981",
-      status: "Success",
-      time: "1d ago",
-    },
-  ];
+
     const [activeStep, setActiveStep] = useState(0);
     const [completed, setCompleted] = useState([]);
 
@@ -128,7 +91,7 @@ const AutomationHerosection = () => {
                   </h1>
 
                   <p className="devops-description">
-                    We automate the manual workflows that slow your team down —
+                    We automate the manual workflows that slow your team down 
                     from data entry and approvals to reporting and customer
                     communications.
                   </p>

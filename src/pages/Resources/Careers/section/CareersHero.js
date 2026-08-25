@@ -2,20 +2,11 @@ import React from "react";
 import "./CareersHero.css";
 import Reveal from "../../../../animations/Reveal";
 import { fadeLeft, fadeUp } from "../../../../animations/variants";
-import { FaArrowRight } from "react-icons/fa";
 import Engineering from "../../../../assets/Careers/Engineering.svg";
 import DevOpsLead from "../../../../assets/Careers/DevOpsLead.svg";
-import Cybersecurity from "../../../../assets/Careers/Cybersecurity (4).svg";
 import Marketing from "../../../../assets/Careers/Marketing (2).svg";
 import Finopsicon from "../../../../assets/Finopsicon.svg";
-import {
-  LuCode,
-  LuLayers,
-  LuPalette,
-  LuShieldCheck,
-  LuMegaphone,
-} from "react-icons/lu";
-
+import { FaUsers } from "react-icons/fa";
 const positions = [
   {
     id: 1,
@@ -32,11 +23,7 @@ const positions = [
     title: "FinOps Sales",
     category: "Sales",
     icon: (
-      <img
-        src={Finopsicon}
-        alt="FinOps Sales"
-        className="careers-badge-icon"
-      />
+      <img src={Finopsicon} alt="FinOps Sales" className="careers-badge-icon" />
     ),
   },
   {
@@ -54,6 +41,16 @@ const positions = [
     title: "Full Stack Dev",
     category: "Engineering",
     icon: <img src={Engineering} alt="" className="careers-badge-icon" />,
+  },
+  {
+    id: 5,
+    avatarText: "BD",
+    avatarColor: "#0591E8",
+    title: "Business Development Executive",
+    category: "Sales",
+    icon: (
+      <FaUsers className="careers-badge-icon" />
+    ),
   },
   {
     id: 6,
@@ -127,9 +124,13 @@ const CareersHero = () => {
                 {/* 3x2 Grid Cards */}
                 <div className="row g-3">
                   {positions.map((item, index) => (
-                    <div key={item.id} className="col-4">
-                      <Reveal variant={fadeUp} delay={0.2 + index * 0.1}>
-                        <div className="careers-role-card card h-100 border-0 align-items-center justify-content-between">
+                    <div key={item.id} className="col-4 d-flex">
+                      <Reveal
+                        variant={fadeUp}
+                        delay={0.2 + index * 0.1}
+                        className="w-100"
+                      >
+                        <div className="careers-role-card card h-100 w-100 border-0 align-items-center justify-content-between">
                           {/* Circle Avatar */}
                           <div
                             className="careers-avatar-circle"
@@ -139,12 +140,13 @@ const CareersHero = () => {
                           </div>
 
                           {/* Title / Subtitle Info */}
-                          <div className="careers-info-block my-1">
+                          <div className="careers-info-block">
                             {item.subtitle && (
                               <div className="careers-subtitle">
                                 {item.subtitle}
                               </div>
                             )}
+
                             <div
                               className={
                                 item.subtitle
@@ -157,7 +159,7 @@ const CareersHero = () => {
                           </div>
 
                           {/* Category Pill */}
-                          <div className="careers-category-wrapper mt-2">
+                          <div className="careers-category-wrapper">
                             <span className="careers-category-pill">
                               {item.icon}
                               {item.category}

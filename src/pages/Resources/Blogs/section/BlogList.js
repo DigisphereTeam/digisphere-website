@@ -45,7 +45,7 @@ const articles = [
     tag: "AI & Automation",
     title: "Practical AI for Indian SMEs: What's Actually Worth Doing in 2026",
     description:
-      "Beyond the hype — the AI use cases that genuinely improve operations for Indian small and mid-size businesses, with realistic cost and timeline expectations.",
+      "Beyond the hype  the AI use cases that genuinely improve operations for Indian small and mid-size businesses, with realistic cost and timeline expectations.",
     date: "May 14, 2026",
     dateIcon: <FiCalendar size={12} className="me-1 " />,
     readTime: "9 min read",
@@ -58,7 +58,7 @@ const articles = [
     tag: "Cybersecurity",
     title: "The Cyber Threat Landscape for Indian Businesses in 2026",
     description:
-      "Ransomware, supply chain attacks, and phishing — what we're seeing across client environments and the controls that matter most.",
+      "Ransomware, supply chain attacks, and phishing  what we're seeing across client environments and the controls that matter most.",
     date: "Apr 30, 2026",
     dateIcon: <FiCalendar size={12} className="me-1 " />,
     readTime: "8 min read",
@@ -72,7 +72,7 @@ const articles = [
     title:
       "How We Cut a Client's AWS Bill by 42% Without Changing Their Architecture",
     description:
-      "A practical walk-through of the cost optimisation levers we use — rightsizing, reserved instances, and S3 lifecycle policies — and real numbers.",
+      "A practical walk-through of the cost optimisation levers we use  rightsizing, reserved instances, and S3 lifecycle policies  and real numbers.",
     date: "Apr 14, 2026",
     dateIcon: <FiCalendar size={12} className="me-1 " />,
     readTime: "8 min read",
@@ -85,7 +85,7 @@ const articles = [
     tag: "UI/UX Design",
     title: "The 5 UX Mistakes That Cost E-Commerce Sites the Most Revenue",
     description:
-      "Based on heatmap analysis and session recordings across 50+ e-commerce sites — the design patterns that consistently kill conversions.",
+      "Based on heatmap analysis and session recordings across 50+ e-commerce sites  the design patterns that consistently kill conversions.",
     date: "March 28, 2026",
     dateIcon: <FiCalendar size={12} className="me-1 " />,
     readTime: "7 min read",
@@ -161,7 +161,7 @@ const BlogList = () => {
                     </h2>
                     <p className="blog-featured-text text-muted">
                       A look at the most common reasons business websites don't
-                      convert visitors to enquiries — and the structural changes
+                      convert visitors to enquiries  and the structural changes
                       that reliably fix them.
                     </p>
 

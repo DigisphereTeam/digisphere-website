@@ -30,7 +30,7 @@ import Applying from "./pages/Applying/Applying.js";
 import Faqspage from "./pages/Faqspage/Faqspage.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy.js";
-import TermsService from "./pages/TermsService/TermsService.js";
+import TermsConditions from "./pages/TermsConditions/TermsConditions.js";
 
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -138,18 +138,18 @@ const App = () => {
         <Route path="/services/cloudservices" element={<CloudServices />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/industries" element={<Industries />} />
-        <Route path="/Resources/casestudies" element={<CaseStudies />} />
-        <Route path="/Resources/technologyguides" element={<TechnologyGuides/>} />
-        <Route path="/Resources/blogs" element={<Blogs/>} />
-        <Route path="/Resources/careers" element={<Careers/>} />
-        <Route path="/Resources/successstories" element={<SuccessStories/>} />
-        <Route path="/Resources/howwework" element={<HowWeWork/>} />
+        <Route path="/resources/casestudies" element={<CaseStudies />} />
+        <Route path="/resources/technologyguides" element={<TechnologyGuides/>} />
+        <Route path="/resources/blogs" element={<Blogs/>} />
+        <Route path="/resources/careers" element={<Careers/>} />
+        <Route path="/resources/successstories" element={<SuccessStories/>} />
+        <Route path="/resources/howwework" element={<HowWeWork/>} />
          <Route path="/services/finops" element={<FinOps/>} />
          <Route path="/applying" element={<Applying/>} />
-         <Route path="/Resources/faqspage" element={<Faqspage/>} />
-         <Route path="/Resources/helpcenter" element={<HelpCenter/>} />
+         <Route path="/resources/faqspage" element={<Faqspage/>} />
+         <Route path="/resources/helpcenter" element={<HelpCenter/>} />
          <Route path="/privacypolicy" element={<PrivacyPolicy/>} />
-          <Route path="/termsservice" element={<TermsService/>} />
+          <Route path="/termsconditions" element={<TermsConditions/>} />
       </Routes>
 
       <DigisphereFooter />

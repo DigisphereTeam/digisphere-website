@@ -38,7 +38,7 @@ const TechnologyGuidesHero = () => {
                 </h1>
                 <p className="industries-hero-description">
                   Practical guides written for business owners, product managers,
-                  and decision-makers — not developers. No jargon. No fluff.
+                  and decision-makers  not developers. No jargon. No fluff.
                 </p>
 
                 <div className="industries-hero-stats-row">
@@ -98,7 +98,7 @@ const TechnologyGuidesHero = () => {
                   AWS vs GCP vs Azure: A Guide for Indian Businesses
                 </h3>
                 <p className="Guides-featured-description">
-                  Data residency, pricing in INR, support quality, and regional coverage — how the three major clouds compare for businesses in India.
+                  Data residency, pricing in INR, support quality, and regional coverage  how the three major clouds compare for businesses in India.
                 </p>
 
                 <div className="Guides-featured-footer">
