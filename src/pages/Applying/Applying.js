@@ -23,6 +23,7 @@ const Applying = () => {
   const [resume, setResume] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
+  // 1. Complete Form State Initialization
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -45,27 +46,33 @@ const Applying = () => {
       timer = setTimeout(() => {
         setShowModal(false);
         navigate("/Resources/careers");
-      }, 2000); // 2000ms = 2 seconds
+      }, 2000);
     }
-
-    return () => clearTimeout(timer); // Cleanup timeout on unmount or state change
+    return () => clearTimeout(timer);
   }, [showModal, navigate]);
 
+  // 2. Generic Input Change Handler
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
+  // 3. Strict 10-Digit Only Phone Handler
+  const handlePhoneChange = (e) => {
+    const value = e.target.value.replace(/\D/g, "").slice(0, 10);
+    setFormData((prev) => ({
+      ...prev,
+      phone: value,
+    }));
+  };
+
+  // 4. File Upload Handler
   const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      if (file.size > 5 * 1024 * 1024) {
-        alert("File size exceeds 5MB limit. Please upload a smaller file.");
-        e.target.value = null;
-        setResume(null);
-        return;
-      }
-      setResume(file);
+    if (e.target.files && e.target.files[0]) {
+      setResume(e.target.files[0]);
     }
   };
 
@@ -93,20 +100,20 @@ const Applying = () => {
         {
           method: "POST",
           body: formPayload,
-        },
+        }
       );
 
       const result = await response.json();
 
       if (result.statusCode === 201) {
-        setShowModal(true); // Triggers the 2-second timer useEffect
+        setShowModal(true);
       } else {
         alert(result.msg || "Failed to submit application.");
       }
     } catch (error) {
       console.error("Application submission error:", error);
       alert(
-        "Something went wrong while submitting your application. Please try again.",
+        "Something went wrong while submitting your application. Please try again."
       );
     }
   };
@@ -195,6 +202,116 @@ const Applying = () => {
                   </div>
                 </div>
               )}
+
+              {/* ROLE RESPONSIBILITIES CARD WITH TOP BLUE BAR */}
+              <div className="applying-responsibilities-card p-4 mb-4 rounded-4 ">
+                <h5 className="fw-bold mb-3 text-dark">
+                  Role's & Responsibilities
+                </h5>
+                <ul className="list-unstyled mb-0 d-flex flex-column gap-2">
+                  {(() => {
+                    // 1. If explicit responsibilities exist in selectedJob, use them
+                    if (
+                      selectedJob?.responsibilities &&
+                      selectedJob.responsibilities.length > 0
+                    ) {
+                      return selectedJob.responsibilities;
+                    }
+
+                    const title = (selectedJob?.title || "").toLowerCase();
+
+                    // 2. Specific matching for requested roles
+                    if (title.includes("full stack")) {
+                      return [
+                        "Architect and maintain scalable frontend and backend Web applications",
+                        "Design and optimize relational and non-relational database schemas",
+                        "Develop secure RESTful APIs and integrate third-party microservices",
+                        "Collaborate with cross-functional teams to define technical requirements",
+                        "Ensure high performance, mobile responsiveness, and code security",
+                      ];
+                    }
+
+                    if (title.includes("finops") || title.includes("cloud cost")) {
+                      return [
+                        "Identify, drive, and close cloud cost optimization sales opportunities",
+                        "Conduct cloud spend assessments and demo FinOps platforms to enterprise clients",
+                        "Develop relationship management strategies with IT leadership and CFOs",
+                        "Partner with cloud architects to build ROI proposals for cloud governance",
+                        "Achieve quarterly revenue targets through strategic pipeline management",
+                      ];
+                    }
+
+                    if (title.includes("ui/ux") || title.includes("designer")) {
+                      return [
+                        "Create user-centered designs by understanding business requirements and user feedback",
+                        "Build interactive wireframes, storyboards, user flows, and high-fidelity prototypes",
+                        "Establish and maintain scalable design systems and brand UI guidelines",
+                        "Conduct usability testing, user research, and analyze engagement metrics",
+                        "Collaborate closely with frontend developers to ensure accurate UI execution",
+                      ];
+                    }
+
+                    if (title.includes("digital marketing")) {
+                      return [
+                        "Plan, execute, and optimize multi-channel marketing strategies (SEO, PPC, Social, Email)",
+                        "Manage social media platforms, content schedules, and brand awareness campaigns",
+                        "Monitor campaign performance, ROI, and website traffic using analytics tools",
+                        "Create high-converting ad copy and collaborate on visual marketing assets",
+                        "Identify targeted market segments to continuously increase lead conversion",
+                      ];
+                    }
+
+                    if (title.includes("business development")) {
+                      return [
+                        "Identify, research, and prospect new business leads and strategic enterprise clients",
+                        "Conduct cold outreach, pitch presentations, and discovery calls with prospects",
+                        "Build and nurture strong strategic relationships with key corporate decision-makers",
+                        "Negotiate contracts, close deals, and achieve revenue and expansion targets",
+                        "Collaborate with tech and delivery teams to align services with client needs",
+                      ];
+                    }
+
+                    if (title.includes("frontend") || title.includes("react")) {
+                      return [
+                        "Develop responsive, high-performance UI components using React.js",
+                        "Collaborate with UI/UX designers to translate wireframes into interactive code",
+                        "Optimize applications for maximum speed, performance, and scalability",
+                        "Integrate frontend components with RESTful APIs and backend services",
+                        "Ensure cross-browser compatibility and mobile responsiveness",
+                      ];
+                    }
+
+                    if (title.includes("backend") || title.includes("node") || title.includes("java")) {
+                      return [
+                        "Design and maintain scalable server-side architecture and APIs",
+                        "Manage and optimize database performance, schemas, and queries",
+                        "Ensure robust security practices and data protection mechanisms",
+                        "Integrate third-party services and microservices architecture",
+                      ];
+                    }
+
+                    // 3. Default generic responsibilities fallback
+                    return [
+                      "Design and maintain scalable software architecture",
+                      "Build robust RESTful APIs and microservices",
+                      "Write clean, efficient, and well-documented code",
+                      "Collaborate cross-functionally with product teams",
+                      "Conduct thorough code reviews and mentor team members",
+                    ];
+                  })().map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="d-flex align-items-center gap-2 text-secondary fs-6"
+                    >
+                      <FaCheckCircle
+                        className="text-primary flex-shrink-0"
+                        size={16}
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -280,9 +397,12 @@ const Applying = () => {
                         name="phone"
                         value={formData.phone}
                         className="form-control applying-input"
-                        placeholder="Enter Phone Number"
+                        placeholder="Enter 10-digit Phone Number"
                         required
-                        onChange={handleInputChange}
+                        maxLength={10}
+                        pattern="[0-9]{10}"
+                        title="Please enter a valid 10-digit phone number"
+                        onChange={handlePhoneChange}
                       />
                     </div>
                   </div>

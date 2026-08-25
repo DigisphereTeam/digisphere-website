@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import "./HelpCenter.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   HiOutlineQuestionMarkCircle,
-  HiOutlineMagnifyingGlass,
   HiOutlineRocketLaunch,
   HiOutlineComputerDesktop,
   HiOutlineChartBar,
@@ -34,7 +33,7 @@ const helpCategories = [
     icon: <HiOutlineComputerDesktop />,
     items: [
       "Want a new website or app? We design and build it for you.",
-      "Want changes to your existing site? Just reach out — well take care of the updates.",
+      "Want changes to your existing site? Just reach out — we'll take care of the updates.",
       "Not sure how to make updates yourself? We'll walk you through it, step by step.",
     ],
   },
@@ -70,6 +69,29 @@ const helpCategories = [
   },
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+const fadeLeft = {
+  hidden: { opacity: 0, x: -40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const fadeRight = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const containerStagger = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
 const HelpCenter = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -77,28 +99,46 @@ const HelpCenter = () => {
     e.preventDefault();
     console.log("Searching for:", searchQuery);
   };
+
   return (
     <div className="help-container">
-      {/* Top Header Badge */}
-      <div className="help-badgeContainer">
+      <motion.div
+        className="help-badgeContainer"
+        initial="hidden"
+        animate="visible"
+        variants={fadeUp}
+      >
         <span className="help-badge">
           <HiOutlineQuestionMarkCircle className="help-badgeIcon" /> Support Hub
         </span>
-      </div>
-
-      {/* Main Title & Subtitle */}
-      <h1 className="help-mainTitle">
+      </motion.div>
+      <motion.h1
+        className="help-mainTitle"
+        initial="hidden"
+        animate="visible"
+        variants={fadeUp}
+      >
         Help Center <span className="help-waveEmoji"></span>
-      </h1>
-      <p className="help-subTitle">
+      </motion.h1>
+
+      <motion.p
+        className="help-subTitle"
+        initial="hidden"
+        animate="visible"
+        variants={fadeRight}
+      >
         Hi! Need help with something? Here's a quick guide to find exactly what
         you're looking for to keep your digital presence growing.
-      </p>
+      </motion.p>
 
-      {/* Grid of Help Cards */}
-      <div className="help-grid">
+      <motion.div
+        className="help-grid"
+        initial="hidden"
+        animate="visible"
+        variants={containerStagger}
+      >
         {helpCategories.map((category) => (
-          <div key={category.id} className="help-card">
+          <motion.div key={category.id} className="help-card" variants={fadeUp}>
             <div className="help-iconWrapper">{category.icon}</div>
             <h2 className="help-cardTitle">{category.title}</h2>
             <ul className="help-cardList">
@@ -109,15 +149,22 @@ const HelpCenter = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
+      {/* Still Need Help Banner Section */}
       <div className="container">
-        <div className="help-banner-still ">
+        <div className="help-banner-still">
           <div className="help-banner">
-            {/* Left Content Column */}
-            <div className="help-leftContent">
+            {/* Left Content Column - Fade Left */}
+            <motion.div
+              className="help-leftContent"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeLeft}
+            >
               <div className="help-bannerText">
                 <h2 className="help-bannerTitle">Still Need Help?</h2>
                 <p className="help-bannerSub">
@@ -142,7 +189,6 @@ const HelpCenter = () => {
                   <div>
                     <div className="help-detailLabel">LOCATION</div>
                     <div className="help-detailValue">
-                      {" "}
                       Hyderabad & Vijayawada
                     </div>
                   </div>
@@ -153,12 +199,19 @@ const HelpCenter = () => {
                 <HiOutlineClock className="help-clockIcon" />
                 <span>Reply Time: Within 1–2 days</span>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Right Side Button */}
-            <Link to="/Resources/faqspage" className="help-faqBtn">
-              Check FAQs <HiArrowRight className="help-btnArrow" />
-            </Link>
+            {/* Right Side Button - Fade Right */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeRight}
+            >
+              <Link to="/Resources/faqspage" className="help-faqBtn">
+                Check FAQs <HiArrowRight className="help-btnArrow" />
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>

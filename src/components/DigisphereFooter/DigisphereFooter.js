@@ -5,7 +5,6 @@ import footerlogo from "../../assets/footerlogo (2).png";
 // Asset Imports
 import linkedinIcon from "../../assets/LinkedinIcon.png";
 import instaIcon from "../../assets/instaIcon.png";
-import DigispherHome from "../../pages/DigisphereHome/DigispherHome";
 
 // Static Navigation Datasets
 const SOCIAL_LINKS = [
@@ -15,13 +14,13 @@ const SOCIAL_LINKS = [
 
 const SERVICES_LINKS = [
   { to: "/services/webdevelopment", label: "Website design & Development" },
-   { to: "/services/webapplications", label: "WebApplications" },
+  { to: "/services/webapplications", label: "Web Applications" },
   { to: "/services/digital-marketing", label: "Digital Marketing" },
   { to: "/services/automation", label: "Automation Solution" },
   { to: "/services/aipowered", label: "AI-Powered Solution" },
   { to: "/services/experience-design", label: "Experience Design" },
   { to: "/services/cloudservices", label: "Cloud Services" },
-   { to: "/services/finops", label: "FinOps" },
+  { to: "/services/finops", label: "FinOps" },
   { to: "/services/cyber-security", label: "Cybersecurity" },
   { to: "/services/managed-it-services", label: "Managed IT" },
   { to: "/services/devops", label: "DevOps" },
@@ -29,17 +28,16 @@ const SERVICES_LINKS = [
 
 const COMPANY_LINKS = [
   { to: "/about", label: "About Us" },
-  { to: "/Resources/careers" , label: "Careers" }, 
-  { to: "/Resources/casestudies", label: "Case Studies" }, 
-  { to: "/Resources/blogs", label: "Blogs" }, 
-  { to: "/industries", label: "Industries" }, 
-  { to: "/contact", label: "Contact" }, 
-
+  { to: "/Resources/careers", label: "Careers" },
+  { to: "/Resources/casestudies", label: "Case Studies" },
+  { to: "/Resources/blogs", label: "Blogs" },
+  { to: "/industries", label: "Industries" },
+  { to: "/contact", label: "Contact" },
 ];
 
 const OFFICES = [
-  { title: "Hyderabad Office", lines: ["HITEC City, Madhapur", "Telangana"],  },
-  { title: "Vijayawada Office", lines: ["5th Floor,502, Veeramachaneni Residency, Ring Rd, Ramavarapadu, Kanuru, Andhra Pradesh 520004"], className: "" }
+  { title: "Hyderabad Office", lines: ["HITEC City, Madhapur", "Telangana"] },
+  { title: "Vijayawada Office", lines: ["5th Floor, Veeramachaneni Residency,502, Ramavarapadu, Ring Road,Andhra Pradesh – 521108"], className: "" }
 ];
 
 const DigisphereFooter = memo(() => {
@@ -49,32 +47,32 @@ const DigisphereFooter = memo(() => {
   // 2. Automatically watch for URL updates and scroll to the top
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]); 
+  }, [pathname]);
 
   return (
     <footer className="footer-section" role="contentinfo">
       <div className="container">
         <div className="row">
-          
+
           {/* Brand Info & Social Stack */}
           <div className="col-lg-4 mb-4">
-            <Link className="navbar-brand fw-bold" to="/" onClick={()=>{<DigispherHome/>}}>
-          <img
-            src={footerlogo}
-            alt="Digisphere Logo"
-            className="Digispherefooter-logo-image"
-          />
-        </Link>
-            <p className="footer-description">
+            <Link className="navbar-brand fw-bold" to="/">
+              <img
+                src={footerlogo}
+                alt="Digisphere Logo"
+                className="Digispherefooter-logo-image"
+              />
+            </Link>
+            <p className="footer-description mt-4">
               We build websites, applications, and marketing systems that grow
-              businesses — and the infrastructure that keeps them running.
+              businesses and the infrastructure that keeps them running.
             </p>
             <div className="social-icons mt-4">
               {SOCIAL_LINKS.map(({ href, icon, label }) => (
-                <Link 
-                  key={label} 
-                  to={href} 
-                  target="_blank" 
+                <Link
+                  key={label}
+                  to={href}
+                  target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit our ${label} page`}
                 >
@@ -134,9 +132,18 @@ const DigisphereFooter = memo(() => {
         <hr className="footer-divider" />
 
         {/* Dynamic Legal & Copyright Context */}
-        <div className="footer-bottom">
+        <div className="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
           <div className="footer-copy">
             © {currentYear} Digisphere. All rights reserved.
+          </div>
+          <div className="footer-legal d-flex align-items-center gap-1">
+            <Link to="/privacypolicy" className="footer-legal-link">
+              Privacy Policy
+            </Link>
+            <span className="side-line">|</span>
+            <Link to="/termsservice" className="footer-legal-link">
+              Terms & Conditions
+            </Link>
           </div>
         </div>
 

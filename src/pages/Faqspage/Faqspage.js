@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import "./Faqspage.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const faqData = [
   {
@@ -85,7 +86,7 @@ const faqData = [
     answer:
       "Yes, we optimize your website with proven SEO practices to help it rank higher on Google. This means more visibility and more people finding you organically.",
   },
-   {
+  {
     id: 13,
     question: "Do you manage Instagram/Facebook pages too?",
     answer:
@@ -106,6 +107,22 @@ const faqData = [
   },
 ];
 
+// Animation Variants
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+const fadeLeft = {
+  hidden: { opacity: 0, x: -30 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+const fadeRight = {
+  hidden: { opacity: 0, x: 30 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
 const Faqspage = () => {
   const [openId, setOpenId] = useState(null);
 
@@ -116,22 +133,42 @@ const Faqspage = () => {
     <div className="faqs-pageContainer">
       <main className="faqs-content">
         <div className="faqs-section">
-          <h1 className="faqs-title">
+          {/* Title - Fade Up */}
+          <motion.h1 
+            className="faqs-title"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+          >
             <span className="faqs-highlight">Frequently</span> Asked Questions
-          </h1>
-          <p className="faqs-subtitle">
+          </motion.h1>
+
+          {/* Subtitle - Fade Up */}
+          <motion.p 
+            className="faqs-subtitle"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+          >
             Everything you need to know about working with Digisphere Tech.
             Can't find the answer you're looking for? Feel free to{" "}
             <Link to="/contact">contact us</Link>.
-          </p>
+          </motion.p>
 
+          {/* Accordion List with Alternating Fade Left / Fade Right */}
           <div className="faqs-accordionList">
-            {faqData.map((item) => {
+            {faqData.map((item, index) => {
               const isOpen = openId === item.id;
+              const cardAnimation = index % 2 === 0 ? fadeLeft : fadeRight;
+
               return (
-                <div
+                <motion.div
                   key={item.id}
                   className={`faqs-accordionCard ${isOpen ? "faqs-open" : ""}`}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                  variants={cardAnimation}
                 >
                   <button
                     className="faqs-accordionHeader"
@@ -145,7 +182,7 @@ const Faqspage = () => {
                   {isOpen && (
                     <div className="faqs-accordionBody">{item.answer}</div>
                   )}
-                </div>
+                </motion.div>
               );
             })}
           </div>

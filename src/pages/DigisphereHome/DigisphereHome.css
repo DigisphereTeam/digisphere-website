@@ -2357,6 +2357,10 @@
   padding: 6px 12px;
   font-size: 0.75rem;
 }
+.home-tag-badge:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
 
 /* Responsive adjust */
 @media (max-width: 991px) {
