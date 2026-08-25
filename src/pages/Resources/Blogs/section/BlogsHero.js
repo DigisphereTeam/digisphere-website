@@ -26,7 +26,7 @@ const BlogsHero = () => {
                     </span>
                   </h1>
                   <p className="industries-hero-description">
-                    Practical articles from the Digisphere team — based on real
+                    Practical articles from the Digisphere team based on real
                     client work, not conference talks.
                   </p>
 

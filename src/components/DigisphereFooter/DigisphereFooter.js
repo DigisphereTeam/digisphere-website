@@ -28,9 +28,9 @@ const SERVICES_LINKS = [
 
 const COMPANY_LINKS = [
   { to: "/about", label: "About Us" },
-  { to: "/Resources/careers", label: "Careers" },
-  { to: "/Resources/casestudies", label: "Case Studies" },
-  { to: "/Resources/blogs", label: "Blogs" },
+  { to: "/resources/careers", label: "Careers" },
+  { to: "/resources/casestudies", label: "Case Studies" },
+  { to: "/resources/blogs", label: "Blogs" },
   { to: "/industries", label: "Industries" },
   { to: "/contact", label: "Contact" },
 ];
@@ -141,7 +141,7 @@ const DigisphereFooter = memo(() => {
               Privacy Policy
             </Link>
             <span className="side-line">|</span>
-            <Link to="/termsservice" className="footer-legal-link">
+            <Link to="/termsconditions" className="footer-legal-link">
               Terms & Conditions
             </Link>
           </div>

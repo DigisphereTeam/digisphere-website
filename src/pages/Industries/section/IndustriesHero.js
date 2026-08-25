@@ -39,9 +39,7 @@ const IndustriesHero = () => {
           <div className="col-lg-6">
             <Reveal variant={fadeLeft} delay={0.1}>
               <div className="industries-main-section">
-                 <p class="Digisphere-badge">
-                  Industries
-                </p>
+                <p class="Digisphere-badge">Industries</p>
                 <h1 className="industries-hero-title">
                   Deep expertise across <br />
                   <span className="industries-text-highlight">
@@ -49,7 +47,7 @@ const IndustriesHero = () => {
                   </span>
                 </h1>
                 <p className="industries-hero-description">
-                  We don't just understand technology — we understand your
+                  We don't just understand technology we understand your
                   industry. 316+ clients across 9 verticals have shaped our
                   domain expertise into practical, deployable knowledge.
                 </p>

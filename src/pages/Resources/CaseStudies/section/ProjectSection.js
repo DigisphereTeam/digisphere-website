@@ -20,7 +20,7 @@ const caseStudiesData = [
     services: "Web App + Digital Marketing",
     title: "Endocare Hospitals",
     challenge:
-      "Patient appointment scheduling was handled entirely by phone — staff spent 4+ hours daily managing calls and the no-show rate was 24%.",
+      "Patient appointment scheduling was handled entirely by phone  staff spent 4+ hours daily managing calls and the no-show rate was 24%.",
     solution:
       "Built a patient portal with online appointment booking, automated SMS reminders, and WhatsApp confirmations. Integrated with their existing HIS.",
     stats: [
@@ -54,7 +54,7 @@ const caseStudiesData = [
     services: "CRM + Lead Generation",
     title: "Real Ventures",
     challenge:
-      "A mid-size property developer with 800+ leads per month had no CRM — leads were managed in spreadsheets, follow-up was inconsistent, and conversion was 1.2%.",
+      "A mid-size property developer with 800+ leads per month had no CRM  leads were managed in spreadsheets, follow-up was inconsistent, and conversion was 1.2%.",
     solution:
       "Built a custom CRM with automated lead scoring, WhatsApp follow-up sequences, and a broker portal. Integrated Google Ads and Meta Ads with lead tracking.",
     stats: [
@@ -88,7 +88,7 @@ const caseStudiesData = [
     services: "Fleet Management + Cloud Migration",
     title: "Logistics",
     challenge:
-      "A 120-truck fleet company running on disconnected WhatsApp groups and Excel sheets — real-time visibility into fleet location and delivery status was zero.",
+      "A 120-truck fleet company running on disconnected WhatsApp groups and Excel sheets  real-time visibility into fleet location and delivery status was zero.",
     solution:
       "Built a fleet tracking platform with GPS integration, driver apps, customer delivery notifications, and migrated their servers to AWS.",
     stats: [

@@ -17,7 +17,7 @@ const MarketingFaqData = [
     {
       question: "How quickly will we see savings?",
       answer:
-        "You will start seeing initial savings within 14 days. Quick wins—such as terminating unattached storage volumes, removing idle dev/test instances, and rightsizing—deliver immediate impact in your first billing cycle. Strategic savings like Reserved Instances, Savings Plans, and architectural refactoring ramp up over weeks 3 through 6.",
+        "You will start seeing initial savings within 14 days. Quick wins such as terminating unattached storage volumes, removing idle dev/test instances, and rightsizing deliver immediate impact in your first billing cycle. Strategic savings like Reserved Instances, Savings Plans, and architectural refactoring ramp up over weeks 3 through 6.",
     },
     {
       question: "Do you work with multi-cloud environments?",
@@ -32,8 +32,8 @@ const FionopsFaqs = () => {
         <FAQSection
           eyebrow="FAQ"
           title="FinOps questions answered."
-          description="Cloud costs are complex. We give you straight answers. "
-          linkText="Talk to our FinOps team.    "
+          description="Cloud costs are complex.We simplify them."
+          linkText="Talk to our FinOps team."
           link="/contact"
           faqs={MarketingFaqData}
         />
