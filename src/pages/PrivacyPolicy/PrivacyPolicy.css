@@ -1,0 +1,43 @@
+/* Light grayish-blue background for full page wrapper */
+.privacy-page-wrapper {
+  background-color: #f3f6fa;
+  min-height: 100vh;
+}
+
+/* Header typography styling */
+.privacy-header-title {
+  font-family: serif; /* Matches serif headline font in image */
+  font-size: 2.2rem;
+  color: #1a2b49;
+}
+
+.privacy-header-subtitle {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #6c757d;
+}
+
+/* Outer Card Container */
+.privacy-card {
+  border-color: #e2e8f0 !important;
+}
+
+/* Blue line accent on section headings */
+.privacy-blue-line-heading {
+  border-left: 3px solid #0d6efd;
+  line-height: 1.2;
+}
+
+/* Section descriptions styling */
+.privacy-section-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #4a5568 !important;
+}
+
+/* Bottom confirmation box */
+.privacy-disclaimer-banner {
+  background-color: #f4f7fb;
+  border: 1px solid #e2e8f0;
+  font-size: 0.82rem;
+}

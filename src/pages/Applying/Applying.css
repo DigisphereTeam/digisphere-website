@@ -190,3 +190,8 @@
 .modal-animated-content {
   animation: slideDownFromTop 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
+
+.applying-responsibilities-card{
+  border-top: 4px solid #057DCD;
+  background-color: #ffffff;
+}

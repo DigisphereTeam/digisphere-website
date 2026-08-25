@@ -29,6 +29,8 @@ import FinOps from "./pages/DigisphereServices/FinOps/FinOps.js";
 import Applying from "./pages/Applying/Applying.js";
 import Faqspage from "./pages/Faqspage/Faqspage.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy.js";
+import TermsService from "./pages/TermsService/TermsService.js";
 
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -145,7 +147,9 @@ const App = () => {
          <Route path="/services/finops" element={<FinOps/>} />
          <Route path="/applying" element={<Applying/>} />
          <Route path="/Resources/faqspage" element={<Faqspage/>} />
-           <Route path="/Resources/helpcenter" element={<HelpCenter/>} />
+         <Route path="/Resources/helpcenter" element={<HelpCenter/>} />
+         <Route path="/privacypolicy" element={<PrivacyPolicy/>} />
+          <Route path="/termsservice" element={<TermsService/>} />
       </Routes>
 
       <DigisphereFooter />

@@ -546,22 +546,9 @@ const DigispherHome = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1.0] }}
             >
-              <span className="home-top-badge px-3 py-2 mb-3">
-                <i>
-                  <img
-                    className="Why-Digisphere"
-                    src={whydigi}
-                    alt="Why Digisphere"
-                  />
-                </i>{" "}
-                Why Digisphere
-              </span>
-
               <h1 className="home-main-title fw-bold mb-3">
                 Why Choose
-                <span className="cloud-numericals">
-                  {" "}
-                  Cloud Numericals?
+                <span className="cloud-numericals"> FinOps?
                 </span>
               </h1>
               <p className="home-main-subtitle text-secondary mx-auto">

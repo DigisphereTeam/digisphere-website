@@ -20,7 +20,7 @@ const jobOpenings = [
  {
   title: "FinOps Sales Specialist",
   department: "Sales",
-  location: "Hyderabad",
+  location: "Vijayawada / Hyderabad",
   experience: "2–5 years",
   type: "Full-time",
   tags: [
@@ -34,7 +34,7 @@ const jobOpenings = [
   {
     title: "UI/UX Designer",
     department: "Design",
-    location: "Vijayawada",
+    location: "Vijayawada / Hyderabad",
     experience: "2–4 years",
     type: "Full-time",
     tags: ["Figma", "User Research", "Prototyping", "Design Systems"],
@@ -43,7 +43,7 @@ const jobOpenings = [
     title: "Digital Marketing Manager",
     department: "Marketing",
     location: "Vijayawada / Hyderabad",
-    experience: "3–5 years",
+    experience: "1-3 years",
     type: "Full-time",
     tags: ["Google Ads", "Meta Ads", "SEO", "Analytics", "Content Strategy"],
   },
@@ -51,9 +51,9 @@ const jobOpenings = [
     title: "Business Development Executive",
     department: "Sales",
     location: "Vijayawada / Hyderabad",
-    experience: "1–3 years",
+    experience: "1–2 years",
     type: "Full-time",
-    tags: ["B2B Sales", "CRM", "Proposal Writing", "Enterprise Accounts"],
+    tags: ["B2B Sales", "CRM", "IT Services", "Enterprise Accounts","Cloud Sales"],
   },
 ];
 
