@@ -8,19 +8,28 @@ import Marketing from "../../../../assets/Careers/Marketing (2).svg";
 import Finopsicon from "../../../../assets/Finopsicon.svg";
 import { FaUsers } from "react-icons/fa";
 const positions = [
-  {
+  // {
+  //   id: 1,
+  //   avatarText: "FE",
+  //   avatarColor: "#057DCD",
+  //   title: "Frontend Engineer",
+  //   category: "Engineering",
+  //   icon: <img src={Engineering} alt="" className="careers-badge-icon" />,
+  // },
+   {
     id: 1,
-    avatarText: "FE",
+    avatarText: "FS",
     avatarColor: "#057DCD",
-    title: "Frontend Engineer",
+    title: "Full Stack Dev",
     category: "Engineering",
     icon: <img src={Engineering} alt="" className="careers-badge-icon" />,
   },
+
   {
     id: 2,
-    avatarText: "FS",
-    avatarColor: "#0591E8",
-    title: "FinOps Sales",
+    avatarText: "CS",
+    avatarColor: "#057DCD",
+    title: "Cloud Sales",
     category: "Sales",
     icon: (
       <img src={Finopsicon} alt="FinOps Sales" className="careers-badge-icon" />
@@ -29,23 +38,15 @@ const positions = [
   {
     id: 3,
     avatarText: "UX",
-    avatarColor: "#0464A4",
+    avatarColor: "#057DCD",
     title: "UX Designer",
     category: "Design",
     icon: <img src={DevOpsLead} alt="" className="careers-badge-icon" />,
   },
   {
     id: 4,
-    avatarText: "FD",
-    avatarColor: "#057DCD",
-    title: "Full Stack Dev",
-    category: "Engineering",
-    icon: <img src={Engineering} alt="" className="careers-badge-icon" />,
-  },
-  {
-    id: 5,
     avatarText: "BD",
-    avatarColor: "#0591E8",
+    avatarColor: "#057DCD",
     title: "Business Development Executive",
     category: "Sales",
     icon: (
@@ -53,9 +54,9 @@ const positions = [
     ),
   },
   {
-    id: 6,
+    id: 5,
     avatarText: "DM",
-    avatarColor: "#0464A4",
+    avatarColor: "#057DCD",
     title: "Digital Marketing",
     category: "Marketing",
     icon: <img src={Marketing} alt="" className="careers-badge-icon" />,
@@ -116,7 +117,7 @@ const CareersHero = () => {
                 <Reveal variant={fadeUp} delay={0.1}>
                   <div className="careers-hiring-badge-wrapper mb-4">
                     <span className="careers-hiring-badge">
-                      We're Hiring — 6 Open Positions
+                      We're Hiring — 5 Open Positions
                     </span>
                   </div>
                 </Reveal>

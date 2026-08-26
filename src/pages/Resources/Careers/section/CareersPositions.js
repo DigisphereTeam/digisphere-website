@@ -18,7 +18,7 @@ const jobOpenings = [
     tags: ["React", "Node.js", "TypeScript", "PostgreSQL", "AWS"],
   },
  {
-  title: "FinOps Sales Specialist",
+  title: "Cloud Sales Specialist",
   department: "Sales",
   location: "Vijayawada / Hyderabad",
   experience: "2–5 years",

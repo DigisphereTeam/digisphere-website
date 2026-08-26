@@ -1,6 +1,10 @@
 .blog-section {
   color: #0f172a;
 }
+.blog-featured-card .row{
+  display: flex;
+  align-items: stretch;
+}
 
 /* Edge-to-Edge Border Wrapper */
 .blog-category-wrapper {
@@ -55,7 +59,7 @@
 
 .blog-featured-img-wrapper {
   height: 100%;
-  overflow: hidden;
+  min-height: 100%;
 }
 
 .blog-featured-img {

@@ -11,7 +11,6 @@ import ManagedItServices from "./pages/DigisphereServices/MangedItServices/Manag
 import ExperienceDesign from "./pages/DigisphereServices/ExperienceDesign/ExperienceDesign.js";
 import Devops from "./pages/DigisphereServices/Devops/Devops.js";
 import CyberSecurity from "./pages/DigisphereServices/CyberSecurity/CyberSecurity.js";
-
 import Automation from "./pages/DigisphereServices/AutomationSolutions/Automation.js";
 import AIPowered from "./pages/DigisphereServices/AIPoweredSolutions/AIPowered.js";
 import CloudServices from "./pages/DigisphereServices/CloudServices/CloudServices.js";
@@ -31,7 +30,13 @@ import Faqspage from "./pages/Faqspage/Faqspage.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy.js";
 import TermsConditions from "./pages/TermsConditions/TermsConditions.js";
-
+import WebArticle from "./pages/WebArticle/WebArticle.js";
+import DigitalMarketingArticle from "./pages/DigitalMarketingArticle/DigitalMarketingArticle.js";
+import AiArticle from "./pages/AiArticle/AiArticle.js";
+import CybersecurityArticle from "./pages/CybersecurityArticle/CybersecurityArticle.js";
+import CloudArticle from "./pages/CloudArticle/CloudArticle.js";
+import UiUxArticle from "./pages/UiUxArticle/UiUxArticle.js";
+import DevOpsArticle from "./pages/DevOpsArticle/DevOpsArticle.js";
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -150,6 +155,13 @@ const App = () => {
          <Route path="/resources/helpcenter" element={<HelpCenter/>} />
          <Route path="/privacypolicy" element={<PrivacyPolicy/>} />
           <Route path="/termsconditions" element={<TermsConditions/>} />
+          <Route path="/webArticle" element={<WebArticle/>} />
+          <Route path="/digitalmarketingarticle" element={<DigitalMarketingArticle/>} />
+           <Route path="/aiarticle" element={<AiArticle/>} />
+           <Route path="/cybersecurityarticle" element={<CybersecurityArticle/>} />
+           <Route path="/cloudarticle" element={<CloudArticle/>} />
+          <Route path="/ui&uxarticle" element={<UiUxArticle/>} />
+           <Route path="/devopsarticle" element={<DevOpsArticle/>} />
       </Routes>
 
       <DigisphereFooter />

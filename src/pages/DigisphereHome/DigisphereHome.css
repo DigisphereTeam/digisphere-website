@@ -2181,7 +2181,8 @@
 
 /* Background wrapper with radial glow matching the image */
 .card-section-wrapper {
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  margin-top: 50px;
   display: flex;
   align-items: center;
 }
