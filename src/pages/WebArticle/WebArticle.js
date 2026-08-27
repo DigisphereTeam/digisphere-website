@@ -74,12 +74,6 @@ const WebArticle = () => {
 
               {/* Meta Info Bar */}
               <div className="d-flex align-items-center gap-4 text-muted webdevarticle-meta pb-4 mb-4 border-bottom">
-                <span className="d-inline-flex align-items-center">
-                  <FiCalendar className="me-2 webdevarticle-theme-icon" /> June 10, 2026
-                </span>
-                <span className="d-inline-flex align-items-center">
-                  <FiClock className="me-2 webdevarticle-theme-icon" /> 7 min read
-                </span>
               </div>
         
 

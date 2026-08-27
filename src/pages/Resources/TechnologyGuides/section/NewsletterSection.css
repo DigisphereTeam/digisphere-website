@@ -150,14 +150,14 @@
   flex-shrink: 0;
 }
 
-.success-title {
+.success-sub-title {
   margin: 0;
   font-size: 1rem;
   font-weight: 700;
   color: #2f855a;
 }
 
-.success-desc {
+.success-sub-desc {
   margin: 2px 0 0;
   font-size: 0.85rem;
   color: #4a5568;
@@ -289,4 +289,27 @@
   .success-desc {
     font-size: 0.78rem;
   }
+}
+.modal-success-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #28a745;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: 700;
+  border: none;
+}
+
+.modal-ok-btn {
+  min-width: 120px;
+  justify-content: center;
+}
+.subscribed-success{
+  font-size: 24px;
+  padding-top: 30px;
 }

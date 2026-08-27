@@ -1,4 +1,4 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./BlogsHero.css";
 import Reveal from "../../../../animations/Reveal";
 import { fadeLeft, fadeUp } from "../../../../animations/variants";
@@ -7,6 +7,8 @@ import Articles from "../../../../assets/Blogs/Articles.svg";
 import Readers from "../../../../assets/Blogs/Readers.svg";
 import WeeklyUpdates from "../../../../assets/Blogs/WeeklyUpdates.svg";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 const BlogsHero = () => {
   return (
     <>
@@ -148,12 +150,15 @@ const BlogsHero = () => {
                           New articles every Tuesday
                         </p>
                       </div>
-                      <button className="blogs-btn-subscribe border-0">
+                      <Link
+                        to="/resources/technologyguides#newsletter-section"
+                        className="blogs-btn-subscribe border-0"
+                      >
                         Subscribe{" "}
                         <span className="ms-1">
                           <FaArrowRight />
                         </span>
-                      </button>
+                      </Link>
                     </div>
                   </Reveal>
                 </div>
