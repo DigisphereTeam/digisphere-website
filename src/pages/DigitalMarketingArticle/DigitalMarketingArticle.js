@@ -76,12 +76,7 @@ const DigitalMarketingArticle = () => {
 
                 {/* Meta Info Bar */}
                 <div className="d-flex align-items-center gap-4 text-muted DigitalArticle-meta pb-4 mb-4 border-bottom">
-                  <span className="d-inline-flex align-items-center">
-                    <FiCalendar className="me-2 DigitalArticle-theme-icon" /> May 28, 2026
-                  </span>
-                  <span className="d-inline-flex align-items-center">
-                    <FiClock className="me-2 DigitalArticle-theme-icon" /> 6 min read
-                  </span>
+                  
                 </div>
               </Reveal>
 
@@ -109,7 +104,7 @@ const DigitalMarketingArticle = () => {
                   {/* Structure Section */}
                   <div className="DigitalArticle-structure-card p-4 my-5 rounded-4">
                     <h3 className="DigitalArticle-structure-title mb-3">What We Changed</h3>
-                    <p className="text-muted mb-3">
+                    <p className=" mb-3">
                       We reorganized the campaigns, removed wasteful keywords, improved targeting, added negative keywords, fixed conversion tracking, and redirected the budget toward campaigns that were actually generating results.
                     </p>
                     <div className="d-flex flex-wrap align-items-center gap-2 mb-3">
@@ -117,12 +112,12 @@ const DigitalMarketingArticle = () => {
                         <React.Fragment key={idx}>
                           <span className="DigitalArticle-structure-badge">{step}</span>
                           {idx < optimizationSteps.length - 1 && (
-                            <span className="text-muted fw-bold">→</span>
+                            <span className="fw-bold">→</span>
                           )}
                         </React.Fragment>
                       ))}
                     </div>
-                    <p className="text-muted mb-0 fw-semibold">
+                    <p className="mb-0 fw-semibold">
                       The goal wasn't simply to spend less. It was to make every rupee work harder.
                     </p>
                   </div>
@@ -130,7 +125,7 @@ const DigitalMarketingArticle = () => {
                   {/* Conclusion Callout */}
                   <div className="DigitalArticle-conclusion-box p-4 rounded-4 mb-5">
                     <h4 className="DigitalArticle-conclusion-title mb-2">The Key Lesson</h4>
-                    <p className="text-muted mb-3">
+                    <p className="mb-3">
                       Google Ads doesn't fail because advertising doesn't work. It often fails because campaigns aren't monitored, measured, and optimized properly. A regular account audit can reveal wasted spend and opportunities that aren't obvious from the surface.
                     </p>
                     <p className="DigitalArticle-conclusion-highlight fw-bold mb-0">

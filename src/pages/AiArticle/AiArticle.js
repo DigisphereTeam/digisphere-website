@@ -68,12 +68,6 @@ const AiArticle = () => {
 
                 {/* Meta Info Bar */}
                 <div className="d-flex align-items-center gap-4 text-muted PracticalAIArticle-meta pb-4 mb-4 border-bottom">
-                  <span className="d-inline-flex align-items-center">
-                    <FiCalendar className="me-2 PracticalAIArticle-theme-icon" /> August 26, 2026
-                  </span>
-                  <span className="d-inline-flex align-items-center">
-                    <FiClock className="me-2 PracticalAIArticle-theme-icon" /> 5 min read
-                  </span>
                 </div>
               </Reveal>
 
