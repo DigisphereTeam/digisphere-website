@@ -98,16 +98,67 @@
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+/* Medium Devices / Tablets Landscape (max-width: 992px) */
+@media (max-width: 992px) {
   .EcommerceUxArticle-main-title {
-    font-size: 1.65rem;
+    font-size: 1.9rem;
   }
 
   .EcommerceUxArticle-lead-text {
-    font-size: 1rem;
+    font-size: 1.05rem;
+  }
+
+  .EcommerceUxArticle-cta-card {
+    padding: 2rem !important;
+  }
+}
+
+/* Extra Small Devices / Mobile Phones (max-width: 576px) */
+@media (max-width: 576px) {
+  .EcommerceUxArticle-main-title {
+    font-size: 1.45rem;
+    line-height: 1.35;
+  }
+
+  .EcommerceUxArticle-meta {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  .EcommerceUxArticle-lead-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .EcommerceUxArticle-reason-title {
+    font-size: 1.05rem;
+  }
+
+  .EcommerceUxArticle-reason-desc {
+    font-size: 0.9rem;
+  }
+
+  .EcommerceUxArticle-conclusion-box {
+    padding: 1.25rem !important;
+  }
+
+  .EcommerceUxArticle-conclusion-title {
     font-size: 1.1rem;
+  }
+
+  .EcommerceUxArticle-conclusion-highlight {
+    font-size: 0.95rem;
+  }
+
+  .EcommerceUxArticle-cta-card {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .EcommerceUxArticle-btn-lg {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 0.95rem;
   }
 }
