@@ -115,17 +115,77 @@
   font-size: 1rem;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+/* Medium Devices / Tablets Landscape (max-width: 992px) */
+@media (max-width: 992px) {
   .CyberArticle-main-title {
-    font-size: 1.65rem;
+    font-size: 1.9rem;
   }
 
   .CyberArticle-lead-text {
-    font-size: 1rem;
+    font-size: 1.05rem;
+  }
+
+  .CyberArticle-structure-title {
+    font-size: 1.2rem;
+  }
+
+  .CyberArticle-cta-card {
+    padding: 2rem !important;
+  }
+}
+
+/* Extra Small Devices / Mobile Phones (max-width: 576px) */
+@media (max-width: 576px) {
+  .CyberArticle-main-title {
+    font-size: 1.45rem;
+    line-height: 1.35;
+  }
+
+  .CyberArticle-meta {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  .CyberArticle-lead-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .CyberArticle-reason-title {
+    font-size: 1.05rem;
+  }
+
+  .CyberArticle-reason-desc,
+  .CyberArticle-controls-list {
+    font-size: 0.9rem;
+  }
+
+  .CyberArticle-controls-list {
+    padding-left: 1rem;
+  }
+
+  .CyberArticle-structure-card,
+  .CyberArticle-conclusion-box {
+    padding: 1.25rem !important;
+  }
+
+  .CyberArticle-conclusion-title {
     font-size: 1.1rem;
+  }
+
+  .CyberArticle-conclusion-highlight {
+    font-size: 0.95rem;
+  }
+
+  .CyberArticle-cta-card {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .CyberArticle-btn-lg {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 0.95rem;
   }
 }

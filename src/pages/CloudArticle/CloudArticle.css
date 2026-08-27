@@ -110,16 +110,72 @@
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+/* Medium Devices / Tablets Landscape (max-width: 992px) */
+@media (max-width: 992px) {
   .AwsCostArticle-main-title {
-    font-size: 1.65rem;
+    font-size: 1.9rem;
   }
 
   .AwsCostArticle-lead-text {
-    font-size: 1rem;
+    font-size: 1.05rem;
+  }
+
+  .AwsCostArticle-structure-title {
+    font-size: 1.2rem;
+  }
+
+  .AwsCostArticle-cta-card {
+    padding: 2rem !important;
+  }
+}
+
+/* Extra Small Devices / Mobile Phones (max-width: 576px) */
+@media (max-width: 576px) {
+  .AwsCostArticle-main-title {
+    font-size: 1.45rem;
+    line-height: 1.35;
+  }
+
+  .AwsCostArticle-meta {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  .AwsCostArticle-lead-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .AwsCostArticle-reason-title {
+    font-size: 1.05rem;
+  }
+
+  .AwsCostArticle-reason-desc {
+    font-size: 0.9rem;
+  }
+
+  .AwsCostArticle-structure-card,
+  .AwsCostArticle-conclusion-box {
+    padding: 1.25rem !important;
+  }
+
+  .AwsCostArticle-conclusion-title {
     font-size: 1.1rem;
+  }
+
+  .AwsCostArticle-conclusion-highlight {
+    font-size: 0.95rem;
+  }
+
+  .AwsCostArticle-cta-card {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .AwsCostArticle-btn-lg {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 0.95rem;
   }
 }
