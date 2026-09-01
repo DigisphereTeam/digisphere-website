@@ -1,0 +1,330 @@
+/* ==========================================
+   Base & Layout Setup
+   ========================================== */
+.Skilledition-wrapper {
+  width: 100%;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+}
+
+.container,
+.Skilledition-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
+.Skilledition-hero {
+  padding: 5rem 0 0 0;
+  background-color: #F7F9FB;
+}
+
+.Skilledition-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: #f0f9ff;
+  color: #057dcd;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.Skilledition-badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #057dcd;
+  border-radius: 50%;
+}
+
+.Skilledition-hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 1.25rem;
+}
+
+.Skilledition-blue {
+  color: #057dcd;
+}
+
+.Skilledition-hero-desc {
+  max-width: 680px;
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-bottom: 3rem;
+}
+
+/* ==========================================
+   Meta Bar
+   ========================================== */
+.Skilledition-meta-bar {
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  background-color: #ffffff;
+}
+
+.Skilledition-meta-bar .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.Skilledition-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.Skilledition-meta-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.Skilledition-meta-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* ==========================================
+   Challenge Section
+   ========================================== */
+.Skilledition-challenge {
+  padding: 5rem 0;
+}
+
+.Skilledition-section-label,
+.Skilledition-approach-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #057dcd;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.Skilledition-challenge-title,
+.Skilledition-approach-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0f172a;
+  margin-bottom: 3rem;
+}
+
+.Skilledition-challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.Skilledition-challenge-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Skilledition-challenge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.Skilledition-icon-box {
+  width: 42px;
+  height: 42px;
+  background-color: #e0f2fe;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.Skilledition-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.Skilledition-card-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* ==========================================
+   What We Built Section
+   ========================================== */
+.Skilledition-approach {
+  padding: 5rem 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.Skilledition-approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.Skilledition-step-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.Skilledition-step-num {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #057dcd;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   Call to Action (CTA) Button
+   ========================================== */
+.Skilledition-cta-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.Skilledition-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  background-color: #057dcd;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.Skilledition-cta-btn:hover {
+  background-color: #0369a1;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   Responsive Breakpoints (992px & 576px)
+   ========================================== */
+
+/* Desktop / Tablet Threshold (<= 992px) */
+@media (max-width: 992px) {
+  .container,
+  .Skilledition-container {
+    padding: 0 1.25rem;
+  }
+
+  .Skilledition-hero {
+    padding-top: 3.5rem;
+  }
+
+  .Skilledition-hero-title {
+    font-size: 2.25rem;
+  }
+
+  .Skilledition-challenge-grid,
+  .Skilledition-approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .Skilledition-meta-bar .container {
+    gap: 1.25rem;
+  }
+
+  .Skilledition-meta-col {
+    flex: 1 1 40%;
+  }
+}
+
+/* Mobile Threshold (<= 576px) */
+@media (max-width: 576px) {
+  .Skilledition-hero {
+    padding-top: 2.5rem;
+  }
+
+  .Skilledition-challenge,
+  .Skilledition-approach {
+    padding: 3rem 0;
+  }
+
+  .Skilledition-hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .Skilledition-hero-desc {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .Skilledition-challenge-title,
+  .Skilledition-approach-title {
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Prevent awkward line breaks on narrow viewports */
+  .Skilledition-hero-title br,
+  .Skilledition-challenge-title br,
+  .Skilledition-approach-title br {
+    display: none;
+  }
+
+  .Skilledition-challenge-grid,
+  .Skilledition-approach-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .Skilledition-meta-bar .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .Skilledition-challenge-card,
+  .Skilledition-step-wrapper {
+    padding: 1.25rem;
+  }
+
+  .Skilledition-cta-wrapper {
+    width: 100%;
+  }
+
+  .Skilledition-cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+  }
+}

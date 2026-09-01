@@ -1,0 +1,431 @@
+.FinSphere-wrapper {
+  width: 100%;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.6;
+}
+.container,
+.FinSphere-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
+.FinSphere-hero {
+  padding: 5rem 0 0 0;
+  background-color: #F7F9FB;
+}
+
+.FinSphere-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: #f0f9ff;
+  color: #057dcd;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.FinSphere-badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #057dcd;
+  border-radius: 50%;
+}
+
+.FinSphere-hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 1.25rem;
+}
+
+.FinSphere-blue {
+  color: #057dcd;
+}
+
+.FinSphere-hero-desc {
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+.FinSphere-meta-bar {
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  background-color: #ffffff;
+}
+
+.FinSphere-meta-bar .container,
+.FinSphere-meta-bar .FinSphere-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.FinSphere-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.FinSphere-meta-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.FinSphere-meta-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+
+.FinSphere-challenge {
+  padding: 5rem 0;
+}
+
+.FinSphere-section-label,
+.FinSphere-approach-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #057dcd;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.FinSphere-challenge-title,
+.FinSphere-approach-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0f172a;
+  margin-bottom: 3rem;
+}
+
+.FinSphere-challenge-lead {
+  font-size: 1.125rem;
+  color: #475569;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-top: -1.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.FinSphere-challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+
+.FinSphere-challenge-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.FinSphere-challenge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.FinSphere-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.FinSphere-card-header .FinSphere-card-title {
+  margin-bottom: 0;
+}
+
+.FinSphere-card-subtitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #057dcd;
+  background: #e0f2fe;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.FinSphere-icon-box {
+  width: 42px;
+  height: 42px;
+  background-color: #e0f2fe;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.FinSphere-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.FinSphere-card-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  flex-grow: 1;
+}
+
+.FinSphere-impact-box {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #e2e8f0;
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+.FinSphere-impact-box strong {
+  color: #0f172a;
+}
+
+
+.FinSphere-approach {
+  padding: 5rem 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.FinSphere-approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.FinSphere-step-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.FinSphere-step-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #057dcd;
+  margin-bottom: 1rem;
+}
+
+
+.FinSphere-deliverable-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0369a1;
+  background: #f0f9ff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.FinSphere-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.FinSphere-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.FinSphere-bullet-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #057dcd;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+
+.FinSphere-tech-main {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 8px 0 4px 0;
+}
+
+.FinSphere-tech-sub {
+  font-size: 0.813rem;
+  color: #64748b;
+  display: block;
+}
+
+.FinSphere-cta-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.FinSphere-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  background-color: #057dcd;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.FinSphere-cta-btn:hover {
+  background-color: #0369a1;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .container,
+  .FinSphere-container {
+    padding: 0 1.25rem;
+  }
+
+  .FinSphere-hero {
+    padding-top: 3.5rem;
+  }
+
+  .FinSphere-hero-title {
+    font-size: 2.25rem;
+  }
+
+  /* Grid Layout Adjustments */
+  .FinSphere-challenge-grid,
+  .FinSphere-approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* Meta Bar alignment */
+  .FinSphere-meta-bar .container,
+  .FinSphere-meta-bar .FinSphere-container {
+    gap: 1.25rem;
+  }
+
+  .FinSphere-meta-col {
+    flex: 1 1 40%;
+  }
+}
+
+/* Mobile Threshold (<= 576px) */
+@media (max-width: 576px) {
+  /* Global spacing reductions */
+  .FinSphere-hero {
+    padding-top: 2.5rem;
+  }
+
+  .FinSphere-challenge,
+  .FinSphere-approach {
+    padding: 3rem 0;
+  }
+
+  /* Typography scale */
+  .FinSphere-hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .FinSphere-hero-desc {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .FinSphere-challenge-title,
+  .FinSphere-approach-title {
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
+  }
+
+  .FinSphere-challenge-lead {
+    font-size: 0.95rem;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Prevent awkward word splits on tiny screens */
+  .FinSphere-hero-title br,
+  .FinSphere-challenge-title br,
+  .FinSphere-approach-title br {
+    display: none;
+  }
+
+  /* Grid layout collapse to 1 column */
+  .FinSphere-challenge-grid,
+  .FinSphere-approach-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Meta Bar multi-column stack */
+  .FinSphere-meta-bar .container,
+  .FinSphere-meta-bar .FinSphere-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Component padding refinements */
+  .FinSphere-challenge-card,
+  .FinSphere-step-wrapper {
+    padding: 1.25rem;
+  }
+
+  /* CTA stretch on small viewports */
+  .FinSphere-cta-wrapper {
+    width: 100%;
+  }
+
+  .FinSphere-cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+  }
+}
