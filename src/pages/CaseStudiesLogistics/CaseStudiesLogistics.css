@@ -38,6 +38,7 @@
   font-weight: 700;
   letter-spacing: 0.05em;
   margin-bottom: 1.5rem;
+  border: 1px solid #057dcd33;
 }
 
 .Logistics-badge-dot {
@@ -201,9 +202,9 @@
 }
 
 .Logistics-step-num {
-  font-size: 1.5rem;
+  font-size: 40px;
   font-weight: 800;
-  color: #057dcd;
+  color: #dceaf8;
   margin-bottom: 1rem;
 }
 

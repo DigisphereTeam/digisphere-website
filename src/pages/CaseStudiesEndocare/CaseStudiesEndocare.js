@@ -1,5 +1,6 @@
 import React from "react";
 import "./CaseStudiesEndocare.css";
+import { motion } from "framer-motion";
 import {
   FiEyeOff,
   FiSearch,
@@ -11,88 +12,103 @@ import {
 } from "react-icons/fi";
 import { TbFingerprint } from "react-icons/tb";
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const fadeLeft = {
+  hidden: { opacity: 0, x: -40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const fadeRight = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 const CaseStudiesEndocare = () => {
   const challenges = [
     {
-      icon: <FiEyeOff size={18} color="#0284c7" />,
+      icon: <FiEyeOff size={18} color="#057dcd" />,
       title: "Service Visibility",
       description:
-        "Specialized clinical offerings and advanced endocrine treatment programs were buried beneath complex navigation menus. Prospective patients struggled to identify relevant care departments, lead specialists, or available treatment options. Elevating service discoverability was crucial for driving informed consultations.",
+        "Specialized clinical offerings and endocrine programs were buried in deep menus, preventing patients from easily finding key care options.",
     },
     {
-      icon: <TbFingerprint size={20} color="#0284c7" />,
+      icon: <TbFingerprint size={20} color="#057dcd" />,
       title: "Brand Identity",
       description:
-        "Legacy visual assets and outdated portal layouts failed to reflect Endocare's reputation for medical excellence. The existing design lacked cohesive color schemes, modern healthcare typography, and reassuring patient-centric imagery. Establishing a trustworthy digital identity was vital to build confidence among new patients.",
+        "Outdated visuals and legacy web components failed to reflect Endocare's clinical excellence or build trust with new patients.",
     },
     {
-      icon: <FiSearch size={18} color="#0284c7" />,
+      icon: <FiSearch size={18} color="#057dcd" />,
       title: "Information Friction",
       description:
-        "Patients encountered significant barriers when searching for physician duty rosters, OPD timings, and emergency contact details. Fragmented content presentation led to high call-center volume for basic informational inquiries. Streamlining critical data pathways was essential for patient convenience.",
+        "Disorganized schedules and scattered contact info caused frustration and drove up repetitive calls to support staff.",
     },
     {
-      icon: <FiMonitor size={18} color="#0284c7" />,
+      icon: <FiMonitor size={18} color="#057dcd" />,
       title: "Cross-Device UX",
       description:
-        "Severe layout breakages and unoptimized mobile forms degraded the booking experience for over 60% of site visitors. Interactive schedule pickers were unusable on smaller touchscreens, causing user frustration. Re-architecting a fluid cross-device experience was mandatory for modern healthcare standards.",
+        "Unresponsive mobile layouts and broken scheduling tools ruined the experience for over 60% of site traffic.",
     },
     {
-      icon: <FiMousePointer size={18} color="#0284c7" />,
+      icon: <FiMousePointer size={18} color="#057dcd" />,
       title: "Conversion Paths",
       description:
-        "Appointment booking forms lacked prominent calls-to-action, progress tracking, and instant confirmation feedback. Multi-step registration flows resulted in steep drop-off rates during digital onboarding. Implementing frictionless conversion funnels was necessary to maximize appointment conversions.",
+        "Multi-step booking forms without clear progress indicators led to high drop-off rates during appointment setup.",
     },
   ];
 
   const steps = [
     {
       number: "01",
-      title: "Discovery & Patient Profiling",
+      title: "Discovery & User Profiling",
       description:
-        "Mapped user personas across age demographics and health conditions to understand key search behaviors. Conducted stakeholder interviews with clinical staff and patients to isolate pain points in the offline-to-online journey. These insights guided our patient-first design strategy.",
+        "Analyzed key patient demographics and search behaviors to identify core usability obstacles across mobile and desktop workflows.",
     },
     {
       number: "02",
       title: "Architecture & Flow Design",
       description:
-        "Restructured site taxonomy to ensure emergency hotlines, doctor profiles, and booking modules are reachable within two clicks. Designed dedicated department hubs featuring direct appointment scheduling widgets. The streamlined flow eliminated unnecessary steps from patient journeys.",
+        "Restructured site navigation to ensure doctors, schedules, and specialty departments are accessible within just two clicks.",
     },
     {
       number: "03",
       title: "Accessible UI System",
       description:
-        "Created a clean, high-contrast design system adhering strictly to WCAG 2.1 AA accessibility guidelines. Standardized typography scales, legibility ratios, and touch targets to accommodate elderly visitors and visually impaired patients. The cohesive visual language reinforced institutional trust.",
+        "Built a clean, high-contrast visual system adhering to WCAG 2.1 AA standards for seamless accessibility across all age groups.",
     },
     {
       number: "04",
       title: "Performance Engineering",
       description:
-        "Architected a lightweight React web app utilizing code-splitting, progressive image loading, and server-side caching. Optimized assets to achieve sub-second page loads across low-bandwidth mobile networks. The rapid responsiveness guaranteed immediate access during urgent medical queries.",
+        "Developed a responsive React web app optimized for rapid load times, even on low-bandwidth mobile networks.",
     },
   ];
 
   const metrics = [
     {
-      icon: <FiTrendingUp size={22} color="#0284c7" />,
+      icon: <FiTrendingUp size={22} color="#057dcd" />,
       value: "+140%",
       label: "Online Bookings",
       detail:
-        "Achieved a massive increase in completed digital appointment requests within 90 days post-launch. Simplified booking forms and prominent CTA placement converted high-intent traffic into scheduled clinical visits.",
+        "Direct appointment conversions surged within 90 days of launch thanks to simplified booking steps and clear calls-to-action.",
     },
     {
-      icon: <FiZap size={22} color="#0284c7" />,
+      icon: <FiZap size={22} color="#057dcd" />,
       value: "1.2s",
       label: "Average Load Time",
       detail:
-        "Delivered a 65% improvement in Core Web Vitals performance across all mobile networks. Rapid page delivery minimized patient bounce rates and ensured reliable access during urgent healthcare searches.",
+        "Optimized Core Web Vitals to deliver sub-second response rates and keep bounce rates to a minimum across mobile devices.",
     },
     {
-      icon: <FiUserCheck size={22} color="#0284c7" />,
+      icon: <FiUserCheck size={22} color="#057dcd" />,
       value: "45%",
-      label: "Bounce Rate Reduction",
+      label: "Bounce Rate Cut",
       detail:
-        "Improved content hierarchy and clear department categorization kept patients engaged longer on key service pages. Visitors explored doctor credentials and treatment details far more thoroughly.",
+        "Intuitive menu structures kept patients engaged longer, encouraging deeper exploration of treatment plans and medical credentials.",
     },
   ];
 
@@ -101,21 +117,46 @@ const CaseStudiesEndocare = () => {
       {/* Hero Section */}
       <section className="Endocare-hero">
         <div className="container">
-          <div className="Endocare-badge">
+          <motion.div 
+            className="Endocare-badge"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+          >
             <span className="Endocare-badge-dot"></span>
-            HEALTHCARE CASE STUDY
-          </div>
-          <h1 className="Endocare-hero-title">
+            Endocare
+          </motion.div>
+
+          <motion.h1 
+            className="Endocare-hero-title"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ delay: 0.1 }}
+          >
             Redesigning the Patient Experience for{" "}
             <span className="Endocare-blue">Endocare Hospitals</span>
-          </h1>
-          <p className="Endocare-hero-desc">
-            Endocare Hospitals needed to transform a fragmented digital presence into an enterprise-grade healthcare portal. We re-engineered their platform from the ground up—combining intuitive appointment scheduling, WCAG-compliant design accessibility, and rapid mobile performance. The new digital front door elevates patient trust, streamlines clinical workflows, and guarantees effortless access to specialty medical care.
-          </p>
+          </motion.h1>
+
+          <motion.p 
+            className="Endocare-hero-desc"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ delay: 0.2 }}
+          >
+            We transformed Endocare's legacy digital presence into an enterprise-grade, patient-first portal. By combining intuitive appointment scheduling, WCAG-compliant accessibility, and rapid mobile performance, the new platform builds institutional trust and guarantees seamless access to specialty medical care.
+          </motion.p>
         </div>
 
         {/* Meta Bar */}
-        <div className="Endocare-meta-bar">
+        <motion.div 
+          className="Endocare-meta-bar"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          transition={{ delay: 0.3 }}
+        >
           <div className="Endocare-meta-container">
             <div className="Endocare-meta-col">
               <span className="Endocare-meta-label">CLIENT</span>
@@ -134,25 +175,47 @@ const CaseStudiesEndocare = () => {
               <span className="Endocare-meta-val">React, Web Performance</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Challenge Section */}
       <section className="Endocare-challenge">
         <div className="Endocare-container">
-          <span className="Endocare-section-label">THE CHALLENGE</span>
-          <h2 className="Endocare-challenge-title">
-            Bridging the gap between complex clinical services and intuitive
-            patient access.
-          </h2>
+          <motion.span 
+            className="Endocare-section-label"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
+            THE CHALLENGE
+          </motion.span>
+
+          <motion.h2 
+            className="Endocare-challenge-title"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
+            Bridging the gap between clinical services and intuitive patient access.
+          </motion.h2>
 
           <div className="Endocare-challenge-grid">
             {challenges.map((item, index) => (
-              <div className="Endocare-challenge-card" key={index}>
+              <motion.div 
+                className="Endocare-challenge-card" 
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{ delay: index * 0.1 }}
+              >
                 <div className="Endocare-icon-box">{item.icon}</div>
                 <h3 className="Endocare-card-title">{item.title}</h3>
                 <p className="Endocare-card-desc">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -161,20 +224,42 @@ const CaseStudiesEndocare = () => {
       {/* Approach Section */}
       <section className="Endocare-approach">
         <div className="container">
-          <span className="Endocare-approach-label">THE STRATEGY</span>
-          <h2 className="Endocare-approach-title">
+          <motion.span 
+            className="Endocare-approach-label"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
+            THE STRATEGY
+          </motion.span>
+
+          <motion.h2 
+            className="Endocare-approach-title"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
             A patient-centric execution framework.
-          </h2>
+          </motion.h2>
 
           <div className="Endocare-approach-grid">
-            {steps.map((step) => (
-              <div className="Endocare-step-wrapper" key={step.number}>
+            {steps.map((step, index) => (
+              <motion.div 
+                className="Endocare-step-wrapper" 
+                key={step.number}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={index % 2 === 0 ? fadeRight : fadeLeft}
+              >
                 <div className="Endocare-step-num">{step.number}</div>
                 <div className="Endocare-step-card">
                   <h3 className="Endocare-card-title">{step.title}</h3>
                   <p className="Endocare-card-desc">{step.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -183,21 +268,44 @@ const CaseStudiesEndocare = () => {
       {/* Results Section */}
       <section className="Endocare-results">
         <div className="container">
-          <span className="Endocare-section-label">THE IMPACT</span>
-          <h2 className="Endocare-results-title">
+          <motion.span 
+            className="Endocare-section-label"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
+            THE IMPACT
+          </motion.span>
+
+          <motion.h2 
+            className="Endocare-results-title"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
             Measurable outcomes for patients and hospital operations.
-          </h2>
+          </motion.h2>
 
           <div className="Endocare-results-grid">
             {metrics.map((metric, index) => (
-              <div className="Endocare-result-card" key={index}>
+              <motion.div 
+                className="Endocare-result-card" 
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{ delay: index * 0.15 }}
+              >
                 <div className="Endocare-result-header">
                   {metric.icon}
                   <span className="Endocare-result-value">{metric.value}</span>
                 </div>
                 <h3 className="Endocare-result-label">{metric.label}</h3>
                 <p className="Endocare-result-desc">{metric.detail}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

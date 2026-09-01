@@ -33,6 +33,7 @@
   font-weight: 700;
   letter-spacing: 0.05em;
   margin-bottom: 1.5rem;
+  border: 1px solid #057dcd33;
 }
 
 .FinSphere-badge-dot {
@@ -231,7 +232,6 @@
 .FinSphere-step-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background: #f8fafc;
   padding: 2rem;
   border-radius: 12px;
@@ -239,9 +239,9 @@
 }
 
 .FinSphere-step-num {
-  font-size: 1.5rem;
+  font-size:40px;
   font-weight: 800;
-  color: #057dcd;
+  color: #dceaf8;
   margin-bottom: 1rem;
 }
 

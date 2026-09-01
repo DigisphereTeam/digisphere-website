@@ -1,6 +1,23 @@
 import React from "react";
 import "./CaseStudiesSkillEdition.css";
 import { FiUsers, FiBookOpen, FiTrendingUp } from "react-icons/fi";
+import { motion } from "framer-motion";
+
+// Animation Variants
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const fadeLeft = {
+  hidden: { opacity: 0, x: -40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const fadeRight = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 const CaseStudiesSkillEdition = () => {
   const challenges = [
@@ -50,16 +67,35 @@ const CaseStudiesSkillEdition = () => {
       {/* Hero Section */}
       <section className="Skilledition-hero">
         <div className="container">
-          <div className="Skilledition-badge">
+          <motion.div
+            className="Skilledition-badge"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+          >
             <span className="Skilledition-badge-dot"></span>
-            CASE STUDY
-          </div>
-          <h1 className="Skilledition-hero-title">
+            Skilledition
+          </motion.div>
+
+          <motion.h1
+            className="Skilledition-hero-title"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ delay: 0.1 }}
+          >
             Centralized EdTech Platform &
             <span className="Skilledition-blue"> Role-Based Ecosystem </span>
             for Skilledition EdTech.
-          </h1>
-          <p className="Skilledition-hero-desc">
+          </motion.h1>
+
+          <motion.p
+            className="Skilledition-hero-desc"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ delay: 0.2 }}
+          >
             Skilledition wanted to create a centralized, scalable learning
             ecosystem capable of powering modern technical education at scale.
             We designed and built a multi-role web platform that unifies student
@@ -67,11 +103,17 @@ const CaseStudiesSkillEdition = () => {
             into one cohesive experience. The solution streamlines curriculum
             delivery, drives student retention, and simplifies complex
             educational workflows.
-          </p>
+          </motion.p>
         </div>
 
         {/* Meta Bar */}
-        <div className="Skilledition-meta-bar">
+        <motion.div
+          className="Skilledition-meta-bar"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          transition={{ delay: 0.3 }}
+        >
           <div className="container">
             <div className="Skilledition-meta-col">
               <span className="Skilledition-meta-label">CLIENT</span>
@@ -90,25 +132,48 @@ const CaseStudiesSkillEdition = () => {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Challenge Section */}
       <section className="Skilledition-challenge">
         <div className="Skilledition-container">
-          <span className="Skilledition-section-label">THE CHALLENGE</span>
-          <h2 className="Skilledition-challenge-title">
+          <motion.span
+            className="Skilledition-section-label"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
+            THE CHALLENGE
+          </motion.span>
+
+          <motion.h2
+            className="Skilledition-challenge-title"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
             Unifying multi-user educational workflows into a single <br />
             scalable, intuitive learning management system.
-          </h2>
+          </motion.h2>
 
           <div className="Skilledition-challenge-grid">
             {challenges.map((item, index) => (
-              <div className="Skilledition-challenge-card" key={index}>
+              <motion.div
+                className="Skilledition-challenge-card"
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{ delay: index * 0.1 }}
+              >
                 <div className="Skilledition-icon-box">{item.icon}</div>
                 <h3 className="Skilledition-card-title">{item.title}</h3>
                 <p className="Skilledition-card-desc">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -117,21 +182,43 @@ const CaseStudiesSkillEdition = () => {
       {/* What We Built Section */}
       <section className="Skilledition-approach">
         <div className="container">
-          <span className="Skilledition-approach-label">WHAT WE BUILT</span>
-          <h2 className="Skilledition-approach-title">
+          <motion.span
+            className="Skilledition-approach-label"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
+            WHAT WE BUILT
+          </motion.span>
+
+          <motion.h2
+            className="Skilledition-approach-title"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
             A complete role-based EdTech platform bringing <br />
             students, tutors, and administrators together.
-          </h2>
+          </motion.h2>
 
           <div className="Skilledition-approach-grid">
             {highlights.map((step, idx) => (
-              <div className="Skilledition-step-wrapper" key={idx}>
+              <motion.div
+                className="Skilledition-step-wrapper"
+                key={idx}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={idx % 2 === 0 ? fadeRight : fadeLeft}
+              >
                 <div className="Skilledition-step-num">{step.number}</div>
                 <div className="Skilledition-step-card">
                   <h3 className="Skilledition-card-title">{step.title}</h3>
                   <p className="Skilledition-card-desc">{step.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

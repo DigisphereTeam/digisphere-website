@@ -1,6 +1,23 @@
 import React from "react";
 import { FiHome, FiCompass, FiSend } from "react-icons/fi";
+import { motion } from "framer-motion";
 import "./CaseStudiesRealVentures.css";
+
+// Shared Scroll Animation Variants
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const fadeLeft = {
+  hidden: { opacity: 0, x: -40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const fadeRight = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 const CaseStudiesRealVentures = () => {
   const challenges = [
@@ -50,23 +67,48 @@ const CaseStudiesRealVentures = () => {
       {/* Hero Section */}
       <section className="RealVentures-hero">
         <div className="container">
-          <div className="RealVentures-badge">
+          <motion.div
+            className="RealVentures-badge"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+          >
             <span className="RealVentures-badge-dot"></span>
-            CASE STUDY
-          </div>
-          <h1 className="RealVentures-hero-title">
+            Real Ventures
+          </motion.div>
+
+          <motion.h1
+            className="RealVentures-hero-title"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ delay: 0.1 }}
+          >
             Website Design &
             <span className="RealVentures-blue"> Digital Experience</span>{" "}
             <br />
             for Real Ventures.
-          </h1>
-          <p className="RealVentures-hero-desc">
+          </motion.h1>
+
+          <motion.p
+            className="RealVentures-hero-desc"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ delay: 0.2 }}
+          >
             Real Ventures required a modernized digital flagship to showcase its growing portfolio of premium real estate developments. We crafted an immersive platform that combines elegant visual storytelling with interactive floor plans and streamlined inquiry flows. The result is a high-converting digital experience that captivates prospective buyers and accelerates real estate sales pipelines.
-          </p>
+          </motion.p>
         </div>
 
         {/* Meta Bar */}
-        <div className="RealVentures-meta-bar">
+        <motion.div
+          className="RealVentures-meta-bar"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          transition={{ delay: 0.3 }}
+        >
           <div className="container">
             <div className="RealVentures-meta-col">
               <span className="RealVentures-meta-label">CLIENT</span>
@@ -83,25 +125,48 @@ const CaseStudiesRealVentures = () => {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Challenge Section */}
       <section className="RealVentures-challenge">
         <div className="container">
-          <span className="RealVentures-section-label">THE CHALLENGE</span>
-          <h2 className="RealVentures-challenge-title">
+          <motion.span
+            className="RealVentures-section-label"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
+            THE CHALLENGE
+          </motion.span>
+
+          <motion.h2
+            className="RealVentures-challenge-title"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
             Transforming complex property portfolios into <br />
             an intuitive, visually captivating buyer journey.
-          </h2>
+          </motion.h2>
 
           <div className="RealVentures-challenge-grid">
             {challenges.map((item, index) => (
-              <div className="RealVentures-challenge-card" key={index}>
+              <motion.div
+                className="RealVentures-challenge-card"
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{ delay: index * 0.1 }}
+              >
                 <div className="RealVentures-icon-box">{item.icon}</div>
                 <h3 className="RealVentures-card-title">{item.title}</h3>
                 <p className="RealVentures-card-desc">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -110,21 +175,43 @@ const CaseStudiesRealVentures = () => {
       {/* What We Built Section */}
       <section className="RealVentures-approach">
         <div className="container">
-          <span className="RealVentures-approach-label">WHAT WE BUILT</span>
-          <h2 className="RealVentures-approach-title">
+          <motion.span
+            className="RealVentures-approach-label"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
+            WHAT WE BUILT
+          </motion.span>
+
+          <motion.h2
+            className="RealVentures-approach-title"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeLeft}
+          >
             A responsive real estate platform built for <br />
             discovery, engagement, and lead capture.
-          </h2>
+          </motion.h2>
 
           <div className="RealVentures-approach-grid">
-            {highlights.map((step) => (
-              <div className="RealVentures-step-wrapper" key={step.number}>
+            {highlights.map((step, index) => (
+              <motion.div
+                className="RealVentures-step-wrapper"
+                key={step.number}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={index % 2 === 0 ? fadeRight : fadeLeft}
+              >
                 <div className="RealVentures-step-num">{step.number}</div>
                 <div className="RealVentures-step-card">
                   <h3 className="RealVentures-card-title">{step.title}</h3>
                   <p className="RealVentures-card-desc">{step.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 

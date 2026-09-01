@@ -35,6 +35,7 @@
   font-weight: 700;
   letter-spacing: 0.05em;
   margin-bottom: 1.5rem;
+  border: 1px solid #057dcd33;
 }
 
 .RealVentures-badge-dot {
@@ -57,7 +58,6 @@
 }
 
 .RealVentures-hero-desc {
-  max-width: 680px;
   font-size: 1.125rem;
   color: #64748b;
   margin-bottom: 3rem;
@@ -196,9 +196,9 @@
 }
 
 .RealVentures-step-num {
-  font-size: 1.5rem;
+  font-size: 40px;
   font-weight: 800;
-  color: #057dcd;
+  color: #dceaf8;
   margin-bottom: 1rem;
 }
 
