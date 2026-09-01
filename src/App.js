@@ -37,6 +37,12 @@ import CybersecurityArticle from "./pages/CybersecurityArticle/CybersecurityArti
 import CloudArticle from "./pages/CloudArticle/CloudArticle.js";
 import UiUxArticle from "./pages/UiUxArticle/UiUxArticle.js";
 import DevOpsArticle from "./pages/DevOpsArticle/DevOpsArticle.js";
+import CaseStudiesEndocare from "./pages/CaseStudiesEndocare/CaseStudiesEndocare.js";
+import CaseStudiesSRSteelDoors from "./pages/CaseStudiesSRSteelDoors/CaseStudiesSRSteelDoors.js";
+import CaseStudiesRealVentures from "./pages/CaseStudiesRealVentures/CaseStudiesRealVentures.js";
+import CaseStudiesSkillEdition from "./pages/CaseStudiesSkillEdition/CaseStudiesSkillEdition.js";
+import { CaseStudiesLogistics } from "./pages/CaseStudiesLogistics/CaseStudiesLogistics.js";
+import { CaseStudiesFinSphere } from "./pages/CaseStudiesFinSphere/CaseStudiesFinSphere.js";
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -160,8 +166,14 @@ const App = () => {
            <Route path="/aiarticle" element={<AiArticle/>} />
            <Route path="/cybersecurityarticle" element={<CybersecurityArticle/>} />
            <Route path="/cloudarticle" element={<CloudArticle/>} />
-          <Route path="/ui&uxarticle" element={<UiUxArticle/>} />
+           <Route path="/ui&uxarticle" element={<UiUxArticle/>} />
            <Route path="/devopsarticle" element={<DevOpsArticle/>} />
+           <Route path="/caseStudiesendocare" element={<CaseStudiesEndocare/>} />
+           <Route path="/casectudiessrsteeldoors" element={<CaseStudiesSRSteelDoors/>} />
+           <Route path="/casestudiesralventures" element={<CaseStudiesRealVentures/>} />
+           <Route path="/casestudiesskilledition" element={<CaseStudiesSkillEdition/>} />
+            <Route path="/casestudieslogistics" element={<CaseStudiesLogistics/>} />
+             <Route path="/casestudiesfinsphere" element={<CaseStudiesFinSphere/>} />
       </Routes>
 
       <DigisphereFooter />
