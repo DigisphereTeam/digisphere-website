@@ -1,0 +1,33 @@
+.toolchain{
+    background: #ffffff;
+    border: 1px solid #dbe3ee;
+    border-radius: 14px;
+    padding:30px 24px 24px 24px;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+
+}
+.toolchain h1{
+    color: #057DCD;
+    font-weight: 800;
+    font-size: 42px;
+
+}
+.toolchain h6{
+    color:#0F172A;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 10px;
+
+}
+.toolchain span{
+    color: #475569;
+    font-size: 14px;
+
+}
+
+.major-clouds{
+    width: 150px;
+    height: 50px;
+}

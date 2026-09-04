@@ -37,3 +37,153 @@
     margin-top: 10px !important;
   }
 }
+
+/* new */
+.workflow-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.header p {
+  color: #777;
+  margin-top: 5px;
+}
+
+.status {
+  color: #00a651;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #00c853;
+  border-radius: 50%;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.step {
+  width: 170px;
+  height: 120px;
+  border: 3px solid #d9d9d9;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+  background: white;
+}
+
+.step h4 {
+  margin: 8px 0 4px;
+}
+
+.step p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+}
+
+.icon {
+  font-size: 22px;
+}
+
+/* Active = Blue */
+.step.active {
+  border-color: #1976d2;
+  background: #eaf3ff;
+  color: #1976d2;
+}
+
+/* Completed = Green */
+.step.completed {
+  border-color: #00c853;
+  background: #ecfff2;
+  color: #00a651;
+}
+
+.line {
+  width: 40px;
+  height: 4px;
+  background: #ccc;
+  transition: .5s;
+}
+
+.line-active {
+  background: #00c853;
+}
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.step {
+  min-width: 95px;
+  height: 90px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.4s;
+  flex-shrink: 0;
+}
+
+.step h6 {
+  margin: 6px 0 2px;
+  font-size: 14px;
+}
+
+.step small {
+  font-size: 11px;
+  color: #666;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background: #ccc;
+  flex-shrink: 0;
+}
+
+.line-active {
+  background: #16a34a;
+}
+
+.step.active {
+  border-color: #0d6efd;
+  background: #eaf3ff;
+  color: #0d6efd;
+}
+
+.step.completed {
+  border-color: #16a34a;
+  background: #ecfff2;
+  color: #16a34a;
+}

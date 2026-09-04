@@ -3,7 +3,10 @@
   color: #fff;
   padding: 70px 0 25px;
 }
-
+.Digispherefooter-logo-image{
+  height: 65px;
+  object-fit: contain;
+}
 .footer-logo {
   font-size: 24px;
   font-weight: 700;
@@ -120,4 +123,35 @@ background-color: #FFFFFF1A;
   background: #10B981;
   border-radius: 50%;
   
+}
+
+.footer-bottom {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+
+.footer-legal {
+  font-size: 0.9rem;
+}
+
+.footer-legal-link {
+  color: #6c757d; 
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-legal-link:hover {
+  color: #5095fe; 
+  text-decoration: none;
+}
+
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.15); 
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.side-line{
+    color: #6c757d !important;
 }

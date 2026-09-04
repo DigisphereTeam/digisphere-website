@@ -8,6 +8,7 @@ import Button from "../../../../components/Button/Button";
 import { FaArrowRight } from "react-icons/fa";
 import { RxPeople } from "react-icons/rx";
 import { LuChevronDown } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const faqData = [
   {
@@ -119,13 +120,13 @@ const WebsiteFAQCTASection = () => {
 
               <Reveal variants={fadeUp}>
                 <div className="cta-buttons">
-                  <Button variant="primary" icon={<FaArrowRight/>}>
+                  <Link to="/contact"><Button variant="primary" icon={<FaArrowRight/>}>
                     Book Free Audit
-                  </Button>
+                  </Button></Link>
 
-                  <Button variant="secondary" icon={<RxPeople />} iconPosition="left" >
+                  <Link to="/contact"><Button variant="secondary" icon={<RxPeople />} iconPosition="left" >
                     Talk To Our Team
-                  </Button>
+                  </Button></Link>
                 </div>
               </Reveal>
 

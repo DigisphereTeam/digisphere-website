@@ -1,7 +1,7 @@
 import React from "react";
 import "./EngagementSection.css";
-
-import growthTrajectory from "../../../assets/about-page/growth-trajectory.svg";
+import { motion } from "framer-motion";
+import { TiArrowUp } from "react-icons/ti";
 
 import auditIcon from "../../../assets/about-page/audit-icon.svg";
 import strategyIcon from "../../../assets/about-page/strategy-icon.svg";
@@ -10,6 +10,7 @@ import launchIcon from "../../../assets/about-page/launch-icon.svg";
 
 import Reveal from "../../../animations/Reveal";
 import { fadeUp } from "../../../animations/variants";
+import ProcessCards from "../../../components/ProcessCards/ProcessCards";
 
 const EngagementSection = () => {
   const steps = [
@@ -39,6 +40,33 @@ const EngagementSection = () => {
     },
   ];
 
+  const bars = [18, 30, 48, 62, 78, 86, 94, 100];
+  const minHeight = Math.min(...bars);
+  const maxHeight = Math.max(...bars);
+
+  // Parent animation manager
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        when: "beforeChildren",
+        staggerChildren: 0.06, // Cascades the bars beautifully from left-to-right
+      },
+    },
+  };
+
+  const barVariants = {
+    hidden: { scaleY: 0 },
+    visible: {
+      scaleY: 1,
+      transition: { duration: 0.5, ease: [0.25, 1, 0.5, 1] },
+    },
+  };
+
   return (
     <section className="engagement-section">
       <div className="container">
@@ -52,35 +80,12 @@ const EngagementSection = () => {
           </div>
         </Reveal>
 
-        {/* Cards */}
-        <div className="row g-4 justify-content-center steps-grid">
-          {steps.map((step, index) => (
-            <div className="col-12 col-sm-6 col-lg-3" key={index}>
-              <Reveal className="h-100" variant={fadeUp} delay={index * 0.15}>
-                <div className="step-card h-100">
-                  <div className="step-icon-box">
-                    <img
-                      src={step.icon}
-                      alt={step.title}
-                      className="step-icon"
-                    />
-                  </div>
-
-                  <div className="step-number">{step.number}</div>
-
-                  <h3 className="step-title">{step.title}</h3>
-
-                  <p className="step-desc">{step.description}</p>
-                </div>
-              </Reveal>
-            </div>
-          ))}
-        </div>
+        <ProcessCards cards={steps} colClass="col-12 col-sm-6 col-lg" />
 
         {/* Getting Started */}
         <Reveal variant={fadeUp}>
           <div className="getting-started text-center">
-            <div className="trend-icon-wrap">
+            <div className="trend-icons-wraps">
               <img src={launchIcon} alt="Growth" />
             </div>
 
@@ -98,16 +103,49 @@ const EngagementSection = () => {
           </div>
         </Reveal>
 
-        {/* Growth Trajectory Image */}
-        <Reveal variant={fadeUp} delay={0.2}>
-          <div className="trajectory-card ">
-            <img
-              src={growthTrajectory}
-              alt="Growth Trajectory"
-              className="trajectory-image"
-            />
-          </div>
-        </Reveal>
+        {/* Growth Trajectory */}
+        <div className="col-lg-6 order-1 order-lg-2 mx-auto">
+          <motion.div
+            className="traffic-card"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <div className="traffic-header">
+              <h4>Growth Trajectory</h4>
+            </div>
+
+            <div className="traffic-bars">
+              {bars.map((height, index) => (
+                <div
+                  key={index}
+                  className={`bar-wrapper ${
+                    height === maxHeight || height === minHeight
+                      ? "fixed-tooltip"
+                      : ""
+                  }`}
+                >
+                  <span className="bar-tooltip">
+                    <TiArrowUp style={{ marginRight: "-2px" }} />
+                    {height}%
+                  </span>
+
+                  <motion.div
+                    className="traffic-bar"
+                    variants={barVariants}
+                    style={{
+                      height: `${height}%`, // Changed from px to % to scale automatically
+                      transformOrigin: "bottom",
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
+
+            <p className="traffic-footer">Search Rankings Up</p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

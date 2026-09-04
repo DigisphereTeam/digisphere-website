@@ -1,0 +1,254 @@
+.Howwework-support-wrapper {
+  background-color: #ffffff;
+}
+
+/* Base Card Styling */
+.Howwework-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* --- Progress Card --- */
+.Howwework-progress-card {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Howwework-progress-title {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.Howwework-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Step Nodes */
+.Howwework-step-node {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Step Node States */
+.Howwework-completed {
+  background-color: #057DCD;
+  color: #ffffff;
+}
+
+.Howwework-active {
+  background-color: #057DCD;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(2, 132, 199, 0.4);
+}
+
+.Howwework-pending {
+  background-color: #f1f5f9;
+  color: #94a3b8;
+}
+
+/* Connecting Line Animation Track */
+.Howwework-step-line-track {
+  flex: 1;
+  height: 4px;
+  background-color: #e2e8f0;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.Howwework-step-line-fill {
+  height: 100%;
+  background-color: #057DCD;
+  border-radius: 2px;
+}
+
+/* --- Main Content Card --- */
+.Howwework-main-card {
+  padding: 20px;
+}
+
+.Howwework-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.Howwework-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background-color: #e0f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.Howwework-icon {
+  color: #0082f6;
+}
+
+.Howwework-phase-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #0082f6;
+  display: block;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.Howwework-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 2px 0;
+}
+
+.Howwework-card-subtitle {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.Howwework-card-description {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.Howwework-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Howwework-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.Howwework-check-icon {
+  color: #0082f6;
+  flex-shrink: 0;
+}
+
+/* --- Metric Cards --- */
+.Howwework-metric-card {
+  padding: 12px;
+  text-align: center;
+}
+
+.Howwework-metric-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  color: #057DCD;
+}
+
+.Howwework-metric-label {
+  font-size: 10px;
+  color: #475569;
+  font-weight: 400;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================== */
+
+/* Medium Devices & Tablets (under 992px) */
+@media (max-width: 992px) {
+  .Howwework-progress-card {
+    padding: 14px 16px;
+  }
+
+  .Howwework-main-card {
+    padding: 18px;
+  }
+
+  .Howwework-card-title {
+    font-size: 1.2rem;
+  }
+
+  .Howwework-icon-badge {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Mobile Devices (under 576px) */
+@media (max-width: 576px) {
+  .Howwework-progress-card {
+    padding: 12px 14px;
+  }
+
+  .Howwework-step-node {
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
+  }
+
+  .Howwework-step-line-track {
+    height: 3px;
+  }
+
+  .Howwework-stepper {
+    gap: 4px;
+  }
+
+  .Howwework-main-card {
+    padding: 16px;
+  }
+
+  .Howwework-card-header {
+    gap: 12px;
+  }
+
+  .Howwework-card-title {
+    font-size: 1.1rem;
+  }
+
+  .Howwework-card-description {
+    font-size: 13px;
+  }
+
+  .Howwework-metric-card {
+    padding: 10px;
+  }
+
+  .Howwework-metric-value {
+    font-size: 14px;
+  }
+
+  .Howwework-metric-label {
+    font-size: 9px;
+  }
+}

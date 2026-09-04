@@ -1,0 +1,170 @@
+
+/* Header */
+.industries-header {
+  margin-bottom: 40px;
+}
+
+.industries-card {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.02),
+    0 1px 2px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.industries-card-cta {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.industries-title {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: #0f172a;
+  margin: 0;
+}
+
+
+
+
+.industries-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px -4px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* Card Top Row */
+.industries-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+/* SVG Icon Box and Image Styling */
+
+
+.industries-icon-img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* Counter */
+.industries-count-wrapper {
+  text-align: right;
+}
+
+.industries-count-number {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.industries-count-label {
+  display: block;
+  font-size: 11px;
+  color: #64748b;
+  max-width: 120px;
+  line-height: 1.25;
+  margin-top: 4px;
+}
+
+/* Content Text */
+.industries-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.industries-card-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  color:#057DCD;
+  margin: 0 0 12px 0;
+}
+
+.industries-card-description {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+/* Bullets List */
+.industries-card-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.industries-card-bullets li {
+  display: flex;
+  align-items: flex-start;
+  font-size: 13px;
+  color: #334155;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.industries-bullet-dot {
+  color: #057DCD;
+  font-size: 18px;
+  line-height: 1;
+  margin-right: 8px;
+}
+
+
+.industries-card-cta a {
+  text-decoration: none;
+  color: #057DCD;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.industries-arrow-icon {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.industries-card-cta a:hover {
+  color:#057DCD;
+}
+
+.industries-card-cta a:hover .industries-arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+  .industries-title {
+    font-size: 28px;
+  }
+}

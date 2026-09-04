@@ -1,0 +1,152 @@
+.across-client-work-section {
+  background-color: #057dcd;
+  color: #ffffff;
+}
+
+.across-client-work-heading {
+  font-size: 1.75rem;
+  letter-spacing: -0.3px;
+}
+
+.across-client-work-number-wrapper {
+  color: #ffffff;
+}
+
+.across-client-work-icon {
+  display: inline-flex;
+  opacity: 0.9;
+}
+
+.across-client-work-number {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.case-banner-section {
+  padding: 80px 20px;
+  background-color: #f8fafc;
+  text-align: center;
+}
+
+.case-banner-header {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #0F172A;
+  margin-bottom: 16px;
+}
+
+.case-banner-description {
+  max-width: 650px;
+  margin: 0 auto 32px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.case-btn button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border: 0;
+  border-radius: 8px;
+  background: #057DCD;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.across-client-work-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffffb2;
+}
+
+/* Base styling for smooth transition on the icon */
+.case-btn button svg {
+  transition: transform 0.3s ease;
+}
+
+/* On button hover, slide the arrow 5px to the right */
+.case-btn button:hover svg {
+  transform: translateX(5px);
+}
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVE SIZES)
+   ========================================== */
+
+/* Tablet Screens (max-width: 991px) */
+@media (max-width: 991px) {
+  .case-banner-section {
+    padding: 60px 20px;
+  }
+
+  .across-client-work-heading {
+    font-size: 1.5rem;
+  }
+
+  .across-client-work-number {
+    font-size: 30px;
+  }
+
+  .case-banner-header {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+
+  .case-banner-description {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .case-btn button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .across-client-work-label {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Screens (max-width: 576px) */
+@media (max-width: 576px) {
+  .case-banner-section {
+    padding: 40px 16px;
+  }
+
+  .across-client-work-heading {
+    font-size: 1.3rem;
+  }
+
+  .across-client-work-number {
+    font-size: 26px;
+  }
+
+  .case-banner-header {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .case-banner-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .case-btn button {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .across-client-work-label {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,170 @@
+.careers-right-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Top Banner Pill */
+.careers-hiring-badge-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.careers-hiring-badge {
+  background-color: #057DCD;
+  color: #ffffff;
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+  box-shadow: 0px 4px 6px -4px #0000001A;
+
+}
+
+/* Individual Grid Card */
+.careers-role-card {
+  background-color: #ffffff;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 14px rgba(226, 232, 240, 1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  padding: 30px 0px 30px 0px  ;
+}
+
+.careers-role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Avatar Circle */
+.careers-avatar-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #0072ce;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* Info Text Styling */
+.careers-info-block {
+  text-align: center;
+  padding: 10px 0px 10px 0px ;
+}
+
+.careers-subtitle {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.careers-title {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.careers-title-small {
+  font-weight: 400;
+  color: #64748b;
+  font-size: 0.72rem;
+  line-height: 1.2;
+}
+
+/* Category Badge */
+.careers-category-wrapper {
+ display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.careers-category-pill {
+  background-color: #E8F4FD;
+  color: #057DCD;
+  border: 1px solid #d0e4ff;
+  border-radius: 50px;
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;        
+  box-sizing: border-box;   
+  white-space: normal;      
+  word-break: break-word;
+}
+
+.careers-badge-icon {
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
+}
+
+/* ==========================================
+   TABLET & SMALL DESKTOP STYLES (max-width: 991px)
+   ========================================== */
+@media (max-width: 991px) {
+  .careers-role-card {
+  overflow: hidden; /* Reduced vertical padding for tighter viewports */
+  }
+
+  .careers-hiring-badge {
+    padding: 7px 18px;
+    font-size: 0.8rem;
+  }
+
+  .careers-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .careers-title {
+    font-size: 11px;
+  }
+}
+
+/* ==========================================
+   MOBILE STYLES (max-width: 576px)
+   ========================================== */
+@media (max-width: 576px) {
+  .careers-role-card {
+   overflow: hidden;
+  }
+
+  /* Disable translate hover lift on touch devices to avoid jitter */
+  .careers-role-card:hover {
+    transform: none;
+  }
+
+  .careers-avatar-circle {
+    width: 38px;
+    height: 38px;
+    font-size: 0.78rem;
+  }
+
+  .careers-hiring-badge {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+  }
+
+  .careers-subtitle {
+    font-size: 0.78rem;
+  }
+
+  .careers-title {
+    font-size: 11px;
+  }
+
+  .careers-title-small {
+    font-size: 0.68rem;
+  }
+
+  .careers-category-pill {
+    padding: 2px 8px;
+    font-size: 7px;
+  }
+}

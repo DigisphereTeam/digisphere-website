@@ -1,10 +1,12 @@
 import React from "react";
 import "./CTASection.css";
-import whiteArrow from "../../../assets/about-page/arrow-icon1.svg";
-import blackArrow from "../../../assets/about-page/arrow-icon2.svg";
 
 import Reveal from "../../../animations/Reveal";
 import { fadeUp } from "../../../animations/variants";
+import Button from "../../../components/Button/Button";
+import { FaArrowRight } from "react-icons/fa6";
+import { RxPeople } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -21,9 +23,9 @@ const CTASection = () => {
                   our business goals instead of just delivering a website."
                 </p>
                 <div className="author-row">
-                  <div className="author-avatar">MK</div>
+                  <div className="author-avatar">KR</div>
                   <div className="author-info">
-                    <p className="author-name">Manish Kumar</p>
+                    <p className="author-name"></p>Manish Kumar
                     <p className="author-title">CEO, TechVision Solutions</p>
                   </div>
                 </div>
@@ -50,14 +52,13 @@ const CTASection = () => {
           </Reveal>
           <Reveal variant={fadeUp} delay={0.3}>
             <div className="cta-buttons">
-              <button className="btn-primary-cta">
+              <Link to="/contact"><Button variant="primary" icon={<FaArrowRight/>}>
                 Book a Free Digital Audit
-                <img src={whiteArrow} alt="arrow" />
-              </button>
-              <button className="btn-ghost-cta">
+              </Button></Link>
+                
+              <Link to="/contact"><Button variant="secondary" icon={<RxPeople/>} iconPosition="left">
                 Talk To Our Team
-                <img src={blackArrow} alt="arrow" />
-              </button>
+              </Button></Link>
             </div>
           </Reveal>
           <Reveal variant={fadeUp} delay={0.4}>

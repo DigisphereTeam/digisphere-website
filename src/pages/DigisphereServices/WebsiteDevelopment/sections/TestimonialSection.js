@@ -17,7 +17,7 @@ const TestimonialSection = () => {
               <div className="client-avatar">AK</div>
 
               <div className="client-details">
-                <h5>Arjun Kapoor</h5>
+                <h5>Karthikeya</h5>
                 <span>CEO, TechSolutions India</span>
               </div>
             </div>

@@ -1,0 +1,219 @@
+/* Container & Item Spacing */
+.project-section .project-item {
+  padding-bottom: 3rem;
+}
+
+/* Badge Tags */
+.project-section .project-badge-tag {
+  background-color: #E8F4FD;
+  color: #057DCD;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.project-section .project-services-tag {
+  font-size: 14px;
+  font-weight: 400;
+  color: #475569;
+}
+
+/* Section Labels (THE CHALLENGE / WHAT WE BUILT) */
+.project-section .project-section-label {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #475569;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* Headings & Text */
+.project-section .project-title {
+  font-weight: 700;
+  font-size: 30px;
+  color: #0F172A;
+}
+
+.project-dc {
+  font-size: 12px;
+  color: #475569;
+}
+
+.project-section .project-description {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  color: #475569;
+}
+
+/* Images */
+.project-section .project-image-wrapper {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.project-section .project-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Stat Cards */
+.project-section .project-stat-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #E2E8F0;
+}
+
+.project-section .project-stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #057DCD;
+  margin-bottom: 2px;
+  font-family: Outfit;
+}
+
+.project-section .project-stat-label {
+  font-size: 10px;
+  color: #475569;
+  line-height: 1.2;
+}
+
+/* Button */
+.project-section .project-start-btn {
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+}
+
+.project-section .project-start-btn:hover {
+  background-color: #f1f5f9;
+  color:#000000;
+  border-color: #cbd5e1;
+}
+
+.project-section .project-btn-arrow {
+  margin-left: 6px;
+}
+
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVE SIZES)
+   ========================================== */
+
+/* Tablet Screens (max-width: 991px) */
+@media (max-width: 991px) {
+  .project-section .project-item {
+    padding-bottom: 2rem;
+  }
+
+  .project-section .project-title {
+    font-size: 24px;
+  }
+
+  .project-section .project-badge-tag {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .project-section .project-services-tag {
+    font-size: 13px;
+  }
+
+  .project-section .project-section-label {
+    font-size: 11px;
+  }
+
+  .project-dc {
+    font-size: 11px;
+  }
+
+  .project-section .project-description {
+    font-size: 13px;
+  }
+
+  .project-section .project-img {
+    height: 320px;
+  }
+
+  .project-section .project-stat-value {
+    font-size: 20px;
+  }
+
+  .project-section .project-stat-label {
+    font-size: 9px;
+  }
+
+  .project-section .project-start-btn {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+}
+
+/* Mobile Screens (max-width: 576px) */
+@media (max-width: 576px) {
+  .project-section .project-item {
+    padding-bottom: 1.5rem;
+  }
+
+  .project-section .project-title {
+    font-size: 20px;
+  }
+
+  .project-section .project-badge-tag {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  .project-section .project-services-tag {
+    font-size: 12px;
+    display: block;
+    margin-left: 0 !important;
+    margin-top: 4px;
+  }
+
+  .project-section .project-section-label {
+    font-size: 10px;
+  }
+
+  .project-dc {
+    font-size: 11px;
+  }
+
+  .project-section .project-description {
+    font-size: 12px;
+  }
+
+  .project-section .project-img {
+    height: 240px;
+  }
+
+  .project-section .project-stat-card {
+    padding: 8px 4px !important;
+  }
+
+  .project-section .project-stat-value {
+    font-size: 16px;
+  }
+
+  .project-section .project-stat-label {
+    font-size: 8.5px;
+  }
+
+  .project-section .project-start-btn {
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+}

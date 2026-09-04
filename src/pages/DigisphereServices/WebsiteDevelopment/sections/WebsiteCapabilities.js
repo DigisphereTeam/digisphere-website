@@ -125,8 +125,8 @@ const WebsiteCapabilities = () => {
         {/* Capability Table */}
         <div className="capability-section">
           <Reveal variant={fadeUp} delay={0.1}>
-          <h2 className="section-title">
-            Everything required to build a
+          <h2 className="web-section-title">
+            Everything required to build a <br/>
             <span> high-performing website.</span>
           </h2>
           </Reveal>
@@ -160,7 +160,7 @@ const WebsiteCapabilities = () => {
         {/* Industry Cards */}
         <div className="industry-section container">
           <Reveal variant={fadeUp} delay={0.1}>
-          <h2 className="section-title">
+          <h2 className="web-section-title">
             Built for
             <span> every stage of growth.</span>
           </h2>

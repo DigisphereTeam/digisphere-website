@@ -1,0 +1,116 @@
+.marketing-banner-section {
+  background-color:#057DCD; /* Matching the vibrant blue banner color */
+  padding: 60px 20px;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.marketing-banner-header {
+  font-size: 40px; /* ~36px */
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.marketing-banner-description {
+  font-size:16px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 580px; /* Constrains line length to match screenshot layout */
+  margin: 0 auto 28px auto;
+  line-height: 1.5;
+}
+
+.marketing-btn a {
+  text-decoration: none;
+}
+
+.marketing-btn button {
+  background-color: #ffffff;
+  color: #057DCD;
+  border: none;
+  padding: 10px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Space between text and arrow icon */
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover effects */
+.marketing-btn button:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.marketing-btn button svg {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.marketing-btn button:hover svg {
+  transform: translateX(3px); /* Subtle arrow shift on hover */
+}
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================== */
+
+/* Medium Devices & Tablets (under 992px) */
+@media (max-width: 992px) {
+  .marketing-banner-section {
+    padding: 50px 20px;
+  }
+
+  .marketing-banner-header {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+
+  .marketing-banner-description {
+    font-size: 15px;
+    max-width: 500px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Mobile Devices (under 576px) */
+@media (max-width: 576px) {
+  .marketing-banner-section {
+    padding: 40px 16px;
+  }
+
+  .marketing-banner-header {
+    font-size: 26px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .marketing-banner-description {
+    font-size: 14px;
+    line-height: 1.45;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .marketing-btn, 
+  .marketing-btn a {
+    width: 100%;
+    display: block;
+  }
+
+  .marketing-btn button {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size:14px;
+  }
+}

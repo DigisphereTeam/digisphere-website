@@ -15,11 +15,11 @@
   width: 95%;
   height: 100% !important;
 }
-.managed-dashboard-card{
+.managed-dashboard-card {
   width: 100px;
-    top: 7px;
-    right: -55px;
-    animation: float 4s ease-in-out infinite;
+  top: 7px;
+  right: -55px;
+  animation: float 4s ease-in-out infinite;
 }
 
 .hero-dashboard {
@@ -52,31 +52,351 @@
   .hero-dashboard {
     margin-top: 40px;
   }
-  .managed-dashboard-card{
+  .managed-dashboard-card {
     width: 90px;
     top: 6px;
     right: -29px;
     animation: float 4s ease-in-out infinite;
   }
-
-
-  
+  .digital-hero-content{
+    text-align: center;
+  }
 }
-@media (max-width: 576px){
-  .managed-hero-image{
-          width: 85%;
+@media (max-width: 576px) {
+  .managed-hero-image {
+    width: 85%;
     /* margin-top: 13px; */
     height: 100% !important;
-}
-.managedit-hero-image{
-  width: 85%;
+  }
+  .managedit-hero-image {
+    width: 85%;
     height: 100% !important;
-
+  }
+  .managed-dashboard-card {
+    width: 75px;
+    top: 6px;
+    right: -18px;
+    animation: float 4s ease-in-out infinite;
+  }
+   .digital-hero-content{
+    text-align: center;
+  }
 }
-    .managed-dashboard-card {
-        width: 75px;
-        top: 6px;
-        right: -18px;
-        animation: float 4s ease-in-out infinite;
-    }
+
+/* new  */
+.health-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.Systems-status {
+  color: #17b26a;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.green-dot {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #17b26a;
+  margin-right: 6px;
+}
+
+.metric-card {
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.text-cpu {
+  font-size: 8px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  color: #057dcd;
+}
+.text-Memory {
+  font-size: 8px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  color: #10b981;
+}
+.text-Network {
+  font-size: 8px;
+  font-weight: 600;
+  color: #8b5cf6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.text-cpu,
+.text-Memory,
+.text-Network {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.text-cpu {
+  color: #057dcd;
+}
+
+.text-Memory {
+  color: #10b981;
+}
+
+.text-Network {
+  color: #8b5cf6;
+}
+
+.progress {
+  height: 4px !important;
+  border-radius: 20px;
+  background: #e7edf5;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 1.2s ease-in-out;
+}
+.cpu-bar {
+  width: 33%;
+  background-color: #057dcd !important;
+}
+
+.Memory-bar {
+  width: 66%;
+  background-color: #10b981 !important;
+}
+
+.network-bar {
+  width: 28%;
+  background-color: #8b5cf6 !important;
+}
+
+.progress-bar {
+  border-radius: 30px;
+  height: 4px;
+}
+
+.metric-cpu {
+  font-size: 16px;
+  font-weight: 700;
+  color: #057dcd;
+}
+
+.metric-Memory {
+  font-size: 16px;
+  font-weight: 700;
+  color: #10b981;
+}
+.metric-Network {
+  font-size: 16px;
+  font-weight: 700;
+  color: #8b5cf6;
+}
+
+
+
+.network-text {
+  color: #8b5cf6;
+}
+
+.text-purple {
+  color: #8b5cf6;
+}
+
+.server-list {
+  overflow: hidden;
+}
+
+.server-row {
+  padding: 8px 8px;
+  border-bottom: 1px solid #eef2f6;
+  font-size: 9px;
+  display: flex;
+  font-weight: 600;
+  background: #f8fafc;
+  justify-content: space-between;
+  align-content: center;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+.server-row:last-child {
+  border-bottom: none;
+}
+
+.server-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.uptime {
+  color: #6c757d;
+  font-size: 6px;
+}
+.System-Health {
+  font-size: 10px;
+  font-weight: 700;
+}
+.queue-card {
+  width:100%;
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow:
+    0 8px 20px rgba(15, 23, 42, 0.08),
+    0 2px 6px rgba(15, 23, 42, 0.05);
+}
+
+.queue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.help-title {
+  font-size: 10px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.response-time {
+  font-size: 9px;
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.queue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ticket-row {
+  height: 35px;
+  background: #f8fafc;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px;
+  transition: all 0.25s ease;
+}
+
+.ticket-row:hover {
+  background: #f1f5f9;
+}
+
+.ticket-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.ticket-title {
+  font-size: 8px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.ticket-id {
+  font-size: 6px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+.open-btn {
+  border: none;
+  background: #EF44441A;
+  color: #EF4444;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 7px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.open-btn:hover {
+  background: #fecaca;
+}
+
+.sla-card {
+  border-radius: 14px;
+  padding: 20px 10px;
+  text-align: center;
+  height: 100%;
+}
+.floating-img {
+  position: absolute;
+  top: -18px;      /* Move up/down */
+  right: 40px;   /* Float outside the card */
+  width: 90px;    /* Image size */
+  height: auto;
+  z-index: 10;
+}
+
+.sla-title {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin-bottom: 10px;
+}
+
+.sla-time {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1677ff;
+  margin: 0;
+}
+
+.sla-subtitle {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin-top: 8px;
+}
+.health-card {
+  position: relative;
+  overflow: visible;
+}
+
+.sla-card {
+  position: absolute;
+  top: 10px;
+  right: -70px;   /* Adjust as needed */
+}
+
+.sla-img {
+  width: 90px;    /* Change size as needed */
+  height: auto;
+  display: block;
 }

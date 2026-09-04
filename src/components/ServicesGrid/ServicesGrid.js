@@ -1,7 +1,6 @@
-import React from "react";
-import "./ServicesGrid.css";
 import Reveal from "../../animations/Reveal";
 import { fadeUp } from "../../animations/variants";
+import "./ServicesGrid.css";
 
 const ServicesGrid = ({
   sectionLabel,

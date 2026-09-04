@@ -1,0 +1,334 @@
+.AI-bottom-card {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.AI-bottom-card img,
+.dashboard-bottom-card img,
+.dashboard-floating-card img {
+  width: 100%;
+  display: block;
+}
+
+/* new */
+.chat-wrapper {
+  width: 100%;
+  height: 220px; /* Perfectly downscaled container */
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #dbe5f0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* =========================
+   Header (Compact)
+========================= */
+.chat-header {
+  background: #057DCD;
+  color: #fff;
+  height: 40px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar-ai {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.header-left h3 {
+  font-size: 11px;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.online {
+  font-size: 9px;
+  color: #d8ffe3;
+  display: flex;
+  align-items: center;
+}
+
+.online svg {
+  color: #10B981;
+  font-size: 5px;
+  margin-right: 4px;
+}
+
+/* =========================
+   Body & Scroll Container
+========================= */
+.chat-body {
+  flex: 1;
+  background: #f7f9fc;
+  overflow-y: auto;
+  position: relative; /* Fixed layer isolation context */
+}
+
+.chat-scroll {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Uniform, predictable bubble spacing */
+}
+
+.chat-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background: #c8d6f5;
+  border-radius: 10px;
+}
+
+/* Removed broken background overlay gradients that masked chat bubbles */
+
+/* =========================
+   Message Rows & Bubbles
+========================= */
+.message-row {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  /* Removed buggy TranslateY animation that caused jumping text */
+}
+
+.message-row.user {
+  justify-content: flex-end;
+}
+
+.bot-avatar {
+  width: 20px;
+  height: 20px;
+  background: #0d79d0;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  font-size: 9px;
+  flex-shrink: 0;
+}
+
+.bot-avatar img, 
+.bot-avatar svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.message {
+  max-width: 75%;
+  line-height: 1.4;
+  font-size: 11px;
+  word-break: break-word;
+}
+
+.bot-message {
+  background: #eef2f7;
+  color: #000000;
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+.user-message {
+  background: #0d79d0;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+/* =========================
+   Input Bar (Downscaled)
+========================= */
+.chat-input {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 8px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+.chat-input input {
+  width: 100%;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  padding: 0 35px 0 10px;
+  background: #f5f7fb;
+  font-size: 11px;
+}
+
+.chat-input button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================
+   Typing Indicator (Fixed Layout)
+========================= */
+.typing-box {
+  background: #eef2f7; /* Changed from white to match standard bot bubbles */
+  padding: 8px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  box-shadow: none; /* Removed heavy shadow layout breaks */
+}
+
+.typing-box span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #0d79d0;
+  animation: typingDot 1.4s infinite ease-in-out;
+}
+
+.typing-box span:nth-child(2) { animation-delay: 0.2s; }
+.typing-box span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingDot {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(-3px); opacity: 1; }
+}
+/* =========================
+   User Loading Bubble (Add to bottom of CSS)
+========================= */
+.typing-box.user-loading {
+  background: #0d79d0 !important; /* Matches user message color */
+  padding: 8px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: auto; /* Forces it to stay pinned to the right side */
+}
+
+.typing-box.user-loading span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffffff !important; /* White dots for the blue background */
+  animation: userTypingDot 1.4s infinite ease-in-out;
+}
+
+.typing-box.user-loading span:nth-child(2) { animation-delay: 0.2s; }
+.typing-box.user-loading span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes userTypingDot {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(-3px); opacity: 1; }
+}
+/* =========================
+ Responsive
+========================= */
+
+@media (max-width: 962px) {
+  .chat-wrapper {
+   
+    border-radius: 0;
+    margin-top: 30px;
+  }
+
+  .chat-header {
+    border-radius: 0;
+  }
+}
+
+.network-card {
+  padding: 10px 20px;
+  background:#ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.layer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  min-height: 85px;
+}
+.Neural-network{
+    font-size: 10px;
+    color: #94A3B8;
+}
+.title-Processing{
+    font-size: 8px;
+    color: #94A3B8;
+}
+.node {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #E8F4FD;
+  background: #E8F4FD;
+  animation: pulseUp 3s infinite;
+}
+
+/* Bottom -> Top animation */
+@keyframes pulseUp {
+  0% {
+    
+    border-color: #E8F4FD;
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  20% {
+    
+    border-color: #2f80ed;
+    transform: scale(1.2);
+
+  }
+
+  40% {
+    border-color: #057DCD;
+  }
+
+  60%,
+  100% {
+    border-color:#E8F4FD;
+    transform: scale(1);
+    box-shadow: none;
+  }
+}

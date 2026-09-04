@@ -2,11 +2,12 @@ import React from "react";
 import "./ExperienceHerosection.css";
 import Reveal from "../../../../animations/Reveal";
 import Counter from "../../../../components/Counter/Counter";
-import { fadeUp } from "../../../../animations/variants";
+import { fadeRight, fadeUp } from "../../../../animations/variants";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "../../../../components/Button/Button";
 import pen from "../../../../assets/pen.svg";
-import Layers from "../../../../assets/Layers.svg";
+import FigmaWorkspaceSimulator from "./FigmaWorkspaceSimulator";
+import { Link } from "react-router-dom";
 const stats = [
   {
     end: 68,
@@ -25,17 +26,17 @@ const stats = [
 
     label: "Products designed and launched",
   },
- {
-  end: 4.9,
-  suffix: "/5",
-  label: "Client satisfaction across projects",
-}
+  {
+    end: 4.9,
+    suffix: "/5",
+    label: "Client satisfaction across projects",
+  },
 ];
 const ExperinceHerosection = () => {
   return (
     <section className="hero-stats-section">
       <div className="hero-wrapper">
-        <div className="row align-items-center">
+        <div className="row mt-5">
           <div className="col-lg-6 col-12">
             <Reveal variant={fadeUp} delay={0.1}>
               <div className="hero-content">
@@ -51,36 +52,38 @@ const ExperinceHerosection = () => {
 
                 <p className="hero-description">
                   We design digital experiences that users love and businesses
-                  profit from — grounded in research, refined through testing,
-                  and delivered production-ready in Figma.
+                  profit from grounded in research, refined through testing, and
+                  delivered production-ready in Figma.
                 </p>
 
                 <div className="hero-buttons">
-                  <Button variant="primary" icon={<FaArrowRight />}>
-                    <span>Start a Design Project </span>
-                  </Button>
+                  <Link to="/contact">
+                    <Button variant="primary" icon={<FaArrowRight />}>
+                      <span>Start a Design Project </span>
+                    </Button>
+                  </Link>
 
-                  <Button variant="secondary">
-                    <span>Our Services</span>
-                  </Button>
+                  <Link to="/contact">
+                    <Button variant="secondary">
+                      <span>Our Services</span>
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Reveal>
           </div>
-
           <div className="col-lg-6 col-12">
-            <div className="hero-image-wrapper">
-              <img
-                src={Layers}
-                alt="Website Development"
-                className="Experince-hero-image"
-              />
-            </div>
+            <Reveal variant={fadeRight} delay={0.2}>
+              <FigmaWorkspaceSimulator />
+            </Reveal>
           </div>
         </div>
       </div>
 
-      <div className="container-fluid mt-5 px-5" style={{backgroundColor:"#0F172A",}}>
+      <div
+        className="container-fluid mt-5 px-5"
+        style={{ backgroundColor: "#0F172A" }}
+      >
         <div className="row g-4">
           {stats.map((item, index) => (
             <div key={index} className="col-lg-3 col-md-6 col-12">

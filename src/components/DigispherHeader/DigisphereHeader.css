@@ -1,3 +1,16 @@
+/* ==========================================================================
+   1. Brand & Structural CSS 
+   ========================================================================== */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.Digisphere-logo-image {
+  height: 50px;
+  object-fit: contain;
+}
+
 .custom-navbar {
   background: #ffffff;
   border-bottom: 1px solid #e5e5e5;
@@ -7,44 +20,90 @@
   top: 0;
   left: 0;
   z-index: 1050;
-  font-weight: 600;
+  font-weight: 400;
 }
 
-.custom-container {
-  padding-left: 6% !important;
-  padding-right: 5.8% !important;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-
-.Digisphere-logo-image {
-  width: 170px;
-  height: 45px;
-  object-fit: contain;
-}
-
+/* ==========================================================================
+   2. Nav Links, Buttons & Active States (Text-Only Underline Fix)
+   ========================================================================== */
 .nav-link {
-  color: #0f172a !important; 
-  font-size: 15px;
+  color: #0f172a !important;
+  font-size: 14px;
   font-weight: 600;
-  padding: 8px 4px !important;
+  padding: 8px 0px 2px 0px !important; 
+  margin-left: 10px;
+  margin-right: 10px;
   transition: color 0.2s ease-in-out;
 }
 
-/* React Router NavLink automatically injects the .active class on the matching link */
-.nav-link:hover{
-  color: #0464a4 !important;
-}
-.nav-link.active {
-  color: #0464a4 !important;
-  text-decoration: underline;
+.custom-navbar .nav-link,
+.custom-navbar .nav-button {
+  position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  width: fit-content;
 }
 
-/* Desktop Button Sizes */
-.work-btn, .talk-btn {
+/* Color updates for Hover AND Active states */
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active,
+.custom-navbar .nav-button:hover,
+.custom-navbar .nav-button.active,
+.nav-button.active {
+  color: #057DCD !important;
+}
+
+/* Underline Animation Setup */
+.custom-navbar .nav-link::after,
+.custom-navbar .nav-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0;
+  height: 3px;
+  background: #057DCD;
+  transition: width .3s ease;
+}
+
+/* Keeps the Underline locked at exactly 100% text footprint width */
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link.active::after,
+.custom-navbar .nav-button:hover::after,
+.custom-navbar .nav-button.active::after {
+  width: 100%;
+}
+
+/* Specific override for Dropdown Container */
+.navbar-nav .nav-item.dropdown .nav-link {
+  position: relative;
+  width: fit-content;
+  display: inline-flex !important;
+}
+
+/* Handles arrow margins if present inside helper containers */
+.navbar-nav .nav-item.dropdown .nav-link .dropdown-icon,
+.navbar-nav .nav-item.dropdown .nav-link span:not(:first-child),
+.navbar-nav .nav-item.dropdown .nav-link i {
+  position: relative;
+  margin-left: 4px;
+}
+
+/* Excludes the dropdown arrow from layout width sizing so underline ignores it */
+.navbar-nav .nav-item.dropdown .nav-link:hover::after,
+.navbar-nav .nav-item.dropdown .nav-link.active::after {
+  width: calc(100% - 16px); 
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* ==========================================================================
+   3. Actions Buttons Styles ("Let's Talk" / "Work")
+   ========================================================================== */
+.work-btn,
+.talk-btn {
   padding: 7px 15px;
   border-radius: 6px;
   font-size: 13.5px;
@@ -76,26 +135,464 @@
   background: #0464a4;
 }
 
-.dropdown-toggle::after {
-  display: none !important;
+/* ==========================================================================
+   4. Mega Menu Setup (With Smooth Hover Effects)
+   ========================================================================== */
+.mega-dropdown {
+  position: static !important;
 }
 
-/* Mobile responsive layout overrides */
-@media (max-width: 991.98px) {
+.mega-menu {
+  width: 1000px;
+  left: 50% !important;
+  transform: translateX(-50%);
+  border: none;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  display: none;
+  z-index: 9999;
+}
+
+/* Bootstrap trigger visibility class */
+.mega-menu.show {
+  display: block;
+}
+
+.mega-heading {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #475569;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* --- Interactive Mega Links Styling --- */
+.mega-link {
+  display: flex;
+  gap: 14px;
+  text-decoration: none;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 12px;
+  color: #111;
+  background: transparent;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Micro-interaction when hover state hits an item */
+.mega-link:hover {
+  background-color: #f8fafc;
+  color: #136AD0;
+}
+
+.icon-box {
+  color: #136AD0;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Moves the icon slightly forward to guide focus */
+.mega-link:hover .icon-box {
+  transform: translateX(3px);
+}
+
+.mega-link h6 {
+  margin-bottom: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0F172A;
+  transition: color 0.2s ease-in-out;
+}
+
+.mega-link:hover h6 {
+  color: #136AD0;
+}
+
+.mega-link p {
+  margin: 0;
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.4;
+}
+
+/* --- Blue Sidebar Featured Card Styles --- */
+.Build-service-card {
+  background: #EEF7FE;
+  padding: 25px;
+  border-radius: 18px;
+  height: 100%;
+  border: 1px solid transparent;
+  transition: all 0.25s ease-in-out;
+}
+
+.Build-service-card:hover {
+  background: #EEF7FE;
+  border-color: rgba(19, 106, 208, 0.15);
+}
+
+.Build-service-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #0F172A;
+}
+
+.Build-service-card p {
+  font-size: 14px;
+  color: #475569;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.stats div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed rgba(71, 85, 105, 0.15);
+  padding-bottom: 6px;
+}
+
+.stats div:last-child {
+  border-bottom: none;
+}
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #057DCD;
+  font-weight: 700;
+  transition: gap 0.2s ease-in-out;
+}
+
+.explore-btn:hover {
+  color: #136AD0;
+  gap: 10px;
+}
+
+.Projects span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #475569;
+}
+
+.Projects strong {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+/* ==========================================================================
+   5. Media Queries / Responsiveness
+   ========================================================================== */
+
+/* --- TABLET PORTRAIT & MOBILE BREAKPOINT (Max-width: 991px) --- */
+@media (max-width: 991px) {
+  .custom-navbar {
+    padding: 10px 0;
+  }
+
   .navbar-nav {
-    align-items: flex-start !important;
-    padding-top: 20px;
+    padding-top: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    margin: 8px 0;
+    justify-content: center;
     width: 100%;
   }
 
+  /* FIX: Disables full-width sliding animations on touch devices */
+  .custom-navbar .nav-link::after,
+  .custom-navbar .nav-button::after,
+  .navbar-nav .nav-item.dropdown .nav-link::after {
+    display: none !important;
+  }
+
+  /* Full width container layout for mobile stacks */
   .nav-buttons-container {
     width: 100%;
     margin-top: 15px;
+    display: flex;
+    flex-direction: column; 
+    gap: 8px;
   }
 
-  .work-btn, .talk-btn {
-    padding: 6px 12px !important; 
-    font-size: 12.5px !important;
-    border-radius: 5px !important;
+  .work-btn,
+  .talk-btn {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+    width: 100%; 
+    text-align: center;
+  }
+
+  /* Centered link layouts inside responsive menus */
+  .navbar-nav .nav-item.dropdown .nav-link {
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+  }
+
+  /* Converts the giant desktop menu to clean accordion panels */
+  .mega-menu {
+    position: static !important;
+    width: 100% !important;
+    transform: none !important;
+    margin-top: 10px;
+    box-shadow: none;
+    border-radius: 14px;
+    padding: 20px;
+    background: #f8fafc; 
+  }
+
+  .mega-link {
+    padding: 8px;
+    margin-bottom: 6px;
+    gap: 10px;
+  }
+
+  .icon-box {
+    width: 22px;
+    height: 22px;
+  }
+
+  .mega-link h6 {
+    font-size: 13px;
+  }
+
+  .mega-link p {
+    font-size: 11.5px;
+  }
+
+  .Build-service-card {
+    margin-top: 20px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .Build-service-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}
+
+/* --- SMALL MOBILE PHONES SPECIFIC (Max-width: 767px) --- */
+@media (max-width: 767px) {
+  .Digisphere-logo-image {
+    width: 140px; 
+    height: auto;
+  }
+
+  .mega-menu {
+    padding: 15px; 
+  }
+}
+
+/* ==========================================================================
+   MEGA DROPDOWN & RESOURCES MENU STYLES
+   ========================================================================== */
+
+/* Parent item positioning */
+.mega-dropdown {
+  position: static !important;
+}
+
+/* Mega menu overlay container */
+.mega-menu {
+  width: 1000px;
+  left: 50% !important;
+  transform: translateX(-50%);
+  border: none;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  display: none;
+  z-index: 9999;
+}
+
+/* Category Column Headers */
+.mega-heading {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+/* Links & Items */
+.mega-link {
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.mega-link:hover {
+  color: #0d6efd;
+}
+
+.icon-box {
+  color: #0d6efd;
+  width: 25px;
+  height: 25px;
+}
+
+.mega-link h6 {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.mega-link p {
+  margin: 0;
+  font-size: 12px;
+  color: #475569;
+}
+
+/* Featured Audit/Service Card (Right Column) */
+.Build-service-card {
+  background: #eef6ff;
+  padding: 25px;
+  border-radius: 18px;
+  height: 100%;
+}
+
+.Build-service-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.Build-service-card p {
+  font-size: 14px;
+  color: #475569;
+  font-weight: 400;
+}
+
+/* Key Stats inside Featured Card */
+.stats div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.Projects span {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.Projects strong {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.explore-btn {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #057DCD;
+  font-weight: 600;
+}
+
+/* Navigation Button Underline Hover States */
+.custom-navbar .nav-link,
+.custom-navbar .nav-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-navbar .nav-link::after,
+.custom-navbar .nav-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0;
+  height: 2px;
+  background: #136AD0;
+  transition: width .3s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-button:hover,
+.custom-navbar .nav-button.active {
+  color: #136AD0 !important;
+}
+
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-button:hover::after,
+.custom-navbar .nav-button.active::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .mega-menu {
+    position: static;
+    width: 100%;
+    transform: none;
+    margin-top: 0;
+    box-shadow: none;
+    border-radius: 24px;
+    padding: 20px;
+  }
+
+  .mega-link {
+    margin-bottom: 10px;
+  }
+
+  .Build-service-card {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mega-menu {
+    padding: 15px;
+    display: none;
+    z-index: 9999;
+    transform: none;
+  }
+
+  .mega-link {
+    margin-bottom: 14px;
+  }
+
+  .icon-box {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+
+  .Build-service-card h3 {
+    font-size: 24px;
+  }
+
+  .Build-service-card {
+    padding: 20px;
   }
 }

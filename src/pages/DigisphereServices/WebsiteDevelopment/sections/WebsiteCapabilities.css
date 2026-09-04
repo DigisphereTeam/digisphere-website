@@ -7,7 +7,7 @@
    COMMON HEADING
 ========================= */
 
-.section-title {
+.web-section-title {
   text-align: center;
   font-size: 40px;
   font-weight: 600;
@@ -16,7 +16,7 @@
   margin-bottom: 40px;
 }
 
-.section-title span {
+.web-section-title span {
   color: #057DCD;
 }
 
@@ -153,7 +153,7 @@
     padding: 30px 0;
   }
 
-  .section-title {
+  .web-section-title {
     font-size: 36px;
   }
 
@@ -180,7 +180,7 @@
     padding: 24px 0;
   }
 
-  .section-title {
+  .web-section-title {
     font-size: 32px;
     margin-bottom: 30px;
   }

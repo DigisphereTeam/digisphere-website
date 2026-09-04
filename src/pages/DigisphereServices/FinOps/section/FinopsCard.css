@@ -1,0 +1,190 @@
+
+
+.finops-hero-wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Header Subtitle */
+.approach-subtitle {
+  color: #057dcd;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Header Main Title */
+.approach-title {
+  color: #0f172a;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 48px;
+}
+
+/* Main Outer Card Wrapper */
+.approach-card-wrapper {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+/* 4-Column Grid */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Step Card Base */
+.approach-step-card {
+  padding: 32px;
+  position: relative;
+  background: #ffffff;
+}
+
+/* Vertical Dividers between columns on desktop */
+.approach-step-card:not(:last-child) {
+  border-right: 1px solid #e2e8f0;
+}
+
+/* Watermark Step Number */
+.approach-step-number {
+  font-size: 48px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  color: rgba(5, 125, 205, 0.1);
+  line-height: 1;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Timeframe Badge */
+.approach-timeframe {
+  color: #057dcd;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Step Title */
+.approach-step-title {
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Step Description */
+.approach-step-desc {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Flow Arrow Connector */
+.approach-step-arrow {
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #057dcd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 10px;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   Responsive Breakpoints
+   ========================================== */
+
+/* Tablet View (2x2 Grid) */
+@media (max-width: 991px) {
+  .approach-title {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reset 4-column right borders */
+  .approach-step-card:not(:last-child) {
+    border-right: none;
+  }
+
+  /* 2-Column Grid Borders */
+  .approach-step-card:nth-child(1),
+  .approach-step-card:nth-child(3) {
+    border-right: 1px solid #e2e8f0;
+  }
+
+  .approach-step-card:nth-child(1),
+  .approach-step-card:nth-child(2) {
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  /* Hide connection arrows on tablet */
+  .approach-step-arrow {
+    display: none;
+  }
+}
+
+/* Mobile View (Single Column) */
+@media (max-width: 576px) {
+  .approach-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Single Column Borders */
+  .approach-step-card,
+  .approach-step-card:nth-child(1),
+  .approach-step-card:nth-child(3) {
+    border-right: none !important;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 24px 20px;
+  }
+
+  .approach-step-card:last-child {
+    border-bottom: none;
+  }
+
+  .approach-step-number {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+
+  .approach-step-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .approach-step-desc {
+    font-size: 13px;
+  }
+
+  .approach-step-arrow {
+    display: none !important;
+  }
+}

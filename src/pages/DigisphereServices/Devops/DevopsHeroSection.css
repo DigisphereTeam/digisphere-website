@@ -1,5 +1,5 @@
 .devops-hero-section {
-  padding: 40px 0 ;
+  padding: 0px 0 ;
   overflow: hidden;
 }
 
@@ -110,9 +110,7 @@
     margin-top: 60px;
   }
 
-  .devops-title {
-    font-size: 50px;
-  }
+ 
   .devops-title {
     font-size: 36px;
   }
@@ -124,7 +122,7 @@
 
 /* MOBILE */
 
-@media (max-width: 767px) {
+@media (max-width: 576px) {
     .devops-hero-section {
     padding: 30px 0;
   }
@@ -142,4 +140,194 @@
     top: -10px;
     right: -10px;
   }
+}
+
+/* new */
+/* Bottom Metrics */
+.workflow-metrics {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.metric-cards {
+  flex: 1;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 8px 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.metric-cards:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.metric-title {
+  font-size: 8px;
+  font-weight: 400;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.metric-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.2;
+}
+
+.metric-change {
+  margin-top: 4px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.metric-change.up {
+  color: #10B981;
+}
+
+.metric-change.down {
+  color: #2563EB;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .workflow-metrics {
+    flex-direction: column;
+  }
+
+  .metric-cards {
+    width: 100%;
+    padding: 8px 8px;
+  }
+  .metric-value{
+font-size: 14px;
+  }
+}
+
+.step-card-.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+.step-card.done {
+  background: #10B981;
+  color: #fff;
+}
+
+.step-card small {
+  opacity: 0.9;
+}
+.step-status {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.step-card.active .step-status {
+  color: #fff;
+}
+
+.step-card.done .step-status {
+  color: #fff;
+}
+.status-running {
+  color: #2563eb;   /* Blue */
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.status-passed {
+  color: #10B981;   /* Green */
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.status-default {
+  color: #6b7280;   /* Gray */
+  font-size: 8px;
+}
+.step-card.active .status-running {
+  color: #057DCD;
+  font-size: 8px;
+  font-weight: 600;
+}
+.step-card.done .status-passed {
+  color:#10B981;
+  font-size: 8px;
+  font-weight: 600;
+}
+.recent-builds-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+.devops-hotfix {
+align-items: center;
+gap: 2;
+font-size: 10px;
+}
+.build-item {
+  border: 1px solid #e8edf3;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  transition: 0.3s;
+}
+
+.build-item:last-child {
+  margin-bottom: 0;
+}
+
+.build-item:hover {
+  background: #f8fafc;
+}
+.Recent-Builds{
+  background-color: #F8FAFC;
+  border:1px solid #E2E8F0;
+  padding: 6px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+.icon-circle {
+  width: 30px;
+  height: 30px;
+  background: #eef7ff;
+  color: #0d6efd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rotate-icon {
+  font-size: 16px;
+  animation: rotatePause 5s linear infinite;
+}
+
+/* Rotate for 1 second, Pause for 4 seconds */
+@keyframes rotatePause {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.badge {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
 }

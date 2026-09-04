@@ -1,0 +1,42 @@
+/* Page Background */
+.terms-page-wrapper {
+  background-color: #f3f6fa;
+  min-height: 100vh;
+}
+
+/* Header Typography */
+.terms-header-title {
+  font-size: 2.2rem;
+  color: #1a2b49;
+}
+
+.terms-header-subtitle {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #6c757d;
+}
+
+/* Card Outer Container */
+.terms-card {
+  border-color: #e2e8f0 !important;
+}
+
+/* Blue Vertical Line Accent for Headings */
+.terms-blue-line-heading {
+  border-left: 3px solid #0d6efd;
+  line-height: 1.2;
+}
+
+/* Section Text Styling */
+.terms-section-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #4a5568 !important;
+}
+
+/* Bottom Confirmation Banner */
+.terms-disclaimer-banner {
+  background-color: #f4f7fb;
+  border: 1px solid #e2e8f0;
+  font-size: 0.82rem;
+}

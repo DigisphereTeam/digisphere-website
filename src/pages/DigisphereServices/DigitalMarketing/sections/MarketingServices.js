@@ -82,10 +82,10 @@ const marketingServices = [
   },
 ];
 
-function MarketingServices() {
+const MarketingServices =()=> {
   return (
     <ServicesGrid
-      sectionLabel="WHAT WE DO"
+      sectionLabel="What We Do"
       heading="Every channel, one strategy."
       description="We don't pick one channel and call it a day. We build integrated systems where SEO, paid, email, and content amplify each other."
       services={marketingServices}
