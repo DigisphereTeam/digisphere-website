@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./DigisphereFooter.css";
-import footerlogo from "../../assets/footerlogo (2).png";
+import footerlogo from "../../assets/footerLogo (2).png";
 // Asset Imports
 import linkedinIcon from "../../assets/LinkedinIcon.png";
 import instaIcon from "../../assets/instaIcon.png";
@@ -53,8 +53,6 @@ const DigisphereFooter = memo(() => {
     <footer className="footer-section" role="contentinfo">
       <div className="container">
         <div className="row">
-
-          {/* Brand Info & Social Stack */}
           <div className="col-lg-4 mb-4">
             <Link className="navbar-brand fw-bold" to="/">
               <img
