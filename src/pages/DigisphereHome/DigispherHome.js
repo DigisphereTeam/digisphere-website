@@ -4,7 +4,6 @@ import "./DigisphereHome.css";
 import { FaArrowRight } from "react-icons/fa";
 import { TiArrowUp } from "react-icons/ti";
 import { motion } from "framer-motion";
-import { MdHub } from "react-icons/md";
 import Website from "../../assets/Website.svg";
 import Launchgrow from "../../assets/Launch & Grow.svg";
 import GenerationIcon from "../../assets/Lead Generationicon.svg";
