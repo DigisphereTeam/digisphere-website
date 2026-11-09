@@ -36,7 +36,7 @@ const COMPANY_LINKS = [
 ];
 
 const OFFICES = [
-  { title: "Hyderabad Office", lines: ["HITEC City, Madhapur", "Telangana"] },
+  { title: "Hyderabad Office", lines: ["G3, Hig-21, Dharma Residency, Phase-6, KPHB colony, Hyderabad - 500085 "] },
   { title: "Vijayawada Office", lines: ["5th Floor, Veeramachaneni Residency,502, Ramavarapadu, Ring Road,Andhra Pradesh – 521108"], className: "" }
 ];
 
