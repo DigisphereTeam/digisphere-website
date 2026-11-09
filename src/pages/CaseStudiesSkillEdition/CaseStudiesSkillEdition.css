@@ -5,8 +5,9 @@
   width: 100%;
   background-color: #f8fafc;
   color: #0f172a;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 1.6;
 }
 
@@ -22,7 +23,7 @@
    ========================================== */
 .Skilledition-hero {
   padding: 5rem 0 0 0;
-  background-color: #F7F9FB;
+  background-color: #f7f9fb;
 }
 
 .Skilledition-badge {
@@ -66,9 +67,6 @@
   margin-bottom: 3rem;
 }
 
-/* ==========================================
-   Meta Bar
-   ========================================== */
 .Skilledition-meta-bar {
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
@@ -105,9 +103,6 @@
   color: #0f172a;
 }
 
-/* ==========================================
-   Challenge Section
-   ========================================== */
 .Skilledition-challenge {
   padding: 5rem 0;
 }
@@ -142,7 +137,9 @@
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .Skilledition-challenge-card:hover {
@@ -199,7 +196,7 @@
 }
 
 .Skilledition-step-num {
-  font-size:40px;
+  font-size: 40px;
   font-weight: 800;
   color: #dceaf8;
   margin-bottom: 1rem;
@@ -226,7 +223,9 @@
   font-size: 1rem;
   border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .Skilledition-cta-btn:hover {
@@ -234,11 +233,6 @@
   transform: translateY(-2px);
 }
 
-/* ==========================================
-   Responsive Breakpoints (992px & 576px)
-   ========================================== */
-
-/* Desktop / Tablet Threshold (<= 992px) */
 @media (max-width: 992px) {
   .container,
   .Skilledition-container {
@@ -268,7 +262,7 @@
   }
 }
 
-/* Mobile Threshold (<= 576px) */
+
 @media (max-width: 576px) {
   .Skilledition-hero {
     padding-top: 2.5rem;
