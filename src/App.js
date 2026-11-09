@@ -42,6 +42,12 @@ import CaseStudiesRealVentures from "./pages/CaseStudiesRealVentures/CaseStudies
 import CaseStudiesSkillEdition from "./pages/CaseStudiesSkillEdition/CaseStudiesSkillEdition.js";
 import { CaseStudiesLogistics } from "./pages/CaseStudiesLogistics/CaseStudiesLogistics.js";
 import { CaseStudiesFinSphere } from "./pages/CaseStudiesFinSphere/CaseStudiesFinSphere.js";
+import Products from "./pages/Products/Products.js";
+import Digicampus from "./pages/Products/components/Digicampus.js";
+import Digiplay from "./pages/Products/components/Digiplay.js";
+import Digilog from "./pages/Products/components/Digilog.js";
+import Digiayur from "./pages/Products/components/Digiayur.js";
+import Digistay from "./pages/Products/components/Digistay.js";
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
