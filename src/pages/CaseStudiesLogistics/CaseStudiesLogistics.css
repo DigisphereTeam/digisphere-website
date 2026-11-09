@@ -1,0 +1,335 @@
+/* ==========================================
+   Base & Layout Container Setup
+   ========================================== */
+.Logistics-wrapper {
+  width: 100%;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+}
+
+.container,
+.Logistics-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
+.Logistics-hero {
+  padding: 5rem 0 0 0;
+  background-color: #f7f9fb;
+}
+
+.Logistics-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: #f0f9ff;
+  color: #057dcd;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  border: 1px solid #057dcd33;
+}
+
+.Logistics-badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #057dcd;
+  border-radius: 50%;
+}
+
+.Logistics-hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 1.25rem;
+}
+
+.Logistics-blue {
+  color: #057dcd;
+}
+
+.Logistics-hero-desc {
+  max-width: 680px;
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-bottom: 3rem;
+}
+
+/* ==========================================
+   Meta Bar
+   ========================================== */
+.Logistics-meta-bar {
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  background-color: #ffffff;
+}
+
+.Logistics-meta-bar .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.Logistics-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.Logistics-meta-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.Logistics-meta-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* ==========================================
+   Challenge Section
+   ========================================== */
+.Logistics-challenge {
+  padding: 5rem 0;
+}
+
+.Logistics-section-label,
+.Logistics-approach-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #057dcd;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.Logistics-challenge-title,
+.Logistics-approach-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0f172a;
+  margin-bottom: 3rem;
+}
+
+.Logistics-challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.Logistics-challenge-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.Logistics-challenge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.Logistics-icon-box {
+  width: 42px;
+  height: 42px;
+  background-color: #e0f2fe;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.Logistics-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.Logistics-card-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* ==========================================
+   What We Built Section
+   ========================================== */
+.Logistics-approach {
+  padding: 5rem 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.Logistics-approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.Logistics-step-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.Logistics-step-num {
+  font-size: 40px;
+  font-weight: 800;
+  color: #dceaf8;
+  margin-bottom: 1rem;
+}
+
+/* ==========================================
+   Call to Action (CTA) Button
+   ========================================== */
+.Logistics-cta-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.Logistics-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  background-color: #057dcd;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.Logistics-cta-btn:hover {
+  background-color: #0369a1;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   Responsive Breakpoints (992px & 576px)
+   ========================================== */
+
+/* Desktop / Tablet Threshold (<= 992px) */
+@media (max-width: 992px) {
+  .container,
+  .Logistics-container {
+    padding: 0 1.25rem;
+  }
+
+  .Logistics-hero {
+    padding-top: 3.5rem;
+  }
+
+  .Logistics-hero-title {
+    font-size: 2.25rem;
+  }
+
+  .Logistics-challenge-grid,
+  .Logistics-approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .Logistics-meta-bar .container {
+    gap: 1.25rem;
+  }
+
+  .Logistics-meta-col {
+    flex: 1 1 40%;
+  }
+}
+
+/* Mobile Threshold (<= 576px) */
+@media (max-width: 576px) {
+  .Logistics-hero {
+    padding-top: 2.5rem;
+  }
+
+  .Logistics-challenge,
+  .Logistics-approach {
+    padding: 3rem 0;
+  }
+
+  .Logistics-hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .Logistics-hero-desc {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .Logistics-challenge-title,
+  .Logistics-approach-title {
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Prevent awkward line breaks on narrow viewports */
+  .Logistics-hero-title br,
+  .Logistics-challenge-title br,
+  .Logistics-approach-title br {
+    display: none;
+  }
+
+  .Logistics-challenge-grid,
+  .Logistics-approach-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .Logistics-meta-bar .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .Logistics-challenge-card,
+  .Logistics-step-wrapper {
+    padding: 1.25rem;
+  }
+
+  .Logistics-cta-wrapper {
+    width: 100%;
+  }
+
+  .Logistics-cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+  }
+}

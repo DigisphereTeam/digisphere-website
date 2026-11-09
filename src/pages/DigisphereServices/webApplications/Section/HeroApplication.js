@@ -136,8 +136,8 @@ const HeroApplication = () => {
                 </h1>
 
                 <p className="devops-description">
-                  Custom web applications — dashboards, portals, SaaS products,
-                  and internal tools — that replace broken spreadsheet workflows
+                  Custom web applications  dashboards, portals, SaaS products,
+                  and internal tools  that replace broken spreadsheet workflows
                   and give your team a competitive edge.
                 </p>
 

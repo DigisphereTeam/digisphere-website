@@ -34,7 +34,7 @@ const AICapabilities = () => {
       number: "03",
       title: "Build & Train",
       description:
-        "Full development — model selection, prompt engineering, RAG pipeline, integrations, testing, and safety guardrails.",
+        "Full development  model selection, prompt engineering, RAG pipeline, integrations, testing, and safety guardrails.",
     },
     {
       number: "04",
@@ -70,7 +70,7 @@ const AICapabilities = () => {
       icon: business,
       title: "AI Business Assistants",
       description:
-        "Custom AI copilots trained on your company data — answering employee questions, retrieving documents, and automating internal knowledge workflows.",
+        "Custom AI copilots trained on your company data  answering employee questions, retrieving documents, and automating internal knowledge workflows.",
       points: [
         "Trained on your documents & SOPs",
         "Slack/Teams/WhatsApp integration",
@@ -81,7 +81,7 @@ const AICapabilities = () => {
       icon: Intelligent,
       title: "Intelligent Chatbots",
       description:
-        "AI-powered customer support chatbots that understand context, handle complex queries, and escalate to humans only when necessary — 24/7.",
+        "AI-powered customer support chatbots that understand context, handle complex queries, and escalate to humans only when necessary  24/7.",
       points: [
         "LLM-powered, not rule-based",
         "Multilingual support",
@@ -92,7 +92,7 @@ const AICapabilities = () => {
       icon: document,
       title: "Document Intelligence",
       description:
-        "Extract, classify, and act on information from unstructured documents — invoices, contracts, forms, and reports — without human review.",
+        "Extract, classify, and act on information from unstructured documents  invoices, contracts, forms, and reports  without human review.",
       points: [
         "OCR + LLM extraction",
         "Structured output APIs",
@@ -114,7 +114,7 @@ const AICapabilities = () => {
       icon: reporting,
       title: "AI-Powered Reporting",
       description:
-        "Natural language interfaces for your data — ask questions in plain English and get structured reports, charts, and insights automatically generated.",
+        "Natural language interfaces for your data  ask questions in plain English and get structured reports, charts, and insights automatically generated.",
       points: [
         "Natural language queries",
         "Auto-generated visualisations",

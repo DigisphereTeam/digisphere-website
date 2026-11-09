@@ -18,7 +18,7 @@ const devopsServices = [
     icon: Process,
     title: "Process Automation",
     description:
-      "Map, document, and automate your most time-consuming manual workflows — approvals, data entry, report generation, and inter-department handoffs.",
+      "Map, document, and automate your most time-consuming manual workflows  approvals, data entry, report generation, and inter-department handoffs.",
     points: [
       "Process mapping & documentation",
       "RPA implementation",
@@ -40,7 +40,7 @@ const devopsServices = [
     icon: NotificationAutomation,
     title: "Alert & Notification Automation",
     description:
-      "Build intelligent alert systems — SLA breach notifications, inventory threshold alerts, payment reminders — delivered via email, WhatsApp, or Slack.",
+      "Build intelligent alert systems  SLA breach notifications, inventory threshold alerts, payment reminders  delivered via email, WhatsApp, or Slack.",
     points: [
       "Multi-channel delivery",
       "Escalation logic",
@@ -51,7 +51,7 @@ const devopsServices = [
     icon: Report,
     title: "Document & Report Automation",
     description:
-      "Automatically generate invoices, reports, contracts, and compliance documents from your data — and distribute them to the right people, on schedule.",
+      "Automatically generate invoices, reports, contracts, and compliance documents from your data  and distribute them to the right people, on schedule.",
     points: [
       "PDF/Excel generation",
       "Email & WhatsApp delivery",
@@ -73,7 +73,7 @@ const devopsServices = [
     icon: Engines,
     title: "Custom Workflow Engines",
     description:
-      "For complex multi-step business processes — loan approvals, procurement, quality inspections — we build bespoke workflow engines with full audit trails.",
+      "For complex multi-step business processes  loan approvals, procurement, quality inspections  we build bespoke workflow engines with full audit trails.",
     points: [
       "Configurable workflow rules",
       "Approval routing",
@@ -107,7 +107,7 @@ const toolchainData = [
   {
     title: "Education",
     tools: [
-      "Admission workflows — from application to fee collection to enrollment",
+      "Admission workflows  from application to fee collection to enrollment",
     ],
   },
   {
@@ -121,7 +121,7 @@ const FaqData = [
   {
     question: "What tools do you use to build automations?",
     answer:
-      "Absolutely. Many of our clients start with little or no Kubernetes experience. We guide your team through every stage — from architecture design and cluster setup to training and documentation. Our goal is not only to implement Kubernetes successfully but also to empower your team with the knowledge and confidence to manage it effectively over time.",
+      "Absolutely. Many of our clients start with little or no Kubernetes experience. We guide your team through every stage  from architecture design and cluster setup to training and documentation. Our goal is not only to implement Kubernetes successfully but also to empower your team with the knowledge and confidence to manage it effectively over time.",
   },
   {
     question: "Do we need to change our existing software?",

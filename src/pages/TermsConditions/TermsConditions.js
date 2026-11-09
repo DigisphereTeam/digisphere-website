@@ -60,7 +60,7 @@ const termsSections = [
   },
 ];
 
-const TermsService = () => {
+const TermsConditions = () => {
   return (
     <div className="terms-page-wrapper py-5">
       <div className="container" style={{ maxWidth: "850px" }}>
@@ -127,4 +127,4 @@ const TermsService = () => {
   );
 };
 
-export default TermsService;
+export default TermsConditions;

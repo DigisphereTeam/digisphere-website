@@ -28,8 +28,8 @@ const DigitalMarketingHerosection = () => {
                 </h1>
 
                 <p className="hero-description">
-                  We build full-funnel digital marketing systems — SEO, paid
-                  ads, email, and content — engineered around your customer
+                  We build full-funnel digital marketing systems  SEO, paid
+                  ads, email, and content  engineered around your customer
                   acquisition economics, not vanity dashboards.
                 </p>
 

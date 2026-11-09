@@ -33,7 +33,7 @@ const ResearchFirst = () => {
     {
       question: "What's the difference between UX and UI design?",
       answer:
-        "UX (User Experience) focuses on how a product works — making it intuitive, efficient, and easy to use. UI (User Interface) focuses on how it looks — the visual design, layouts, colors, and interactions. Great products need both. We combine strategic UX thinking with polished UI design to create experiences that delight users and drive business results.",
+        "UX (User Experience) focuses on how a product works  making it intuitive, efficient, and easy to use. UI (User Interface) focuses on how it looks  the visual design, layouts, colors, and interactions. Great products need both. We combine strategic UX thinking with polished UI design to create experiences that delight users and drive business results.",
     },
     {
       question: "Do you design for mobile and desktop?",

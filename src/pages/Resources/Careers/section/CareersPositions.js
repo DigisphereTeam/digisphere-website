@@ -18,7 +18,7 @@ const jobOpenings = [
     tags: ["React", "Node.js", "TypeScript", "PostgreSQL", "AWS"],
   },
  {
-  title: "FinOps Sales Specialist",
+  title: "Cloud Sales Specialist",
   department: "Sales",
   location: "Vijayawada / Hyderabad",
   experience: "2–5 years",
@@ -85,7 +85,7 @@ const CareersPositions = () => {
                   >
                     careers@digispheretech.in
                   </a>
-                  — we hire for talent, not just vacancies.
+                   -we hire for talent, not just vacancies.
                 </p>
               </div>
             </div>
@@ -166,7 +166,7 @@ const CareersPositions = () => {
       {/* Bottom Call to Action Section */}
       <BookingSection
         title="Don't see your role listed?"
-        description="We're always looking for exceptional people. Send your portfolio and a note about how you'd contribute — we read every email."
+        description="We're always looking for exceptional people. Send your portfolio and a note about how you'd contribute  we read every email."
         buttonText="Send Open Application"
         buttonLink="/contact"
       />

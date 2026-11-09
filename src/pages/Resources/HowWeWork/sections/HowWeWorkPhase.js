@@ -21,7 +21,7 @@ const processSteps = [
     duration: "30–45 min · Free",
     badge: "Clarity on whether and how we can help",
     description:
-      "We start with a focused conversation about your business, goals, and what you're trying to solve. No pitch deck, no sales pressure — just questions and listening.",
+      "We start with a focused conversation about your business, goals, and what you're trying to solve. No pitch deck, no sales pressure  just questions and listening.",
     icon: <img src={Discovery} className="phase-icon" />,
   },
   {
@@ -30,7 +30,7 @@ const processSteps = [
     duration: "3–5 business days",
     badge: "Fixed-price proposal with full scope breakdown",
     description:
-      "After the call, we write a detailed proposal that defines scope, timeline, cost, and what success looks like. We don't use boilerplate — every proposal is written for your situation.",
+      "After the call, we write a detailed proposal that defines scope, timeline, cost, and what success looks like. We don't use boilerplate  every proposal is written for your situation.",
     icon: <img src={Scoping} className="phase-icon" />,
   },
   {
@@ -39,7 +39,7 @@ const processSteps = [
     duration: "1–3 weeks",
     badge: "Approved wireframes and design system",
     description:
-      "Before a single line of code is written, we design. Wireframes, user flows, prototypes — you approve the blueprint before we build. This phase eliminates surprises.",
+      "Before a single line of code is written, we design. Wireframes, user flows, prototypes  you approve the blueprint before we build. This phase eliminates surprises.",
     icon: <img src={Design} className="phase-icon" />,
   },
   {
@@ -48,7 +48,7 @@ const processSteps = [
     duration: "Varies by scope",
     badge: "Working software on staging environment",
     description:
-      "We build in sprints with weekly check-ins. You have access to a staging environment throughout. We write clean, documented code — not throw-away prototypes.",
+      "We build in sprints with weekly check-ins. You have access to a staging environment throughout. We write clean, documented code  not throw-away prototypes.",
     icon: <img src={Development} className="phase-icon" />,
   },
   {
@@ -93,7 +93,7 @@ const MarketingProcessSteps = [
     icon: icon4,
     title: "Weekly check-ins",
     description:
-      "30-minute calls every week — no surprises, always aligned, always moving.",
+      "30-minute calls every week no surprises, always aligned, always moving.",
   },
 ];
 const HowWeWorkPhase = () => {
@@ -163,7 +163,7 @@ const HowWeWorkPhase = () => {
       </section>
       <BookingSection
         title="Ready to start the process?"
-        description="The first step is a free 30-minute discovery call. No obligation, no pitch — just a focused conversation about your goals."
+        description="The first step is a free 30-minute discovery call. No obligation, no pitch  just a focused conversation about your goals."
         buttonText="Book Your Discovery Call"
         buttonLink="/contact"
       />

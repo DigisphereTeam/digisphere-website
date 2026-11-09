@@ -11,7 +11,7 @@ const services = [
     icon: UxResearch,
     title: "UX Research & Strategy",
     description:
-      "We research your users — interviews, surveys, usability testing, and competitive benchmarking — to build a foundation for design decisions grounded in real behaviour.",
+      "We research your users  interviews, surveys, usability testing, and competitive benchmarking  to build a foundation for design decisions grounded in real behaviour.",
     points: [
       "User journey mapping",
       "Persona development",
@@ -23,7 +23,7 @@ const services = [
     icon: UIDesign,
     title: "UI Design",
     description:
-      "Pixel-perfect interfaces that feel effortless. We design with your brand system in mind — consistent, accessible, and production-ready for your development team.",
+      "Pixel-perfect interfaces that feel effortless. We design with your brand system in mind  consistent, accessible, and production-ready for your development team.",
     points: [
       "Component library creation",
       "Design system documentation",
@@ -35,7 +35,7 @@ const services = [
     icon: Interaction,
     title: "Interaction Design",
     description:
-      "Micro-interactions, transitions, and motion design that make products feel alive. We prototype interactions before development begins — saving time and budget.",
+      "Micro-interactions, transitions, and motion design that make products feel alive. We prototype interactions before development begins  saving time and budget.",
     points: [
       "Prototype & validation",
       "Motion design specs",
@@ -47,7 +47,7 @@ const services = [
     icon: Usability,
     title: "Usability Testing",
     description:
-      "We test real users on real tasks — moderated sessions, unmoderated remote testing, and A/B experiments — and iterate designs based on evidence.",
+      "We test real users on real tasks  moderated sessions, unmoderated remote testing, and A/B experiments  and iterate designs based on evidence.",
     points: [
       "Session recording analysis",
       "Heuristic evaluation",

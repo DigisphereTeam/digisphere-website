@@ -24,23 +24,18 @@ const TeamSection = () => {
     role: "UI/UX Designer",
     description: "Creative designer crafting intuitive and visually engaging user interfaces.",
   },
-  {
-    initials: "SG",
-    name: "Sneha",
-    role: "Marketing Director",
-    description: "Growth marketer, driving measurable business outcomes."
+   {
+    initials: "JB",
+    name: "Jabeer",
+    role: "Senior IT Sales Manager",
+    description: "Driving IT sales through client relationships and technology solutions.",
   },
-  {
-    initials: "KK",
-    name: "Kiran Kumar",
-    role: "Digital Marketing Executive",
-    description: "Driving online growth through data-driven marketing strategies."
-  },
+
   {
     initials: "RV",
     name: "Ravi Kishore",
     role: "Lead Backend Developer",
-    description: "Cybersecurity expert with enterprise compliance experience.",
+    description: "Specializes in scalable cloud architecture, database optimization, and secure API design.",
   },
   {
     initials: "NA",
@@ -52,38 +47,33 @@ const TeamSection = () => {
     initials: "VS",
     name: "Vamshi",
     role: "Backend Developer",
-    description: "Focused on building robust microservices and server-side logic.",
+    description: "Engineers high-performance server logic and secure backend services.",
   },
   {
     initials: "IS",
     name: "Ibrahim Shaik",
     role: "Lead Frontend Developer",
-    description: "Cloud architect specializing in scalable infrastructure.",
+    description: "Focuses on design translation, UI architecture, and overall user experience.",
   },
   {
     initials: "PM",
     name: "Prasad",
     role: "Frontend Developer",
-    description: "Crafting responsive user interfaces with modern React frameworks.",
+    description: "Focuses on component development, state management, and smooth application performance.",
   },
   {
     initials: "AA",
     name: "Ashok",
     role: "Frontend Developer",
-    description: "Expert in performance tuning and interactive component design.",
+    description: "Develops responsive web interfaces with a focus on code optimization and seamless user experience.",
   },
   {
     initials: "PR",
     name: "Pardeep",
     role: "Intern",
-    description: "Assisting the engineering team with feature testing and documentation.",
+    description: "Eager learner contributing to frontend components, bug fixes, and supporting core feature delivery.",
   },
-  {
-    initials: "AS",
-    name: "Akash",
-    role: "Intern",
-    description: "Gaining hands-on experience in full-stack development and agile workflows.",
-  },
+ 
 ];
 
   return (

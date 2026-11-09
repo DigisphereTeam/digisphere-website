@@ -96,7 +96,7 @@ const faqData = [
     id: 14,
     question: "What if something breaks after my website is live?",
     answer:
-      "No worries — just message us and we'll fix it quickly. We're always around to keep your website running smoothly.",
+      "No worries  just message us and we'll fix it quickly. We're always around to keep your website running smoothly.",
   },
   {
     id: 15,
@@ -150,7 +150,7 @@ const Faqspage = () => {
             animate="visible"
             variants={fadeUp}
           >
-            Everything you need to know about working with Digisphere Tech.
+            Everything you need to know about working with Digisphere.
             Can't find the answer you're looking for? Feel free to{" "}
             <Link to="/contact">contact us</Link>.
           </motion.p>

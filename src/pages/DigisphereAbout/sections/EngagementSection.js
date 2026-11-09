@@ -85,7 +85,7 @@ const EngagementSection = () => {
         {/* Getting Started */}
         <Reveal variant={fadeUp}>
           <div className="getting-started text-center">
-            <div className="trend-icon-wrap">
+            <div className="trend-icons-wraps">
               <img src={launchIcon} alt="Growth" />
             </div>
 

@@ -33,7 +33,7 @@ const helpCategories = [
     icon: <HiOutlineComputerDesktop />,
     items: [
       "Want a new website or app? We design and build it for you.",
-      "Want changes to your existing site? Just reach out — we'll take care of the updates.",
+      "Want changes to your existing site? Just reach out  we'll take care of the updates.",
       "Not sure how to make updates yourself? We'll walk you through it, step by step.",
     ],
   },
@@ -52,7 +52,7 @@ const helpCategories = [
     title: "Billing Help",
     icon: <HiOutlineCreditCard />,
     items: [
-      "Confused about pricing? We break it down clearly upfront — no hidden costs.",
+      "Confused about pricing? We break it down clearly upfront  no hidden costs.",
       "Need an invoice or receipt? Just ask and we'll send it right over.",
       "Have a billing question anytime? Reach out and we'll sort it out quickly.",
     ],

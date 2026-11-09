@@ -213,7 +213,7 @@ const DigisphereHeader = () => {
           {
             title: "How We Work",
             desc: "Our engagement process explained.",
-            path: "/Resources/howwework",
+            path: "/resources/howwework",
             icon: (
               <img
                 className="service-image"
@@ -225,13 +225,13 @@ const DigisphereHeader = () => {
           {
             title: "Careers",
             desc: "Join a growing tech team.",
-            path: "/Resources/careers",
+            path: "/resources/careers",
             icon: <img className="service-image" src={Careers} alt="pen" />,
           },
           {
             title: "Contact",
             desc: "Get in touch with our team.",
-            path: "/Contact",
+            path: "/contact",
             icon: (
               <img
                 className="service-image"
@@ -249,19 +249,19 @@ const DigisphereHeader = () => {
           {
             title: "Blog",
             desc: "Tech insights and practical guides.",
-            path: "/Resources/blogs",
+            path: "/resources/blogs",
             icon: <img className="service-image" src={Blog} alt="Blog" />,
           },
           {
             title: "Case Studies",
             desc: "Real results from real clients.",
-            path: "/Resources/casestudies",
+            path: "/resources/casestudies",
             icon: <img className="service-image" src={CaseStudies} alt="pen" />,
           },
           {
             title: "Success Stories",
             desc: "How clients grew with us.",
-            path: "/Resources/successstories",
+            path: "/resources/successstories",
             icon: (
               <img className="service-image" src={SuccessStories} alt="pen" />
             ),
@@ -269,7 +269,7 @@ const DigisphereHeader = () => {
           {
             title: "Technology Guides",
             desc: "Deep-dives on tools and stacks.",
-            path: "/Resources/technologyguides",
+            path: "/resources/technologyguides",
             icon: (
               <img className="service-image" src={TechnologyGuides} alt="pen" />
             ),
@@ -283,12 +283,12 @@ const DigisphereHeader = () => {
             title: "FAQs",
             desc: "Answers to common questions.",
             icon: <img className="service-image" src={FAQs} alt="FAQs" />,
-            path: "/Resources/faqspage",
+            path: "/resources/faqspage",
           },
           {
             title: "Help Center",
             desc: "Support resources and docs.",
-            path:"/Resources/helpcenter",
+            path:"/resources/helpcenter",
             icon: (
               <img
                 className="service-image"

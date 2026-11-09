@@ -60,7 +60,7 @@ const ManagedItServices = () => {
       icon: helpDeskIcon,
       title: "IT Help Desk Support",
       description:
-        "Single point of contact for all employee IT issues — hardware, software, connectivity, and account management — resolved fast so your team stays productive.",
+        "Single point of contact for all employee IT issues  hardware, software, connectivity, and account management  resolved fast so your team stays productive.",
       points: [
         "8am–8pm support (SLA-backed)",
         "Remote & on-site resolution",
@@ -71,7 +71,7 @@ const ManagedItServices = () => {
       icon: endpointIcon,
       title: "Endpoint Management",
       description:
-        "Centrally managed desktops, laptops, and mobile devices — software deployment, patch management, security policies, and asset tracking across your fleet.",
+        "Centrally managed desktops, laptops, and mobile devices  software deployment, patch management, security policies, and asset tracking across your fleet.",
       points: [
         "MDM/UEM platform setup",
         "Automated patch management",
@@ -82,7 +82,7 @@ const ManagedItServices = () => {
       icon: serverNetworkIcon,
       title: "Server & Network Management",
       description:
-        "Proactive management of your on-premise servers, network switches, firewalls, and Wi-Fi infrastructure — monitoring, patching, and performance optimisation.",
+        "Proactive management of your on-premise servers, network switches, firewalls, and Wi-Fi infrastructure  monitoring, patching, and performance optimisation.",
       points: [
         "24/7 monitoring",
         "Network performance reporting",
@@ -93,7 +93,7 @@ const ManagedItServices = () => {
       icon: backupRecoveryIcon,
       title: "Backup & Recovery",
       description:
-        "Automated, verified backups with documented recovery procedures — protecting your business data against hardware failure, ransomware, and human error.",
+        "Automated, verified backups with documented recovery procedures  protecting your business data against hardware failure, ransomware, and human error.",
       points: [
         "Daily automated backups",
         "Backup verification testing",
@@ -104,7 +104,7 @@ const ManagedItServices = () => {
       icon: softwareLicenceIcon,
       title: "Software & Licence Management",
       description:
-        "Inventory, procurement, and compliance management for all software licences — eliminating audit risk and ensuring your team always has the tools they need.",
+        "Inventory, procurement, and compliance management for all software licences  eliminating audit risk and ensuring your team always has the tools they need.",
       points: [
         "Licence inventory audit",
         "Renewal management",
@@ -223,8 +223,8 @@ const ManagedItServices = () => {
                     </span>
                   </h2>
                   <p className="hero-description">
-                    End-to-end IT management — help desk, endpoint management,
-                    servers, networks, backups, and security — delivered as a
+                    End-to-end IT management  help desk, endpoint management,
+                    servers, networks, backups, and security  delivered as a
                     predictable monthly service with SLA guarantees.
                   </p>
                   <div className="hero-buttons">

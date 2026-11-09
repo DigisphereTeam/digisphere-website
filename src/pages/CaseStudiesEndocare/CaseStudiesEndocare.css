@@ -1,0 +1,409 @@
+.Endocare-wrapper {
+  color: #0f172a;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Endocare-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.Endocare-hero {
+  padding-top: 60px;
+  background-color: #F7F9FB;
+}
+
+.Endocare-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #057DCD18;
+  color: #057dcd;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+  border: 1px solid #057dcd33;
+}
+
+.Endocare-badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #057dcd;
+  border-radius: 50%;
+}
+
+.Endocare-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.Endocare-blue {
+  color: #057DCD;
+}
+
+.Endocare-hero-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 48px;
+}
+
+/* Meta Bar Section */
+.Endocare-meta-bar {
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  padding: 35px 0;
+}
+
+.Endocare-meta-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.Endocare-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.Endocare-meta-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.Endocare-meta-val {
+  font-size: 15px;
+  font-weight: 600;
+  color: #057dcd;
+}
+
+/* Challenge Section */
+.Endocare-challenge {
+  padding: 80px 0 90px 0;
+  background-color: #f8fafc;
+}
+
+.Endocare-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #057dcd;
+  display: block;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.Endocare-challenge-title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  margin-bottom: 40px;
+}
+
+.Endocare-challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.Endocare-challenge-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px 20px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.Endocare-icon-box {
+  width: 38px;
+  height: 38px;
+  background-color: #e0f2fe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.Endocare-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.Endocare-card-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Approach Section */
+.Endocare-approach {
+  background-color: #057dcd;
+  padding: 80px 0 100px 0;
+}
+
+.Endocare-approach-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #057dcd;
+  display: block;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.Endocare-approach-title {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin-bottom: 48px;
+}
+
+.Endocare-approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.Endocare-step-wrapper {
+  position: relative;
+}
+
+.Endocare-step-num {
+  width: 24px;
+  height: 24px;
+  background-color: #057dcd;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  position: absolute;
+  top: -12px;
+  left: -8px;
+  z-index: 2;
+  border: 2px solid #057dcd;
+}
+
+.Endocare-step-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 28px 20px 24px 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .Endocare-challenge-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .Endocare-approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .Endocare-meta-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .Endocare-meta-col:not(:last-child)::after {
+    display: none;
+  }
+  .Endocare-challenge-grid,
+  .Endocare-approach-grid {
+    grid-template-columns: 1fr;
+  }
+  .Endocare-hero-title {
+    font-size: 36px;
+  }
+}
+
+
+.Endocare-results {
+  padding: 80px 0;
+  background-color: #f8fafc; 
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.Endocare-results-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.25;
+  margin-top: 12px;
+  margin-bottom: 48px;
+  max-width: 640px;
+}
+
+
+.Endocare-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+
+.Endocare-result-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.Endocare-result-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+}
+
+.Endocare-result-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.Endocare-result-header svg {
+  flex-shrink: 0;
+  background-color: #e0f2fe;
+  padding: 8px;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.Endocare-result-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #057dcd; 
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Typography */
+.Endocare-result-label {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.Endocare-result-desc {
+  font-size: 0.938rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .Endocare-container,
+  .Endocare-meta-container {
+    padding: 0 20px;
+  }
+
+  /* Grid layouts */
+  .Endocare-challenge-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .Endocare-approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 20px;
+  }
+
+  .Endocare-results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Endocare-hero-title {
+    font-size: 40px;
+  }
+
+  .Endocare-approach-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .Endocare-container,
+  .Endocare-meta-container {
+    padding: 0 16px;
+  }
+
+  .Endocare-hero {
+    padding-top: 40px;
+  }
+
+  .Endocare-challenge,
+  .Endocare-results {
+    padding: 48px 0;
+  }
+
+  .Endocare-approach {
+    padding: 48px 0 60px 0;
+  }
+  .Endocare-meta-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .Endocare-challenge-grid,
+  .Endocare-approach-grid,
+  .Endocare-results-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .Endocare-hero-title {
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+
+  .Endocare-challenge-title,
+  .Endocare-approach-title,
+  .Endocare-results-title {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .Endocare-result-value {
+    font-size: 2rem;
+  }
+
+  .Endocare-result-card {
+    padding: 20px 16px;
+  }
+}

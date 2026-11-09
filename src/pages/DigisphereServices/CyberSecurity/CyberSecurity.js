@@ -97,7 +97,7 @@ const CyberSecurity = () => {
       icon: Monitoring,
       title: "Security Monitoring (SOC) ",
       description:
-        "24/7 Security Operations Center monitoring — real-time threat detection, log analysis, and incident response for your infrastructure.",
+        "24/7 Security Operations Center monitoring  real-time threat detection, log analysis, and incident response for your infrastructure.",
       points: [
         "SIEM implementation",
         "Real-time threat alerts",
@@ -130,7 +130,7 @@ const CyberSecurity = () => {
       icon: Incident,
       title: "Incident Response",
       description:
-        "When a breach happens, speed matters. Emergency incident response — containment, forensic analysis, recovery, and post-incident reporting.",
+        "When a breach happens, speed matters. Emergency incident response  containment, forensic analysis, recovery, and post-incident reporting.",
       points: [
         "Encryption at rest & transit",
         "Forensic investigation",
@@ -141,7 +141,7 @@ const CyberSecurity = () => {
       icon: Architecture,
       title: "Security Architecture Review",
       description:
-        "Independent review of your security architecture — network design, IAM policies, cloud config, application security — with a prioritised improvement roadmap.",
+        "Independent review of your security architecture  network design, IAM policies, cloud config, application security  with a prioritised improvement roadmap.",
       points: [
         "Architecture threat modelling",
         "Zero-trust assessment",
@@ -242,7 +242,7 @@ const CyberSecurity = () => {
 
                   <p className="hero-description">
                     VAPT, SOC monitoring, compliance assessments, and security
-                    architecture reviews — we protect your business from
+                    architecture reviews  we protect your business from
                     breaches, ransomware, and regulatory penalties.
                   </p>
 

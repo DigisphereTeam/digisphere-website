@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./DigisphereFooter.css";
-import footerlogo from "../../assets/footerlogo (2).png";
+import footerLogo from "../../assets/footerlogo (2).png";
 // Asset Imports
 import linkedinIcon from "../../assets/LinkedinIcon.png";
 import instaIcon from "../../assets/instaIcon.png";
@@ -28,9 +28,9 @@ const SERVICES_LINKS = [
 
 const COMPANY_LINKS = [
   { to: "/about", label: "About Us" },
-  { to: "/Resources/careers", label: "Careers" },
-  { to: "/Resources/casestudies", label: "Case Studies" },
-  { to: "/Resources/blogs", label: "Blogs" },
+  { to: "/resources/careers", label: "Careers" },
+  { to: "/resources/casestudies", label: "Case Studies" },
+  { to: "/resources/blogs", label: "Blogs" },
   { to: "/industries", label: "Industries" },
   { to: "/contact", label: "Contact" },
 ];
@@ -53,12 +53,10 @@ const DigisphereFooter = memo(() => {
     <footer className="footer-section" role="contentinfo">
       <div className="container">
         <div className="row">
-
-          {/* Brand Info & Social Stack */}
           <div className="col-lg-4 mb-4">
             <Link className="navbar-brand fw-bold" to="/">
               <img
-                src={footerlogo}
+                src={footerLogo}
                 alt="Digisphere Logo"
                 className="Digispherefooter-logo-image"
               />
@@ -141,7 +139,7 @@ const DigisphereFooter = memo(() => {
               Privacy Policy
             </Link>
             <span className="side-line">|</span>
-            <Link to="/termsservice" className="footer-legal-link">
+            <Link to="/termsconditions" className="footer-legal-link">
               Terms & Conditions
             </Link>
           </div>

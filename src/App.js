@@ -11,7 +11,6 @@ import ManagedItServices from "./pages/DigisphereServices/MangedItServices/Manag
 import ExperienceDesign from "./pages/DigisphereServices/ExperienceDesign/ExperienceDesign.js";
 import Devops from "./pages/DigisphereServices/Devops/Devops.js";
 import CyberSecurity from "./pages/DigisphereServices/CyberSecurity/CyberSecurity.js";
-
 import Automation from "./pages/DigisphereServices/AutomationSolutions/Automation.js";
 import AIPowered from "./pages/DigisphereServices/AIPoweredSolutions/AIPowered.js";
 import CloudServices from "./pages/DigisphereServices/CloudServices/CloudServices.js";
@@ -29,14 +28,20 @@ import Applying from "./pages/Applying/Applying.js";
 import Faqspage from "./pages/Faqspage/Faqspage.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy.js";
-import TermsService from "./pages/TermsService/TermsService.js";
-import Products from "./pages/Products/Products.js";
-import Digicampus from "./pages/Products/components/Digicampus.js";
-import Digiplay from "./pages/Products/components/Digiplay.js";
-import Digilog from "./pages/Products/components/Digilog.js";
-import Digistay from "./pages/Products/components/Digistay.js";
-import Digiayur from "./pages/Products/components/Digiayur.js";
-
+import TermsConditions from "./pages/TermsConditions/TermsConditions.js";
+import WebArticle from "./pages/WebArticle/WebArticle.js";
+import DigitalMarketingArticle from "./pages/DigitalMarketingArticle/DigitalMarketingArticle.js";
+import AiArticle from "./pages/AiArticle/AiArticle.js";
+import CybersecurityArticle from "./pages/CybersecurityArticle/CybersecurityArticle.js";
+import CloudArticle from "./pages/CloudArticle/CloudArticle.js";
+import UiUxArticle from "./pages/UiUxArticle/UiUxArticle.js";
+import DevOpsArticle from "./pages/DevOpsArticle/DevOpsArticle.js";
+import CaseStudiesEndocare from "./pages/CaseStudiesEndocare/CaseStudiesEndocare.js";
+import CaseStudiesSRSteelDoors from "./pages/CaseStudiesSRSteelDoors/CaseStudiesSRSteelDoors.js";
+import CaseStudiesRealVentures from "./pages/CaseStudiesRealVentures/CaseStudiesRealVentures.js";
+import CaseStudiesSkillEdition from "./pages/CaseStudiesSkillEdition/CaseStudiesSkillEdition.js";
+import { CaseStudiesLogistics } from "./pages/CaseStudiesLogistics/CaseStudiesLogistics.js";
+import { CaseStudiesFinSphere } from "./pages/CaseStudiesFinSphere/CaseStudiesFinSphere.js";
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -149,18 +154,31 @@ const App = () => {
         <Route path="/products/digiayur" element={<Digiayur/>} />
         <Route path="/products/digistay" element={<Digistay/>} />
         <Route path="/industries" element={<Industries />} />
-        <Route path="/Resources/casestudies" element={<CaseStudies />} />
-        <Route path="/Resources/technologyguides" element={<TechnologyGuides/>} />
-        <Route path="/Resources/blogs" element={<Blogs/>} />
-        <Route path="/Resources/careers" element={<Careers/>} />
-        <Route path="/Resources/successstories" element={<SuccessStories/>} />
-        <Route path="/Resources/howwework" element={<HowWeWork/>} />
+        <Route path="/resources/casestudies" element={<CaseStudies />} />
+        <Route path="/resources/technologyguides" element={<TechnologyGuides/>} />
+        <Route path="/resources/blogs" element={<Blogs/>} />
+        <Route path="/resources/careers" element={<Careers/>} />
+        <Route path="/resources/successstories" element={<SuccessStories/>} />
+        <Route path="/resources/howwework" element={<HowWeWork/>} />
          <Route path="/services/finops" element={<FinOps/>} />
          <Route path="/applying" element={<Applying/>} />
-         <Route path="/Resources/faqspage" element={<Faqspage/>} />
-         <Route path="/Resources/helpcenter" element={<HelpCenter/>} />
+         <Route path="/resources/faqspage" element={<Faqspage/>} />
+         <Route path="/resources/helpcenter" element={<HelpCenter/>} />
          <Route path="/privacypolicy" element={<PrivacyPolicy/>} />
-          <Route path="/termsservice" element={<TermsService/>} />
+          <Route path="/termsconditions" element={<TermsConditions/>} />
+          <Route path="/webArticle" element={<WebArticle/>} />
+          <Route path="/digitalmarketingarticle" element={<DigitalMarketingArticle/>} />
+           <Route path="/aiarticle" element={<AiArticle/>} />
+           <Route path="/cybersecurityarticle" element={<CybersecurityArticle/>} />
+           <Route path="/cloudarticle" element={<CloudArticle/>} />
+           <Route path="/ui&uxarticle" element={<UiUxArticle/>} />
+           <Route path="/devopsarticle" element={<DevOpsArticle/>} />
+           <Route path="/caseStudiesendocare" element={<CaseStudiesEndocare/>} />
+           <Route path="/casectudiessrsteeldoors" element={<CaseStudiesSRSteelDoors/>} />
+           <Route path="/casestudiesralventures" element={<CaseStudiesRealVentures/>} />
+           <Route path="/casestudiesskilledition" element={<CaseStudiesSkillEdition/>} />
+            <Route path="/casestudieslogistics" element={<CaseStudiesLogistics/>} />
+             <Route path="/casestudiesfinsphere" element={<CaseStudiesFinSphere/>} />
       </Routes>
 
       <DigisphereFooter />

@@ -1,0 +1,363 @@
+
+.SRSteel-wrapper {
+  width: 100%;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+.container,
+.SRSteel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+.SRSteel-hero {
+  padding: 5rem 0 0rem 0;
+  background-color: #F7F9FB;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.SRSteel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: #f0f9ff;
+  color: #057DCD;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  border: 1px solid #057dcd33;
+}
+
+.SRSteel-badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color:#057DCD;
+  border-radius: 50%;
+}
+
+.SRSteel-hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 1.25rem;
+}
+
+.SRSteel-blue {
+  color: #057DCD;
+}
+
+.SRSteel-hero-desc {
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-bottom: 3rem;
+}
+
+/* Meta Bar Layout */
+
+
+.SRSteel-meta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.SRSteel-meta-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.SRSteel-meta-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.SRSteel-meta-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.SRSteel-challenge {
+  padding: 5rem 0;
+  background-color: #F7F9FB;
+}
+
+.SRSteel-section-label,
+.SRSteel-approach-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #057DCD;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.SRSteel-challenge-title,
+.SRSteel-approach-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0f172a;
+  margin-bottom: 3rem;
+}
+
+.SRSteel-challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.SRSteel-challenge-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.SRSteel-challenge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.SRSteel-icon-box {
+  width: 42px;
+  height: 42px;
+  background-color: #e0f2fe;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.SRSteel-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.SRSteel-card-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* ==========================================
+   Approach / What We Built Section
+   ========================================== */
+.SRSteel-approach {
+  padding: 5rem 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.SRSteel-approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+
+.SRSteel-step-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #F7F9FB;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.SRSteel-step-num {
+  font-size: 40px;
+  font-weight: 800;
+  color:#dceaf8;
+  margin-bottom: 1rem;
+}
+
+.SRSteel-step-card .SRSteel-card-title {
+  margin-bottom: 0.5rem;
+}
+
+/* ==========================================
+   Call to Action (CTA) Button
+   ========================================== */
+.SRSteel-cta-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.SRSteel-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  background-color: #057DCD;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.SRSteel-cta-btn:hover {
+  background-color: #0369a1;
+  transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   Meta Bar (Original Layout)
+   ========================================== */
+.SRSteel-meta-bar {
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  background-color:#ffffff;
+}
+
+/* Uses .container directly as requested in your markup */
+.SRSteel-meta-bar .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.SRSteel-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.SRSteel-meta-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.SRSteel-meta-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+/* ==========================================
+   Responsive Breakpoints (992px & 576px)
+   ========================================== */
+
+/* Desktop / Tablet Threshold (<= 992px) */
+@media (max-width: 992px) {
+  .container,
+  .SRSteel-container,
+  .SRSteel-meta-container {
+    padding: 0 1.25rem;
+  }
+
+  .SRSteel-hero {
+    padding-top: 3.5rem;
+  }
+
+  .SRSteel-hero-title {
+    font-size: 2.25rem;
+  }
+
+  .SRSteel-challenge-grid,
+  .SRSteel-approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .SRSteel-meta-bar .container,
+  .SRSteel-meta-container {
+    gap: 1.25rem;
+  }
+
+  .SRSteel-meta-col {
+    flex: 1 1 40%;
+  }
+}
+
+/* Mobile Threshold (<= 576px) */
+@media (max-width: 576px) {
+  .SRSteel-hero {
+    padding: 2.5rem 0 1.5rem 0;
+  }
+
+  .SRSteel-challenge,
+  .SRSteel-approach {
+    padding: 3rem 0;
+  }
+
+  .SRSteel-hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .SRSteel-hero-desc {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .SRSteel-challenge-title,
+  .SRSteel-approach-title {
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Prevent awkward line breaks on narrow viewports */
+  .SRSteel-hero-title br,
+  .SRSteel-challenge-title br,
+  .SRSteel-approach-title br {
+    display: none;
+  }
+
+  .SRSteel-challenge-grid,
+  .SRSteel-approach-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .SRSteel-meta-bar .container,
+  .SRSteel-meta-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .SRSteel-challenge-card,
+  .SRSteel-step-wrapper {
+    padding: 1.25rem;
+  }
+
+  .SRSteel-cta-wrapper {
+    width: 100%;
+  }
+
+  .SRSteel-cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+  }
+}

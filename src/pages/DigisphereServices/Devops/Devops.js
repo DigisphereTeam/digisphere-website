@@ -46,7 +46,7 @@ const Devops = () => {
       icon: devopsIcon1,
       title: "CI/CD Pipeline Design",
       description:
-        "Automated build, test, and deployment pipelines that cut release cycles from weeks to hours — with quality gates, rollback mechanisms, and full audit trails.",
+        "Automated build, test, and deployment pipelines that cut release cycles from weeks to hours  with quality gates, rollback mechanisms, and full audit trails.",
       points: [
         "GitHub Actions / GitLab CI / Jenkins",
         "Automated testing integration",
@@ -57,7 +57,7 @@ const Devops = () => {
       icon: devopsIcon2,
       title: "Containerisation & Kubernetes",
       description:
-        "Containerise your applications and orchestrate them with Kubernetes — scalable, portable, and resilient deployments across any cloud environment.",
+        "Containerise your applications and orchestrate them with Kubernetes  scalable, portable, and resilient deployments across any cloud environment.",
       points: [
         "Docker containerisation",
         "Kubernetes cluster management",
@@ -68,7 +68,7 @@ const Devops = () => {
       icon: devopsIcon3,
       title: "Infrastructure as Code",
       description:
-        "Version-controlled, reproducible infrastructure using Terraform and Ansible — eliminate configuration drift and make infrastructure changes auditable and reversible.",
+        "Version-controlled, reproducible infrastructure using Terraform and Ansible  eliminate configuration drift and make infrastructure changes auditable and reversible.",
       points: [
         "Terraform module library",
         "Ansible playbooks",
@@ -79,7 +79,7 @@ const Devops = () => {
       icon: devopsIcon4,
       title: "Monitoring & Observability",
       description:
-        "Full-stack observability — metrics, logs, traces, and dashboards — using Prometheus, Grafana, ELK Stack, or Datadog so you can see and fix problems fast.",
+        "Full-stack observability  metrics, logs, traces, and dashboards  using Prometheus, Grafana, ELK Stack, or Datadog so you can see and fix problems fast.",
       points: [
         "Prometheus + Grafana setup",
         "Centralised logging (ELK)",
@@ -90,7 +90,7 @@ const Devops = () => {
       icon: devopsIcon5,
       title: "DevSecOps",
       description:
-        "Security built into the pipeline — SAST/DAST scanning, container vulnerability scanning, secrets management, and compliance-as-code for regulated environments.",
+        "Security built into the pipeline  SAST/DAST scanning, container vulnerability scanning, secrets management, and compliance-as-code for regulated environments.",
       points: [
         "SAST/DAST integration",
         "Container image scanning",
@@ -101,7 +101,7 @@ const Devops = () => {
       icon: devopsIcon6,
       title: "Platform Engineering",
       description:
-        "Internal developer platforms that give your engineering teams self-service capabilities — provisioning, deployment, and monitoring without waiting on ops.",
+        "Internal developer platforms that give your engineering teams self-service capabilities provisioning, deployment, and monitoring without waiting on ops.",
       points: [
         "Internal developer portal",
         "Self-service provisioning",
@@ -131,7 +131,7 @@ const Devops = () => {
     {
       question: "Our team has never used Kubernetes. Can you still help?",
       answer:
-        "Absolutely. Many of our clients start with little or no Kubernetes experience. We guide your team through every stage — from architecture design and cluster setup to training and documentation. Our goal is not only to implement Kubernetes successfully but also to empower your team with the knowledge and confidence to manage it effectively over time.",
+        "Absolutely. Many of our clients start with little or no Kubernetes experience. We guide your team through every stage  from architecture design and cluster setup to training and documentation. Our goal is not only to implement Kubernetes successfully but also to empower your team with the knowledge and confidence to manage it effectively over time.",
     },
     {
       question: "How long does it take to set up a CI/CD pipeline?",

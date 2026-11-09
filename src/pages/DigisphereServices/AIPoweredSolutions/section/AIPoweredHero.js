@@ -169,7 +169,7 @@ const AIPoweredHero = () => {
 
                   <p className="devops-description">
                     We build AI integrations, copilots, and intelligent systems
-                    that solve real business problems — not AI for the sake of
+                    that solve real business problems  not AI for the sake of
                     AI.
                   </p>
 

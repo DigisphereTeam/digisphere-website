@@ -15,7 +15,7 @@ const WebApplicationCards = () => {
       icon: webaplication1,
       title: "Business Dashboards & Portals",
       description:
-        "Internal tools that replace spreadsheets—role-based dashboards, reporting portals, and operational management interfaces built for your team.",
+        "Internal tools that replace spreadsheets role based dashboards, reporting portals, and operational management interfaces built for your team.",
       points: [
         "Role-based access control",
         "Real-time data views",
@@ -27,7 +27,7 @@ const WebApplicationCards = () => {
       icon: webaplication2,
       title: "Customer Portals",
       description:
-        "Branded self-service portals for your clients—order tracking, document management, ticketing, billing, and account management in one place.",
+        "Branded self-service portals for your clients order tracking, document management, ticketing, billing, and account management in one place.",
       points: [
         "White-labelled & branded",
         "Integration with your CRM/ERP",
@@ -39,7 +39,7 @@ const WebApplicationCards = () => {
       icon: webaplication3,
       title: "Custom CRMs & ERPs",
       description:
-        "When off-the-shelf doesn't fit your workflow, we build custom CRM and ERP systems designed around your exact processes—not the other way around.",
+        "When off-the-shelf doesn't fit your workflow, we build custom CRM and ERP systems designed around your exact processes not the other way around.",
       points: [
         "Fully custom data models",
         "Workflow automation built-in",
@@ -51,7 +51,7 @@ const WebApplicationCards = () => {
       icon: webaplication4,
       title: "SaaS Product Development",
       description:
-        "From MVP to multi-tenant SaaS—we help startups and enterprises build software products with subscription billing, onboarding, and feature flags.",
+        "From MVP to multi-tenant SaaS we help startups and enterprises build software products with subscription billing, onboarding, and feature flags.",
       points: [
         "Multi-tenancy architecture",
         "Stripe/Recurring billing",
@@ -75,7 +75,7 @@ const WebApplicationCards = () => {
       icon: webaplication6,
       title: "API & Integration Layer",
       description:
-        "Middleware, API gateways, and integration services that connect your software stack—CRM, ERP, logistics, payment, and third-party platforms.",
+        "Middleware, API gateways, and integration services that connect your software stack CRM, ERP, logistics, payment, and third-party platforms.",
       points: [
         "REST & GraphQL APIs",
         "Webhook management",

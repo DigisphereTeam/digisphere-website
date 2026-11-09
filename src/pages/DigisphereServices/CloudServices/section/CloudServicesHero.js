@@ -132,7 +132,7 @@ const CloudServicesHero = () => {
                   </h1>
 
                   <p className="devops-description">
-                    AWS, Azure, and Google Cloud solutions — from migration and
+                    AWS, Azure, and Google Cloud solutions  from migration and
                     architecture to ongoing management and cost optimisation.
                   </p>
 

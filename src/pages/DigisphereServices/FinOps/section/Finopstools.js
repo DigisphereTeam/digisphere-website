@@ -53,7 +53,7 @@ const Finopstools = () => {
               <h2 className="tools-title">Best-in-class FinOps tooling.</h2>
               <p className="tools-description">
                 We work with the tools you already use and introduce specialised
-                FinOps platforms where they add value — never tool-for-tool's-sake.
+                FinOps platforms where they add value  never tool-for-tool's-sake.
               </p>
             </div>
           </Reveal>
