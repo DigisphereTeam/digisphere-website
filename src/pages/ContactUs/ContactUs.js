@@ -334,9 +334,7 @@ const ContactUs = () => {
                   <div className="info-item item-align-start">
                     <img src={locationicon} alt="location" />
                     <span>
-                      HITEC City, Madhapur
-                      <br />
-                      Hyderabad, Telangana 500081
+                      G3, Hig-21, Dharma Residency, Phase-6, KPHB colony, Hyderabad - 500085
                     </span>
                   </div>
                   <div className="info-item">

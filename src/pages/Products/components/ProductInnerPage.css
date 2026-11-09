@@ -1,0 +1,348 @@
+.product-page-container {
+  background-color: #f8fafc;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+.product-hero-section {
+  padding: 60px 0;
+}
+
+.product-hero-title {
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.15;
+  font-size: 40px;
+}
+
+.product-text-blue {
+  color: #0052cc !important;
+}
+
+.product-hero-desc {
+  color: #475569;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.product-dashboard-preview {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* SECTION 2 */
+.product-features-section {
+  padding: 80px 0;
+  background-color: #F4F8FD;
+}
+
+.product-section-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0052cc;
+  letter-spacing: 1px;
+}
+
+.product-section-title {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 40px;
+}
+
+.product-section-desc {
+  color: #475569;
+  font-size: 16px;
+  max-width: 600px;
+}
+
+.product-feature-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.product-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.product-feature-icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: #eef2ff;
+  color: #0052cc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.product-feature-card-title {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.product-feature-card-desc {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.product-feature-card-tag {
+  border-top: 1px solid #f1f5f9;
+  color: #0052cc;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* SECTION 3: RBAC STYLES */
+.product-team-access-section {
+  padding: 80px 0;
+  background-color: #f8fafc;
+}
+
+.product-role-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.product-role-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.product-role-card-title {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.product-role-badge {
+  background-color: #eef2ff;
+  color: #1e3a8a;
+  padding: 4px 10px;
+  border-radius: 50rem;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.product-role-card-desc {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.product-rbac-table-container {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.product-rbac-table-heading {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
+.product-rbac-security-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.product-custom-rbac-table th {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: 2px solid #f1f5f9 !important;
+  background-color: transparent !important;
+}
+
+.product-custom-rbac-table td {
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.product-custom-rbac-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* SECTION 4: DASHBOARD, REPORTS & GET STARTED BANNER */
+.product-dashboard-reports-section {
+  padding: 80px 0;
+  background-color: #f4f8fd;
+}
+
+.product-report-item-title {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 15px;
+}
+
+.product-report-item-desc {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.product-get-started-banner {
+  background-color: linear-gradient(135deg, #f8fafc 0%, #dbeafe 100%);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.product-banner-title {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 22px;
+}
+
+.product-banner-desc {
+  color: #64748b;
+  font-size: 14px;
+}
+/* PATIENT JOURNEY SECTION */
+.product-journey-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.product-journey-subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0052cc;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.product-journey-card {
+  background-color: #f4f7fc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.product-journey-card:hover {
+  background-color: #eaf2ff;
+  border-color: #cfe0fb;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.product-journey-card-active {
+  background-color: #eaf2ff;
+  border-color: #cfe0fb;
+}
+
+.product-journey-step {
+  width: 32px;
+  height: 32px;
+  background-color: #0052cc;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.product-journey-stage {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0052cc;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.product-journey-card-title {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.product-journey-card-desc {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* RESPONSIVE MEDIA QUERIES (MAX-WIDTH SCALING) */
+@media (max-width: 991px) {
+  .product-hero-title,
+  .product-section-title {
+    font-size: 36px;
+  }
+  .product-hero-section {
+  padding: 40px 0;
+  text-align: center;
+}
+  .product-hero-desc,
+  .product-section-desc {
+    font-size: 14px;
+  }
+  .product-section-subtitle{
+    font-size: 16px;
+  }
+  .product-feature-card-desc{
+    font-size: 14px;
+  }
+  .product-team-access-section {
+  padding: 50px 0;
+  text-align: center;
+}
+.product-text-center{
+  text-align: center;
+}
+.product-role-card-desc {
+  font-size: 12px;
+  text-align: left !important;
+}
+  .product-journey-section {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 576px) {
+    .product-hero-section {
+  padding: 30px 0;
+  text-align: center;
+}
+  .product-hero-title,
+  .product-section-title {
+    font-size: 32px;
+  }
+  .product-section-subtitle{
+    font-size: 14px;
+    text-align: center;
+  }
+  .product-feature-card-desc{
+    font-size: 12px;
+  }
+  .product-hero-desc,
+  .product-section-desc {
+    font-size: 12px;
+  }
+  .product-custom-rbac-table td {
+    font-size: 12px;
+  }
+    .product-journey-subtitle {
+    font-size: 11px;
+  }
+  .product-journey-card-title {
+    font-size: 16px;
+  }
+  .product-journey-card-desc {
+    font-size: 12px;
+  }
+}

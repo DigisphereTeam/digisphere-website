@@ -10,7 +10,7 @@ import Finopsicon from "../../assets/Finopsicon.svg";
 import Blog from "../../assets/resourcesdropdown/Blog.svg";
 import Careers from "../../assets/resourcesdropdown/Careers.svg";
 import Contact from "../../assets/resourcesdropdown/Contact.svg";
-import Documentation from "../../assets/resourcesdropdown/Documentation.svg";
+// import Documentation from "../../assets/resourcesdropdown/Documentation.svg";
 import FAQs from "../../assets/resourcesdropdown/FAQs.svg";
 import HelpCenter from "../../assets/resourcesdropdown/HelpCenter.svg";
 import HowWeWork from "../../assets/resourcesdropdown/HowWeWork.svg";
@@ -27,7 +27,6 @@ import WebApplications from "../../assets/servicesDropdown/WebApplications.svg";
 import WebsiteDesign from "../../assets/servicesDropdown/Website Design & Development.svg";
 
 import "./DigisphereHeader.css";
-import { path } from "framer-motion/client";
 
 const DigisphereHeader = () => {
   const navigate = useNavigate();
@@ -298,17 +297,17 @@ const DigisphereHeader = () => {
               />
             ),
           },
-          {
-            title: "Documentation",
-            desc: "Technical references and guides.",
-            icon: (
-              <img
-                className="service-image"
-                src={Documentation}
-                alt="Documentation"
-              />
-            ),
-          },
+          // {
+          //   title: "Documentation",
+          //   desc: "Technical references and guides.",
+          //   icon: (
+          //     <img
+          //       className="service-image"
+          //       src={Documentation}
+          //       alt="Documentation"
+          //     />
+          //   ),
+          // },
         ],
       },
     ],
@@ -442,6 +441,15 @@ const DigisphereHeader = () => {
                 </div>
               </div>
             </li>
+
+            {/* Products */}
+            <li className="nav-item">
+                  <NavLink className="nav-link" to="/products" onClick={closeNavbar}>
+                    Products
+                  </NavLink>
+            </li>
+
+            {/* Industries */}
             <li className="nav-item">
               <NavLink
                 className="nav-link"
@@ -451,6 +459,7 @@ const DigisphereHeader = () => {
                 Industries
               </NavLink>
             </li>
+
             {/* ================= RESOURCES MEGA MENU ================= */}
             <li className="nav-item dropdown mega-dropdown">
               <button

@@ -21,7 +21,6 @@ import CaseStudies from "./pages/Resources/CaseStudies/CaseStudies.js";
 import TechnologyGuides from "./pages/Resources/TechnologyGuides/TechnologyGuides.js";
 import Blogs from "./pages/Resources/Blogs/Blogs.js";
 import Careers from "./pages/Resources/Careers/Careers.js";
-import SuccessStoriesHero from "./pages/Resources/SuccessStories/section/SuccessStoriesHero.js";
 import SuccessStories from "./pages/Resources/SuccessStories/SuccessStories.js";
 import HowWeWork from "./pages/Resources/HowWeWork/HowWeWork.js";
 import FinOps from "./pages/DigisphereServices/FinOps/FinOps.js";
@@ -43,6 +42,12 @@ import CaseStudiesRealVentures from "./pages/CaseStudiesRealVentures/CaseStudies
 import CaseStudiesSkillEdition from "./pages/CaseStudiesSkillEdition/CaseStudiesSkillEdition.js";
 import { CaseStudiesLogistics } from "./pages/CaseStudiesLogistics/CaseStudiesLogistics.js";
 import { CaseStudiesFinSphere } from "./pages/CaseStudiesFinSphere/CaseStudiesFinSphere.js";
+import Products from "./pages/Products/Products.js";
+import Digicampus from "./pages/Products/components/Digicampus.js";
+import Digiplay from "./pages/Products/components/Digiplay.js";
+import Digilog from "./pages/Products/components/Digilog.js";
+import Digiayur from "./pages/Products/components/Digiayur.js";
+import Digistay from "./pages/Products/components/Digistay.js";
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -148,6 +153,12 @@ const App = () => {
         <Route path="/services/aipowered" element={<AIPowered />} />
         <Route path="/services/cloudservices" element={<CloudServices />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/products" element={<Products/>} />
+        <Route path="/products/digicampus" element={<Digicampus/>} />
+        <Route path="/products/digiplay" element={<Digiplay/>} />
+        <Route path="/products/digilog" element={<Digilog/>} />
+        <Route path="/products/digiayur" element={<Digiayur/>} />
+        <Route path="/products/digistay" element={<Digistay/>} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/resources/casestudies" element={<CaseStudies />} />
         <Route path="/resources/technologyguides" element={<TechnologyGuides/>} />
