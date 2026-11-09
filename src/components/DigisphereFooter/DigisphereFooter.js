@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./DigisphereFooter.css";
-import footerLogo from "../../assets/footerLogo (2).png";
+import footerLogo from "../../assets/footerlogo (2).png";
 // Asset Imports
 import linkedinIcon from "../../assets/LinkedinIcon.png";
 import instaIcon from "../../assets/instaIcon.png";
