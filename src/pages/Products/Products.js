@@ -8,6 +8,8 @@ import digiLogIcon from "../../assets/Products/digilog-icon.svg";
 import digiAyurIcon from "../../assets/Products/digiayur-icon.svg";
 import digiStayIcon from "../../assets/Products/digistay-icon.svg";
 import customIcon from "../../assets/Products/custom-icon.svg";
+import Reveal from "../../animations/Reveal";
+import { fadeUp } from "../../animations/variants";
 import "./Products.css";
 
 const productsData = [
@@ -89,109 +91,124 @@ const Products = () => {
   return (
     <div className="products-container container">
       {/* Existing Hero Component */}
-      <div className="products-hero">
-        <p className="Digisphere-badge">Our Products</p>
-        <h1 className="about-hero-title">
-          Products Built for{" "}
-          <span className="about-text-blue">Real-World Operations</span>
-        </h1>
-        <p className="about-hero-description">
-          We build smart and reliable digital products that make everyday
-          business tasks easier. Our solutions help organizations manage their
-          work, automate daily processes, and save time. Each product is
-          designed to improve efficiency, simplify management, and help
-          businesses grow.
-        </p>
-      </div>
+      <Reveal variant={fadeUp} delay={0.1}>
+        <div className="products-hero">
+          <p className="Digisphere-badge">Our Products</p>
+          <h1 className="about-hero-title">
+            Products Built for{" "}
+            <span className="about-text-blue">Real-World Operations</span>
+          </h1>
+          <p className="about-hero-description">
+            We build smart and reliable digital products that make everyday
+            business tasks easier. Our solutions help organizations manage
+            their work, automate daily processes, and save time. Each product
+            is designed to improve efficiency, simplify management, and help
+            businesses grow.
+          </p>
+        </div>
+      </Reveal>
 
       {/* Product Cards Grid */}
       <div className="row g-4 mt-2">
-        {productsData.map((product) => (
+        {productsData.map((product, index) => (
           <div key={product.id} className="col-12 col-lg-6">
-            <div className="product-card h-100">
-              <div className="row h-100">
-                {/* Left Column: Icon + Branding */}
-                <div className="col-12 col-sm-5 d-flex flex-column justify-content-between pe-sm-2 mb-3 mb-sm-0">
-                  <div>
-                    <div className="product-icon-box" style={{ backgroundColor: product.iconBg }} >
-                      <img
-                        src={product.icon}
-                        alt={`${product.name} icon`}
-                        className="product-icon-img img-fluid"
-                      />
-                    </div>
-                    <h3 className="product-card-title mt-3">
-                      Digi
-                      <span className="product-title-blue">
-                        {product.highlightName}
-                      </span>
-                    </h3>
-                    <p className="product-card-category">{product.category}</p>
-                  </div>
-                  <div className="product-badge-version">
-                    <span className="dot-indicator"></span> {product.version}
-                  </div>
-                </div>
-
-                {/* Right Column: Description + Tags + CTA */}
-                <div className="col-12 col-sm-7 d-flex flex-column justify-content-between ps-sm-3 border-start-sm">
-                  <div>
-                    <p className="product-card-description">
-                      {product.description}
-                    </p>
-                    <div className="product-tags d-flex flex-wrap gap-2 my-3">
-                      {product.tags.map((tag, idx) => (
-                        <span key={idx} className="product-tag">
-                          {tag}
+            <Reveal
+              className="h-100"
+              variant={fadeUp}
+              delay={(index % 2) * 0.15}
+            >
+              <div className="product-card h-100">
+                <div className="row h-100">
+                  {/* Left Column: Icon + Branding */}
+                  <div className="col-12 col-sm-5 d-flex flex-column justify-content-between pe-sm-2 mb-3 mb-sm-0">
+                    <div>
+                      <div
+                        className="product-icon-box"
+                        style={{ backgroundColor: product.iconBg }}
+                      >
+                        <img
+                          src={product.icon}
+                          alt={`${product.name} icon`}
+                          className="product-icon-img img-fluid"
+                        />
+                      </div>
+                      <h3 className="product-card-title mt-3">
+                        Digi
+                        <span className="product-title-blue">
+                          {product.highlightName}
                         </span>
-                      ))}
+                      </h3>
+                      <p className="product-card-category">
+                        {product.category}
+                      </p>
+                    </div>
+                    <div className="product-badge-version">
+                      <span className="dot-indicator"></span> {product.version}
                     </div>
                   </div>
 
-                  <div className="product-card-footer d-flex align-items-center justify-content-between pt-2">
-                    {/* Updated Link with onClick using navigate */}
-                    <button
-                      type="button"
-                      onClick={() => navigate(product.path)}
-                      className="product-link btn btn-link p-0 text-decoration-none d-flex align-items-center"
-                    >
-                      {product.linkText} <FiArrowRight className="ms-1" />
-                    </button>
-                    {product.stat && (
-                      <span className="product-stat">{product.stat}</span>
-                    )}
+                  {/* Right Column: Description + Tags + CTA */}
+                  <div className="col-12 col-sm-7 d-flex flex-column justify-content-between ps-sm-3 border-start-sm">
+                    <div>
+                      <p className="product-card-description">
+                        {product.description}
+                      </p>
+                      <div className="product-tags d-flex flex-wrap gap-2 my-3">
+                        {product.tags.map((tag, idx) => (
+                          <span key={idx} className="product-tag">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="product-card-footer d-flex align-items-center justify-content-between pt-2">
+                      {/* Updated Link with onClick using navigate */}
+                      <button
+                        type="button"
+                        onClick={() => navigate(product.path)}
+                        className="product-link btn btn-link p-0 text-decoration-none d-flex align-items-center"
+                      >
+                        {product.linkText} <FiArrowRight className="ms-1" />
+                      </button>
+                      {product.stat && (
+                        <span className="product-stat">{product.stat}</span>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Reveal>
           </div>
         ))}
       </div>
 
       {/* Bottom Integration Banner */}
-      <div className="custom-integration-banner mt-4 mb-4 p-4 rounded-4">
-        <div className="row align-items-center g-3">
-          <div className="col-12 col-md-8 d-flex align-items-center gap-3">
-            <div className="banner-icon-box">
-              <img src={customIcon} alt="custom-Icon"/>
+      <Reveal variant={fadeUp} delay={0.1}>
+        <div className="custom-integration-banner mt-4 mb-4 p-4 rounded-4">
+          <div className="row align-items-center g-3">
+            <div className="col-12 col-md-8 d-flex align-items-center gap-3">
+              <div className="banner-icon-box">
+                <img src={customIcon} alt="custom-Icon" />
+              </div>
+              <div>
+                <h4 className="banner-title mb-1">
+                  Custom Integrations & Unified Single Sign-On
+                </h4>
+                <p className="banner-description mb-0">
+                  All DigiSphere platforms seamlessly sync with your current
+                  ERP, SIS, payment gateways, and cloud infrastructure.
+                </p>
+              </div>
             </div>
-            <div>
-              <h4 className="banner-title mb-1">
-                Custom Integrations & Unified Single Sign-On
-              </h4>
-              <p className="banner-description mb-0">
-                All DigiSphere platforms seamlessly sync with your current ERP,
-                SIS, payment gateways, and cloud infrastructure.
-              </p>
+            <div className="col-12 col-md-4 text-md-end text-start">
+              <Button variant="primary" onClick={() => navigate("/contact")}>
+                Let's Talk About Our Products <FiArrowRight className="ms-1" />
+              </Button>
             </div>
-          </div>
-          <div className="col-12 col-md-4 text-md-end text-start">
-            <Button variant="primary" onClick={() => navigate("/contact")}>
-              Let's Talk About Our Products <FiArrowRight className="ms-1" />
-            </Button>
           </div>
         </div>
-      </div>
+      </Reveal>
     </div>
   );
 };

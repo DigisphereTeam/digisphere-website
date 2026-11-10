@@ -1,5 +1,4 @@
 import React from "react";
-import "./AllIndustriesc.css";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Reveal from "../../../animations/Reveal";
@@ -15,6 +14,7 @@ import indaustries7 from "../../../assets/Industries/Logistics.svg";
 import indaustries8 from "../../../assets/Industries/Startups.svg";
 import indaustries9 from "../../../assets/Industries/Professional.svg";
 import BookingSection from "../../../components/BookingSection/BookingSection.js"
+import "./AllIndustriesc.css";
 
 
 const industriesData = [
@@ -167,12 +167,12 @@ const industriesData = [
 const AllIndustries = () => {
   return (
     <>
-      <section className="industries-section mb-5 mt-5">
+      <section className="industries-section mb-4 mt-4">
         <div className="container">
           {/* Header */}
           <Reveal variant={fadeUp} delay={0.1}>
             <div className="industries-header">
-              <span className="industries-badge">ALL INDUSTRIES</span>
+              <span >All Industries</span>
               <h2 className="industries-title">
                 Built for your world, not just your tech stack.
               </h2>
