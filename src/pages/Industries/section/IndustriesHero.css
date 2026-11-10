@@ -10,21 +10,13 @@
 }
 .industries-hero-section {
   background-color: #ffffff;
-  padding-top: 20px;
+  padding-top: 40px ;
   color: #0f172a;
   padding-bottom: 10px;
 }
 
 /* Left Column */
-.industries-hero-badge {
-  color: #057dcd;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 12px;
-}
+
 
 .industries-hero-title {
   font-size: 40px;
@@ -201,6 +193,9 @@
   }
   .industries-main-section{
   text-align: center;
+  }
+  .industries-hero-section{
+    padding-top: 32px ;
   }
 
 }

@@ -2,6 +2,12 @@
 /* Header */
 .industries-header {
   margin-bottom: 40px;
+  text-align: center;
+}
+
+.industries-header span{
+  color: #057DCD;
+  font-size: 24px;
 }
 
 .industries-card {
@@ -26,7 +32,6 @@
     box-shadow 0.25s ease,
     border-color 0.25s ease;
 }
-
 
 .industries-card-cta {
   margin-top: auto;
