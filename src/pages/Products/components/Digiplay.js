@@ -30,7 +30,7 @@ const productsFeatures = [
     icon: <HiCurrencyRupee />,
     title: "Never chase a pending fee",
     description:
-      "Automated renewal alerts, payment links via SMS, and instant digital receipt generation.",
+      "Automated fee renewal reminders, payment tracking, instant digital receipts, and easy management of pending dues.",
     tag: "UPI & Gateway settlement",
   },
   {
