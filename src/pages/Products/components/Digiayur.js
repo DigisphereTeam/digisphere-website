@@ -242,7 +242,7 @@ const Digiayur = () => {
               <Reveal variant={fadeRight} delay={0.2}>
                 <div className="product-hero-content pe-lg-4">
                   <p className="Digisphere-badge">
-                    Sri Gayatri HMS · Ayurvedic Hospital Management System
+                    DigiAyur · Ayurvedic Hospital Management System
                   </p>
                   <h1 className="product-hero-title mb-3">
                     Run your entire hospital &amp; patient care from{" "}

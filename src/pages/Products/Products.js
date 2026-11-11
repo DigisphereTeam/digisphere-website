@@ -1,4 +1,3 @@
-import React from "react";
 import { FiArrowRight } from "react-icons/fi";
 import Button from "../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
@@ -76,7 +75,7 @@ const productsData = [
     category: "Hostel & Residential Management",
     icon: digiStayIcon,
     description:
-      "Comprehensive digital management for hostels, student accommodations, and PG facilities — managing room allocations, student check-in/out, fee collections, mess & meal tracking, gate passes, complaints, and resident safety.",
+      "Comprehensive digital management for hostels, student accommodations, and PG facilities, covering room allocations, student check-in/check-out, fee collections, and resident safety.",
     tags: ["Room Allocation", "Fee Management", "Mess & Meals", "Complaints"],
     version: "v5.0 · Smart Living",
     linkText: "Explore DigiStay",

@@ -39,7 +39,7 @@ const productsFeatures = [
     icon: <HiCalendar />,
     title: "Fee Schedules & Due Dates",
     description:
-      "Set room rates for daily, weekly, or monthly billing. Auto-calculate dues and track upcoming deadlines with automated reminders.",
+      "Set room rates for daily or monthly billing. Auto-calculate dues and track upcoming deadlines with automated reminders.",
     tag: "Fee Management Engine",
   },
   {

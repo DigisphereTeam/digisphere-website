@@ -72,19 +72,25 @@ const roleCardsData = [
     title: "Admin",
     badge: "Master Control",
     description:
-      "Full access to every module, academic setup, staff provisioning, exam publishing, and financial governance.",
+      "Complete access to school management, academic setup, staff management, student records, fee administration, and overall institutional operations.",
   },
   {
     title: "Teacher & Staff",
-    badge: "Class & Operational Desk",
+    badge: "Academic & Operations Desk",
     description:
-      "Assigned class registers, marks entry, timetable view, student attendance, and library circulation desk.",
+      "Manage assigned classes, student attendance, marks entry, timetables, lesson activities, and day-to-day academic responsibilities.",
   },
   {
-    title: "Accountant & Parent",
-    badge: "Role Scoped",
+    title: "Accountant",
+    badge: "Financial Management",
     description:
-      "Fee collection, receipt printing, expense management, and parent portal for fee dues and child progress.",
+      "Handle student fee collection, generate receipts, track pending payments, manage expenses, and maintain financial records and reports.",
+  },
+  {
+    title: "Student & Parent",
+    badge: "Learning & Parent Portal",
+    description:
+      "Access attendance records, academic progress, exam results, homework, fee details, announcements, and important school updates.",
   },
 ];
 
@@ -95,6 +101,20 @@ const roleAccessMatrix = [
     teacher: "Class only",
     accountant: "View only",
     parent: "Own record",
+  },
+  {
+    module: "Staff & Employee Management",
+    admin: "Full access",
+    teacher: "Own profile",
+    accountant: "View only",
+    parent: "No access",
+  },
+  {
+    module: "Academic Year, Class & Section Management",
+    admin: "Full access",
+    teacher: "Assigned classes",
+    accountant: "View only",
+    parent: "Child's class",
   },
   {
     module: "Fees & Payment Dues",
@@ -125,14 +145,21 @@ const roleAccessMatrix = [
     parent: "Published only",
   },
   {
-    module: "Library & Transport",
+    module: "Homework & Assignments",
+    admin: "Full access",
+    teacher: "Create & evaluate",
+    accountant: "No access",
+    parent: "View only",
+  },
+  {
+    module: "Library & Transport Management",
     admin: "Full access",
     teacher: "View only",
     accountant: "No access",
     parent: "Assigned only",
   },
   {
-    module: "Institutional Revenue",
+    module: "Revenue, Expenses & Financial Reports",
     admin: "Full access",
     teacher: "No access",
     accountant: "Full access",
